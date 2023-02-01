@@ -1,3 +1,21 @@
+# ♾️ TaoTech ♾️
+
+## Table of contents
+
+- [🤓 How to set up this repo?](#🤓-how-to-set-up-this-repo)
+- [🤔 What's inside?](#🤔-whats-inside)
+  - [💻📱 Apps](#💻📱-apps)
+  - [📦 Packages](#📦-packages)
+- [🏗️ How to build this project?](#🏗️-how-to-build-this-project)
+- [📦 How to install packages into individual workspace?](#📦-how-to-install-packages-into-individual-workspace)
+- [🧑‍💻 How to start the developement server?](#🧑‍💻-how-to-start-the-developement-server)
+- [🧪 How to run test for this project?](#🧪-how-to-run-test-for-this-project)
+- [📚 How to open storybooks?](#📚-how-to-open-storybooks)
+- [📝 Are there any caveats I should know?](#📝-are-there-any-caveats-i-should-know)
+- [🥞 What tech is in this project?](#🥞-what-tech-is-in-this-project)
+
+## 🤓 How to set up this repo?
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
