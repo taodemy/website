@@ -1,4 +1,3 @@
-// __mocks__/fileMock.js
 module.exports = {
     src: '/img.jpg',
     height: 24,
