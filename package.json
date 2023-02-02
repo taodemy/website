@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "jest --watch",
+    "test":"jest --colors --config jest.config.js",
     "lint": "next lint",
     "prettier": "npx prettier --write ."
   },

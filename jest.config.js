@@ -8,6 +8,19 @@ const createJestConfig = nextJest({
 // Add any custom config to be passed to Jest
 const customJestConfig = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  collectCoverage:true,
+  collectCoverageFrom:[
+    'pages/*.tsx',
+    '!pages/_app.tsx',
+    '!pages/_document.tsx'
+    ],
+  coverageThreshold:{
+    global:{
+        branches:90,
+        functions:90,
+        lines:90,
+        statements:90
+    }},
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
     '^@/components/(.*)$': '<rootDir>/components/$1',
