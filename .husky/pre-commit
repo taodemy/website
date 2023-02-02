@@ -11,4 +11,10 @@ npm run lint || (
         false; 
 )
 
-# npm run test
+#Check pass all tests
+npm run test || (
+    
+    echo '😤😂❌🤡 Test Failed. 😤😂❌🤡
+            Make sure all tests pass and meet the required coverage threshold'
+    false;
+)
