@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+#Check eslint standards
+npm run lint || (
+
+        echo '😤🏀👋😤 Eslint Check Failed. 😤🏀👋😤 
+                Make the required changes listed above, add changes and try to commit again.
+                You can read the ".turbo/turbo-eslint.log" of the failing project for more detail.
+              '
+        false; 
+)
+
+# npm run test
