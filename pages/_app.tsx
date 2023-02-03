@@ -1,4 +1,4 @@
-import "@/styles/globals.scss";
+import "@/styles/globals.css";
 import localFont from "@next/font/local";
 import {Syne} from "@next/font/google"
 
