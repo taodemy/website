@@ -1,10 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-import {Syne} from "@next/font/google"
 import styles from "@/styles/Home.module.css";
 import {textFont, titleFont} from "./_app";
-
-// consttitleFont = Syne({subsets: ['latin'] })
 
 export default function Home() {
   return (
