@@ -5,7 +5,7 @@ import {Syne} from "@next/font/google"
 export const titleFont = Syne({subsets: ['latin'] })
 export const textFont = localFont({
   src:[ {
-      path: '../public/font/Satoshi-Regular.woff2',
+      path: '../fonts/Satoshi-Regular.woff2',
       weight: '400',
   }
   ]
