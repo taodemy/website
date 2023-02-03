@@ -8,143 +8,104 @@
   --icon-default: #191919;
 }
 
-@font-face {
-  font-family: 'Syne';
-  src: url('../public/font/local/Syne-VariableFont_wght.ttf');
-  font-weight: 500;
-  font-style: normal;
-  }
-
-@font-face {
-    font-family: 'Satoshi';
-    src: url('../public/font/local/Satoshi-Regular.ttf');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@mixin font-medium {
-  font-family:'Syne', sans-serif;
-  font-weight: 500;
-}
-
-@mixin font-regular {
-  font-family: 'Satoshi', sans-serif;
-  font-weight: 400;
-}
-
 // heading
 .heading-large {
-  @include font-medium;
   font-size: 128px;
   line-height: 100%;
 }
 
 .heading-medium {
-  @include font-medium;
   font-size: 96px;
   line-height: 110%;
 }
 
 .heading-medium-uppercase {
-  @include font-medium;
   font-size: 96px;
   line-height: 110%;
 }
 
 .heading-small {
-  @include font-medium;
   font-size: 80px;
   line-height: 110%;
 }
 
-.heading-small-uppercase {
-  @include font-medium;
+.heading-small-uppercase { 
   font-size: 80px;
   line-height: 110%;
 }
 
 .heading-h1 {
-  @include font-medium;
   font-size: 64px;
   line-height: 120%;
 }
 
 .heading-h1-uppercase {
-  @include font-medium;
   font-size: 64px;
   line-height: 110%;
 }
 
 .heading-h2 {
-  @include font-medium;
   font-size: 48px;
   line-height: 120%;
 }
 
 .heading-h2-uppercase {
-  @include font-medium;
   font-size: 48px;
   line-height: 110%;
 }
 
 .heading-h3 {
-  @include font-medium;
+  
   font-size: 32px;
   line-height: 130%;
 }
 
 .heading-h3-uppercase {
-  @include font-medium;
+  
   font-size: 32px;
   line-height: 120%;
 }
 
 .heading-h4 {
-  @include font-medium;
+  
   font-size: 24px;
   line-height: 120%;
 }
 
 .heading-h4-uppercase {
-  @include font-medium;
+  
   font-size: 24px;
   line-height: 120%;
 }
 
 // text
 .text-xlarge {
-  @include font-regular;
   font-size: 32px;
   line-height: 150%;
 }
 
-.text-large {
-  @include font-regular;
+.text-large { 
   font-size: 24px;
   line-height: 160%;
 }
 
 .text-medium {
-  @include font-regular;
   font-size: 20px;
   line-height: 170%;
 }
 
 .text-default {
-  @include font-regular;
   font-size: 18px;
   line-height: 170%;
 }
 
 .text-meta {
-  @include font-regular;
   font-size: 15px;
   line-height: 100%;
   letter-spacing: 0.5px;
 }
 
 .text-meta-small {
-  @include font-regular;
   font-size: 13px;
   line-height: 100%;
   letter-spacing: 1px;
