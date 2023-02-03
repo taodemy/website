@@ -50,7 +50,7 @@ $ npm run start
 ### Run All Test
 
 ```shell
-$ npm run test:ci
+$ npm run test
 ```
 
 ### Run Single Test With Watching And Display Coverage
