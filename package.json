@@ -10,7 +10,7 @@
     "lint": "next lint",
     "prettier": "npx prettier --write .",
     "prepare": "husky install",
-    "pre-commit": "npm run prettier && npm run lint && npm run test"
+    "pre-commit": "npm run prettier && npm run lint && npm run test && npx --no-install"
   },
   "engineStrict": true,
   "engines": {
