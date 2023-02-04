@@ -43,49 +43,7 @@ export default function Home() {
             </style>
         </div>
 
-        <div className={textFont.className + " " + "text-meta-small"}>there is the text inverse color
-            <style jsx>{`
-          div{
-          color:var(--text-inverse);
-          background:var(--background-primary);
-          }
-        `}
-            </style>
-        </div>
-        <div className={textFont.className + " " + "text-meta-small"}>there is the border color
-            <style jsx>{`
-          div{
-            border: 1px solid ;
-            border-color:var(--border-default);
-          }
-        `}
-            </style>
-        </div>
-        <div className={textFont.className + " " + "text-meta-small"}>there is the background default color
-            <style jsx>{`
-          div{
-            background:var(--background-default);
-          }
-        `}
-            </style>
-        </div>
-        <div className={textFont.className + " " + "text-meta-small"}>there is the background primary color
-            <style jsx>{`
-          div{
-            background:var(--background-primary);
-            color:var(--text-inverse);
-          }
-        `}
-            </style>
-        </div>
-        <div className={textFont.className + " " + "text-meta-small"}>there is the background secondary color
-            <style jsx>{`
-          div{
-            background:var(--background-secondary);
-          }
-        `}
-            </style>
-        </div>
+        
       </main>
     </>
   );
