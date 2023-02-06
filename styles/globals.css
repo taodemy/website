@@ -1,10 +1,10 @@
 :root {
   --text-default: #191919;
-  --text-inverse: #FFFFFF;
+  --text-inverse: #ffffff;
   --border-default: #000000;
-  --background-default: #FDFBF5;
+  --background-default: #fdfbf5;
   --background-primary: #000000;
-  --background-secondary: #F0D163;
+  --background-secondary: #f0d163;
   --icon-default: #191919;
 }
 
@@ -103,4 +103,11 @@
   font-size: 13px;
   line-height: 100%;
   letter-spacing: 1px;
+}
+
+/*container for the whole page*/
+.container {
+  padding: 48px;
+  margin: 20px;
+  border: 1px solid var(--border-default);
 }
