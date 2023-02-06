@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 40px;
+}
+
+.bottom_border {
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+}
+
+.text_container {
+  padding-left: 56.5px;
+  margin: 0;
+}
+
+.text_container p {
+  margin: 0;
+}
