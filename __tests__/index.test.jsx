@@ -8,13 +8,13 @@ describe("Homepage renders properly", () => {
   });
 
   it("renders a hero heading with the right content", () => {
-    const heading = screen.getByTestId("hero__section__slogan");
+    const heading = screen.getByTestId("hero__slogan");
     expect(heading).toBeInTheDocument();
     expect(heading).toHaveTextContent("We are a digital agency from Melbourne.");
   });
 
   it("renders a hero text with the right content", () => {
-    const text = screen.getByTestId("hero__section__txt");
+    const text = screen.getByTestId("hero__txt");
     expect(text).toBeInTheDocument();
     expect(text).toHaveTextContent(
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."

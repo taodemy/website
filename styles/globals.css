@@ -1,105 +1,105 @@
 :root {
-  --text--default: #191919;
-  --text--inverse: #ffffff;
-  --border--default: #000000;
-  --background--default: #fdfbf5;
-  --background--primary: #000000;
-  --background--secondary: #f0d163;
-  --icon--default: #191919;
+  --text-default: #191919;
+  --text-inverse: #ffffff;
+  --border-default: #000000;
+  --background-default: #fdfbf5;
+  --background-primary: #000000;
+  --background-secondary: #f0d163;
+  --icon-default: #191919;
 }
 
-.heading--large {
+.heading-large {
   font-size: 128px;
   line-height: 100%;
 }
 
-.heading--medium {
+.heading-medium {
   font-size: 96px;
   line-height: 110%;
 }
 
-.heading--medium--uppercase {
+.heading-medium-uppercase {
   font-size: 96px;
   line-height: 110%;
 }
 
-.heading--small {
+.heading-small {
   font-size: 80px;
   line-height: 110%;
 }
 
-.heading--small--uppercase {
+.heading-small-uppercase {
   font-size: 80px;
   line-height: 110%;
 }
 
-.heading--h1 {
+.heading-h1 {
   font-size: 64px;
   line-height: 120%;
 }
 
-.heading--h1--uppercase {
+.heading-h1-uppercase {
   font-size: 64px;
   line-height: 110%;
 }
 
-.heading--h2 {
+.heading-h2 {
   font-size: 48px;
   line-height: 120%;
 }
 
-.heading--h2--uppercase {
+.heading-h2-uppercase {
   font-size: 48px;
   line-height: 110%;
 }
 
-.heading--h3 {
+.heading-h3 {
   font-size: 32px;
   line-height: 130%;
 }
 
-.heading--h3--uppercase {
+.heading-h3-uppercase {
   font-size: 32px;
   line-height: 120%;
 }
 
-.heading--h4 {
+.heading-h4 {
   font-size: 24px;
   line-height: 120%;
 }
 
-.heading--h4--uppercase {
+.heading-h4-uppercase {
   font-size: 24px;
   line-height: 120%;
 }
 
-.text--xlarge {
+.text-xlarge {
   font-size: 32px;
   line-height: 150%;
 }
 
-.text--large {
+.text-large {
   font-size: 24px;
   line-height: 160%;
 }
 
-.text--medium {
+.text-medium {
   font-size: 20px;
   line-height: 170%;
 }
 
-.text--default {
+.text-default {
   font-size: 18px;
   line-height: 170%;
 }
 
-.text--meta {
+.text-meta {
   font-size: 15px;
   line-height: 100%;
   letter-spacing: 0.5px;
 }
 
-.text--meta--small {
+.text-meta-small {
   font-size: 13px;
   line-height: 100%;
   letter-spacing: 1px;
@@ -109,5 +109,5 @@
 .page__wrapper {
   padding: 48px;
   margin: 20px;
-  border: 1px solid var(--border--default);
+  border: 1px solid var(--border-default);
 }

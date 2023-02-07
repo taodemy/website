@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between;
   padding: 64px 0px;
-  border-top: 1px solid var(--border--default);
-  border-bottom: 1px solid var(--border--default);
+  border-top: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
   gap: 0px 64px;
 }
 
@@ -15,13 +15,13 @@
   width: 50%;
 }
 
-.hero__section__solgan {
-  color: var(--text--default);
+.hero__solgan {
+  color: var(--text-default);
 }
 
-.hero__section__txt {
-  color: var(--text--default);
-  max-width: 70%;
+.hero__txt {
+  color: var(--text-default);
+  max-width: 80%;
 }
 
 .hero__photo {
@@ -30,7 +30,7 @@
 }
 
 .hero__icon {
-  color: var(--icon--default);
+  color: var(--icon-default);
   height: fit-content;
   width: fit-content;
 }

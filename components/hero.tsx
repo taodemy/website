@@ -7,16 +7,16 @@ const Hero = () => {
       <div className={styles["hero__section"]}>
         <div>
           <div
-            data-testid="hero__section__slogan"
-            className={`${titleFont.className} heading--medium ${styles["hero__section__slogan"]}`}
+            data-testid="hero__slogan"
+            className={`${titleFont.className} heading-medium ${styles["hero__slogan"]}`}
           >
             We are a <br />
             digital agency
             <br /> from Melbourne.
           </div>
           <div
-            data-testid="hero__section__txt"
-            className={`${textFont.className} text--xlarge ${styles["hero__section__txt"]}`}
+            data-testid="hero__txt"
+            className={`${textFont.className} text-xlarge ${styles["hero__txt"]}`}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
           </div>
