@@ -3,34 +3,34 @@
   display: flex;
   justify-content: space-between;
   padding: 64px 0px;
-  border-top: 1px solid var(--border-default);
-  border-bottom: 1px solid var(--border-default);
+  border-top: 1px solid var(--border--default);
+  border-bottom: 1px solid var(--border--default);
   gap: 0px 64px;
 }
 
-.hero-section {
+.hero__section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
 }
 
-.hero-section-solgan {
-  color: var(--text-default);
+.hero__section__solgan {
+  color: var(--text--default);
 }
 
-.hero-section-txt {
-  color: var(--text-default);
+.hero__section__txt {
+  color: var(--text--default);
   max-width: 70%;
 }
 
-.hero-photo {
+.hero__photo {
   border-radius: 16px;
   height: 100%;
 }
 
-.hero-icon {
-  color: var(--icon-default);
+.hero__icon {
+  color: var(--icon--default);
   height: fit-content;
   width: fit-content;
 }
