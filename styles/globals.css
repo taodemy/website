@@ -106,7 +106,7 @@
 }
 
 /*container for the whole page*/
-.container {
+.page-wrapper {
   padding: 48px;
   margin: 20px;
   border: 1px solid var(--border-default);

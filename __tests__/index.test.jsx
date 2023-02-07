@@ -8,13 +8,13 @@ describe("Homepage renders properly", () => {
   });
 
   it("renders a hero heading with the right content", () => {
-    const heading = screen.getByTestId("heroSectionSolgan");
+    const heading = screen.getByTestId("hero-section-slogan");
     expect(heading).toBeInTheDocument();
     expect(heading).toHaveTextContent("We are a digital agency from Melbourne.");
   });
 
   it("renders a hero text with the right content", () => {
-    const text = screen.getByTestId("heroSectionTxt");
+    const text = screen.getByTestId("hero-section-txt");
     expect(text).toBeInTheDocument();
     expect(text).toHaveTextContent(
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
@@ -22,14 +22,14 @@ describe("Homepage renders properly", () => {
   });
 
   it("renders a hero photo with the right src and alt", () => {
-    const heroPhoto = screen.getByTestId("heroPhoto");
+    const heroPhoto = screen.getByTestId("hero-photo");
     expect(heroPhoto).toBeInTheDocument();
     expect(heroPhoto).toHaveAttribute("src", "/images/hero.png");
     expect(heroPhoto).toHaveAttribute("alt", "hero photo");
   });
 
   it("renders a hero icon with the right src and alt", () => {
-    const heroIcon = screen.getByTestId("heroIcon");
+    const heroIcon = screen.getByTestId("hero-icon");
     expect(heroIcon).toBeInTheDocument();
     expect(heroIcon).toHaveAttribute("src", "/images/vector.png");
     expect(heroIcon).toHaveAttribute("alt", "hero icon");

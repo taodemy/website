@@ -8,28 +8,28 @@
   gap: 0px 64px;
 }
 
-.heroSection {
+.hero-section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
 }
 
-.heroSectionSolgan {
+.hero-section-solgan {
   color: var(--text-default);
 }
 
-.heroSectionTxt {
+.hero-section-txt {
   color: var(--text-default);
   max-width: 70%;
 }
 
-.heroPhoto {
+.hero-photo {
   border-radius: 16px;
   height: 100%;
 }
 
-.heroIcon {
+.hero-icon {
   color: var(--icon-default);
   height: fit-content;
   width: fit-content;
