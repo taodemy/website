@@ -1,6 +1,3 @@
-import Image from "next/image";
-import styles from "@/styles/Home.module.css";
-import { textFont, titleFont } from "./_app";
 import Values from "@/components/OurValue/OurValues";
 import Head from "next/head";
 
