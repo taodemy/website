@@ -30,6 +30,4 @@ describe("ListItems", () => {
     const content = screen.getByText("Lorem ipsum dolor sit amet, consectetur adipiscing elit");
     expect(content).toBeInTheDocument();
   });
-
-  it("should render icon to be visible", () => {});
 });
