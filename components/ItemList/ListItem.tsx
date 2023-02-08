@@ -11,9 +11,15 @@ interface Props {
 
 const ListItem = ({ title, content, icon, ifHasBottomBorder }: Props) => {
   return (
-    <div className={`${styles.container} ${ifHasBottomBorder ? styles.bottom_border : null}`}>
+    <div
+      className={`${
+        ifHasBottomBorder
+          ? styles.item_list__with_bottom_border
+          : styles.item_list___without_bottom_border
+      }`}
+    >
       <Image src={icon} width={34} height={34} alt="icon" />
-      <div className={styles.text_container}>
+      <div className={styles.item_list__text_container}>
         <p className={`${titleFont.className} heading-h3-uppercase`}>{title}</p>
         <p className={`${textFont.className} text-default`}>{content}</p>
       </div>

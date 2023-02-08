@@ -1,11 +1,11 @@
 import Image from "next/image";
-import ListItem from "../list_items/ListItem";
+import ListItem from "../ItemList/ListItem";
 import ourValuesImage from "../../assets/our_value.jpeg";
 import styles from "@/styles/OurValues.module.css";
 import { titleFont } from "@/pages/_app";
-import NumberSvg1 from "@/assets/number_one.svg";
-import NumberSvg2 from "@/assets/number_two.svg";
-import NumberSvg3 from "@/assets/number_three.svg";
+import NumberSvg1 from "@/assets/number_one_icon.svg";
+import NumberSvg2 from "@/assets/number_two_icon.svg";
+import NumberSvg3 from "@/assets/number_three_icon.svg";
 
 const Values = () => {
   const listItems = [
@@ -36,13 +36,18 @@ const Values = () => {
   ];
 
   return (
-    <section className={styles.container}>
-      <h1 className={`${titleFont.className} heading-small-uppercase ${styles.title}`}>
+    <section className={styles.our_values__container}>
+      <h1 className={`${titleFont.className} heading-small-uppercase ${styles.our_values__title}`}>
         OUR VALUES
       </h1>
-      <div className={styles.content}>
-        <Image priority className={styles.image} src={ourValuesImage} alt="our values image" />
-        <div className={styles.list}>
+      <div className={styles.our_values__content}>
+        <Image
+          priority
+          className={styles.our_values__image}
+          src={ourValuesImage}
+          alt="our values image"
+        />
+        <div className={styles.our_values__list}>
           {listItems.map(({ id, title, content, ifHasBottomBorder, icon }) => (
             <ListItem
               key={id}

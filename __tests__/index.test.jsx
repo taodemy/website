@@ -3,11 +3,9 @@ import Home from "../pages/index";
 import "@testing-library/jest-dom";
 
 describe("Home", () => {
-  it("renders a heading", () => {
+  it("should render our values section in success", () => {
     render(<Home />);
-
-    const heading = screen.getByText("Get started by editing");
-
-    expect(heading).toBeInTheDocument();
+    const ourValuesTitle = screen.getByText("OUR VALUES");
+    expect(ourValuesTitle).toBeInTheDocument();
   });
 });

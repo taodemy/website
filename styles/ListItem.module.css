@@ -1,19 +1,21 @@
-.container {
+.item_list___without_bottom_border {
   display: flex;
   flex-direction: row;
-  padding-bottom: 40px;
 }
 
-.bottom_border {
+.item_list__with_bottom_border {
   border-bottom: 1px solid black;
-  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
 }
 
-.text_container {
-  padding-left: 56.5px;
+.item_list__text_container {
+  padding-left: 48px;
   margin: 0;
 }
 
-.text_container p {
+.item_list__text_container p {
   margin: 0;
 }
