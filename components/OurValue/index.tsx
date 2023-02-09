@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ListItem from "../ItemList/ListItem";
+import ListItem from "../ItemList";
 import ourValuesImage from "../../assets/our_value.jpeg";
 import styles from "@/styles/OurValues.module.css";
 import { titleFont } from "@/pages/_app";

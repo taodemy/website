@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import ListItem from "@/components/ItemList/ListItem";
+import ListItem from "@/components/ItemList";
 import number_one from "../../../assets/number_one_icon.svg";
 
 describe("ListItems", () => {
