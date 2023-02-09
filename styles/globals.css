@@ -135,6 +135,7 @@ table {
   border-spacing: 0;
 }
 
+/*Custom global styling*/
 :root {
   --text-default: #191919;
   --text-inverse: #ffffff;
