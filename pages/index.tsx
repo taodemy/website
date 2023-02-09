@@ -1,4 +1,5 @@
 import Values from "@/components/OurValue";
+import Contact from "@/components/Contact";
 import Head from "next/head";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <Values />
+        <Contact />
       </main>
     </>
   );

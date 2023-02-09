@@ -1,0 +1,35 @@
+.contact__container {
+}
+
+.contact__title_container {
+}
+
+.contact_heading {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.contact__title {
+  font-family: "Syne";
+  font-style: normal;
+  font-weight: 500;
+  /* font-size: 96px; */
+  line-height: 110%;
+  text-transform: uppercase;
+  color: #191919;
+}
+
+.contact__icon {
+  font-family: "Satoshi";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.contact__content {
+}
