@@ -1,11 +1,11 @@
 import Image from "next/image";
 import ListItem from "../ItemList";
-import ourValuesImage from "../../assets/our_value.jpeg";
+import ourValuesImage from "@/public/our_value.jpeg";
 import styles from "@/styles/OurValues.module.css";
 import { titleFont } from "@/pages/_app";
-import NumberSvg1 from "@/assets/number_one_icon.svg";
-import NumberSvg2 from "@/assets/number_two_icon.svg";
-import NumberSvg3 from "@/assets/number_three_icon.svg";
+import NumberSvg1 from "@/public/number_one_icon.svg";
+import NumberSvg2 from "@/public/number_two_icon.svg";
+import NumberSvg3 from "@/public/number_three_icon.svg";
 
 function OurValues() {
   const listItems = [
