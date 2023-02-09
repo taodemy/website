@@ -1,12 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import ListItem from "@/components/ItemList";
-import number_one from "@/public/number_one_icon.svg";
 
 describe("ListItems", () => {
   const props = {
     title: "Connection",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    icon: number_one,
+    icon: "/images/number_one_icon.svg",
   };
 
   beforeEach(() => {
