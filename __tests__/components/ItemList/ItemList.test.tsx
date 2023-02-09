@@ -7,22 +7,14 @@ describe("ListItems", () => {
     title: "Connection",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     icon: number_one,
-    ifHasBottomBorder: true,
   };
 
   beforeEach(() => {
-    render(
-      <ListItem
-        title={props.title}
-        content={props.content}
-        icon={props.icon}
-        ifHasBottomBorder={props.ifHasBottomBorder}
-      />
-    );
+    render(<ListItem title={props.title} content={props.content} icon={props.icon} />);
   });
 
   it("should render list title in success", () => {
-    const title = screen.getByText("Connection");
+    const title = screen.getByText("CONNECTION");
     expect(title).toBeInTheDocument();
   });
 

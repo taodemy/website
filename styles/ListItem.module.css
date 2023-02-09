@@ -1,14 +1,15 @@
-.item_list___without_bottom_border {
-  display: flex;
-  flex-direction: row;
-}
-
-.item_list__with_bottom_border {
+.item_list {
   border-bottom: 1px solid black;
   display: flex;
   flex-direction: row;
   margin-bottom: 48px;
   padding-bottom: 48px;
+}
+
+.item_list:nth-last-child(1) {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .item_list__text_container {

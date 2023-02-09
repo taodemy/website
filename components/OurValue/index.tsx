@@ -7,14 +7,13 @@ import NumberSvg1 from "@/assets/number_one_icon.svg";
 import NumberSvg2 from "@/assets/number_two_icon.svg";
 import NumberSvg3 from "@/assets/number_three_icon.svg";
 
-const Values = () => {
+function OurValues() {
   const listItems = [
     {
       id: 1,
       title: "Vision",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat.",
-      ifHasBottomBorder: true,
       icon: NumberSvg1,
     },
     {
@@ -22,7 +21,6 @@ const Values = () => {
       title: "Innovation",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat.",
-      ifHasBottomBorder: true,
       icon: NumberSvg2,
     },
     {
@@ -30,7 +28,6 @@ const Values = () => {
       title: "Connection",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat.",
-      ifHasBottomBorder: false,
       icon: NumberSvg3,
     },
   ];
@@ -48,19 +45,13 @@ const Values = () => {
           alt="our values image"
         />
         <div className={styles.our_values__list}>
-          {listItems.map(({ id, title, content, ifHasBottomBorder, icon }) => (
-            <ListItem
-              key={id}
-              title={title}
-              content={content}
-              ifHasBottomBorder={ifHasBottomBorder}
-              icon={icon}
-            />
+          {listItems.map(({ id, title, content, icon }) => (
+            <ListItem key={id} title={title} content={content} icon={icon} />
           ))}
         </div>
       </div>
     </section>
   );
-};
+}
 
-export default Values;
+export default OurValues;
