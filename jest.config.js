@@ -10,7 +10,12 @@ const customJestConfig = {
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 
   collectCoverage: true,
-  collectCoverageFrom: ["pages/*.tsx", "!pages/_app.tsx", "!pages/_document.tsx"],
+  collectCoverageFrom: [
+    "pages/*.tsx",
+    "components/*.tsx",
+    "!pages/_app.tsx",
+    "!pages/_document.tsx",
+  ],
   coverageThreshold: {
     global: {
       branches: 90,
