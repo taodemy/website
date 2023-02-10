@@ -12,8 +12,10 @@ const ListItem = ({ title, content, icon }: Props) => {
     <div className={styles.item_list}>
       <img src={icon} alt="icon" className={styles.item_list__image} />
       <div className={styles.item_list__text_container}>
-        <p className={`${titleFont.className} heading-h3-uppercase`}>{title.toUpperCase()}</p>
-        <p className={`${textFont.className} text-default`}>{content}</p>
+        <p className={`${titleFont.className} global__uppercase-heading-h3`}>
+          {title.toUpperCase()}
+        </p>
+        <p className={`${textFont.className} global__text-default`}>{content}</p>
       </div>
     </div>
   );

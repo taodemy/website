@@ -30,7 +30,9 @@ function OurValues() {
 
   return (
     <section className={styles.our_values}>
-      <h1 className={`${titleFont.className} heading-small-uppercase ${styles.our_values__title}`}>
+      <h1
+        className={`${titleFont.className} global__uppercase-heading--small ${styles.our_values__title}`}
+      >
         OUR VALUES
       </h1>
       <div className={styles.our_values__content}>
