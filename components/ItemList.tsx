@@ -10,7 +10,7 @@ interface Props {
 const ListItem = ({ title, content, icon }: Props) => {
   return (
     <div className={styles.item_list}>
-      <img src={icon} alt="icon" className={styles.item_list__image} />
+      <img src={icon} alt="icon" arial-label="list_icon" className={styles.item_list__image} />
       <div className={styles.item_list__text_container}>
         <p className={`${titleFont.className} global__uppercase-heading-h3`}>
           {title.toUpperCase()}

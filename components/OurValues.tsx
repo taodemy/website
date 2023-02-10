@@ -40,6 +40,7 @@ function OurValues() {
           className={styles.our_values__image}
           src="/images/our_value.jpeg"
           alt="our values image"
+          aria-label="our_values_image"
         />
 
         <div className={styles.our_values__list}>

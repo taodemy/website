@@ -13,7 +13,9 @@ describe("Home", () => {
   });
 
   it("should render our values image in success", () => {
-    const alt = screen.getByAltText("our values image");
-    expect(alt).toBeInTheDocument();
+    const ourValuesImage = screen.getByRole("img", { name: "our_values_image" });
+    expect(ourValuesImage).toBeInTheDocument();
+    expect(ourValuesImage).toHaveAttribute("src", "/images/our_value.jpeg");
+    expect(ourValuesImage).toHaveAttribute("alt", "our values image");
   });
 });
