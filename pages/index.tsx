@@ -1,4 +1,4 @@
-import Values from "@/components/OurValue";
+import Values from "@/components/OurValues";
 import Head from "next/head";
 
 export default function Home() {

@@ -1,4 +1,4 @@
-import ListItem from "../ItemList";
+import ListItem from "./ItemList";
 
 import styles from "@/styles/OurValues.module.css";
 import { titleFont } from "@/pages/_app";
