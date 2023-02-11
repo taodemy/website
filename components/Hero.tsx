@@ -6,12 +6,14 @@ const Hero = () => {
     <div className={styles["hero"]}>
       <div className={styles["hero__section"]}>
         <div>
-          <div className={`${titleFont.className} heading-medium ${styles["hero__slogan"]}`}>
+          <div
+            className={`${titleFont.className} global__heading--medium ${styles["hero__slogan"]}`}
+          >
             We are a <br />
             digital agency
             <br /> from Melbourne.
           </div>
-          <div className={`${textFont.className} text-xlarge ${styles["hero__txt"]}`}>
+          <div className={`${textFont.className} global__text-xlarge ${styles["hero__txt"]}`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
           </div>
         </div>
