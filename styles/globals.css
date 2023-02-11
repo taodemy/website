@@ -104,3 +104,10 @@
   line-height: 100%;
   letter-spacing: 1px;
 }
+
+/*container for the whole page*/
+.page__wrapper {
+  padding: 48px;
+  margin: 20px;
+  border: 1px solid var(--border-default);
+}
