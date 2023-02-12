@@ -1,0 +1,27 @@
+.card_list {
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+  }
+  
+  .card_list:nth-last-child(1) {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  
+  .card_list__image {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .card_list__text_container {
+    padding-left: 48px;
+    margin: 0;
+  }
+  
+  .card_list__text_container p {
+    margin: 0;
+  }
