@@ -1,0 +1,62 @@
+.footer-container {
+	padding: 0px 0px 16px;
+	width: 1784px;
+	height: 520px;
+}
+.footer-main-container {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 441px;
+	padding-top: 64px;
+	border-style: solid none solid;
+	border-width: 1px;
+}
+.footer-main-fylla-container {
+	position: relative;
+	width: 530px;
+	height: 311px;
+}
+.footer-main-fylla-top-container {
+	width: 530px;
+	height: 144px;
+}
+.footer-main-fylla-top-icon-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+	width: 138.65px;
+	height: 50px;
+}
+.footer-main-fylla-top-icon {
+	width: 49.64px;
+	height: 50px;
+	margin-right: 16px;
+}
+.footer-main-fylla-ul {
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	padding: 0 0 0 0;
+	left: 0;
+	bottom: 0;
+	gap: 16px;
+}
+.footer-main-fylla-ul img {
+	width: 34px;
+	height: 34px;
+}
+.footer-main-border {
+	position: absolute;
+	top: 64px;
+	left: 578px;
+	border-style: none none none solid;
+	border-width: 1px;
+	width: 0px;
+	height: 311px;
+}
+.footer-bottom-container {
+	width: 100%;
+	height: 64px;
+}
