@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import {textFont, titleFont} from "./_app";
+import { textFont, titleFont } from "./_app";
 
 export default function Home() {
   return (
@@ -14,36 +14,48 @@ export default function Home() {
       </Head>
       <main className={styles.description}>
         <div>
-        <p className={titleFont.className + " " + "heading-large"}>This is heading-large</p>
-        <p className={titleFont.className + " " + "heading-medium"}>This is heading-medium</p>
-        <p className={titleFont.className + " " +"heading-medium-uppercase"}>THIS IS HEADING-MEDIUM-UPPERCASE</p>
-        <p className={titleFont.className + " " + "heading-small"}>This is heading-small</p>
-        <p className={titleFont.className + " " + "heading-small-uppercase"}>THIS IS HEADING-H1-UPPERCASE</p>
-        <p className={titleFont.className + " " + "heading-h1"}>This is heading-h1</p>
-        <p className={titleFont.className + " " + "heading-h1-uppercase"}>THIS IS HEADING-H1-UPPERCASE</p>
-        <p className={titleFont.className + " " + "heading-h2"}>This is heading-h2</p>
-        <p className={titleFont.className + " " + "heading-h2-uppercase"}>THIS IS HEADING-H2-UPPERCASE</p>
-        <p className={titleFont.className + " " + "heading-h3"}>This is heading-h3</p>
-        <p className={titleFont.className + " " + "heading-h3-uppercase"}>THIS IS HEADING-H3-UPPERCASE</p>
-        <p className={titleFont.className + " " + "heading-h4"}>This is heading-h4</p>
-        <p className={titleFont.className + " " + "heading-h4-uppercase"}>THIS IS HEADING-H4-UPPERCASE</p>
-        <p className={textFont.className + " " + "text-xlarge"}>This is text-xlarge</p>
-        <p className={textFont.className + " " + "text-large"}>This is text-large</p>
-        <p className={textFont.className + " " + "text-medium"}>This is text-medium</p>
-        <p className={textFont.className + " " + "text-default"}>This is text-default</p>
-        <p className={textFont.className + " " + "text-meta"}>This is text-meta</p>
-        <p className={textFont.className + " " + "text-meta-small"}>This is text-meta-small</p>
+          <p className={titleFont.className + " " + "heading-large"}>This is heading-large</p>
+          <p className={titleFont.className + " " + "heading-medium"}>This is heading-medium</p>
+          <p className={titleFont.className + " " + "heading-medium-uppercase"}>
+            THIS IS HEADING-MEDIUM-UPPERCASE
+          </p>
+          <p className={titleFont.className + " " + "heading-small"}>This is heading-small</p>
+          <p className={titleFont.className + " " + "heading-small-uppercase"}>
+            THIS IS HEADING-H1-UPPERCASE
+          </p>
+          <p className={titleFont.className + " " + "heading-h1"}>This is heading-h1</p>
+          <p className={titleFont.className + " " + "heading-h1-uppercase"}>
+            THIS IS HEADING-H1-UPPERCASE
+          </p>
+          <p className={titleFont.className + " " + "heading-h2"}>This is heading-h2</p>
+          <p className={titleFont.className + " " + "heading-h2-uppercase"}>
+            THIS IS HEADING-H2-UPPERCASE
+          </p>
+          <p className={titleFont.className + " " + "heading-h3"}>This is heading-h3</p>
+          <p className={titleFont.className + " " + "heading-h3-uppercase"}>
+            THIS IS HEADING-H3-UPPERCASE
+          </p>
+          <p className={titleFont.className + " " + "heading-h4"}>This is heading-h4</p>
+          <p className={titleFont.className + " " + "heading-h4-uppercase"}>
+            THIS IS HEADING-H4-UPPERCASE
+          </p>
+          <p className={textFont.className + " " + "text-xlarge"}>This is text-xlarge</p>
+          <p className={textFont.className + " " + "text-large"}>This is text-large</p>
+          <p className={textFont.className + " " + "text-medium"}>This is text-medium</p>
+          <p className={textFont.className + " " + "text-default"}>This is text-default</p>
+          <p className={textFont.className + " " + "text-meta"}>This is text-meta</p>
+          <p className={textFont.className + " " + "text-meta-small"}>This is text-meta-small</p>
         </div>
-        <div className={textFont.className + " " + "text-meta-small"}>there is the text default color
-            <style jsx>{`
-          div{
-          color:var(--text-default);
-          }
-        `}
-            </style>
+        <div className={textFont.className + " " + "text-meta-small"}>
+          there is the text default color
+          <style jsx>
+            {`
+              div {
+                color: var(--text-default);
+              }
+            `}
+          </style>
         </div>
-
-        
       </main>
     </>
   );

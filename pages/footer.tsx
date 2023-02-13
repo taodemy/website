@@ -1,9 +1,9 @@
-import Footer from "@/layouts/Footer"
+import Footer from "@/layouts/Footer";
 
 export default function FooterTest() {
-	return (
-		<>
-			<Footer></Footer>
-		</>
-	)
+  return (
+    <>
+      <Footer></Footer>
+    </>
+  );
 }
