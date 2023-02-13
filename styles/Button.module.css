@@ -1,0 +1,25 @@
+.default_button {
+  padding: 10px 16px;
+  width: 152px;
+  height: 35px;
+  background-color: var(--background-primary);
+  border-radius: 6px;
+  border: none;
+  color: var(--text-inverse);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.inverted_button {
+  padding: 10px 16px;
+  width: 102px;
+  height: 35px;
+  background-color: transparent;
+  color: var(--text-default);
+  border-radius: 6px;
+  border: 1px solid var(--border-default);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
