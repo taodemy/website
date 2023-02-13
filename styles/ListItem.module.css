@@ -1,0 +1,27 @@
+.item_list {
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+}
+
+.item_list:nth-last-child(1) {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.item_list__image {
+  width: 34px;
+  height: 34px;
+}
+
+.item_list__text_container {
+  padding-left: 48px;
+  margin: 0;
+}
+
+.item_list__text_container p {
+  margin: 0;
+}
