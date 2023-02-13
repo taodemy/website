@@ -1,11 +1,15 @@
 :root {
   --text-default: #191919;
-  --text-inverse: #FFFFFF;
+  --text-inverse: #ffffff;
   --border-default: #000000;
-  --background-default: #FDFBF5;
+  --background-default: #fdfbf5;
   --background-primary: #000000;
-  --background-secondary: #F0D163;
+  --background-secondary: #f0d163;
   --icon-default: #191919;
+}
+
+* {
+  background-color: var(--background-default);
 }
 
 .heading-large {
