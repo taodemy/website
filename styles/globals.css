@@ -8,103 +8,107 @@
   --icon-default: #191919;
 }
 
-* {
-  background-color: var(--background-default);
-}
-
-.heading-large {
+.global__heading--large {
   font-size: 128px;
   line-height: 100%;
 }
 
-.heading-medium {
+.global__heading--medium {
   font-size: 96px;
   line-height: 110%;
 }
 
-.heading-medium-uppercase {
+.global__uppercase-heading--medium {
   font-size: 96px;
   line-height: 110%;
 }
 
-.heading-small {
+.global__heading--small {
   font-size: 80px;
   line-height: 110%;
 }
 
-.heading-small-uppercase {
+.global__uppercase-heading--small {
   font-size: 80px;
   line-height: 110%;
 }
 
-.heading-h1 {
+.global__heading-h1 {
   font-size: 64px;
   line-height: 120%;
 }
 
-.heading-h1-uppercase {
+.global__uppercase-heading-h1 {
   font-size: 64px;
   line-height: 110%;
 }
 
-.heading-h2 {
+.global__heading-h2 {
   font-size: 48px;
   line-height: 120%;
 }
 
-.heading-h2-uppercase {
+.global__uppercase-heading-h2 {
   font-size: 48px;
   line-height: 110%;
 }
 
-.heading-h3 {
+.global__heading-h3 {
   font-size: 32px;
   line-height: 130%;
 }
 
-.heading-h3-uppercase {
+.global__uppercase-heading-h3 {
   font-size: 32px;
   line-height: 120%;
 }
 
-.heading-h4 {
+.global__heading-h4 {
   font-size: 24px;
   line-height: 120%;
 }
 
-.heading-h4-uppercase {
+.global__uppercase-heading-h4 {
   font-size: 24px;
   line-height: 120%;
 }
 
-.text-xlarge {
+.global__text-xlarge {
   font-size: 32px;
   line-height: 150%;
 }
 
-.text-large {
+.global__text--large {
   font-size: 24px;
   line-height: 160%;
 }
 
-.text-medium {
+.global__text--medium {
   font-size: 20px;
   line-height: 170%;
 }
 
-.text-default {
+.global__text-default {
   font-size: 18px;
   line-height: 170%;
 }
 
-.text-meta {
+.global__text-meta {
   font-size: 15px;
   line-height: 100%;
   letter-spacing: 0.5px;
 }
 
-.text-meta-small {
+.global__text-meta--small {
   font-size: 13px;
   line-height: 100%;
   letter-spacing: 1px;
 }
+
+/*container for the whole page*/
+.page__wrapper {
+  padding: 48px;
+  margin: 20px;
+  border: 1px solid var(--border-default);
+}
+

@@ -1,0 +1,39 @@
+.our_values {
+  padding: 0 0px;
+}
+
+.our_values__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 110%;
+  padding: 48px 68px;
+  border-bottom: 1px solid black;
+  margin: 0;
+}
+
+.our_values__image {
+  max-width: 50%;
+  height: 100%;
+  border-radius: 12px;
+  margin-right: 48px;
+  object-fit: cover;
+  display: block;
+}
+
+.our_values__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding: 64px 0;
+}
+
+.our_values__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 48px;
+  border-left: 1px solid black;
+  justify-content: space-around;
+}
