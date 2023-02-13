@@ -1,13 +1,15 @@
-.our_values__container {
+.our_values {
   padding: 0 68px;
 }
 
 .our_values__title {
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 110%;
   padding: 48px 68px;
   border-bottom: 1px solid black;
   margin: 0;
-  font-weight: 500;
 }
 
 .our_values__image {
@@ -25,7 +27,6 @@
   justify-content: center;
   border-bottom: 1px solid black;
   padding: 64px 0;
-  position: relative;
 }
 
 .our_values__list {

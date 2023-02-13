@@ -1,0 +1,36 @@
+/* styling for hero component */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 0px;
+  border-top: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--border-default);
+  gap: 0px 64px;
+}
+
+.hero__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.hero__solgan {
+  color: var(--text-default);
+}
+
+.hero__txt {
+  color: var(--text-default);
+  max-width: 80%;
+}
+
+.hero__photo {
+  border-radius: 16px;
+  height: 100%;
+}
+
+.hero__icon {
+  color: var(--icon-default);
+  height: fit-content;
+  width: fit-content;
+}
