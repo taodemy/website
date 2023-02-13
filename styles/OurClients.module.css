@@ -1,0 +1,17 @@
+.our_clients {
+    display: flex;
+    padding: 0 0px; 
+}
+
+.our_clients__icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    gap: 94px;
+
+    width: 1550px;
+    height: 80px;
+   
+  }
