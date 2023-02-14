@@ -3,9 +3,8 @@
   display: grid;
   grid-template-rows: auto auto;
   gap: 16px;
-}
-
-.card_list:nth-last-child(1) {
+  border-right: 1px solid #191919;
+  padding-right: 48px;
 }
 
 .card_list__image {
@@ -14,6 +13,12 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.card_list:nth-last-child(1) {
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
 }
 
 .card_list__text {
@@ -27,20 +32,14 @@
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #191919;
 }
 
 .card_list__text__title {
-  font-family: "Roboto Mono";
+  width: 530px;
+  height: 84px;
   font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 100%;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-weight: 500;
   color: #191919;
 }
