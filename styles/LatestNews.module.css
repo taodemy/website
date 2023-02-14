@@ -64,6 +64,7 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
 .inverted_button:hover {
   color: var(--text-inverse);
   background-color: var(--background-primary);
