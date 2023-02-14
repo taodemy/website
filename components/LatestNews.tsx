@@ -1,6 +1,6 @@
 import { textFont, titleFont } from "@/pages/_app";
 import styles from "@/styles/LatestNews.module.css";
-import Card from "./Cards";
+import Card from "./general/Card/Card";
 
 const LatestNews = () => {
   const newsList = [
@@ -26,7 +26,19 @@ const LatestNews = () => {
 
   return (
     <section className={styles.last_news}>
-      <h1>Latest News</h1>
+      <header className={styles.last_news__header}>
+        <h1
+          className={`${titleFont.className} global__uppercase-heading--small ${styles.last_news__title}`}
+        >
+          LATEST NEWS
+        </h1>
+        <button className={styles.default_button}>SEE ALL</button>
+      </header>
+      <div className={styles.last_news__news}>
+        {newsList.map(({ id, image, cornerMakerLeft, title }) => (
+          <Card key={id} image={image} cornerMakerLeft={cornerMakerLeft} title={title} />
+        ))}
+      </div>
     </section>
   );
 };
