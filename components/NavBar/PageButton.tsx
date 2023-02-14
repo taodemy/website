@@ -14,6 +14,7 @@ const NavbarPage = () => {
             {linkLists.map(({ id, placeHolder }) => (
                 <NavbarLink key={id} placeHolder={placeHolder} />
             ))}
+
             <img
                 arial-label="header_navbar_page_icon"
                 className={styles.header_navbar_page_icon}
