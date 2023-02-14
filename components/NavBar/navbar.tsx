@@ -2,7 +2,7 @@
 import React from "react";
 import { textFont } from "@/pages/_app";
 import styles from "@/styles/Header.module.css";
-import NavLink from "@/component/NavbarLink";
+import NavLink from "@/components/NavBar/NavbarLink";
 
 const NavBar = () => {
   return (
@@ -26,7 +26,7 @@ const NavBar = () => {
       <div className={styles.navbar_right}>
         <button
           aria-label="navbar_right"
-          className={`${textFont.className} text-inverse ${styles.header_navbar_button}`}
+          className={`${textFont.className} global__text-inverse ${styles.header_navbar_button}`}
         >
           LET`S TALK
         </button>
