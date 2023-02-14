@@ -1,3 +1,4 @@
+import "@/styles/reset.css";
 import "@/styles/globals.css";
 import localFont from "@next/font/local";
 import { Syne } from "@next/font/google";
