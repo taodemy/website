@@ -11,6 +11,12 @@
   cursor: pointer;
 }
 
+.default_button:hover {
+  color: var(--text-default);
+  background-color: transparent;
+  border: 1px solid var(--border-default);
+}
+
 .inverted_button {
   padding: 10px 16px;
   width: 102px;
@@ -22,4 +28,9 @@
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.inverted_button:hover {
+  color: var(--text-inverse);
+  background-color: var(--background-primary);
 }

@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 
 describe("Button", () => {
   beforeEach(() => {
-    render(<Button text="Get in touch" />);
+    render(<Button>Get in touch</Button>);
   });
 
   it("should render button in success", () => {
