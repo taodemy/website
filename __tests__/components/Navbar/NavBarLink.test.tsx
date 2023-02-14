@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import NavbarLink from "@/components/Navbar/NavbarLink";
+import NavbarLink from "@/components/NavbarLink";
 
 describe("NavbarLink", () => {
     const NavbarLinkProps = {

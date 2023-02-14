@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/Header.module.css";
-import NavbarLink from "@/components/Navbar/NavbarLink";
-import PageButton from "@/components/Navbar/PageButton";
+import NavbarLink from "@/components/NavbarLink";
+import PageButton from "@/components/PageButton";
 import Button from "@/components/Button";
 
 const NavBar = () => {

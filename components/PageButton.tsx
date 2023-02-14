@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/Header.module.css";
-import NavbarLink from "@/components/Navbar/NavbarLink";
+import NavbarLink from "@/components/NavbarLink";
 
 const NavbarPage = () => {
     const linkLists = [

@@ -1,6 +1,6 @@
 import { titleFont } from "@/pages/_app";
 import styles from "@/styles/Header.module.css";
-import NavBar from "@/components/Navbar/FirstPageNavbar";
+import NavBar from "@/components/FirstPageNavbar";
 
 const Header = () => {
   return (
