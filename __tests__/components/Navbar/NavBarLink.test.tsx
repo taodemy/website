@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import NavbarLink from "@/components/Navbar/NavbarLink";
+
 describe("NavbarLink", () => {
     const NavbarLinkProps = {
         placeHolder: "pageName",

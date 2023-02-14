@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/Header.module.css";
 import NavbarLink from "@/components/Navbar/NavbarLink";
-import NavbarPage from "@/components/Navbar/NavbarPage";
+import PageButton from "@/components/Navbar/PageButton";
 import Button from "@/components/Button";
 
 const NavBar = () => {
@@ -32,7 +32,7 @@ const NavBar = () => {
       {linkLists.map(({ id, placeHolder }) => (
         <NavbarLink key={id} placeHolder={placeHolder} />
       ))}
-      <NavbarPage />
+      <PageButton />
       <section className={styles.navbar_right_button}>
         <Button
           aria-label="navbar_right"

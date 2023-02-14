@@ -41,8 +41,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 70px;
   height: 18px;
+  gap: 4px;
 }
 
 .header_navbar_page_icon {
