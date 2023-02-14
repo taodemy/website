@@ -13,7 +13,7 @@ describe("Home", () => {
     expect(heading).toBeInTheDocument();
   });
 
-    it("renders a hero text with the right content", () => {
+  it("renders a hero text with the right content", () => {
     const text = screen.getByText(
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
     );
@@ -46,5 +46,4 @@ describe("Home", () => {
     expect(ourValuesImage).toHaveAttribute("src", "/images/our_value.jpeg");
     expect(ourValuesImage).toHaveAttribute("alt", "our values image");
   });
-
 });
