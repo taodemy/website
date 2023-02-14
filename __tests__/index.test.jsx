@@ -46,4 +46,12 @@ describe("Home", () => {
     expect(ourValuesImage).toHaveAttribute("src", "/images/our_value.jpeg");
     expect(ourValuesImage).toHaveAttribute("alt", "our values image");
   });
+
+  // test latest news section
+  it("should render the header of latest news section success", () => {
+    const latestNewsTitle = screen.getByRole('heading', { name: /latest news/i });
+    const seeAllBtn = screen.getByRole('button', { name: /see all/i });
+    expect(latestNewsTitle).toBeInTheDocument();
+    expect(seeAllBtn).toBeInTheDocument();
+  });
 });
