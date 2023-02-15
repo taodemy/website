@@ -1,5 +1,6 @@
 .featured-work {
   margin-top: 2%;
+  margin-bottom: 2%;
   display: flex;
   border-bottom: #000000 solid 1px;
   border-top: #000000 solid 1px;
@@ -18,8 +19,8 @@
 }
 
 .featured-work__left-container p {
- margin-top: 2%;
- margin-right: 15%;
+  margin-top: 2%;
+  margin-right: 15%;
 }
 
 .featured-work__big-img p {
