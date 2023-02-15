@@ -1,11 +1,12 @@
 import React from "react";
+import { textFont } from "@/pages/_app";
 
-type ButtonProps = {
-  buttonWidth?: string;
-  buttonHeight?: string;
-  isBlack?: boolean;
-  placeHolder?: string;
-};
+interface ButtonProps {
+  buttonWidth: string;
+  buttonHeight: string;
+  isBlack: boolean;
+  placeHolder: string;
+}
 
 const Button = ({ buttonWidth, buttonHeight, isBlack, placeHolder }: ButtonProps) => {
   const buttonBackground = isBlack ? "#000000" : "#FFFFFF";
@@ -19,7 +20,7 @@ const Button = ({ buttonWidth, buttonHeight, isBlack, placeHolder }: ButtonProps
   };
 
   return (
-    <button style={buttonStyle} className="text-meta">
+    <button style={buttonStyle} className={`${textFont.className} global__text-meta`}>
       {placeHolder}
     </button>
   );

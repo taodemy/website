@@ -46,4 +46,15 @@ describe("Home", () => {
     expect(ourValuesImage).toHaveAttribute("src", "/images/our_value.jpeg");
     expect(ourValuesImage).toHaveAttribute("alt", "our values image");
   });
+
+  //test footer section
+  it("should render footer section in success", () => {
+    const taoTechTitle = screen.getByText("TAOTECH");
+    expect(taoTechTitle).toBeInTheDocument();
+  });
+
+  it("should render footer address in success", () => {
+    const taoTechTitle = screen.getByText("Main Street. 1 22222 Berlin");
+    expect(taoTechTitle).toBeInTheDocument();
+  });
 });

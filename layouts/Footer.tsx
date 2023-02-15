@@ -1,47 +1,122 @@
 import React from "react";
+import { textFont, titleFont } from "@/pages/_app";
+import FooterNaviLink from "@/components/FooterNaviLink";
 import styles from "@/styles/Footer.module.css";
 import Image from "next/image";
 import fylla from "@/public/images/fyllaIcon.png";
 import badgeLN from "@/public/images/badge-ln.png";
 import badgeIN from "@/public/images/badge-in.png";
 import badgeFB from "@/public/images/badge-fb.png";
-import Button from "@/components/button/Button";
+import Button from "@/components/Button";
 
 const Footer = () => {
+  const pages = [
+    {
+      id: 1,
+      content: "HOME",
+    },
+    {
+      id: 2,
+      content: "SERVICES",
+    },
+    {
+      id: 3,
+      content: "STUDIO",
+    },
+    {
+      id: 4,
+      content: "CONTACT",
+    },
+  ];
+  const cms = [
+    {
+      id: 1,
+      content: "WORK",
+    },
+    {
+      id: 2,
+      content: "WORK SINGLE",
+    },
+    {
+      id: 3,
+      content: "BLOG",
+    },
+    {
+      id: 4,
+      content: "BLOG POST",
+    },
+    {
+      id: 5,
+      content: "SHOP",
+    },
+    {
+      id: 6,
+      content: "SHOP SINGLE",
+    },
+  ];
+  const utilityPages = [
+    {
+      id: 1,
+      content: "404 ERROR PAGE",
+    },
+    {
+      id: 2,
+      content: "PASSWORD PROTECTED",
+    },
+    {
+      id: 3,
+      content: "STYLEGUIDE",
+    },
+    {
+      id: 4,
+      content: "LICENSING",
+    },
+    {
+      id: 5,
+      content: "CHANGELOG",
+    },
+  ];
   return (
-    <footer className={styles["footer-container"]}>
-      <div className={styles["footer-main-container"]}>
-        <div className={styles["footer-main-fylla-container"]}>
-          <div className={styles["footer-main-fylla-top-container"]}>
-            <div className={styles["footer-main-fylla-top-icon-container"]}>
-              <Image src={fylla} alt="icon" className={styles["footer-main-fylla-top-icon"]} />
-              <p className={styles["footer-main-fylla-top-title"]}>FYLLA</p>
+    <footer className={styles["footer__container"]}>
+      <div className={styles["footer__main__container"]}>
+        <div className={styles["footer__main__fylla__container"]}>
+          <div className={styles["footer__main__fylla__top__container"]}>
+            <div className={styles["footer__main__fylla__top__icon__container"]}>
+              <Image
+                src={fylla}
+                alt="icon"
+                className={styles["footer__main__fylla__top__icon"]}
+                aria-label="icon__fylla"
+              />
+              <p className={`${styles["footer__main__fylla__top__title"]} ${titleFont.className}`}>
+                TAOTECH
+              </p>
             </div>
-            <p className="text-default">
+            <p className={`${textFont.className} global__text-default`}>
               Main Street. 1<br /> 22222 Berlin
             </p>
           </div>
-          <ul className={styles["footer-main-fylla-ul"]}>
+          <ul className={styles["footer__main__fylla__ul"]}>
             <li>
-              <Image src={badgeLN} alt="badge" />
+              <Image src={badgeLN} alt="badge" aria-label="badge__ln" />
             </li>
             <li>
-              <Image src={badgeIN} alt="badge" />
+              <Image src={badgeIN} alt="badge" aria-label="badge__in" />
             </li>
             <li>
-              <Image src={badgeFB} alt="badge" />
+              <Image src={badgeFB} alt="badge" aria-label="badge__fb" />
             </li>
           </ul>
         </div>
-        <div className={styles["footer-main-border"]}></div>
-        <div className={styles["footer-main-links-container"]}>
-          <div className={styles["footer-main-link-container"]}>
-            <ul className={styles["footer-main-link-ul"] + " text-meta"}>
-              <li className="heading-h4">Pages</li>
-              <li>HOME</li>
-              <li>SERVICES</li>
-              <li>STUDIO</li>
-              <li>CONTACT</li>
+        <div className={styles["footer__main__links__container"]}>
+          <div className={styles["footer__main__link__container"]}>
+            <ul
+              className={`${styles["footer__main__link__ul"]} ${titleFont.className} global__text-meta`}
+            >
+              <li className={`global__heading-h4 ${titleFont.className}`}>Pages</li>
+              {pages.map((page) => (
+                <FooterNaviLink key={page.id} content={page.content} />
+              ))}
               <li>
                 <Button
                   buttonWidth="172px"
@@ -52,34 +127,33 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className={styles["footer-main-link-container"]}>
-            <ul className={styles["footer-main-link-ul"] + " text-meta"}>
-              <li className="heading-h4">CMS</li>
-              <li>WORK</li>
-              <li>WORK SINGLE</li>
-              <li>BLOG</li>
-              <li>BLOG POST</li>
-              <li>SHOP</li>
-              <li>SHOP SINGLE</li>
+          <div className={styles["footer__main__link__container"]}>
+            <ul
+              className={`${styles["footer__main__link__ul"]} ${titleFont.className} global__text-meta`}
+            >
+              <li className={`global__heading-h4 ${titleFont.className}`}>CMS</li>
+              {cms.map((c) => (
+                <FooterNaviLink key={c.id} content={c.content} />
+              ))}
             </ul>
           </div>
-          <div className={styles["footer-main-link-container"]}>
-            <ul className={styles["footer-main-link-ul"] + " text-meta"}>
-              <li className="heading-h4">Utility Pages</li>
-              <li>404 ERROR PAGE</li>
-              <li>PASSWORD PROTECTED</li>
-              <li>STYLEGUIDE</li>
-              <li>LICENSING</li>
-              <li>CHANGELOG</li>
+          <div className={styles["footer__main__link__container"]}>
+            <ul
+              className={`${styles["footer__main__link__ul"]} ${titleFont.className} global__text-meta`}
+            >
+              <li className={`global__heading-h4 ${titleFont.className}`}>Utility Pages</li>
+              {utilityPages.map((up) => (
+                <FooterNaviLink key={up.id} content={up.content} />
+              ))}
             </ul>
           </div>
         </div>
       </div>
-      <div className={styles["footer-bottom-container"]}>
-        <div className={styles["footer-bottom-copyright"] + " text-meta"}>
+      <div className={styles["footer__bottom__container"]}>
+        <div className={`${styles["footer__bottom__copyright"]} global__text-meta`}>
           © 2022 Made by Pawel Gola. Powered by Webflow.
         </div>
-        <ul className={styles["footer-bottom-privacy"] + " text-meta"}>
+        <ul className={`${styles["footer__bottom__privacy"]} global__text-meta`}>
           <li>PRIVACY</li>
           <li>IMPRINT</li>
         </ul>
