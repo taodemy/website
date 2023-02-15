@@ -60,7 +60,6 @@ describe("Home", () => {
     expect(logoImage).toHaveAttribute("alt", "Website Icon");
   });
 
-
   //test contact section
   it("should render contact section title in success", () => {
     const contactTitle = screen.getByText("Let’s bring your brand to the next level");

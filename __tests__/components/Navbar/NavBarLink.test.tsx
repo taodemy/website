@@ -1,18 +1,17 @@
 import { render, screen } from "@testing-library/react";
-import NavbarLink from "@/components/Navbar/NavbarLink";
+import NavbarLink from "@/components/general/Navbar/NavbarLink";
 
 describe("NavbarLink", () => {
-    const NavbarLinkProps = {
-        placeHolder: "pageName",
-    };
+  const NavbarLinkProps = {
+    linkName: "pageName",
+  };
 
-    beforeEach(() => {
-        render(<NavbarLink placeHolder={NavbarLinkProps.placeHolder} />);
-    });
+  beforeEach(() => {
+    render(<NavbarLink linkName={NavbarLinkProps.linkName} />);
+  });
 
-    it("should render navbar link list", () => {
-        const placeHolder = screen.getByText("pageName");
-        expect(placeHolder).toBeInTheDocument();
-    });
-
-})
+  it("should render navbar link list", () => {
+    const linkName = screen.getByText("pageName");
+    expect(linkName).toBeInTheDocument();
+  });
+});

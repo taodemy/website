@@ -19,7 +19,7 @@
   width: 115px;
   text-align: center;
   font-weight: 500;
-  font-family: 'Syne';
+  font-family: "Syne";
 }
 
 .header_logo_name p {
@@ -36,7 +36,7 @@
   text-decoration: none;
   color: var(--text-default);
   font-weight: 400;
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
 }
 
 .header_navbar_page {
@@ -62,5 +62,5 @@
   height: 35px;
   padding: 10px 16px;
   text-align: center;
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
 }

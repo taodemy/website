@@ -8,10 +8,9 @@ describe("Header", () => {
   });
 
   it("should render arrow image in success", () => {
-    const ourValuesImage = screen.getByRole("img", { name: "Page Arrow" });
-    expect(ourValuesImage).toBeInTheDocument();
-    expect(ourValuesImage).toHaveAttribute("src", "/images/arrow.png");
-    expect(ourValuesImage).toHaveAttribute("alt", "Page Arrow");
+    const arrowImage = screen.getByRole("img", { name: "Page Arrow" });
+    expect(arrowImage).toBeInTheDocument();
+    expect(arrowImage).toHaveAttribute("src", "/images/arrow.png");
+    expect(arrowImage).toHaveAttribute("alt", "Page Arrow");
   });
-
 });
