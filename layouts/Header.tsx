@@ -9,7 +9,7 @@ const Header = () => {
         <img
           arial-label="header_logo_image"
           className={styles.header_logo_image}
-          src="/images/Icon.png"
+          src="/images/logo.png"
           alt="Website Icon"
         />
         <div className={styles.header_logo_name}>
