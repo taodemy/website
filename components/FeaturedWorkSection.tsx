@@ -11,7 +11,7 @@ export default function Home() {
           FEATURED <br /> WORK
         </h1>
         <p className={`${textFont.className} text-large`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+          The featured work section shows some of the successful works of our website.
         </p>
         <button className={styles["featured-work__btn"]}>SEE ALL WORK</button>
       </div>
