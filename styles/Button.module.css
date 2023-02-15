@@ -17,6 +17,10 @@
   border: 1px solid var(--border-default);
 }
 
+.default_button:active {
+  box-shadow: 2px 2px 5px #808080;
+}
+
 .inverted_button {
   padding: 10px 16px;
   width: 102px;
@@ -33,4 +37,8 @@
 .inverted_button:hover {
   color: var(--text-inverse);
   background-color: var(--background-primary);
+}
+
+.inverted_button:active {
+  box-shadow: 2px 2px 5px #808080;
 }
