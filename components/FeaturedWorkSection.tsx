@@ -1,16 +1,15 @@
-import { Inter } from "@next/font/google";
 import Picturedbox from "./Picturedbox";
-import styles from "../styles/featured_work.module.css";
+import styles from "../styles/FeaturedWork.module.css";
 import { textFont, titleFont } from "../pages/_app";
 
 export default function Home() {
   return (
     <div className={styles["featured-work"]}>
       <div className={styles["featured-work__left-container"]}>
-        <h1 className={`${titleFont.className} heading-h1-uppercase`}>
+        <h1 className={`${titleFont.className} global__heading-h1 `}>
           FEATURED <br /> WORK
         </h1>
-        <p className={`${textFont.className} text-large`}>
+        <p className={`${textFont.className} global__text--large`}>
           The featured work section shows some of the successful works of our website.
         </p>
         <button className={styles["featured-work__btn"]}>SEE ALL WORK</button>

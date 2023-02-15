@@ -9,7 +9,7 @@ describe("Home", () => {
 
   // test featured work section
   it("renders the heading of featured work section", () => {
-    const FeaturedWorkSection = screen.getByRole('heading', {  name: /featured work/i});
+    const FeaturedWorkSection = screen.getByRole("heading", { name: /featured work/i });
     expect(FeaturedWorkSection).toBeInTheDocument();
   });
 
@@ -27,7 +27,7 @@ describe("Home", () => {
 
   //test hero section
   it("renders a hero heading with the right content", () => {
-    const heading = screen.getByRole('img', {  name: /dangcing stars/i});
+    const heading = screen.getByRole("img", { name: /dangcing stars/i });
     expect(heading).toBeInTheDocument();
   });
 

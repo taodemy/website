@@ -1,4 +1,4 @@
-import styles from "@/styles/featured_work.module.css";
+import styles from "@/styles/FeaturedWork.module.css";
 import { textFont, titleFont } from "../pages/_app";
 
 interface MyProps {
