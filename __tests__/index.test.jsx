@@ -8,13 +8,26 @@ describe("Home", () => {
   });
 
   // test featured work section
-  it("renders the component of featured work section failed", () => {
-    const FeaturedWorkSection = screen.getByRole("main");
+  it("renders the heading of featured work section", () => {
+    const FeaturedWorkSection = screen.getByRole('heading', {  name: /featured work/i});
     expect(FeaturedWorkSection).toBeInTheDocument();
   });
+
+  it("renders a hero text with the right content", () => {
+    const text = screen.getByText(
+      "The featured work section shows some of the successful works of our website."
+    );
+    expect(text).toBeInTheDocument();
+  });
+
+  it("renders a featured work img", () => {
+    const heroPhoto = screen.getByRole("img", { name: "hero__photo" });
+    expect(heroPhoto).toBeInTheDocument();
+  });
+
   //test hero section
   it("renders a hero heading with the right content", () => {
-    const heading = screen.getByText("We are a digital agency from Melbourne.");
+    const heading = screen.getByRole('img', {  name: /dangcing stars/i});
     expect(heading).toBeInTheDocument();
   });
 
