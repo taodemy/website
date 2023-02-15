@@ -1,7 +1,8 @@
-import Values from "@/components/OurValues";
+import Contact from "@/components/general/Contact";
+import Values from "@/components/general/OurValues";
 import Head from "next/head";
-import Hero from "@/components/Hero";
-import FeaturedWorkSection from "../components/FeaturedWorkSection";
+import FeaturedWorkSection from "../components/general/FeaturedWorkSection";
+import Hero from "@/components/general/Hero";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Values />
         <FeaturedWorkSection />
+        <Contact />
       </main>
     </>
   );

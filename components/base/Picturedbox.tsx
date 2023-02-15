@@ -1,5 +1,5 @@
 import styles from "@/styles/FeaturedWork.module.css";
-import { textFont, titleFont } from "../pages/_app";
+import { textFont, titleFont } from "../../pages/_app";
 
 interface MyProps {
   location: string;

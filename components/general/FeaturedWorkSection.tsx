@@ -1,6 +1,6 @@
-import Picturedbox from "./Picturedbox";
-import styles from "../styles/FeaturedWork.module.css";
-import { textFont, titleFont } from "../pages/_app";
+import Picturedbox from "../base/Picturedbox";
+import styles from "../../styles/FeaturedWork.module.css";
+import { textFont, titleFont } from "../../pages/_app";
 
 export default function Home() {
   return (
