@@ -1,6 +1,6 @@
 import styles from "@/styles/Contact.module.css";
 import { textFont, titleFont } from "@/pages/_app";
-import Button from "./base/Button/Button";
+import Button from "../base/Button";
 
 function Contact() {
   return (
