@@ -27,7 +27,7 @@ describe("Home", () => {
 
   //test hero section
   it("renders a hero heading with the right content", () => {
-    const heading = screen.getByRole("img", { name: /dangcing stars/i });
+    const heading = screen.getByText("We are a digital agency from Melbourne.");
     expect(heading).toBeInTheDocument();
   });
 
