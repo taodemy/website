@@ -1,7 +1,7 @@
 import Contact from "@/components/general/Contact";
 import Values from "@/components/general/OurValues";
 import Head from "next/head";
-import FeaturedWorkSection from "../components/general/FeaturedWorkSection";
+import FeaturedWork from "../components/general/FeaturedWork";
 import Hero from "@/components/general/Hero";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <main className="page__wrapper">
         <Hero />
         <Values />
-        <FeaturedWorkSection />
+        <FeaturedWork />
         <Contact />
       </main>
     </>
