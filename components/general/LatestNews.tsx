@@ -1,6 +1,6 @@
 import { titleFont } from "@/pages/_app";
 import styles from "@/styles/LatestNews.module.css";
-import Card from "./general/Card/Card";
+import Card from "../base/Card";
 
 const LatestNews = () => {
   const newsList = [
