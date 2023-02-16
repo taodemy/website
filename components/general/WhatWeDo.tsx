@@ -29,14 +29,17 @@ const WhatWeDo = () => {
     {
       id: 4,
       title: "CONTENT",
-      content: "something that is to be expressed through some medium, as speech, writing, or any of various arts.",
+      content:
+        "Something that is to be expressed through some medium, as speech, writing, or any of various arts.",
       icon: "/images/content_icon.png",
       alt: "Content icon",
     },
   ];
   return (
     <section className={styles["what-we-do"]}>
-      <p className={`${styles["what-we-do__txt"]} ${headingFont.className} global__text-meta`}>WHAT WE DO</p>
+      <p className={`${styles["what-we-do__txt"]} ${headingFont.className} global__text-meta`}>
+        WHAT WE DO
+      </p>
       <div className={styles["what-we-do__content"]}>
         {whatWeDoItems.map((item) => (
           <WhatWeDoItem
