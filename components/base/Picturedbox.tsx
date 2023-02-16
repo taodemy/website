@@ -3,7 +3,6 @@ import { textFont, titleFont } from "../../pages/_app";
 
 interface MyProps {
   location: string;
-  className: string;
   title: string;
   hasBorder: boolean;
 }

@@ -2,8 +2,38 @@ import Picturedbox from "../base/Picturedbox";
 import styles from "../../styles/FeaturedWork.module.css";
 import { textFont, titleFont } from "../../pages/_app";
 import Button from "../base/Button";
+import { useState } from "react";
 
 export default function Home() {
+  const [imgBoxes, setImgBoxes] = useState(
+    [
+      {
+        id: 1,
+        location: "img/featured-work-sec-img-1.png",
+        title: "Enjoy Silence",
+        hasBorder: true
+      }, 
+      {
+        id: 2,
+        location: "img/featured-work-sec-img-2.png",
+        title: "Pure Vision",
+        hasBorder: false
+      }, 
+      {
+        id: 3,
+        location: "img/featured-work-sec-img-3.png",
+        title: "Boring Brand",
+        hasBorder: true
+      }, 
+      {
+        id: 4,
+        location: "img/featured-work-sec-img-4.png",
+        title: "New Culture",
+        hasBorder: false
+      }
+    ]
+  )
+
   return (
     <div className={styles["featured-work"]}>
       <div className={styles["featured-work__left-container"]}>
@@ -28,30 +58,13 @@ export default function Home() {
         <div
           className={`${styles["featured-work__right-container-bottom"]} ${textFont.className} text-default`}
         >
-          <Picturedbox
-            className={styles["featured-work__small-img-1"]}
-            location="img/featured-work-sec-img-2.png"
-            title="Enjoy Silence"
-            hasBorder={true}
-          ></Picturedbox>
-          <Picturedbox
-            className={styles["featured-work__small-img-2"]}
-            location="img/featured-work-sec-img-3.png"
-            title="Pure Vision"
-            hasBorder={false}
-          ></Picturedbox>
-          <Picturedbox
-            className={styles["featured-work__small-img-3"]}
-            location="img/featured-work-sec-img-4.png"
-            title="Boring Brand"
-            hasBorder={true}
-          ></Picturedbox>
-          <Picturedbox
-            className={styles["featured-work__small-img-4"]}
-            location="img/featured-work-sec-img-5.png"
-            title="New Culture"
-            hasBorder={false}
-          ></Picturedbox>
+          {imgBoxes.map((box) => (
+            <Picturedbox key={box.id}
+              location={box.location}
+              title={box.title}
+              hasBorder={box.hasBorder}
+            ></Picturedbox>
+          ))}
         </div>
       </div>
     </div>
