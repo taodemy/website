@@ -1,13 +1,11 @@
-.card_list {
+.card {
   width: 530px;
-  display: grid;
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
-  border-right: 1px solid #191919;
-  padding-right: 48px;
 }
 
-.card_list__image {
+.card__image {
   background-color: #7d7d7d;
   border-radius: 16px;
   height: 100%;
@@ -15,20 +13,14 @@
   display: block;
 }
 
-.card_list:nth-last-child(1) {
-  border-right: none;
-  padding-right: 0;
-  margin-right: 0;
-}
-
-.card_list__text {
+.card__text {
   height: 107px;
-  display: grid;
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: column;
   row-gap: 8px;
 }
 
-.card_list__text__corner {
+.card__text__corner {
   font-family: "Roboto Mono";
   font-style: normal;
   font-weight: 400;
@@ -36,7 +28,7 @@
   color: #191919;
 }
 
-.card_list__text__title {
+.card__text__title {
   width: 530px;
   height: 84px;
   font-style: normal;

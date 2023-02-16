@@ -1,18 +1,19 @@
 import styles from "@/styles/Button.module.css";
 import { textFont } from "@/pages/_app";
 
-type ButtonVariant = "default" | "inverted";
+type ButtonVariant = "primary" | "secondary" | "inverted";
 type ButtonProps = {
   variant?: ButtonVariant;
 };
 
 const Button = ({
-  variant = "default",
+  variant = "primary",
   children,
   ...otherProps
 }: ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   const buttonVariants = {
-    default: "default_button",
+    primary: "primary_button",
+    secondary: "secondary_button",
     inverted: "inverted_button",
   };
   return (

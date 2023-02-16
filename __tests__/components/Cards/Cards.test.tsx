@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Card from "@/components/base/Card";
 
-describe("CardList", () => {
+describe("Card", () => {
   const cardProps = {
     id: 1,
     image: "/images/two_people_praying.png",

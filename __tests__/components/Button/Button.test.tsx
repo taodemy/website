@@ -10,6 +10,6 @@ describe("Button", () => {
     const button = screen.getByRole("button", {
       name: /get in touch/i,
     });
-    expect(button).toHaveClass("default_button");
+    expect(button).toHaveClass("primary_button");
   });
 });
