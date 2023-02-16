@@ -1,6 +1,7 @@
 import Picturedbox from "../base/Picturedbox";
 import styles from "../../styles/FeaturedWork.module.css";
 import { textFont, titleFont } from "../../pages/_app";
+import Button from "../base/Button";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <p className={`${textFont.className} global__text--large`}>
           The featured work section shows some of the successful works of our website.
         </p>
-        <button className={styles["featured-work__btn"]}>SEE ALL WORK</button>
+        <Button className={styles["featured-work__btn"]}>SEE ALL WORK</Button>
       </div>
       <div className={styles["featured-work__right-container"]}>
         <div className={styles["featured-work__big-img"]}>
