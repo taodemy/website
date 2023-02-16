@@ -1,16 +1,16 @@
-.last_news {
+.latest_news {
   padding: 0 0px;
   border-bottom: 1px solid black;
 }
 
-.last_news__header {
+.latest_news__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid black;
 }
 
-.last_news__title {
+.latest_news__title {
   text-transform: uppercase;
   font-weight: 500;
   line-height: 110%;
@@ -18,7 +18,7 @@
   margin: 0;
 }
 
-.last_news__news {
+.latest_news__news {
   margin-top: 64px;
   margin-bottom: 64px;
   display: flex;
@@ -26,49 +26,7 @@
   justify-content: space-between;
 }
 
-.last_news__divider {
+.latest_news__divider {
   width: 1px;
   background-color: black;
-}
-
-.default_button {
-  padding: 10px 16px;
-  width: 102px;
-  height: 35px;
-  background-color: var(--background-default);
-  border: 1px solid #000000;
-  border-radius: 6px;
-  color: #000000;
-  font-family: "Roboto Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 100%;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-
-.default_button:hover {
-  color: var(--text-default);
-  background-color: transparent;
-  border: 1px solid var(--border-default);
-}
-
-.inverted_button {
-  padding: 10px 16px;
-  width: 102px;
-  height: 35px;
-  background-color: transparent;
-  color: var(--text-default);
-  border-radius: 6px;
-  border: 1px solid var(--border-default);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.inverted_button:hover {
-  color: var(--text-inverse);
-  background-color: var(--background-primary);
 }

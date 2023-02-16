@@ -5,28 +5,28 @@ import Button from "../base/Button";
 
 const LatestNews = () => {
   return (
-    <section className={styles.last_news}>
-      <div className={styles.last_news__header}>
+    <section className={styles.latest_news}>
+      <div className={styles.latest_news__header}>
         <h1
-          className={`${titleFont.className} global__uppercase-heading--small ${styles.last_news__title}`}
+          className={`${titleFont.className} global__uppercase-heading--small ${styles.latest_news__title}`}
         >
           LATEST NEWS
         </h1>
         <Button variant="secondary">SEE ALL</Button>
       </div>
-      <article className={styles.last_news__news}>
+      <article className={styles.latest_news__news}>
         <Card
           image={"/images/two_people_praying.png"}
           cornerMakerLeft={"Branding, Design"}
           title={"Things to Look for When Comparing Branding Alternatives"}
         />
-        <div className={styles.last_news__divider} />
+        <div className={styles.latest_news__divider} />
         <Card
           image={"/images/channel.png"}
           cornerMakerLeft={"Branding, Design"}
           title={"5 Stand-out Features of Branding You Should Know"}
         />
-        <div className={styles.last_news__divider} />
+        <div className={styles.latest_news__divider} />
         <Card
           image={"/images/brand_strategy.png"}
           cornerMakerLeft={"Branding, Design"}
