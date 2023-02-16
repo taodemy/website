@@ -1,6 +1,7 @@
 import Values from "@/components/OurValues";
 import Head from "next/head";
 import Hero from "@/components/Hero";
+import WhatWeDo from "@/components/WhatWeDo";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       </Head>
       <main className="page__wrapper">
         <Hero />
+        <WhatWeDo/>
         <Values />
       </main>
     </>

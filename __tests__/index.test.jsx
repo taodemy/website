@@ -14,10 +14,11 @@ describe("Home", () => {
   });
 
   it("renders a hero text with the right content", () => {
-    const text = screen.getByText(
+    const text = screen.getByLabelText("hero__txt");
+    expect(text).toBeInTheDocument();
+    expect(text).toHaveTextContent(
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
     );
-    expect(text).toBeInTheDocument();
   });
 
   it("renders a hero photo with the right src and alt", () => {
@@ -32,6 +33,12 @@ describe("Home", () => {
     expect(heroIcon).toBeInTheDocument();
     expect(heroIcon).toHaveAttribute("src", "/images/vector.png");
     expect(heroIcon).toHaveAttribute("alt", "hero icon");
+  });
+
+  //test what we do section
+  it("renders what we do txt", () => {
+    const text = screen.getByText("WHAT WE DO");
+    expect(text).toBeInTheDocument();
   });
 
   //test our values section

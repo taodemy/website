@@ -13,7 +13,10 @@ const Hero = () => {
             digital agency
             <br /> from Melbourne.
           </div>
-          <div className={`${textFont.className} global__text-xlarge ${styles["hero__txt"]}`}>
+          <div
+            className={`${textFont.className} global__text-xlarge ${styles["hero__txt"]}`}
+            aria-label="hero__txt"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
           </div>
         </div>
