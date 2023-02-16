@@ -2,6 +2,7 @@ import { titleFont } from "@/pages/_app";
 import styles from "@/styles/LatestNews.module.css";
 import Card from "../base/Card";
 import Button from "../base/Button";
+import Divider from "../base/Divider";
 
 const LatestNews = () => {
   return (
@@ -20,13 +21,13 @@ const LatestNews = () => {
           cornerMakerLeft={"Branding, Design"}
           title={"Things to Look for When Comparing Branding Alternatives"}
         />
-        <div className={styles.latest_news__divider} />
+        <Divider />
         <Card
           image={"/images/channel.png"}
           cornerMakerLeft={"Branding, Design"}
           title={"5 Stand-out Features of Branding You Should Know"}
         />
-        <div className={styles.latest_news__divider} />
+        <Divider />
         <Card
           image={"/images/brand_strategy.png"}
           cornerMakerLeft={"Branding, Design"}

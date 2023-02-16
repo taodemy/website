@@ -25,8 +25,3 @@
   flex-direction: row;
   justify-content: space-between;
 }
-
-.latest_news__divider {
-  width: 1px;
-  background-color: black;
-}
