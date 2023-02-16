@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <main className="page__wrapper">
         <Hero />
-        <WhatWeDo/>
+        <WhatWeDo />
         <Values />
       </main>
     </>

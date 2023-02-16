@@ -11,11 +11,19 @@ describe("WhatWeDoItem", () => {
   };
 
   beforeEach(() => {
-    render(<WhatWeDoItem key={testData.id} title={testData.title} content={testData.content} icon={testData.icon} alt={testData.alt}/>);
+    render(
+      <WhatWeDoItem
+        key={testData.id}
+        title={testData.title}
+        content={testData.content}
+        icon={testData.icon}
+        alt={testData.alt}
+      />
+    );
   });
 
   it("renders an item title", () => {
-    const title = screen.getByRole("heading", {name:"BRANDING"});
+    const title = screen.getByRole("heading", { name: "BRANDING" });
     expect(title).toBeInTheDocument();
   });
 
@@ -25,7 +33,7 @@ describe("WhatWeDoItem", () => {
   });
 
   it("renders an item icon with right src and alt", () => {
-    const img = screen.getByRole("img")
+    const img = screen.getByRole("img");
     expect(img).toHaveAttribute("src", "/images/branding_icon.png");
     expect(img).toHaveAttribute("alt", "Branding icon");
   });

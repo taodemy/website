@@ -8,7 +8,7 @@ type ItemType = {
   alt: string;
 };
 
-const WhatWeDoItem = ({title, content, icon, alt }: ItemType) => {
+const WhatWeDoItem = ({ title, content, icon, alt }: ItemType) => {
   return (
     <section className={styles["what-we-do-item"]}>
       <img src={icon} alt={alt}></img>
