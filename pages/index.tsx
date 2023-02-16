@@ -14,8 +14,8 @@ export default function Home() {
       <main className="page__wrapper">
         <Hero />
         <Values />
-        <LatestNews />
         <Contact />
+        <LatestNews />
       </main>
     </>
   );
