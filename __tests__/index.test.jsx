@@ -53,4 +53,24 @@ describe("Home", () => {
     expect(ourValuesImage).toHaveAttribute("src", "/images/our_value.jpeg");
     expect(ourValuesImage).toHaveAttribute("alt", "our values image");
   });
+
+  //test contact section
+  it("should render contact section title in success", () => {
+    const contactTitle = screen.getByText("Let’s bring your brand to the next level");
+    expect(contactTitle).toBeInTheDocument();
+  });
+
+  it("should render icon in contact section success", () => {
+    const contactIcon = screen.getByRole("img", { name: "contact_arrows_icon" });
+    expect(contactIcon).toBeInTheDocument();
+    expect(contactIcon).toHaveAttribute("src", "/images/arrows.svg");
+    expect(contactIcon).toHaveAttribute("alt", "contact arrows icon");
+  });
+
+  it("should render contact content text in success", () => {
+    const contactContent = screen.getByText(
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    );
+    expect(contactContent).toBeInTheDocument();
+  });
 });

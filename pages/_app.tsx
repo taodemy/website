@@ -1,7 +1,7 @@
 import "@/styles/reset.css";
 import "@/styles/globals.css";
 import localFont from "@next/font/local";
-import { Syne } from "@next/font/google";
+import { Syne, Roboto } from "@next/font/google";
 
 export const titleFont = Syne({ subsets: ["latin"] });
 export const textFont = localFont({
@@ -11,6 +11,11 @@ export const textFont = localFont({
       weight: "400",
     },
   ],
+});
+
+export const headingFont = Roboto({
+  weight: "400",
+  subsets: ["latin"],
 });
 
 import type { AppProps } from "next/app";

@@ -1,7 +1,8 @@
-import Values from "@/components/OurValues";
 import Head from "next/head";
-import Hero from "@/components/Hero";
-import WhatWeDo from "@/components/WhatWeDo";
+import Hero from "@/components/general/Hero";
+import WhatWeDo from "@/components/general/WhatWeDo";
+import Contact from "@/components/general/Contact";
+import Values from "@/components/general/OurValues";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <WhatWeDo />
         <Values />
+        <Contact />
       </main>
     </>
   );

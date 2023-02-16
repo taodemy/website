@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import WhatWeDoItem from "@/components/WhatWeDoItem";
+import WhatWeDoItem from "@/components/general/WhatWeDoItem";
 
 describe("WhatWeDoItem", () => {
   const testData = {
