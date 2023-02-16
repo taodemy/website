@@ -47,19 +47,6 @@ describe("Home", () => {
     expect(ourValuesImage).toHaveAttribute("alt", "our values image");
   });
 
-  //test header section
-  it("should renders logo name", () => {
-    const logoName = screen.getByText("TAOTECH");
-    expect(logoName).toBeInTheDocument();
-  });
-
-  it("should render logo image in success", () => {
-    const logoImage = screen.getByRole("img", { name: "Website Icon" });
-    expect(logoImage).toBeInTheDocument();
-    expect(logoImage).toHaveAttribute("src", "/images/Icon.png");
-    expect(logoImage).toHaveAttribute("alt", "Website Icon");
-  });
-
   //test contact section
   it("should render contact section title in success", () => {
     const contactTitle = screen.getByText("Let’s bring your brand to the next level");

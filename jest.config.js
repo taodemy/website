@@ -13,8 +13,9 @@ const customJestConfig = {
   collectCoverageFrom: [
     "pages/*.tsx",
     "components/*.tsx",
-    "components/Navbar/*.tsx",
-    "layouts/*.tsx",
+    "components/base/*.tsx",
+    "components/general/*.tsx",
+    "components/general/Navbar/*.tsx",
     "!pages/_app.tsx",
     "!pages/_document.tsx",
   ],
@@ -30,7 +31,6 @@ const customJestConfig = {
   moduleNameMapper: {
     // Handle module aliases (this will be automatically configured for you soon)
     "^@/components/(.*)$": "<rootDir>/components/$1",
-    "^@/layouts/(.*)$": "<rootDir>/layouts/$1",
     "^@/pages/(.*)$": "<rootDir>/pages/$1",
   },
   testEnvironment: "jest-environment-jsdom",
