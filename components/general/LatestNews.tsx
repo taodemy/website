@@ -14,7 +14,7 @@ const LatestNews = () => {
         </h1>
         <Button variant="secondary">SEE ALL</Button>
       </div>
-      <article className={styles.latest_news__news}>
+      <article className={styles.latest_news__article}>
         <Card
           image={"/images/two_people_praying.png"}
           cornerMakerLeft={"Branding, Design"}
