@@ -56,7 +56,8 @@ describe("Home", () => {
   it("should render footer address in success", () => {
     const taoTechTitle = screen.getByText("Main Street. 1 22222 Berlin");
     expect(taoTechTitle).toBeInTheDocument();
-		
+  });
+
   //test contact section
   it("should render contact section title in success", () => {
     const contactTitle = screen.getByText("Let’s bring your brand to the next level");

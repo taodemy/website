@@ -1,13 +1,8 @@
 import React from "react";
 import { textFont, titleFont } from "@/pages/_app";
-import FooterNaviLink from "@/components/FooterNaviLink";
+import FooterNaviLink from "@/components/general/FooterNaviLink";
 import styles from "@/styles/Footer.module.css";
-import Image from "next/image";
-import fylla from "@/public/images/fyllaIcon.png";
-import badgeLN from "@/public/images/badge-ln.png";
-import badgeIN from "@/public/images/badge-in.png";
-import badgeFB from "@/public/images/badge-fb.png";
-import Button from "@/components/Button";
+import Button from "@/components/base/Button";
 
 const Footer = () => {
   const pages = [
@@ -82,8 +77,8 @@ const Footer = () => {
         <div className={styles["footer__main__fylla__container"]}>
           <div className={styles["footer__main__fylla__top__container"]}>
             <div className={styles["footer__main__fylla__top__icon__container"]}>
-              <Image
-                src={fylla}
+              <img
+                src="/images/fyllaIcon.png"
                 alt="icon"
                 className={styles["footer__main__fylla__top__icon"]}
                 aria-label="icon__fylla"
@@ -98,13 +93,13 @@ const Footer = () => {
           </div>
           <ul className={styles["footer__main__fylla__ul"]}>
             <li>
-              <Image src={badgeLN} alt="badge" aria-label="badge__ln" />
+              <img src="/images/badge-ln.png" alt="badge" aria-label="badge__ln" />
             </li>
             <li>
-              <Image src={badgeIN} alt="badge" aria-label="badge__in" />
+              <img src="/images/badge-in.png" alt="badge" aria-label="badge__in" />
             </li>
             <li>
-              <Image src={badgeFB} alt="badge" aria-label="badge__fb" />
+              <img src="/images/badge-fb.png" alt="badge" aria-label="badge__fb" />
             </li>
           </ul>
         </div>
@@ -118,12 +113,7 @@ const Footer = () => {
                 <FooterNaviLink key={page.id} content={page.content} />
               ))}
               <li>
-                <Button
-                  buttonWidth="172px"
-                  buttonHeight="35px"
-                  isBlack={true}
-                  placeHolder="More Templates"
-                ></Button>
+                <Button buttonWidth={173}>More Templates</Button>
               </li>
             </ul>
           </div>
@@ -132,8 +122,8 @@ const Footer = () => {
               className={`${styles["footer__main__link__ul"]} ${titleFont.className} global__text-meta`}
             >
               <li className={`global__heading-h4 ${titleFont.className}`}>CMS</li>
-              {cms.map((c) => (
-                <FooterNaviLink key={c.id} content={c.content} />
+              {cms.map((cmsItem) => (
+                <FooterNaviLink key={cmsItem.id} content={cmsItem.content} />
               ))}
             </ul>
           </div>
@@ -142,18 +132,22 @@ const Footer = () => {
               className={`${styles["footer__main__link__ul"]} ${titleFont.className} global__text-meta`}
             >
               <li className={`global__heading-h4 ${titleFont.className}`}>Utility Pages</li>
-              {utilityPages.map((up) => (
-                <FooterNaviLink key={up.id} content={up.content} />
+              {utilityPages.map((utilityPage) => (
+                <FooterNaviLink key={utilityPage.id} content={utilityPage.content} />
               ))}
             </ul>
           </div>
         </div>
       </div>
       <div className={styles["footer__bottom__container"]}>
-        <div className={`${styles["footer__bottom__copyright"]} global__text-meta`}>
+        <div
+          className={`${styles["footer__bottom__copyright"]} global__text-meta ${titleFont.className}`}
+        >
           © 2022 Made by Pawel Gola. Powered by Webflow.
         </div>
-        <ul className={`${styles["footer__bottom__privacy"]} global__text-meta`}>
+        <ul
+          className={`${styles["footer__bottom__privacy"]} global__text-meta ${titleFont.className}`}
+        >
           <li>PRIVACY</li>
           <li>IMPRINT</li>
         </ul>
