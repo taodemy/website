@@ -1,6 +1,6 @@
 import Picturedbox from "../base/Picturedbox";
 import styles from "../../styles/FeaturedWork.module.css";
-import { textFont, titleFont } from "../../pages/_app";
+import { textFont, titleFont, headingFont } from "../../pages/_app";
 import Button from "../base/Button";
 import { useState } from "react";
 
@@ -50,7 +50,7 @@ export default function FeaturedWork() {
             className={`${styles["featured-work_img-text-box"]} ${textFont.className} text-default`}
           >
             <p className={`${titleFont.className} heading-h4`}>Dangcing Stars</p>
-            <p>2022</p>
+            <p className={`${headingFont.className}`}>2022</p>
           </div>
         </div>
         <div
