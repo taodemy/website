@@ -1,5 +1,5 @@
 import React from "react";
-import { textFont, titleFont } from "@/pages/_app";
+import { textFont, titleFont, textFontRoboto } from "@/pages/_app";
 import FooterNaviLink from "@/components/general/FooterNaviLink";
 import styles from "@/styles/Footer.module.css";
 import Button from "@/components/base/Button";
@@ -73,17 +73,17 @@ const Footer = () => {
   ];
   return (
     <footer className={styles["footer__container"]}>
-      <div className={styles["footer__main__container"]}>
-        <div className={styles["footer__main__fylla__container"]}>
-          <div className={styles["footer__main__fylla__top__container"]}>
-            <div className={styles["footer__main__fylla__top__icon__container"]}>
+      <div className={styles["footer_main__container"]}>
+        <div className={styles["footer_main_fylla__container"]}>
+          <div className={styles["footer_main_fylla_top__container"]}>
+            <div className={styles["footer_main_fylla_top__icon_container"]}>
               <img
                 src="/images/fyllaIcon.png"
                 alt="icon"
-                className={styles["footer__main__fylla__top__icon"]}
+                className={styles["footer_main_fylla_top__icon"]}
                 aria-label="icon__fylla"
               />
-              <p className={`${styles["footer__main__fylla__top__title"]} ${titleFont.className}`}>
+              <p className={`${styles["footer_main_fylla_top__title"]} ${titleFont.className}`}>
                 TAOTECH
               </p>
             </div>
@@ -91,7 +91,7 @@ const Footer = () => {
               Main Street. 1<br /> 22222 Berlin
             </p>
           </div>
-          <ul className={styles["footer__main__fylla__ul"]}>
+          <ul className={styles["footer_main_fylla__ul"]}>
             <li>
               <img src="/images/badge-ln.png" alt="badge" aria-label="badge__ln" />
             </li>
@@ -103,23 +103,23 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className={styles["footer__main__links__container"]}>
-          <div className={styles["footer__main__link__container"]}>
+        <div className={styles["footer_main_links__container"]}>
+          <div className={styles["footer_main_link__container"]}>
             <ul
-              className={`${styles["footer__main__link__ul"]} ${titleFont.className} global__text-meta`}
+              className={`${styles["footer_main_link__ul"]} ${titleFont.className} global__text-meta`}
             >
               <li className={`global__heading-h4 ${titleFont.className}`}>Pages</li>
               {pages.map((page) => (
                 <FooterNaviLink key={page.id} content={page.content} />
               ))}
               <li>
-                <Button buttonWidth={173}>More Templates</Button>
+                <Button buttonWidth={178}>More Templates</Button>
               </li>
             </ul>
           </div>
-          <div className={styles["footer__main__link__container"]}>
+          <div className={styles["footer_main_link__container"]}>
             <ul
-              className={`${styles["footer__main__link__ul"]} ${titleFont.className} global__text-meta`}
+              className={`${styles["footer_main_link__ul"]} ${titleFont.className} global__text-meta`}
             >
               <li className={`global__heading-h4 ${titleFont.className}`}>CMS</li>
               {cms.map((cmsItem) => (
@@ -127,9 +127,9 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className={styles["footer__main__link__container"]}>
+          <div className={styles["footer_main_link__container"]}>
             <ul
-              className={`${styles["footer__main__link__ul"]} ${titleFont.className} global__text-meta`}
+              className={`${styles["footer_main_link__ul"]} ${titleFont.className} global__text-meta`}
             >
               <li className={`global__heading-h4 ${titleFont.className}`}>Utility Pages</li>
               {utilityPages.map((utilityPage) => (
@@ -139,14 +139,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className={styles["footer__bottom__container"]}>
+      <div className={styles["footer_bottom__container"]}>
         <div
-          className={`${styles["footer__bottom__copyright"]} global__text-meta ${titleFont.className}`}
+          className={`${styles["footer_bottom__copyright"]} global__text-meta ${textFontRoboto.className}`}
         >
           © 2022 Made by Pawel Gola. Powered by Webflow.
         </div>
         <ul
-          className={`${styles["footer__bottom__privacy"]} global__text-meta ${titleFont.className}`}
+          className={`${styles["footer_bottom__privacy"]} global__text-meta ${textFontRoboto.className}`}
         >
           <li>PRIVACY</li>
           <li>IMPRINT</li>

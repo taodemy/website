@@ -13,6 +13,11 @@ export const textFont = localFont({
   ],
 });
 
+export const textFontRoboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+});
+
 export const headingFont = Roboto({
   weight: "400",
   subsets: ["latin"],

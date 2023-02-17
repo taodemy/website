@@ -7,7 +7,7 @@ interface Item {
 const FooterNaviLink = ({ content }: Item) => {
   return (
     <li>
-      <a className={Styles["footer____main__link__a"]} href="">
+      <a className={Styles.footer_main_link__a} href="">
         {content}
       </a>
     </li>

@@ -23,7 +23,9 @@ const Button = ({
   return (
     <button
       style={buttonStyle}
-      className={`${textFont.className} global__text-meta ${styles[buttonVariants[variant]]}`}
+      className={`${styles.common_button} ${textFont.className} global__text-meta ${
+        styles[buttonVariants[variant]]
+      }`}
       {...otherProps}
     >
       {children}
