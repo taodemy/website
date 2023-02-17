@@ -1,7 +1,7 @@
 import ListItem from "./ItemList";
 
 import styles from "@/styles/OurValues.module.css";
-import { titleFont } from "@/pages/_app";
+import { fontSyne } from "@/pages/_app";
 
 function OurValues() {
   const listItems = [
@@ -31,7 +31,7 @@ function OurValues() {
   return (
     <section className={styles.our_values}>
       <h1
-        className={`${titleFont.className} global__uppercase-heading--small ${styles.our_values__title}`}
+        className={`${fontSyne.className} global__uppercase-heading--small ${styles.our_values__title}`}
       >
         OUR VALUES
       </h1>
