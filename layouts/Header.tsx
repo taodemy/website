@@ -1,4 +1,4 @@
-import { fontRobotoMono} from "@/pages/_app";
+import { fontRobotoMono } from "@/pages/_app";
 import styles from "@/styles/Header.module.css";
 import NavBar from "@/components/general/Navbar/FirstPageNavbar";
 

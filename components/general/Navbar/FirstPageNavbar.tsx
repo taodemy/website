@@ -37,7 +37,7 @@ const NavBar = () => {
         <PageButton />
       </section>
       <section className={styles.navbar_right_button}>
-        <Button aria-label="navbar_right" >LET&apos;S TALK</Button>
+        <Button aria-label="navbar_right">LET&apos;S TALK</Button>
       </section>
     </section>
   );
