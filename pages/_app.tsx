@@ -1,10 +1,10 @@
 import "@/styles/reset.css";
 import "@/styles/globals.css";
 import localFont from "@next/font/local";
-import { Syne, Roboto } from "@next/font/google";
+import { Syne, Roboto_Mono } from "@next/font/google";
 
-export const titleFont = Syne({ subsets: ["latin"] });
-export const textFont = localFont({
+export const fontSyne = Syne({ subsets: ["latin"] });
+export const fontSatoshi = localFont({
   src: [
     {
       path: "../styles/fonts/Satoshi-Regular.woff2",
@@ -13,7 +13,7 @@ export const textFont = localFont({
   ],
 });
 
-export const headingFont = Roboto({
+export const fontRobotoMono = Roboto_Mono({
   weight: "400",
   subsets: ["latin"],
 });
