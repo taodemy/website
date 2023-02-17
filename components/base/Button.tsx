@@ -1,5 +1,5 @@
 import styles from "@/styles/Button.module.css";
-import { textFont } from "@/pages/_app";
+import { fontRobotoMono } from "@/pages/_app";
 
 type ButtonVariant = "primary" | "secondary";
 type ButtonProps = {
@@ -17,7 +17,7 @@ const Button = ({
   };
   return (
     <button
-      className={`${textFont.className} global__text-meta ${styles[buttonVariants[variant]]}`}
+      className={`${fontRobotoMono.className} global__text-meta ${styles[buttonVariants[variant]]}`}
       {...otherProps}
     >
       {children}
