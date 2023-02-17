@@ -4,12 +4,10 @@ import { textFont } from "@/pages/_app";
 type ButtonVariant = "default" | "inverted";
 type ButtonProps = {
   variant?: ButtonVariant;
-  buttonWidth?: number;
 };
 
 const Button = ({
   variant = "default",
-  buttonWidth = 152,
   children,
   ...otherProps
 }: ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
@@ -17,14 +15,10 @@ const Button = ({
     default: "default_button",
     inverted: "inverted_button",
   };
-  const buttonStyle = {
-    width: `${buttonWidth}px`,
-  };
   return (
     <button
-      style={buttonStyle}
-      className={`${styles.common_button} ${textFont.className} global__text-meta ${
-        styles[buttonVariants[variant]]
+      className={`${textFont.className} global__text-meta ${styles[buttonVariants[variant]]} ${
+        styles["common_button"]
       }`}
       {...otherProps}
     >

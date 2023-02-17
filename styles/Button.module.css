@@ -1,6 +1,5 @@
 .common_button {
-  padding: 10px 16px;
-  height: 35px;
+  padding: 0.8em 0.5em;
   border: 1px solid var(--border-default);
 }
 

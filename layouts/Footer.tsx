@@ -113,7 +113,7 @@ const Footer = () => {
                 <FooterNaviLink key={page.id} content={page.content} />
               ))}
               <li>
-                <Button buttonWidth={178}>More Templates</Button>
+                <Button>more templates</Button>
               </li>
             </ul>
           </div>
