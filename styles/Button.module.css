@@ -35,33 +35,10 @@
 }
 
 .secondary_button:hover {
-  color: var(--text-default);
-  background-color: transparent;
-  border: 1px solid var(--border-default);
-}
-
-.secondary_button:active {
-  box-shadow: 2px 2px 5px #808080;
-}
-
-.inverted_button {
-  padding: 10px 16px;
-  width: 102px;
-  height: 35px;
-  background-color: transparent;
-  color: var(--text-default);
-  border-radius: 6px;
-  border: 1px solid var(--border-default);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.inverted_button:hover {
   color: var(--text-inverse);
   background-color: var(--background-primary);
 }
 
-.inverted_button:active {
+.secondary_button:active {
   box-shadow: 2px 2px 5px #808080;
 }

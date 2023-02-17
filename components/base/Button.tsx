@@ -1,7 +1,7 @@
 import styles from "@/styles/Button.module.css";
 import { textFont } from "@/pages/_app";
 
-type ButtonVariant = "primary" | "secondary" | "inverted";
+type ButtonVariant = "primary" | "secondary";
 type ButtonProps = {
   variant?: ButtonVariant;
 };
@@ -14,7 +14,6 @@ const Button = ({
   const buttonVariants = {
     primary: "primary_button",
     secondary: "secondary_button",
-    inverted: "inverted_button",
   };
   return (
     <button
