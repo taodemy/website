@@ -1,4 +1,4 @@
-import { titleFont } from "@/pages/_app";
+import { fontSyne } from "@/pages/_app";
 import styles from "@/styles/LatestNews.module.css";
 import Card from "../base/Card";
 import Button from "../base/Button";
@@ -9,7 +9,7 @@ const LatestNews = () => {
     <section className={styles.latest_news}>
       <div className={styles.latest_news__header}>
         <h1
-          className={`${titleFont.className} global__uppercase-heading--small ${styles.latest_news__title}`}
+          className={`${fontSyne.className} global__uppercase-heading--small ${styles.latest_news__title}`}
         >
           LATEST NEWS
         </h1>
