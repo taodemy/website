@@ -17,8 +17,8 @@ const Button = ({
   };
   return (
     <button
-      className={`${textFont.className} global__text-meta ${styles[buttonVariants[variant]]} ${
-        styles["common_button"]
+      className={`${styles.common_button} ${textFont.className} global__text-meta ${
+        styles[buttonVariants[variant]]
       }`}
       {...otherProps}
     >
