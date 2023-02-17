@@ -1,7 +1,14 @@
 .common_button {
-  align-self: flex-start;
   padding: 0.8em 0.5em;
   border: 1px solid var(--border-default);
+}
+
+.button-blocked {
+  align-self: auto;
+}
+
+.button-unblocked {
+  align-self: flex-start;
 }
 
 .default_button {
