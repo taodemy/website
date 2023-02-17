@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import ListItem from "@/components/ItemList";
+import ListItem from "@/components/general/ItemList";
 
 describe("ListItems", () => {
   const props = {

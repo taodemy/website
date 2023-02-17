@@ -1,6 +1,7 @@
-import Values from "@/components/OurValues";
+import Contact from "@/components/general/Contact";
+import Values from "@/components/general/OurValues";
 import Head from "next/head";
-import Hero from "@/components/Hero";
+import Hero from "@/components/general/Hero";
 import Footer from "@/layouts/Footer";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="page__wrapper">
         <Hero />
         <Values />
+        <Contact />
         <Footer />
       </main>
     </>
