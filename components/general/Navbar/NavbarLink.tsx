@@ -1,6 +1,5 @@
 import React from "react";
-import { headingFont } from "@/pages/_app";
-import styles from "@/styles/Header.module.css";
+import { fontRobotoMono } from "@/pages/_app";
 
 type NavbarLinkProps = {
   linkName?: string;
@@ -9,7 +8,7 @@ type NavbarLinkProps = {
 
 const Links = ({ linkName, link }: NavbarLinkProps) => {
   return (
-    <a href={link} className={`${headingFont.className} global__text-meta`}>
+    <a href={link} className={`${fontRobotoMono.className} global__text-meta`}>
       {linkName}
     </a>
   );

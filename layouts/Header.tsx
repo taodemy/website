@@ -1,4 +1,4 @@
-import { titleFont } from "@/pages/_app";
+import { fontRobotoMono} from "@/pages/_app";
 import styles from "@/styles/Header.module.css";
 import NavBar from "@/components/general/Navbar/FirstPageNavbar";
 
@@ -13,7 +13,7 @@ const Header = () => {
           alt="Website Icon"
         />
         <div className={styles.header_logo_name}>
-          <p className={`${titleFont.className} global__uppercase-heading-h4`}>TAOTECH</p>
+          <p className={`${fontRobotoMono.className} global__uppercase-heading-h4`}>TAOTECH</p>
         </div>
       </section>
       <NavBar />
