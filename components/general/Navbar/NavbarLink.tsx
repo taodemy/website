@@ -9,7 +9,7 @@ type NavbarLinkProps = {
 
 const Links = ({ linkName, link }: NavbarLinkProps) => {
   return (
-    <a href={link} className={`${headingFont.className} global__text-meta ${styles.header_navbar}`}>
+    <a href={link} className={`${headingFont.className} global__text-meta`}>
       {linkName}
     </a>
   );

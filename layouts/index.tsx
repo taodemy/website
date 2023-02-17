@@ -7,7 +7,6 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
     return (
-        <>
             <div className="page__wrapper">
                 <section>
                     <Header />
@@ -16,7 +15,6 @@ const Layout = ({ children }: LayoutProps) => {
                     {children}
                 </main>
             </div>
-        </>
     );
 };
 export default Layout;

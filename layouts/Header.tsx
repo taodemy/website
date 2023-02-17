@@ -4,7 +4,7 @@ import NavBar from "@/components/general/Navbar/FirstPageNavbar";
 
 const Header = () => {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <section className={styles.header_logo}>
         <img
           arial-label="header_logo_image"
@@ -17,7 +17,7 @@ const Header = () => {
         </div>
       </section>
       <NavBar />
-    </div>
+    </header>
   );
 };
 export default Header;

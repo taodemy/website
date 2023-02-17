@@ -29,15 +29,17 @@ const NavBar = () => {
   ];
 
   return (
-    <div className={styles.header_navbar}>
-      {linkLists.map(({ id, linkName }) => (
-        <NavbarLink key={id} linkName={linkName} />
-      ))}
-      <PageButton />
+    <section className={styles.header_navbar}>
+      <section className={styles.header_navbar_link}>
+        {linkLists.map(({ id, linkName }) => (
+          <NavbarLink key={id} linkName={linkName} />
+        ))}
+        <PageButton />
+      </section>
       <section className={styles.navbar_right_button}>
         <Button aria-label="navbar_right" >LET &apos; S TALK</Button>
       </section>
-    </div>
+    </section>
   );
 };
 export default NavBar;
