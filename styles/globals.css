@@ -8,6 +8,10 @@
   --icon-default: #191919;
 }
 
+body {
+  background-color: #fdfbf5;
+}
+
 .global__heading--large {
   font-size: 128px;
   line-height: 100%;
