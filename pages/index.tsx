@@ -1,7 +1,8 @@
+import Head from "next/head";
 import Contact from "@/components/general/Contact";
 import Values from "@/components/general/OurValues";
-import Head from "next/head";
 import Hero from "@/components/general/Hero";
+import LatestNews from "@/components/general/LatestNews";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Values />
         <Contact />
+        <LatestNews />
       </main>
     </>
   );
