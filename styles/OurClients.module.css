@@ -7,7 +7,6 @@
     padding: 0 0px;
     border-bottom: 1px solid black;
     padding-bottom: 64px;
-    background-color: brown;
 }
 
 .our_clients__text {
@@ -22,12 +21,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     padding: 0px;
-    gap: 193px;
+    gap: 191px;
     padding-left: 64px;
-
-    width: 1550px;
-    height: 80px;
+    border-left: 1px solid black;
    
   }
