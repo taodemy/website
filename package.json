@@ -8,9 +8,12 @@
     "start": "next start",
     "test": "jest --colors --config jest.config.js",
     "lint": "next lint",
-    "prettier": "npx prettier --write .",
     "prepare": "husky install",
-    "pre-commit": "npm run prettier && npm run lint && npm run test && npx --no-install"
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier write .",
+    "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run test && npx --no-install && npm run build"
   },
   "engineStrict": true,
   "engines": {

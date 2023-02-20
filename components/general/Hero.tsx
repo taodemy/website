@@ -1,5 +1,5 @@
 import styles from "@/styles/Hero.module.css";
-import { textFont, titleFont } from "@/pages/_app";
+import { fontSyne, fontSatoshi } from "@/pages/_app";
 
 const Hero = () => {
   return (
@@ -7,16 +7,13 @@ const Hero = () => {
       <div className={styles["hero__section"]}>
         <div>
           <div
-            className={`${titleFont.className} global__heading--medium ${styles["hero__slogan"]}`}
+            className={`${fontSyne.className} global__heading--medium ${styles["hero__slogan"]}`}
           >
             We are a <br />
             digital agency
             <br /> from Melbourne.
           </div>
-          <div
-            className={`${textFont.className} global__text-xlarge ${styles["hero__txt"]}`}
-            aria-label="hero__txt"
-          >
+          <div className={`${fontSatoshi.className} global__text-xlarge ${styles["hero__txt"]}`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
           </div>
         </div>

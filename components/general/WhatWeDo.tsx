@@ -1,5 +1,5 @@
 import styles from "@/styles/WhatWeDo.module.css";
-import { headingFont } from "@/pages/_app";
+import { fontRobotoMono } from "@/pages/_app";
 import WhatWeDoItem from "./WhatWeDoItem";
 
 const WhatWeDo = () => {
@@ -37,7 +37,7 @@ const WhatWeDo = () => {
   ];
   return (
     <section className={styles["what-we-do"]}>
-      <p className={`${styles["what-we-do__txt"]} ${headingFont.className} global__text-meta`}>
+      <p className={`${styles["what-we-do__txt"]} ${fontRobotoMono.className} global__text-meta`}>
         WHAT WE DO
       </p>
       <div className={styles["what-we-do__content"]}>
