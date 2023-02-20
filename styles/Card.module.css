@@ -1,0 +1,36 @@
+.card {
+  width: 530px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card__image {
+  background-color: #7d7d7d;
+  border-radius: 16px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card__text {
+  height: 107px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.card__text__corner {
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #191919;
+}
+
+.card__text__title {
+  width: 530px;
+  height: 84px;
+  font-style: normal;
+  font-weight: 500;
+  color: #191919;
+}

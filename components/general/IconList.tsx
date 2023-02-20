@@ -8,7 +8,7 @@ interface Props {
 
 const IconsList = ({ aria_label, alt, icon }: Props) => {
   return (
-    <div className={styles.our_clients__icons}>
+    <div>
       <img src={icon} arial-label={aria_label} alt={alt} />
     </div>
   );
