@@ -10,6 +10,11 @@
   border-right: 1px solid #000000;
 }
 
+.featured-work__left-container h1 {
+  font-weight: 500;
+  line-height: 110%;
+}
+
 .featured-work__left-container p {
   margin-top: 8px;
   margin-right: 15%;

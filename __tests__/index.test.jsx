@@ -84,4 +84,12 @@ describe("Home", () => {
     );
     expect(contactContent).toBeInTheDocument();
   });
+
+  it("should render the header of latest news section success", () => {
+    const latestNewsTitle = screen.getByRole("heading", { name: /latest news/i });
+    const seeAllBtn = screen.getAllByRole("button", { name: /see all/i });
+    const button = seeAllBtn[seeAllBtn.length - 1];
+    expect(button).toBeInTheDocument();
+    expect(seeAllBtn[1]).toBeInTheDocument();
+  });
 });

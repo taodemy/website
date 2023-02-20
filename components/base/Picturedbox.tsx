@@ -1,5 +1,5 @@
 import styles from "@/styles/FeaturedWork.module.css";
-import { textFont, titleFont } from "../../pages/_app";
+import { fontSatoshi, fontRobotoMono } from "../../pages/_app";
 
 interface MyProps {
   location: string;
@@ -15,8 +15,8 @@ const Picturebox = (props: MyProps) => {
     <div className={border}>
       <img src={props.location} alt={props.location} />
       <div className={styles["picturedbox_img-text-box"]}>
-        <p className={`${titleFont.className} heading-h4`}>{props.title}</p>
-        <p>2022</p>
+        <p className={`${fontSatoshi.className} heading-h4`}>{props.title}</p>
+        <p className={`${fontRobotoMono.className}`}>2022</p>
       </div>
     </div>
   );

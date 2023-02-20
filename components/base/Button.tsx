@@ -1,23 +1,23 @@
 import styles from "@/styles/Button.module.css";
-import { textFont } from "@/pages/_app";
+import { fontRobotoMono } from "@/pages/_app";
 
-type ButtonVariant = "default" | "inverted";
+type ButtonVariant = "primary" | "secondary";
 type ButtonProps = {
   variant?: ButtonVariant;
 };
 
 const Button = ({
-  variant = "default",
+  variant = "primary",
   children,
   ...otherProps
 }: ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
   const buttonVariants = {
-    default: "default_button",
-    inverted: "inverted_button",
+    primary: "primary_button",
+    secondary: "secondary_button",
   };
   return (
     <button
-      className={`${textFont.className} global__text-meta ${styles[buttonVariants[variant]]}`}
+      className={`${fontRobotoMono.className} global__text-meta ${styles[buttonVariants[variant]]}`}
       {...otherProps}
     >
       {children}
