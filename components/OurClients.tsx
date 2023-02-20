@@ -5,7 +5,7 @@ const OurClients = () => {
   return (
     <section className={styles.our_clients}>
       <p>OUR CLIENTS</p>
-      <div>
+      <div className={styles.our_clients__icons}>
         <img src="/icons/icon1.svg" alt="icon1" />
         <img src="/icons/icon2.svg" alt="icon2" />
         <img src="/icons/icon3.svg" alt="icon3" />

@@ -1,15 +1,31 @@
 .our_clients {
+    margin-top: 64px;
     display: flex;
-    padding: 0 0px; 
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 0px;
+    border-bottom: 1px solid black;
+    padding-bottom: 64px;
+    background-color: brown;
 }
 
+.our_clients__text {
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: 400;
+    width: 169px;
+    line-height: 100%;
+
+}
 .our_clients__icons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0px;
-    gap: 94px;
+    gap: 193px;
+    padding-left: 64px;
 
     width: 1550px;
     height: 80px;
