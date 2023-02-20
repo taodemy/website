@@ -1,17 +1,56 @@
 import styles from "@/styles/OurClients.module.css";
-import { titleFont } from "@/pages/_app";
+import { textFont, titleFont } from "@/pages/_app";
+import IconsList from "./IconList";
 
 const OurClients = () => {
+  const IconsList = [
+    {
+      id: 1,
+      aria_label: "icon1",
+      icon: "/icons/icon1.svg",
+      alt:"icon1",
+    }
+    {
+      id: 2,
+      aria_label: "icon2",
+      icon: "/icons/icon2.svg",
+      alt:"icon2",
+    }
+    {
+      id: 3,
+      aria_label: "icon3",
+      icon: "/icons/icon3.svg",
+      alt:"icon3",
+    }
+    {
+      id: 4,
+      aria_label: "icon4",
+      icon: "/icons/icon4.svg",
+      alt:"icon4",
+    }
+    {
+      id: 5,
+      aria_label: "icon5",
+      icon: "/icons/icon5.svg",
+      alt:"icon5",
+    }
+    {
+      id: 6,
+      aria_label: "icon6",
+      icon: "/icons/icon6.svg",
+      alt:"icon6",
+    }
+  ]
   return (
     <section className={styles.our_clients}>
-      <p>OUR CLIENTS</p>
+      <p className={`${textFont.className} global__text-meta ${styles.our_clients__text}`}>
+        OUR CLIENTS 
+      </p>
       <div className={styles.our_clients__icons}>
-        <img src="/icons/icon1.svg" alt="icon1" />
-        <img src="/icons/icon2.svg" alt="icon2" />
-        <img src="/icons/icon3.svg" alt="icon3" />
-        <img src="/icons/icon4.svg" alt="icon4" />
-        <img src="/icons/icon5.svg" alt="icon5" />
-        <img src="/icons/icon6.svg" alt="icon6" />
+        {IconsList.map(({id, aria_label, alt, icon})=>(
+          <IconsList key={id} aria_label={aria_label} icon={icon} alt={alt} />
+        ))}
+        
       </div>
     </section>
   );

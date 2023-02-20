@@ -46,4 +46,16 @@ describe("Home", () => {
     expect(ourValuesImage).toHaveAttribute("src", "/images/our_value.jpeg");
     expect(ourValuesImage).toHaveAttribute("alt", "our values image");
   });
+
+   //test our clients section
+   it("should render our clients section in success", () => {
+    const ourClientsText = screen.getByText("OUR CLIENTS");
+    expect(ourClientsText).toBeInTheDocument();
+  });
+
+  it("should render our clients icon in success", () => {
+    const ourClientsIcon = screen.getByRole("icons", { name: "our_clients_icons" });
+    expect(ourClientsIcon).toBeInTheDocument();
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/icon1.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "our clients icon");
 });
