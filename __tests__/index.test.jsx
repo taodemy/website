@@ -40,6 +40,12 @@ describe("Home", () => {
     expect(text).toBeInTheDocument();
   });
 
+  //test what we do section
+  it("renders what we do txt", () => {
+    const text = screen.getByText("WHAT WE DO");
+    expect(text).toBeInTheDocument();
+  });
+
   //test our values section
   it("should render our values section in success", () => {
     const ourValuesTitle = screen.getByText("OUR VALUES");
@@ -93,5 +99,32 @@ describe("Home", () => {
     expect(ourClientsIcon).toBeInTheDocument();
     expect(ourClientsIcon).toHaveAttribute("src", "/icons/icon6.svg");
     expect(ourClientsIcon).toHaveAttribute("alt", "icon6");
+  });
+
+  //test contact section
+  it("should render contact section title in success", () => {
+    const contactTitle = screen.getByText("Let’s bring your brand to the next level");
+    expect(contactTitle).toBeInTheDocument();
+  });
+
+  it("should render icon in contact section success", () => {
+    const contactIcon = screen.getByRole("img", { name: "contact_arrows_icon" });
+    expect(contactIcon).toBeInTheDocument();
+    expect(contactIcon).toHaveAttribute("src", "/images/arrows.svg");
+    expect(contactIcon).toHaveAttribute("alt", "contact arrows icon");
+  });
+
+  it("should render contact content text in success", () => {
+    const contactContent = screen.getByText(
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    );
+    expect(contactContent).toBeInTheDocument();
+  });
+
+  it("should render the header of latest news section success", () => {
+    const latestNewsTitle = screen.getByRole("heading", { name: /latest news/i });
+    const seeAllBtn = screen.getByRole("button", { name: /see all/i });
+    expect(latestNewsTitle).toBeInTheDocument();
+    expect(seeAllBtn).toBeInTheDocument();
   });
 });
