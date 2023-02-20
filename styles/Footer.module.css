@@ -3,7 +3,7 @@
   width: 100%;
   height: 520px;
 }
-.footer_main__container {
+.footer_top__container {
   display: flex;
   width: 100%;
   height: 441px;
@@ -11,18 +11,20 @@
   border-style: solid none solid;
   border-width: 1px;
 }
-.footer_main_fylla__container {
-  position: relative;
+.footer_top_taotech__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border-style: solid;
   border-width: 0 1px 0 0;
   width: 33%;
   height: 311px;
 }
-.footer_main_fylla_top__container {
+.footer_top_taotech_top__container {
   width: 530px;
   height: 144px;
 }
-.footer_main_fylla_top__icon_container {
+.footer_top_taotech_top__icon_container {
   display: flex;
   align-items: center;
   margin-bottom: 32px;
@@ -30,39 +32,38 @@
   height: 50px;
   font-size: 24px;
 }
-.footer_main_fylla_top__icon {
+.footer_top_taotech_top__icon {
   width: 49.64px;
   height: 50px;
   margin-right: 16px;
 }
-.footer_main_fylla_top__title {
+.footer_top_taotech_top__title {
   font-size: 24px;
 }
-.footer_main_fylla__ul {
+.footer_top_taotech__ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  position: absolute;
-  padding: 0 0 0 0;
+  /* position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
   gap: 16px;
 }
-.footer_main_fylla__ul img {
+.footer_top_taotech__ul img {
   width: 34px;
   height: 34px;
 }
-.footer_main_links__container {
+.footer_top_links__container {
   display: flex;
   margin-left: 97px;
   width: 1157px;
   height: 311px;
 }
-.footer_main_link__container {
+.footer_top_link__container {
   margin-right: 48px;
   flex: 1;
 }
-.footer_main_link__ul {
+.footer_top_link__ul {
   display: flex;
   flex-direction: column;
   list-style-type: none;

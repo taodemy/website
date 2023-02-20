@@ -73,17 +73,17 @@ const Footer = () => {
   ];
   return (
     <footer className={styles["footer__container"]}>
-      <div className={styles["footer_main__container"]}>
-        <div className={styles["footer_main_fylla__container"]}>
-          <div className={styles["footer_main_fylla_top__container"]}>
-            <div className={styles["footer_main_fylla_top__icon_container"]}>
+      <div className={styles["footer_top__container"]}>
+        <div className={styles["footer_top_taotech__container"]}>
+          <div className={styles["footer_top_taotech_top__container"]}>
+            <div className={styles["footer_top_taotech_top__icon_container"]}>
               <img
                 src="/images/fyllaIcon.png"
                 alt="icon"
-                className={styles["footer_main_fylla_top__icon"]}
+                className={styles["footer_top_taotech_top__icon"]}
                 aria-label="icon__fylla"
               />
-              <p className={`${styles["footer_main_fylla_top__title"]} ${fontSyne.className}`}>
+              <p className={`${styles["footer_top_taotech_top__title"]} ${fontSyne.className}`}>
                 TAOTECH
               </p>
             </div>
@@ -91,7 +91,7 @@ const Footer = () => {
               Main Street. 1<br /> 22222 Berlin
             </p>
           </div>
-          <ul className={styles["footer_main_fylla__ul"]}>
+          <ul className={styles["footer_top_taotech__ul"]}>
             <li>
               <img src="/images/badge-ln.png" alt="badge" aria-label="badge__ln" />
             </li>
@@ -103,10 +103,10 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className={styles["footer_main_links__container"]}>
-          <div className={styles["footer_main_link__container"]}>
+        <div className={styles["footer_top_links__container"]}>
+          <div className={styles["footer_top_link__container"]}>
             <ul
-              className={`${styles["footer_main_link__ul"]} ${fontSyne.className} global__text-meta`}
+              className={`${styles["footer_top_link__ul"]} ${fontSyne.className} global__text-meta`}
             >
               <li className={`global__heading-h4 ${fontSyne.className}`}>Pages</li>
               {pages.map((page) => (
@@ -117,9 +117,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className={styles["footer_main_link__container"]}>
+          <div className={styles["footer_top_link__container"]}>
             <ul
-              className={`${styles["footer_main_link__ul"]} ${fontSyne.className} global__text-meta`}
+              className={`${styles["footer_top_link__ul"]} ${fontSyne.className} global__text-meta`}
             >
               <li className={`global__heading-h4 ${fontSyne.className}`}>CMS</li>
               {cms.map((cmsItem) => (
@@ -127,9 +127,9 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-          <div className={styles["footer_main_link__container"]}>
+          <div className={styles["footer_top_link__container"]}>
             <ul
-              className={`${styles["footer_main_link__ul"]} ${fontSyne.className} global__text-meta`}
+              className={`${styles["footer_top_link__ul"]} ${fontSyne.className} global__text-meta`}
             >
               <li className={`global__heading-h4 ${fontSyne.className}`}>Utility Pages</li>
               {utilityPages.map((utilityPage) => (
