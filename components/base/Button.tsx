@@ -1,33 +1,29 @@
 import styles from "@/styles/Button.module.css";
-import { textFont } from "@/pages/_app";
+import { fontRobotoMono } from "@/pages/_app";
 
-type ButtonVariant = "default" | "inverted";
-type ButtonBlockVariants = "unblocked" | "blocked";
+type ButtonVariant = "primary" | "secondary";
 type ButtonProps = {
   variant?: ButtonVariant;
-  blockVariant?: ButtonBlockVariants;
+  isBlock?: boolean;
 };
 
 const Button = ({
-  variant = "default",
-  blockVariant = "unblocked",
+  variant = "primary",
+  isBlock = false,
   children,
   ...otherProps
 }: ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>) => {
-  const buttonBlockVariants = {
-    unblocked: "button-unblocked",
-    blocked: "button-blocked",
-  };
+  const buttonBlockStyle = isBlock ? "button-blocked" : "button-unblocked";
 
   const buttonVariants = {
-    default: "default_button",
-    inverted: "inverted_button",
+    primary: "primary_button",
+    secondary: "secondary_button",
   };
 
   return (
     <button
-      className={`${styles[buttonBlockVariants[blockVariant]]} ${styles.common_button} ${
-        textFont.className
+      className={`${styles.common_button} ${styles[buttonBlockStyle]} ${
+        fontRobotoMono.className
       } global__text-meta ${styles[buttonVariants[variant]]}`}
       {...otherProps}
     >

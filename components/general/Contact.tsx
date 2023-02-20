@@ -1,16 +1,16 @@
 import styles from "@/styles/Contact.module.css";
-import { textFont, titleFont } from "@/pages/_app";
+import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
 import Button from "../base/Button";
 
 function Contact() {
   return (
     <section className={styles.contact}>
       <div className={styles.contact__title}>
-        <p className={`${titleFont.className} global__text-meta ${styles.contact_heading}`}>
+        <p className={`${fontRobotoMono.className} global__text-meta ${styles.contact_heading}`}>
           Contact
         </p>
         <h1
-          className={`${titleFont.className} global__uppercase-heading--medium ${styles.contact__title_text}`}
+          className={`${fontSyne.className} global__uppercase-heading--medium ${styles.contact__title_text}`}
         >
           Let’s bring your brand to the next level
         </h1>
@@ -24,7 +24,9 @@ function Contact() {
         />
       </div>
       <div className={styles.contact__content}>
-        <p className={`${textFont.className} global__text-xlarge ${styles.contact__content_text}`}>
+        <p
+          className={`${fontSatoshi.className} global__text-xlarge ${styles.contact__content_text}`}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua.
         </p>

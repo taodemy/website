@@ -65,12 +65,10 @@ $ npm run test filename --watch --coverage
 $PROJECT_ROOT
 │   # run some command when you commit
 ├── husky
-│   # The icons
+│   # The static files
 ├── public
 │   # All unit tests
 ├── tests
-│   # All images
-├── assets
 │   # React component files
 ├── components
 │   # Page layout

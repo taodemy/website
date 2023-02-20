@@ -1,5 +1,5 @@
 import React from "react";
-import { textFont, titleFont, textFontRoboto } from "@/pages/_app";
+import { fontSatoshi, fontSyne, fontRobotoMono } from "@/pages/_app";
 import FooterNaviLink from "@/components/general/FooterNaviLink";
 import styles from "@/styles/Footer.module.css";
 import Button from "@/components/base/Button";
@@ -83,11 +83,11 @@ const Footer = () => {
                 className={styles["footer_main_fylla_top__icon"]}
                 aria-label="icon__fylla"
               />
-              <p className={`${styles["footer_main_fylla_top__title"]} ${titleFont.className}`}>
+              <p className={`${styles["footer_main_fylla_top__title"]} ${fontSyne.className}`}>
                 TAOTECH
               </p>
             </div>
-            <p className={`${textFont.className} global__text-default`}>
+            <p className={`${fontSatoshi.className} global__text-default`}>
               Main Street. 1<br /> 22222 Berlin
             </p>
           </div>
@@ -106,9 +106,9 @@ const Footer = () => {
         <div className={styles["footer_main_links__container"]}>
           <div className={styles["footer_main_link__container"]}>
             <ul
-              className={`${styles["footer_main_link__ul"]} ${titleFont.className} global__text-meta`}
+              className={`${styles["footer_main_link__ul"]} ${fontSyne.className} global__text-meta`}
             >
-              <li className={`global__heading-h4 ${titleFont.className}`}>Pages</li>
+              <li className={`global__heading-h4 ${fontSyne.className}`}>Pages</li>
               {pages.map((page) => (
                 <FooterNaviLink key={page.id} content={page.content} />
               ))}
@@ -119,9 +119,9 @@ const Footer = () => {
           </div>
           <div className={styles["footer_main_link__container"]}>
             <ul
-              className={`${styles["footer_main_link__ul"]} ${titleFont.className} global__text-meta`}
+              className={`${styles["footer_main_link__ul"]} ${fontSyne.className} global__text-meta`}
             >
-              <li className={`global__heading-h4 ${titleFont.className}`}>CMS</li>
+              <li className={`global__heading-h4 ${fontSyne.className}`}>CMS</li>
               {cms.map((cmsItem) => (
                 <FooterNaviLink key={cmsItem.id} content={cmsItem.content} />
               ))}
@@ -129,9 +129,9 @@ const Footer = () => {
           </div>
           <div className={styles["footer_main_link__container"]}>
             <ul
-              className={`${styles["footer_main_link__ul"]} ${titleFont.className} global__text-meta`}
+              className={`${styles["footer_main_link__ul"]} ${fontSyne.className} global__text-meta`}
             >
-              <li className={`global__heading-h4 ${titleFont.className}`}>Utility Pages</li>
+              <li className={`global__heading-h4 ${fontSyne.className}`}>Utility Pages</li>
               {utilityPages.map((utilityPage) => (
                 <FooterNaviLink key={utilityPage.id} content={utilityPage.content} />
               ))}
@@ -141,12 +141,12 @@ const Footer = () => {
       </div>
       <div className={styles["footer_bottom__container"]}>
         <div
-          className={`${styles["footer_bottom__copyright"]} global__text-meta ${textFontRoboto.className}`}
+          className={`${styles["footer_bottom__copyright"]} global__text-meta ${fontRobotoMono.className}`}
         >
           © 2022 Made by Pawel Gola. Powered by Webflow.
         </div>
         <ul
-          className={`${styles["footer_bottom__privacy"]} global__text-meta ${textFontRoboto.className}`}
+          className={`${styles["footer_bottom__privacy"]} global__text-meta ${fontRobotoMono.className}`}
         >
           <li>PRIVACY</li>
           <li>IMPRINT</li>
