@@ -103,7 +103,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className={styles["footer_top_links__container"]}>
+        <nav className={styles["footer_top_links__container"]}>
           <div className={styles["footer_top_link__container"]}>
             <ul
               className={`${styles["footer_top_link__ul"]} ${fontSyne.className} global__text-meta`}
@@ -137,9 +137,9 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-        </div>
+        </nav>
       </div>
-      <div className={styles["footer_bottom__container"]}>
+      <aside className={styles["footer_bottom__container"]}>
         <div
           className={`${styles["footer_bottom__copyright"]} global__text-meta ${fontRobotoMono.className}`}
         >
@@ -151,7 +151,7 @@ const Footer = () => {
           <li>PRIVACY</li>
           <li>IMPRINT</li>
         </ul>
-      </div>
+      </aside>
     </footer>
   );
 };
