@@ -41,7 +41,12 @@ export default function FeaturedWork() {
         <p className={`${fontSyne.className} global__text--large`}>
           The featured work section shows some of the successful works of our website.
         </p>
-        <Button className={styles["featured-work__btn"]}>SEE ALL WORKS</Button>
+        <Button
+          variant="primary"
+          className={`${fontRobotoMono.className} ${styles["featured-work__btn"]}`}
+        >
+          SEE ALL WORK
+        </Button>
       </div>
       <div className={styles["featured-work__right-container"]}>
         <div className={styles["featured-work__big-img"]}>
