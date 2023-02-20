@@ -14,11 +14,10 @@ describe("Home", () => {
   });
 
   it("renders a hero text with the right content", () => {
-    const text = screen.getByLabelText("hero__txt");
-    expect(text).toBeInTheDocument();
-    expect(text).toHaveTextContent(
+    const text = screen.getByText(
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
     );
+    expect(text).toBeInTheDocument();
   });
 
   it("renders a hero photo with the right src and alt", () => {
