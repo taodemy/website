@@ -83,13 +83,13 @@ const Footer = () => {
                 className={styles["footer_top_taotech_top__icon"]}
                 aria-label="icon__fylla"
               />
-              <p className={`${styles["footer_top_taotech_top__title"]} ${fontSyne.className}`}>
+              <h1 className={`${styles["footer_top_taotech_top__title"]} ${fontSyne.className}`}>
                 TAOTECH
-              </p>
+              </h1>
             </div>
-            <p className={`${fontSatoshi.className} global__text-default`}>
+            <address className={`${fontSatoshi.className} global__text-default`}>
               Main Street. 1<br /> 22222 Berlin
-            </p>
+            </address>
           </div>
           <ul className={styles["footer_top_taotech__ul"]}>
             <li>
@@ -108,7 +108,9 @@ const Footer = () => {
             <ul
               className={`${styles["footer_top_link__ul"]} ${fontSyne.className} global__text-meta`}
             >
-              <li className={`global__heading-h4 ${fontSyne.className}`}>Pages</li>
+              <li>
+                <h2 className={`global__heading-h4 ${fontSyne.className}`}>Pages</h2>
+              </li>
               {pages.map((page) => (
                 <FooterNaviLink key={page.id} content={page.content} />
               ))}
@@ -121,7 +123,9 @@ const Footer = () => {
             <ul
               className={`${styles["footer_top_link__ul"]} ${fontSyne.className} global__text-meta`}
             >
-              <li className={`global__heading-h4 ${fontSyne.className}`}>CMS</li>
+              <li>
+                <h2 className={`global__heading-h4 ${fontSyne.className}`}>CMS</h2>
+              </li>
               {cms.map((cmsItem) => (
                 <FooterNaviLink key={cmsItem.id} content={cmsItem.content} />
               ))}
@@ -131,7 +135,9 @@ const Footer = () => {
             <ul
               className={`${styles["footer_top_link__ul"]} ${fontSyne.className} global__text-meta`}
             >
-              <li className={`global__heading-h4 ${fontSyne.className}`}>Utility Pages</li>
+              <li>
+                <h2 className={`global__heading-h4 ${fontSyne.className}`}>Utility Pages</h2>
+              </li>
               {utilityPages.map((utilityPage) => (
                 <FooterNaviLink key={utilityPage.id} content={utilityPage.content} />
               ))}
@@ -139,19 +145,23 @@ const Footer = () => {
           </div>
         </nav>
       </div>
-      <aside className={styles["footer_bottom__container"]}>
+      <div className={styles["footer_bottom__container"]}>
         <div
           className={`${styles["footer_bottom__copyright"]} global__text-meta ${fontRobotoMono.className}`}
         >
-          © 2022 Made by Pawel Gola. Powered by Webflow.
+          <small>© 2022 Made by Pawel Gola. Powered by Webflow.</small>
         </div>
         <ul
           className={`${styles["footer_bottom__privacy"]} global__text-meta ${fontRobotoMono.className}`}
         >
-          <li>PRIVACY</li>
-          <li>IMPRINT</li>
+          <li>
+            <small>PRIVACY</small>
+          </li>
+          <li>
+            <small>IMPRINT</small>
+          </li>
         </ul>
-      </aside>
+      </div>
     </footer>
   );
 };
