@@ -12,9 +12,7 @@ const customJestConfig = {
   collectCoverage: true,
   collectCoverageFrom: [
     "pages/*.tsx",
-    "components/base/*.tsx",
-    "components/general/*.tsx",
-    "components/general/Navbar/*.tsx",
+    "components/*/*.tsx",
     "!pages/_app.tsx",
     "!pages/_document.tsx",
   ],
