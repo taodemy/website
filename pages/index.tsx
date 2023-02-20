@@ -1,9 +1,10 @@
 import Head from "next/head";
+import Hero from "@/components/general/Hero";
+import WhatWeDo from "@/components/general/WhatWeDo";
 import Contact from "@/components/general/Contact";
 import Values from "@/components/general/OurValues";
-import Hero from "@/components/general/Hero";
-import Footer from "@/layouts/Footer";
 import LatestNews from "@/components/general/LatestNews";
+import Footer from "@/layouts/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <WhatWeDo />
         <Values />
         <Contact />
         <LatestNews />
