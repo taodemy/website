@@ -1,32 +1,30 @@
 .our_clients {
-    margin-top: 64px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0px;
-    border-bottom: 1px solid black;
-    padding-bottom: 64px;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0px;
+  border-bottom: 1px solid black;
+  padding-bottom: 64px;
 }
 
 .our_clients__text {
-    font-family: 'Roboto Mono';
-    font-style: normal;
-    font-weight: 400;
-    width: 105px;
-    line-height: 100%;
-
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 400;
+  width: 105px;
+  line-height: 100%;
 }
 .our_clients__icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px;
-    gap: 94px;
-    padding-left: 64px;
-    border-left: 1px solid black;
-    width: 1550px;
-    height: 80px;
-   
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 94px;
+  padding-left: 64px;
+  border-left: 1px solid black;
+  width: 1550px;
+  height: 80px;
+}
