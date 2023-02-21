@@ -7,6 +7,23 @@ describe("Home", () => {
     render(<Home />);
   });
 
+  it("renders the heading of featured work section", () => {
+    const FeaturedWorkSection = screen.getByRole("heading", { name: /featured work/i });
+    expect(FeaturedWorkSection).toBeInTheDocument();
+  });
+
+  it("renders a hero text with the right content", () => {
+    const text = screen.getByText(
+      "The featured work section shows some of the successful works of our website."
+    );
+    expect(text).toBeInTheDocument();
+  });
+
+  it("renders a featured work img", () => {
+    const heroPhoto = screen.getByRole("img", { name: "hero__photo" });
+    expect(heroPhoto).toBeInTheDocument();
+  });
+
   it("renders a hero heading with the right content", () => {
     const heading = screen.getByText("We are a digital agency from Melbourne.");
     expect(heading).toBeInTheDocument();
@@ -81,8 +98,9 @@ describe("Home", () => {
 
   it("should render the header of latest news section success", () => {
     const latestNewsTitle = screen.getByRole("heading", { name: /latest news/i });
-    const seeAllBtn = screen.getByRole("button", { name: /see all/i });
-    expect(latestNewsTitle).toBeInTheDocument();
-    expect(seeAllBtn).toBeInTheDocument();
+    const seeAllBtn = screen.getAllByRole("button", { name: /see all/i });
+    const button = seeAllBtn[seeAllBtn.length - 1];
+    expect(button).toBeInTheDocument();
+    expect(seeAllBtn[1]).toBeInTheDocument();
   });
 });

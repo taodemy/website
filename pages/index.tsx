@@ -3,6 +3,7 @@ import Hero from "@/components/general/Hero";
 import WhatWeDo from "@/components/general/WhatWeDo";
 import Contact from "@/components/general/Contact";
 import Values from "@/components/general/OurValues";
+import FeaturedWork from "../components/general/FeaturedWork";
 import LatestNews from "@/components/general/LatestNews";
 import Footer from "@/layouts/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <WhatWeDo />
         <Values />
+        <FeaturedWork />
         <Contact />
         <LatestNews />
         <Footer />
