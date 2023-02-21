@@ -12,9 +12,9 @@
 }
 .how_we_work__title_text {
   height: 352px;
+  padding-bottom: 16px;
 }
 .how_we_work__icon {
-  padding-top: 16px;
   width: 100px;
   height: 100px;
   color: var(--icon-default);
@@ -24,6 +24,6 @@
   padding-left: 48px;
 }
 .how_we_work__content_text {
-  height: 499px;
+  height: 464px;
   width: 508px;
 }
