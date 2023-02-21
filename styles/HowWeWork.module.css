@@ -1,0 +1,29 @@
+.how_we_work {
+  display: flex;
+  border-bottom: 1px solid var(--border-default);
+  justify-content: space-between;
+  padding: 48px 0px;
+}
+.how_we_work__title {
+  height: 499px;
+}
+.how_we_work__title_heading {
+  padding-bottom: 16px;
+}
+.how_we_work__title_text {
+  height: 352px;
+}
+.how_we_work__icon {
+  padding-top: 16px;
+  width: 100px;
+  height: 100px;
+  color: var(--icon-default);
+}
+.how_we_work__content {
+  border-left: 1px solid var(--border-default);
+  padding-left: 48px;
+}
+.how_we_work__content_text {
+  height: 499px;
+  width: 508px;
+}

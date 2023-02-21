@@ -4,6 +4,7 @@ import WhatWeDo from "@/components/general/WhatWeDo";
 import Contact from "@/components/general/Contact";
 import Values from "@/components/general/OurValues";
 import LatestNews from "@/components/general/LatestNews";
+import HowWework from "@/components/general/HowWeWork";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <main>
         <Hero />
         <WhatWeDo />
+        <HowWework />
         <Values />
         <Contact />
         <LatestNews />
