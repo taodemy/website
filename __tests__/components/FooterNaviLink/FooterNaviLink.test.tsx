@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import FooterNaviLink from "@/components/general/FooterNaviLink";
+import FooterNaviLink from "@/components/general/NavLink";
 
 describe("FooterNaviLink", () => {
   const Item = {

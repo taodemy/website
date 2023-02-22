@@ -4,7 +4,7 @@ interface Item {
   content: string;
 }
 
-const FooterNaviLink = ({ content }: Item) => {
+const NavLink = ({ content }: Item) => {
   return (
     <li>
       <a className={Styles.footer_main_link__a} href="">
@@ -14,4 +14,4 @@ const FooterNaviLink = ({ content }: Item) => {
   );
 };
 
-export default FooterNaviLink;
+export default NavLink;

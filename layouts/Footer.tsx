@@ -1,6 +1,6 @@
 import React from "react";
 import { fontSatoshi, fontSyne, fontRobotoMono } from "@/pages/_app";
-import FooterNaviLink from "@/components/general/FooterNaviLink";
+import NavLink from "@/components/general/NavLink";
 import styles from "@/styles/Footer.module.css";
 import Button from "@/components/base/Button";
 
@@ -49,7 +49,7 @@ const Footer = () => {
       content: "SHOP SINGLE",
     },
   ];
-  const utilityPages = [
+  const utilityItems = [
     {
       id: 1,
       content: "404 ERROR PAGE",
@@ -93,13 +93,13 @@ const Footer = () => {
           </div>
           <ul className={styles["footer_top_taotech__ul"]}>
             <li>
-              <img src="/images/badge-ln.png" alt="badge" aria-label="badge__ln" />
+              <img src="/images/badge-ln.svg" alt="badge" aria-label="badge__ln" />
             </li>
             <li>
-              <img src="/images/badge-in.png" alt="badge" aria-label="badge__in" />
+              <img src="/images/badge-in.svg" alt="badge" aria-label="badge__in" />
             </li>
             <li>
-              <img src="/images/badge-fb.png" alt="badge" aria-label="badge__fb" />
+              <img src="/images/badge-fb.svg" alt="badge" aria-label="badge__fb" />
             </li>
           </ul>
         </div>
@@ -112,7 +112,7 @@ const Footer = () => {
                 <h2 className={`global__heading-h4 ${fontSyne.className}`}>Pages</h2>
               </li>
               {pages.map((page) => (
-                <FooterNaviLink key={page.id} content={page.content} />
+                <NavLink key={page.id} content={page.content} />
               ))}
               <li>
                 <Button>more templates</Button>
@@ -127,7 +127,7 @@ const Footer = () => {
                 <h2 className={`global__heading-h4 ${fontSyne.className}`}>CMS</h2>
               </li>
               {cms.map((cmsItem) => (
-                <FooterNaviLink key={cmsItem.id} content={cmsItem.content} />
+                <NavLink key={cmsItem.id} content={cmsItem.content} />
               ))}
             </ul>
           </div>
@@ -138,8 +138,8 @@ const Footer = () => {
               <li>
                 <h2 className={`global__heading-h4 ${fontSyne.className}`}>Utility Pages</h2>
               </li>
-              {utilityPages.map((utilityPage) => (
-                <FooterNaviLink key={utilityPage.id} content={utilityPage.content} />
+              {utilityItems.map((utilityItem) => (
+                <NavLink key={utilityItem.id} content={utilityItem.content} />
               ))}
             </ul>
           </div>
