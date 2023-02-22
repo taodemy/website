@@ -1,18 +1,19 @@
 .how_we_work {
-  display: flex;
+  display: grid;
+  grid-template-columns: 69% 31%;
   border-bottom: 1px solid var(--border-default);
-  justify-content: space-between;
-  padding: 48px 0px;
+  padding: 48px 0;
 }
 .how_we_work__title {
-  height: 499px;
+  grid-column: auto;
 }
 .how_we_work__title_heading {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 .how_we_work__title_text {
   height: 352px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
+  font-weight: 500;
 }
 .how_we_work__icon {
   width: 100px;
@@ -25,5 +26,5 @@
 }
 .how_we_work__content_text {
   height: 464px;
-  width: 508px;
+  font-weight: 400;
 }
