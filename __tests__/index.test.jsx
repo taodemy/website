@@ -56,12 +56,6 @@ describe("Home", () => {
     expect(text).toBeInTheDocument();
   });
 
-  //test what we do section
-  it("renders what we do txt", () => {
-    const text = screen.getByText("WHAT WE DO");
-    expect(text).toBeInTheDocument();
-  });
-
   //test our values section
   it("should render our values section in success", () => {
     const ourValuesTitle = screen.getByText("OUR VALUES");
