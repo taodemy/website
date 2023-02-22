@@ -7,7 +7,6 @@ describe("Home", () => {
     render(<Home />);
   });
 
-  // test featured work section
   it("renders the heading of featured work section", () => {
     const FeaturedWorkSection = screen.getByRole("heading", { name: /featured work/i });
     expect(FeaturedWorkSection).toBeInTheDocument();
@@ -25,7 +24,6 @@ describe("Home", () => {
     expect(heroPhoto).toBeInTheDocument();
   });
 
-  //test hero section
   it("renders a hero heading with the right content", () => {
     const heading = screen.getByText("We are a digital agency from Melbourne.");
     expect(heading).toBeInTheDocument();
@@ -52,13 +50,11 @@ describe("Home", () => {
     expect(heroIcon).toHaveAttribute("alt", "hero icon");
   });
 
-  //test what we do section
   it("renders what we do txt", () => {
     const text = screen.getByText("WHAT WE DO");
     expect(text).toBeInTheDocument();
   });
 
-  //test our values section
   it("should render our values section in success", () => {
     const ourValuesTitle = screen.getByText("OUR VALUES");
     expect(ourValuesTitle).toBeInTheDocument();
@@ -71,7 +67,6 @@ describe("Home", () => {
     expect(ourValuesImage).toHaveAttribute("alt", "our values image");
   });
 
-  //test contact section
   it("should render contact section title in success", () => {
     const contactTitle = screen.getByText("Let’s bring your brand to the next level");
     expect(contactTitle).toBeInTheDocument();
