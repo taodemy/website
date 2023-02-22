@@ -5,7 +5,6 @@ import Contact from "@/components/general/Contact";
 import Values from "@/components/general/OurValues";
 import FeaturedWork from "../components/general/FeaturedWork";
 import LatestNews from "@/components/general/LatestNews";
-import Footer from "@/layouts/Footer";
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
         <FeaturedWork />
         <Contact />
         <LatestNews />
-        <Footer />
       </main>
     </>
   );
