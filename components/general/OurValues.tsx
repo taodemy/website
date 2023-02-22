@@ -1,9 +1,8 @@
 import ListItem from "./ItemList";
-
 import styles from "@/styles/OurValues.module.css";
 import { fontSyne } from "@/pages/_app";
 
-function OurValues() {
+const OurValues = () => {
   const listItems = [
     {
       id: 1,
@@ -51,6 +50,6 @@ function OurValues() {
       </div>
     </section>
   );
-}
+};
 
 export default OurValues;

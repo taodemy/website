@@ -15,7 +15,7 @@ function Contact() {
           Let’s bring your brand to the next level
         </h1>
         <img
-          src="/images/arrows.svg"
+          src="/images/design_icon.svg"
           alt="contact arrows icon"
           aria-label="contact_arrows_icon"
           width={100}
