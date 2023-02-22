@@ -1,6 +1,3 @@
-import styles from "@/styles/Contact.module.css";
-import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
-import Button from "../base/Button";
 import InfoBlock from "./InfoBlock/InfoBlock";
 
 const Contact = () => {

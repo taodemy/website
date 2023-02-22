@@ -9,7 +9,7 @@ type InfoProps = {
   iconPath: string;
   blockType: InfoBlockType;
   content: string;
-  buttonContent: string;
+  buttonContent?: string;
 };
 
 const InfoBlock = ({
@@ -42,9 +42,9 @@ const InfoBlock = ({
         />
       </div>
       {blockType === "normal" && (
-        <div className={styles.info_block__content}>
+        <div className={styles.info_block__normal_content}>
           <p
-            className={`${fontSatoshi.className} global__text-xlarge ${styles.info_block__content_text}`}
+            className={`${fontSatoshi.className} global__text-xlarge ${styles.info_block__normal_content_text}`}
           >
             {content}
           </p>
@@ -52,13 +52,20 @@ const InfoBlock = ({
         </div>
       )}
       {blockType === "input" && (
-        <div className={styles.info_block__content}>
+        <div className={styles.info_block__sign_up_content}>
           <p
-            className={`${fontSatoshi.className} global__text-xlarge ${styles.info_block__content_text}`}
+            className={`${fontSatoshi.className} global__text-xlarge ${styles.info_block__sign_up_content__text}`}
           >
             {content}
           </p>
-          <Button>{buttonContent}</Button>
+          <form className={styles.info_block__sign_up_content__form}>
+            <input
+              type="email"
+              defaultValue="YOUR EMAIL"
+              className={`global__heading-h4 ${fontSyne.className} ${styles.info_block__sign_up_content__form__input}`}
+            />
+            <Button>sign up</Button>
+          </form>
         </div>
       )}
     </section>
