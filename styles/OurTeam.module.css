@@ -16,10 +16,9 @@
 .our_team__card_container {
   grid-column: 2/4;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: auto auto auto;
   grid-column-gap: 25px;
   grid-row-gap: 35px;
-  justify-content: end;
   border-left: var(--default-border);
   padding-left: 41px;
 }

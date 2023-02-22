@@ -21,7 +21,6 @@ export default function Home() {
         <FeaturedWork />
         <Contact />
         <LatestNews />
-        <Footer />
       </main>
     </>
   );

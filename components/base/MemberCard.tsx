@@ -10,7 +10,7 @@ interface CardProps {
   direction: CardVariant;
 }
 
-const MemberCard = ({ title, subtitle, image, direction }: CardProps) => {
+const MemberCard = ({ title, subtitle, image, direction, ...otherProps }: CardProps) => {
   const directionVariants = {
     column: "card__title_container_column",
     row: "card__title_container_row",

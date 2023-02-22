@@ -1,46 +1,33 @@
 import styles from "@/styles/OurTeam.module.css";
-import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
-import Button from "../base/Button";
-import Picturebox from "../base/Picturedbox";
+import { fontSyne, fontSatoshi } from "@/pages/_app";
 import MemberCard from "../base/MemberCard";
-
-interface MemberCardProps {
-  name: string;
-  position: string;
-  image: string;
-  width: number;
-  height: number;
-}
+import Divider from "../base/Divider";
 
 const OurTeam = () => {
   const members = [
     {
       id: 1,
-      name: "Jacob Jones",
+      name: "Tato",
       position: "Mentor",
       image: "img/featured-work-sec-img-1.png",
-      hasBorder: true,
     },
     {
       id: 2,
-      name: "Jacob Jones",
+      name: "Kristin Watson",
       position: "Developer",
       image: "img/featured-work-sec-img-2.png",
-      hasBorder: false,
     },
     {
       id: 3,
-      name: "Jacob Jones",
+      name: "Cameron Huang",
       position: "Developer",
       image: "img/featured-work-sec-img-3.png",
-      hasBorder: true,
     },
     {
       id: 4,
-      name: "Jacob Jones",
+      name: "Guy Hawkins",
       position: "Developer",
       image: "img/featured-work-sec-img-4.png",
-      hasBorder: false,
     },
   ];
   return (
@@ -56,9 +43,32 @@ const OurTeam = () => {
       </div>
 
       <div className={styles["our_team__card_container"]}>
-        {members.map(({ id, name, position, image }) => (
-          <MemberCard key={id} title={name} image={image} subtitle={position} direction="row" />
-        ))}
+        <MemberCard
+          title="Tato"
+          subtitle="Mentor"
+          image="img/featured-work-sec-img-1.png"
+          direction="column"
+        />
+        <Divider />
+        <MemberCard
+          title="Kristin Watson"
+          subtitle="Developer"
+          image="img/featured-work-sec-img-2.png"
+          direction="column"
+        />
+        <MemberCard
+          title="Cameron Huang"
+          subtitle="Developer"
+          image="img/featured-work-sec-img-3.png"
+          direction="column"
+        />
+        <Divider />
+        <MemberCard
+          title="Guy Hawkins"
+          subtitle="Developer"
+          image="img/featured-work-sec-img-4.png"
+          direction="column"
+        />
       </div>
     </section>
   );
