@@ -99,6 +99,7 @@ describe("Home", () => {
     const latestNewsTitle = screen.getByRole("heading", { name: /latest news/i });
     const seeAllBtn = screen.getAllByRole("button", { name: /see all/i });
     const button = seeAllBtn[seeAllBtn.length - 1];
+    expect(latestNewsTitle).toBeInTheDocument();
     expect(button).toBeInTheDocument();
     expect(seeAllBtn[1]).toBeInTheDocument();
   });
