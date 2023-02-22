@@ -3,6 +3,7 @@
   grid-template-columns: 69% 31%;
   border-bottom: 1px solid var(--border-default);
   padding: 48px 0;
+  justify-content: space-between;
 }
 .how_we_work__title {
   grid-column: auto;

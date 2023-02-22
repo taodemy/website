@@ -24,7 +24,7 @@ function HowWeWork() {
         <img
           src="/images/star.svg"
           className={styles.how_we_work__icon}
-          aria-label="star_icon"
+          aria-label="how_we_work_star_icon"
           alt="how we work icon"
         />
       </div>
@@ -33,9 +33,9 @@ function HowWeWork() {
           className={`${fontSatoshi.className} global__text--large ${styles.how_we_work__content_text}`}
         >
           Our team of experts is dedicated to delivering real results through creativity, strategic
-          thinking, and technical expertise. Whether it&#39;s developing a new marketing campaign,
+          thinking, and technical expertise. Whether it‘s developing a new marketing campaign,
           designing a website, or creating a mobile app, we are always pushing the boundaries of
-          what&#39;s possible to help our clients stay ahead of the curve.
+          what’s possible to help our clients stay ahead of the curve.
         </p>
         <Button>OUR SERVICES</Button>
       </article>
