@@ -73,7 +73,9 @@ describe("Home", () => {
   });
 
   it("should render icon in contact section success", () => {
-    const contactIcon = screen.getByRole("img", { name: /\[object object\] icon/i });
+    const contactIcon = screen.getByRole("img", {
+      name: /let’s bring your brand to the next levelicon/i,
+    });
     expect(contactIcon).toBeInTheDocument();
     expect(contactIcon).toHaveAttribute("src", "/images/arrows.svg");
   });

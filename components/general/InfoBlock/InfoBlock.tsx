@@ -20,7 +20,6 @@ const InfoBlock = ({
   content,
   buttonContent,
 }: InfoProps) => {
-  const imgDescription = { title } + " icon";
   return (
     <section className={styles.info_block}>
       <div className={styles.info_block__title}>
@@ -34,8 +33,8 @@ const InfoBlock = ({
         </h1>
         <img
           src={iconPath}
-          alt={imgDescription}
-          aria-label={imgDescription}
+          alt={`${title}icon`}
+          aria-label={`${title}icon`}
           width={100}
           height={100}
           className={styles.info_block__icon}
