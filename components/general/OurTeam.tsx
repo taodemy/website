@@ -37,8 +37,9 @@ const OurTeam = () => {
           OUR <br /> TEAM
         </h1>
         <p className={`${fontSatoshi.className} global__text--large`}>
-          Lorem ipsum dolor sit amet, consectetur
-          <br /> adipiscing elit, sed do eiusmod tempor.
+          A team comprised of talented individuals with <br />a range of skills and expertise,
+          working <br />
+          collaboratively towards achieving our goals.
         </p>
       </div>
 

@@ -12,11 +12,13 @@ interface CardProps {
 
 const MemberCard = ({ title, subtitle, image, direction, ...otherProps }: CardProps) => {
   const directionVariants = {
-    column: "card__title_container_column",
     row: "card__title_container_row",
+    column: "card__title_container_column",
+    column_reverse: "card__title_container_column_reverse",
   };
+
   return (
-    <div className={styles["card"]}>
+    <div className={styles["card"]} {...otherProps}>
       <img
         src={image}
         alt={`${title} image`}
