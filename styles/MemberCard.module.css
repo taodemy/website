@@ -1,0 +1,30 @@
+.card {
+}
+
+.card__image {
+  border-radius: 12px;
+}
+
+.card__title_container_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title_container_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-weight: 500;
+}
+
+.card__subtitle {
+  font-weight: 400;
+}
+
+.card:nth-child(2n) {
+  padding-left: 25px;
+  border-left: var(--default-border);
+}

@@ -1,5 +1,5 @@
 import styles from "@/styles/OurValueV2.module.css";
-import { fontSatoshi, fontRobotoMono, fontSyne } from "@/pages/_app";
+import { fontRobotoMono, fontSyne } from "@/pages/_app";
 import ListItem from "./ItemList";
 import Button from "../base/Button";
 
@@ -48,7 +48,7 @@ const OurValueV2 = () => {
       </div>
       <div className={styles["our_values__content_container"]}>
         {listItems.map(({ id, title, content, icon }) => (
-          <ListItem key={id} title={title} content={content} icon={icon} />
+          <ListItem key={id} title={title} content={content} icon={icon} width={64} height={64} />
         ))}
       </div>
     </section>

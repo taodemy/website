@@ -27,8 +27,9 @@ function Contact() {
         <p
           className={`${fontSatoshi.className} global__text-xlarge ${styles.contact__content_text}`}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua.
+          A programming journey can be challenging, but the potential for personal and professional
+          growth makes it a rewarding experience that can lead to endless opportunities for
+          innovation and problem-solving.
         </p>
         <Button>get in touch</Button>
       </div>
