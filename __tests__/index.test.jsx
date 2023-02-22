@@ -55,31 +55,29 @@ describe("Home", () => {
     expect(text).toBeInTheDocument();
   });
 
-  it("should render how we work section in sucess", ()=>{
+  it("should render how we work section in sucess", () => {
     const howWeWorkHead = screen.getByText("HOW WE WORK");
     expect(howWeWorkHead).toBeInTheDocument();
-
   });
-  it("should render how we work title in sucess", ()=>{
-    const howWeWorkTitle = screen.getByRole("heading", { name: /We help our clients succeed with innovative strategies./i });
+  it("should render how we work title in sucess", () => {
+    const howWeWorkTitle = screen.getByRole("heading", {
+      name: /We help our clients succeed with innovative strategies./i,
+    });
     expect(howWeWorkTitle).toBeInTheDocument();
-
   });
-  it("should render how we work icon in sucess", ()=>{
-    const howWeWorkIcon = screen.getByRole("img", { name:"how_we_work_star_icon"});
+  it("should render how we work icon in sucess", () => {
+    const howWeWorkIcon = screen.getByRole("img", { name: "how_we_work_star_icon" });
     expect(howWeWorkIcon).toBeInTheDocument();
     expect(howWeWorkIcon).toHaveAttribute("src", "/images/star.svg");
     expect(howWeWorkIcon).toHaveAttribute("alt", "how we work icon");
-
   });
-  it("should render how we work content in sucess", ()=>{
+  it("should render how we work content in sucess", () => {
     const howWeWorkContent = screen.getByText(
       "Our team of experts is dedicated to delivering real results through creativity, strategic thinking, and technical expertise. Whether it‘s developing a new marketing campaign, designing a website, or creating a mobile app, we are always pushing the boundaries of what’s possible to help our clients stay ahead of the curve."
     );
     expect(howWeWorkContent).toBeInTheDocument();
-
   });
-  it("should render how we work content in sucess", ()=>{
+  it("should render how we work content in sucess", () => {
     const button = screen.getAllByRole("button", { name: /OUR SERVICES/i });
     expect(button[0]).toBeInTheDocument();
   });
