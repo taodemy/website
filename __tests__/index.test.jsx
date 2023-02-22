@@ -65,40 +65,41 @@ describe("Home", () => {
   });
 
   it("should render our clients icon in success", () => {
-    const ourClientsIcon = screen.getByRole("img", { name: "icon1" });
+    const ourClientsIcon = screen.getByRole("img", { name: /super food icon/i });
     expect(ourClientsIcon).toBeInTheDocument();
-    expect(ourClientsIcon).toHaveAttribute("src", "/icons/icon1.svg");
-    expect(ourClientsIcon).toHaveAttribute("alt", "icon1");
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/super_food_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "super food icon");
+  });
+
+  it("should render our clients icon in success", () => {
+    const ourClientsIcon = screen.getByRole("img", { name: /creative studio icon/i });
+    expect(ourClientsIcon).toBeInTheDocument();
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/creative_studio_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "creative studio icon");
   });
   it("should render our clients icon in success", () => {
-    const ourClientsIcon = screen.getByRole("img", { name: "icon2" });
+    const ourClientsIcon = screen.getByRole("img", { name: /in motion icon/i });
     expect(ourClientsIcon).toBeInTheDocument();
-    expect(ourClientsIcon).toHaveAttribute("src", "/icons/icon2.svg");
-    expect(ourClientsIcon).toHaveAttribute("alt", "icon2");
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/in_motion_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "in motion icon");
   });
   it("should render our clients icon in success", () => {
-    const ourClientsIcon = screen.getByRole("img", { name: "icon3" });
+    const ourClientsIcon = screen.getByRole("img", { name: /abstract icon/i });
     expect(ourClientsIcon).toBeInTheDocument();
-    expect(ourClientsIcon).toHaveAttribute("src", "/icons/icon3.svg");
-    expect(ourClientsIcon).toHaveAttribute("alt", "icon3");
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/abstract_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "abstract icon");
   });
   it("should render our clients icon in success", () => {
-    const ourClientsIcon = screen.getByRole("img", { name: "icon4" });
+    const ourClientsIcon = screen.getByRole("img", { name: /vision studio icon/i });
     expect(ourClientsIcon).toBeInTheDocument();
-    expect(ourClientsIcon).toHaveAttribute("src", "/icons/icon4.svg");
-    expect(ourClientsIcon).toHaveAttribute("alt", "icon4");
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/vision_studio_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "vision studio icon");
   });
   it("should render our clients icon in success", () => {
-    const ourClientsIcon = screen.getByRole("img", { name: "icon5" });
+    const ourClientsIcon = screen.getByRole("img", { name: /invision square icon/i });
     expect(ourClientsIcon).toBeInTheDocument();
-    expect(ourClientsIcon).toHaveAttribute("src", "/icons/icon5.svg");
-    expect(ourClientsIcon).toHaveAttribute("alt", "icon5");
-  });
-  it("should render our clients icon in success", () => {
-    const ourClientsIcon = screen.getByRole("img", { name: "icon6" });
-    expect(ourClientsIcon).toBeInTheDocument();
-    expect(ourClientsIcon).toHaveAttribute("src", "/icons/icon6.svg");
-    expect(ourClientsIcon).toHaveAttribute("alt", "icon6");
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/invision_square_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "invision square icon");
   });
 
   //test contact section

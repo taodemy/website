@@ -6,7 +6,7 @@ interface Props {
   icon: string;
 }
 
-const IconsList = ({ aria_label, alt, icon }: Props) => {
+const IconItem = ({ aria_label, alt, icon }: Props) => {
   return (
     <div>
       <img src={icon} arial-label={aria_label} alt={alt} />
@@ -14,4 +14,4 @@ const IconsList = ({ aria_label, alt, icon }: Props) => {
   );
 };
 
-export default IconsList;
+export default IconItem;
