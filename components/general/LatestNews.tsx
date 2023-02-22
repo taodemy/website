@@ -13,7 +13,9 @@ const LatestNews = () => {
         >
           LATEST NEWS
         </h1>
-        <Button variant="secondary">SEE ALL</Button>
+        <Button variant="secondary" isBlock={true}>
+          SEE ALL
+        </Button>
       </div>
       <article className={styles.latest_news__article}>
         <Card
