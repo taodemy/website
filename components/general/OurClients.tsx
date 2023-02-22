@@ -1,6 +1,6 @@
 import styles from "@/styles/OurClients.module.css";
 import { fontRobotoMono, fontSatoshi, fontSyne } from "@/pages/_app";
-import IconItem from "./IconList";
+import IconItem from "./IconItem";
 
 const OurClients = () => {
   const iconItems = [
