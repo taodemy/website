@@ -1,3 +1,4 @@
+import OurClients from "@/components/general/OurClients";
 import Head from "next/head";
 import Hero from "@/components/general/Hero";
 import WhatWeDo from "@/components/general/WhatWeDo";
@@ -5,7 +6,7 @@ import Contact from "@/components/general/Contact";
 import Values from "@/components/general/OurValues";
 import FeaturedWork from "../components/general/FeaturedWork";
 import LatestNews from "@/components/general/LatestNews";
-import Footer from "@/layouts/Footer";
+import HowWework from "@/components/general/HowWeWork";
 
 export default function Home() {
   return (
@@ -16,12 +17,13 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <OurClients />
         <WhatWeDo />
-        <Values />
         <FeaturedWork />
+        <HowWework />
+        <Values />
         <Contact />
         <LatestNews />
-        <Footer />
       </main>
     </>
   );
