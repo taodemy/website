@@ -1,0 +1,8 @@
+.info-item {
+  margin-bottom: 20px;
+}
+
+.info-item__title {
+  color: grey;
+  padding-bottom: 5px;
+}
