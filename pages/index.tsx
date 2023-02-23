@@ -6,6 +6,7 @@ import Contact from "@/components/general/Contact";
 import Values from "@/components/general/OurValues";
 import FeaturedWork from "../components/general/FeaturedWork";
 import LatestNews from "@/components/general/LatestNews";
+import HowWework from "@/components/general/HowWeWork";
 
 export default function Home() {
   return (
@@ -18,8 +19,9 @@ export default function Home() {
         <Hero />
         <OurClients />
         <WhatWeDo />
-        <Values />
         <FeaturedWork />
+        <HowWework />
+        <Values />
         <Contact />
         <LatestNews />
       </main>
