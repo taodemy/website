@@ -1,10 +1,19 @@
+.common_button {
+  padding: 0.8em 0.5em;
+  border: 1px solid var(--border-default);
+}
+
+.button-blocked {
+  align-self: auto;
+}
+
+.button-unblocked {
+  align-self: flex-start;
+}
+
 .primary_button {
-  padding: 10px 16px;
-  width: 152px;
-  height: 35px;
   background-color: var(--background-primary);
   border-radius: 6px;
-  border: none;
   color: var(--text-inverse);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -14,7 +23,6 @@
 .primary_button:hover {
   color: var(--text-default);
   background-color: transparent;
-  border: 1px solid var(--border-default);
 }
 
 .primary_button:active {
@@ -22,13 +30,9 @@
 }
 
 .secondary_button {
-  padding: 10px 16px;
-  width: 102px;
-  height: 35px;
   background-color: transparent;
   color: var(--text-default);
   border-radius: 6px;
-  border: 1px solid var(--border-default);
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;

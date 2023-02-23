@@ -7,7 +7,6 @@ describe("Home", () => {
     render(<Home />);
   });
 
-  // test featured work section
   it("renders the heading of featured work section", () => {
     const FeaturedWorkSection = screen.getByRole("heading", { name: /featured work/i });
     expect(FeaturedWorkSection).toBeInTheDocument();
@@ -25,7 +24,6 @@ describe("Home", () => {
     expect(heroPhoto).toBeInTheDocument();
   });
 
-  //test hero section
   it("renders a hero heading with the right content", () => {
     const heading = screen.getByText("We are a digital agency from Melbourne.");
     expect(heading).toBeInTheDocument();
@@ -58,6 +56,38 @@ describe("Home", () => {
     expect(text).toBeInTheDocument();
   });
 
+  // test how we work section
+  it("should render how we work section in sucess", () => {
+    const howWeWorkHead = screen.getByText("HOW WE WORK");
+    expect(howWeWorkHead).toBeInTheDocument();
+  });
+
+  it("should render how we work title in sucess", () => {
+    const howWeWorkTitle = screen.getByRole("heading", {
+      name: /We help our clients succeed with innovative strategies./i,
+    });
+    expect(howWeWorkTitle).toBeInTheDocument();
+  });
+
+  it("should render how we work icon in sucess", () => {
+    const howWeWorkIcon = screen.getByRole("img", { name: "how_we_work_star_icon" });
+    expect(howWeWorkIcon).toBeInTheDocument();
+    expect(howWeWorkIcon).toHaveAttribute("src", "/images/star.svg");
+    expect(howWeWorkIcon).toHaveAttribute("alt", "how we work icon");
+  });
+
+  it("should render how we work content in sucess", () => {
+    const howWeWorkContent = screen.getByText(
+      "Our team of experts is dedicated to delivering real results through creativity, strategic thinking, and technical expertise. Whether it‘s developing a new marketing campaign, designing a website, or creating a mobile app, we are always pushing the boundaries of what’s possible to help our clients stay ahead of the curve."
+    );
+    expect(howWeWorkContent).toBeInTheDocument();
+  });
+
+  it("should render the button in how we work section in success.", () => {
+    const howWeWorkButton = screen.getByRole("button", { name: /OUR SERVICES/i });
+    expect(howWeWorkButton).toBeInTheDocument();
+  });
+
   //test our values section
   it("should render our values section in success", () => {
     const ourValuesTitle = screen.getByText("OUR VALUES");
@@ -71,7 +101,50 @@ describe("Home", () => {
     expect(ourValuesImage).toHaveAttribute("alt", "our values image");
   });
 
-  //test contact section
+  //test our clients section
+  it("should render our clients section in success", () => {
+    const ourClientsText = screen.getByText("OUR CLIENTS");
+    expect(ourClientsText).toBeInTheDocument();
+  });
+
+  it("should render our clients icon in success", () => {
+    const ourClientsIcon = screen.getByRole("img", { name: /super food icon/i });
+    expect(ourClientsIcon).toBeInTheDocument();
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/super_food_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "super food icon");
+  });
+
+  it("should render our clients icon in success", () => {
+    const ourClientsIcon = screen.getByRole("img", { name: /creative studio icon/i });
+    expect(ourClientsIcon).toBeInTheDocument();
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/creative_studio_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "creative studio icon");
+  });
+  it("should render our clients icon in success", () => {
+    const ourClientsIcon = screen.getByRole("img", { name: /in motion icon/i });
+    expect(ourClientsIcon).toBeInTheDocument();
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/in_motion_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "in motion icon");
+  });
+  it("should render our clients icon in success", () => {
+    const ourClientsIcon = screen.getByRole("img", { name: /abstract icon/i });
+    expect(ourClientsIcon).toBeInTheDocument();
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/abstract_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "abstract icon");
+  });
+  it("should render our clients icon in success", () => {
+    const ourClientsIcon = screen.getByRole("img", { name: /vision studio icon/i });
+    expect(ourClientsIcon).toBeInTheDocument();
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/vision_studio_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "vision studio icon");
+  });
+  it("should render our clients icon in success", () => {
+    const ourClientsIcon = screen.getByRole("img", { name: /invision square icon/i });
+    expect(ourClientsIcon).toBeInTheDocument();
+    expect(ourClientsIcon).toHaveAttribute("src", "/icons/invision_square_icon.svg");
+    expect(ourClientsIcon).toHaveAttribute("alt", "invision square icon");
+  });
+
   it("should render contact section title in success", () => {
     const contactTitle = screen.getByText("Let’s bring your brand to the next level");
     expect(contactTitle).toBeInTheDocument();

@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   padding: 64px 0px;
-  border-top: 1px solid var(--border-default);
   border-bottom: 1px solid var(--border-default);
   gap: 0px 64px;
 }
