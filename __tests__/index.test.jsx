@@ -81,9 +81,9 @@ describe("Home", () => {
     expect(howWeWorkContent).toBeInTheDocument();
   });
 
-  it("should render how we work button in sucess", () => {
-    const howWeWorkButton = screen.getAllByRole("button", { name: /OUR SERVICES/i });
-    expect(howWeWorkButton[0]).toBeInTheDocument();
+  it("should render the button in how we work section in success.", () => {
+    const howWeWorkButton = screen.getByRole("button", { name: /OUR SERVICES/i });
+    expect(howWeWorkButton).toBeInTheDocument();
   });
 
   it("should render our values section in success", () => {
