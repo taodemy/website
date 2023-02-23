@@ -2,7 +2,7 @@ import styles from "@/styles/InfoBlock.module.css";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
 import Button from "../../base/Button";
 
-type InfoBlockType = "normal" | "input";
+type InfoBlockType = "normal" | "smallHeading" | "input";
 type InfoProps = {
   sectionName: string;
   title: string;
@@ -26,11 +26,19 @@ const InfoBlock = ({
         <p className={`${fontRobotoMono.className} global__text-meta ${styles.info_block_heading}`}>
           {sectionName}
         </p>
-        <h1
-          className={`${fontSyne.className} global__uppercase-heading--medium ${styles.info_block__title_text}`}
-        >
-          {title}
-        </h1>
+        {blockType === "smallHeading" ? (
+          <h1
+            className={`${fontSyne.className} global__heading--small ${styles.info_block__title_text_small}`}
+          >
+            {title}
+          </h1>
+        ) : (
+          <h1
+            className={`${fontSyne.className} global__uppercase-heading--medium ${styles.info_block__title_text}`}
+          >
+            {title}
+          </h1>
+        )}
         <img
           src={iconPath}
           alt={`${title}icon`}
@@ -40,17 +48,7 @@ const InfoBlock = ({
           className={styles.info_block__icon}
         />
       </div>
-      {blockType === "normal" && (
-        <div className={styles.info_block__normal_content}>
-          <p
-            className={`${fontSatoshi.className} global__text-xlarge ${styles.info_block__normal_content_text}`}
-          >
-            {content}
-          </p>
-          <Button>{buttonContent}</Button>
-        </div>
-      )}
-      {blockType === "input" && (
+      {blockType === "input" ? (
         <div className={styles.info_block__sign_up_content}>
           <p
             className={`${fontSatoshi.className} global__text-xlarge ${styles.info_block__sign_up_content__text}`}
@@ -65,6 +63,23 @@ const InfoBlock = ({
             />
             <Button>sign up</Button>
           </form>
+        </div>
+      ) : (
+        <div className={styles.info_block__normal_content}>
+          {blockType === "smallHeading" ? (
+            <p
+              className={`${fontSatoshi.className} global__text--large ${styles.info_block__normal_content_text_small}`}
+            >
+              {content}
+            </p>
+          ) : (
+            <p
+              className={`${fontSatoshi.className} global__text-xlarge ${styles.info_block__normal_content_text}`}
+            >
+              {content}
+            </p>
+          )}
+          <Button>{buttonContent}</Button>
         </div>
       )}
     </section>
