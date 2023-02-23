@@ -1,3 +1,4 @@
+import OurClients from "@/components/general/OurClients";
 import Head from "next/head";
 import Hero from "@/components/general/Hero";
 import WhatWeDo from "@/components/general/WhatWeDo";
@@ -15,6 +16,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero />
+        <OurClients />
         <WhatWeDo />
         <Values />
         <FeaturedWork />
