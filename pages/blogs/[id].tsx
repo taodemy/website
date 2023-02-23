@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { blogs } from "@/constants/blogDb.json";
+import blogs from "@/constants/blogDb.json";
 import styles from "@/styles/BlogSingle.module.css";
 
 interface stateProps {
-  id: number;
+  id: string;
   title: string;
   subtitle: string;
   content: string;
@@ -15,35 +15,36 @@ interface stateProps {
   readingTime: string;
 }
 export default function Blog() {
-  const [currentBlog, setCurrentBlog] = useState<stateProps>();
+  const [currentBlog, setCurrentBlog] = useState<stateProps>({
+    id: "",
+    title: "",
+    subtitle: "",
+    content: "",
+    image: "",
+    alt: "",
+    date: "",
+    category: "",
+    readingTime: "",
+  });
   const router = useRouter();
   const { id } = router.query;
+  console.log(typeof id);
   useEffect(() => {
-    if (typeof id === "undefined") {
-      return;
-    } else if (Array.isArray(id)) {
-      return;
-    } else {
-      const blog = blogs.filter((blog) => blog.id === parseInt(id));
-      setCurrentBlog(blog[0]);
-    }
+    const blog = blogs.data.filter((blog) => blog.id === id);
+    if (blog[0]) setCurrentBlog(blog[0]);
   }, [id]);
 
-  console.log(currentBlog);
-  if (currentBlog === undefined) {
-    return;
-  } else {
-    return (
-      <div>
-        {currentBlog.title}
-        <figure>
-          <img
-            src={currentBlog.image}
-            alt={currentBlog.title}
-            className={`${styles.blogsingle_image_container}`}
-          />
-        </figure>
-      </div>
-    );
-  }
+  return (
+    <div>
+      {currentBlog.title}
+
+      <img
+        src={currentBlog.image}
+        alt={currentBlog.alt}
+        aria-label={currentBlog.title}
+        className={`${styles.blogsingle_image_container}`}
+      />
+    </div>
+  );
 }
+// }

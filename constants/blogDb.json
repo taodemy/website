@@ -1,4 +1,5 @@
-{ "name":"blogs",
+{
+  "name": "blogs",
   "data": [
     {
       "id": "1",
