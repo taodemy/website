@@ -1,46 +1,21 @@
-import styles from "@/styles/HowWeWork.module.css";
-import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
-import Button from "../base/Button";
+import InfoBlock from "./InfoBlock/InfoBlock";
 
-function HowWeWork() {
+const HowWeWork = () => {
   return (
-    <section className={styles.how_we_work}>
-      <div className={styles.how_we_work__title}>
-        <p
-          className={`${fontRobotoMono.className} global__text-meta ${styles.how_we_work__title_heading}`}
-        >
-          HOW WE WORK
-        </p>
-
-        <h1
-          className={`${fontSyne.className} global__heading--small ${styles.how_we_work__title_text}`}
-        >
-          We help our clients <br />
+    <InfoBlock
+      sectionName="How we work"
+      title="We help our clients 
           succeed with innovative
-          <br />
-          strategies.
-        </h1>
-
-        <img
-          src="/images/star.svg"
-          className={styles.how_we_work__icon}
-          aria-label="how_we_work_star_icon"
-          alt="how we work icon"
-        />
-      </div>
-      <article className={styles.how_we_work__content}>
-        <p
-          className={`${fontSatoshi.className} global__text--large ${styles.how_we_work__content_text}`}
-        >
-          Our team of experts is dedicated to delivering real results through creativity, strategic
+          strategies."
+      iconPath="/images/star.svg"
+      blockType="normal"
+      content="Our team of experts is dedicated to delivering real results through creativity, strategic
           thinking, and technical expertise. Whether it‘s developing a new marketing campaign,
           designing a website, or creating a mobile app, we are always pushing the boundaries of
-          what’s possible to help our clients stay ahead of the curve.
-        </p>
-        <Button>OUR SERVICES</Button>
-      </article>
-    </section>
+          what’s possible to help our clients stay ahead of the curve."
+      buttonContent="our services"
+    />
   );
-}
+};
 
 export default HowWeWork;
