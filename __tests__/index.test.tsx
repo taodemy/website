@@ -58,7 +58,7 @@ describe("Home", () => {
 
   // test how we work section
   it("should render how we work section in sucess", () => {
-    const howWeWorkHead = screen.getByText("HOW WE WORK");
+    const howWeWorkHead = screen.getByText(/how we work/i);
     expect(howWeWorkHead).toBeInTheDocument();
   });
 
@@ -70,10 +70,11 @@ describe("Home", () => {
   });
 
   it("should render how we work icon in sucess", () => {
-    const howWeWorkIcon = screen.getByRole("img", { name: "how_we_work_star_icon" });
+    const howWeWorkIcon = screen.getByRole("img", {
+      name: /we help our clients succeed with innovative strategies\.icon/i,
+    });
     expect(howWeWorkIcon).toBeInTheDocument();
     expect(howWeWorkIcon).toHaveAttribute("src", "/images/star.svg");
-    expect(howWeWorkIcon).toHaveAttribute("alt", "how we work icon");
   });
 
   it("should render how we work content in sucess", () => {
@@ -151,10 +152,11 @@ describe("Home", () => {
   });
 
   it("should render icon in contact section success", () => {
-    const contactIcon = screen.getByRole("img", { name: "contact_arrows_icon" });
+    const contactIcon = screen.getByRole("img", {
+      name: /let’s bring your brand to the next levelicon/i,
+    });
     expect(contactIcon).toBeInTheDocument();
     expect(contactIcon).toHaveAttribute("src", "/images/arrows.svg");
-    expect(contactIcon).toHaveAttribute("alt", "contact arrows icon");
   });
 
   it("should render contact content text in success", () => {
@@ -168,6 +170,7 @@ describe("Home", () => {
     const latestNewsTitle = screen.getByRole("heading", { name: /latest news/i });
     const seeAllBtn = screen.getAllByRole("button", { name: /see all/i });
     const button = seeAllBtn[seeAllBtn.length - 1];
+    expect(latestNewsTitle).toBeInTheDocument();
     expect(button).toBeInTheDocument();
     expect(seeAllBtn[1]).toBeInTheDocument();
   });
