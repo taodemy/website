@@ -1,7 +1,7 @@
-{
-  "blogs": [
+{ "name":"blogs",
+  "data": [
     {
-      "id": 1,
+      "id": "1",
       "title": "BRANDING1",
       "subtitle": "lorem Branding is the process of creating a distinct identity for a business in the mind.",
       "content": "Branding is the process of creating a distinct identity for a business in the mind.",
@@ -12,7 +12,7 @@
       "readingTime": "10 MIN"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "BRANDING2",
       "subtitle": "lorem Branding is the process of creating a distinct identity for a business in the mind.",
       "content": "Branding is the process of creating a distinct identity for a business in the mind.",
@@ -23,7 +23,7 @@
       "readingTime": "10 MIN"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "BRANDING3",
       "subtitle": "lorem Branding is the process of creating a distinct identity for a business in the mind.",
       "content": "Branding is the process of creating a distinct identity for a business in the mind.",
@@ -34,7 +34,7 @@
       "readingTime": "10 MIN"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "BRANDING4",
       "subtitle": "lorem Branding is the process of creating a distinct identity for a business in the mind.",
       "content": "Branding is the process of creating a distinct identity for a business in the mind.",
