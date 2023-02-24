@@ -2,3 +2,22 @@
   width: 1780px;
   border-radius: 16px;
 }
+.blogsingle_title_section {
+  display: flex;
+  justify-content: space-between;
+  padding: 65px 0;
+}
+.blogsingle_title_button {
+  width: 17%;
+}
+.blogsingle_title_button p {
+  font-size: small;
+  font-weight: 500;
+}
+.blogsingle_title_text {
+  width: 61%;
+}
+.blogsingle_title_misc {
+  width: 22%;
+  border-left: 1px solid var(--border-default);
+}

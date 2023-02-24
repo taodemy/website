@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import blogs from "@/constants/blogDb.json";
 import styles from "@/styles/BlogSingle.module.css";
+import Button from "@/components/base/Button";
+import { fontSyne, fontSatoshi } from "@/pages/_app";
 
 interface stateProps {
   id: string;
@@ -36,7 +38,18 @@ export default function Blog() {
 
   return (
     <div>
-      {currentBlog.title}
+      <section className={`${styles.blogsingle_title_section}`}>
+        <div className={`${styles.blogsingle_title_button}`}>
+          <Button variant="secondary" isBlock={true}>
+            <p>GO BACK</p>
+          </Button>
+        </div>
+        <div className={`${styles.blogsingle_title_text}`}>
+          <h1 className={`${fontSyne.className} global__heading--medium`}>{currentBlog.title}</h1>
+          <p className={`${fontSatoshi.className} global__text-xlarge`}>{currentBlog.subtitle}</p>
+        </div>
+        <div className={`${styles.blogsingle_title_misc}`}>miscellaneous</div>
+      </section>
 
       <img
         src={currentBlog.image}
