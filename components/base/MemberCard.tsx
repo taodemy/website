@@ -1,20 +1,35 @@
 import styles from "@/styles/MemberCard.module.css";
 import { fontRobotoMono, fontSyne } from "../../pages/_app";
 
-type CardVariant = "column" | "row";
+type CardDirectionVariant = "column" | "column_reverse" | "row";
+type CardSizeVariant = "lg" | "md" | "sm";
 
 interface CardProps {
   title: string;
   subtitle: string;
   image: string;
-  direction: CardVariant;
+  direction?: CardDirectionVariant;
+  size?: CardSizeVariant;
 }
 
-const MemberCard = ({ title, subtitle, image, direction, ...otherProps }: CardProps) => {
+const MemberCard = ({
+  title,
+  subtitle,
+  image,
+  direction = "column",
+  size = "sm",
+  ...otherProps
+}: CardProps) => {
   const directionVariants = {
     row: "card__title_container_row",
     column: "card__title_container_column",
     column_reverse: "card__title_container_column_reverse",
+  };
+
+  const sizeVariants = {
+    lg: "card__image_large",
+    md: "card__image_medium",
+    sm: "card__image_small",
   };
 
   return (
@@ -22,9 +37,7 @@ const MemberCard = ({ title, subtitle, image, direction, ...otherProps }: CardPr
       <img
         src={image}
         alt={`${title} image`}
-        className={styles["card__image"]}
-        width="100%"
-        height="380"
+        className={`${styles["card__image"]} ${styles[sizeVariants[size]]}`}
       />
       <div className={styles[directionVariants[direction]]}>
         <h1 className={`${fontSyne.className} global__text--large ${styles["card__title"]}`}>
