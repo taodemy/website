@@ -32,7 +32,7 @@ const NavBar = () => {
     <section className={styles.header_navbar}>
       <section className={styles.header_navbar_link}>
         {linkLists.map(({ id, linkName }) => (
-          <NavbarLink key={id} linkName={linkName} />
+          <NavbarLink key={id} linkName={linkName} link={`/${linkName.toLowerCase()}`} />
         ))}
         <PageButton />
       </section>
