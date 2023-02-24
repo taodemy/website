@@ -1,16 +1,15 @@
-import InfoBlock from "./InfoBlock/InfoBlock";
+import styles from "@/styles/Contact.module.css";
+import SendMsg from "./SendMsg";
+import OurOffices from "./OurOffices";
+import CommonQuestions from "./CommonQuestions";
 
 const Contact = () => {
   return (
-    <InfoBlock
-      sectionName="Contact"
-      title="Let’s bring your brand to the next level"
-      iconPath="/images/arrows.svg"
-      blockType="normal"
-      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua."
-      buttonContent="get in touch"
-    />
+    <div className={styles.contact}>
+      <SendMsg />
+      <OurOffices />
+      <CommonQuestions />
+    </div>
   );
 };
 

@@ -1,0 +1,12 @@
+.social_media__ul {
+  list-style-type: none;
+  display: flex;
+}
+.standard {
+  gap: 16px;
+  flex-direction: row;
+}
+.reverse {
+  gap: 10px;
+  flex-direction: row-reverse;
+}

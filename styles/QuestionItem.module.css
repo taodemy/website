@@ -1,0 +1,10 @@
+.question_card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.question__button {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
