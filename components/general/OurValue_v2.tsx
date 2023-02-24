@@ -9,21 +9,21 @@ const OurValueV2 = () => {
       id: 1,
       title: "Vision",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat.",
+        "With the power of technology, we can unlock a future where humanity's greatest dreams become a reality.",
       icon: "/images/branding_icon.svg",
     },
     {
       id: 2,
       title: "Innovation",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat.",
+        "The continuous development of cutting-edge technology is the key to unlocking new frontiers of progress and discovery",
       icon: "/images/design_icon.svg",
     },
     {
       id: 3,
       title: "Connection",
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat.",
+        "By connecting people and ideas across borders and cultures, technology has the power to bring us closer together and create a more unified global community.",
       icon: "/images/video_icon.svg",
     },
   ];

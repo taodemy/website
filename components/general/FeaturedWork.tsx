@@ -3,7 +3,6 @@ import styles from "../../styles/FeaturedWork.module.css";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "../../pages/_app";
 import Button from "../base/Button";
 import { useState } from "react";
-import MemberCard from "../base/MemberCard";
 
 export default function FeaturedWork() {
   const [imgBoxes, setImgBoxes] = useState([

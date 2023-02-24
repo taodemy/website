@@ -161,7 +161,7 @@ describe("Home", () => {
 
   it("should render contact content text in success", () => {
     const contactContent = screen.getByText(
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "Contact us to explore partnership opportunities and discover how we can work together to drive innovation and create positive change."
     );
     expect(contactContent).toBeInTheDocument();
   });
