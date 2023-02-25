@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run server & next build",
     "start": "next start",
     "test": "jest --colors --config jest.config.js",
     "lint": "next lint",
