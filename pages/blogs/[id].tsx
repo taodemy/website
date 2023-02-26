@@ -40,7 +40,7 @@ export default function Blog() {
     <div>
       <section className={`${styles.blogsingle_title_section}`}>
         <div className={`${styles.blogsingle_title_button}`}>
-          <Button variant="secondary" isBlock={true}>
+          <Button variant="secondary" padding="small">
             <p>GO BACK</p>
           </Button>
         </div>
