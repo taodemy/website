@@ -1,6 +1,6 @@
 import Head from "next/head";
 import AboutUs from "@/components/general/AboutUs";
-import OurValueV2 from "@/components/general/OurValue_v2";
+import OurValueV2 from "@/components/general/OurValue2";
 import OurTeam from "@/components/general/OurTeam";
 import Contact from "@/components/general/Contact";
 
