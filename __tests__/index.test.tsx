@@ -147,21 +147,21 @@ describe("Home", () => {
   });
 
   it("should render contact section title in success", () => {
-    const contactTitle = screen.getByText("Let’s bring your brand to the next level");
+    const contactTitle = screen.getByText("Let’s bring your tech to the next level");
     expect(contactTitle).toBeInTheDocument();
   });
 
   it("should render icon in contact section success", () => {
     const contactIcon = screen.getByRole("img", {
-      name: /let’s bring your brand to the next levelicon/i,
+      name: /let’s bring your tech to the next levelicon/i,
     });
     expect(contactIcon).toBeInTheDocument();
-    expect(contactIcon).toHaveAttribute("src", "/images/arrows.svg");
+    expect(contactIcon).toHaveAttribute("src", "/images/design_icon.svg");
   });
 
   it("should render contact content text in success", () => {
     const contactContent = screen.getByText(
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "Contact us to explore partnership opportunities and discover how we can work together to drive innovation and create positive change."
     );
     expect(contactContent).toBeInTheDocument();
   });
