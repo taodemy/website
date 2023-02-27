@@ -1,4 +1,4 @@
-import styles from "@/styles/Contact.module.css";
+import styles from "@/styles/ContactPage.module.css";
 import { fontSyne, fontRobotoMono } from "@/pages/_app";
 import SocialMedia from "./SocialMedia/SocialMedia";
 import Button from "../base/Button";

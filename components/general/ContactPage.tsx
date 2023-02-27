@@ -1,4 +1,4 @@
-import styles from "@/styles/Contact.module.css";
+import styles from "@/styles/ContactPage.module.css";
 import SendMsg from "./SendMsg";
 import OurOffices from "./OurOffices";
 import CommonQuestions from "./CommonQuestions";

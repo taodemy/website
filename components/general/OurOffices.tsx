@@ -1,4 +1,4 @@
-import styles from "@/styles/Contact.module.css";
+import styles from "@/styles/ContactPage.module.css";
 import { fontRobotoMono } from "@/pages/_app";
 import AddressItem from "./AddressItem";
 
