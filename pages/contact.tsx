@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Contact from "@/components/general/Contact";
+import Contact from "@/components/general/ContactPage";
 
 export default function Blog() {
   return (
