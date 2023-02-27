@@ -81,15 +81,6 @@ export default function FeaturedWork() {
             image={imgBoxes[3].location}
             direction="row"
           />
-
-          {/* {imgBoxes.map((box) => (
-            <Picturedbox
-              key={box.id}
-              location={box.location}
-              title={box.title}
-              hasBorder={box.hasBorder}
-            ></Picturedbox>
-          ))} */}
         </div>
       </div>
     </div>
