@@ -10,5 +10,5 @@ const PORT = process.env.JSON_SERVER_PORT;
 server.use(middleware);
 server.use(router);
 server.listen(PORT, () => {
-  console.log(`JSON Server is running ${PORT}`);
+  console.log(`JSON Server is running at ${PORT}`);
 });

@@ -2,14 +2,23 @@
 
 ## Table of contents
 
-- [🤓 Getting Started](#getting-started-✨-sparkles)
-- [📝 Project Structure](#project-structure)
-- [💻 Project Tech Stack](#project-tech-stack)
-- [🏗️ UI Design](#ui-design)
-- [📦 Notion Board](#notion-board)
-- [🧪 Code of Conduct](#code-of-conduct-clipboard)
-- [📚 Example ](#example)
-- [🥞 Frequent Issue Solutions](#frequent-issue-solutionspill)
+- [♾️ TaoTech ♾️](#️-taotech-️)
+  - [Table of contents](#table-of-contents)
+  - [Getting Started ✨ :sparkles:](#getting-started--sparkles)
+    - [Install dependencies](#install-dependencies)
+    - [Start the server](#start-the-server)
+    - [Build for Deploy](#build-for-deploy)
+    - [Static HTML Export](#static-html-export)
+    - [Run the Production](#run-the-production)
+    - [Run All Test](#run-all-test)
+    - [Run Single Test With Watching And Display Coverage](#run-single-test-with-watching-and-display-coverage)
+  - [Project structure](#project-structure)
+  - [Project Tech Stack](#project-tech-stack)
+  - [UI Design](#ui-design)
+  - [Notion Board](#notion-board)
+  - [Code of Conduct :clipboard:](#code-of-conduct-clipboard)
+  - [Example](#example)
+  - [Frequent Issue Solutions:pill:](#frequent-issue-solutionspill)
 
 ## Getting Started ✨ :sparkles:
 
