@@ -9,7 +9,15 @@ describe("ListItems", () => {
   };
 
   beforeEach(() => {
-    render(<ListItem title={props.title} content={props.content} icon={props.icon} />);
+    render(
+      <ListItem
+        title={props.title}
+        content={props.content}
+        icon={props.icon}
+        height={50}
+        width={50}
+      />
+    );
   });
 
   it("should render list title in success", () => {

@@ -1,125 +1,125 @@
 {
-    "name": "works",
-    "data": [
+  "name": "works",
+  "data": [
+    {
+      "id": "1",
+      "title": "DANCING STARS",
+      "intro": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, dignissimos ullam eaque excepturi sunt nemo praesentium tenetur et placeat dolores at porro rem autem similique reiciendis ipsum voluptatum possimus. Veritatis possimus voluptate harum eligendi iure accusamus dolores magnam perspiciatis quaerat",
+      "info": {
+        "client": "LOREM IPSUM",
+        "timeline": "4 WEEKS",
+        "service": "DESIGN, BRANDING",
+        "website": "WWW.GOLA.IO"
+      },
+      "report": {
+        "challenge": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tenetur ipsam provident laborum illo dolore totam nam voluptatum error ullam, corrupti dolorum voluptas, corporis sapiente",
+        "solution": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tenetur ipsam provident laborum illo dolore totam nam voluptatum error ullam, corrupti dolorum voluptas, corporis sapiente",
+        "result": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tenetur ipsam provident laborum illo dolore totam nam voluptatum error ullam, corrupti dolorum voluptas, corporis sapiente"
+      },
+      "img": [
         {
-            "id": "1",
-            "title": "DANCING STARS",
-            "intro": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, dignissimos ullam eaque excepturi sunt nemo praesentium tenetur et placeat dolores at porro rem autem similique reiciendis ipsum voluptatum possimus. Veritatis possimus voluptate harum eligendi iure accusamus dolores magnam perspiciatis quaerat",
-            "info": {
-                "client": "LOREM IPSUM",
-                "timeline": "4 WEEKS",
-                "service": "DESIGN, BRANDING",
-                "website": "WWW.GOLA.IO"
-            },
-            "report": {
-                "challenge": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tenetur ipsam provident laborum illo dolore totam nam voluptatum error ullam, corrupti dolorum voluptas, corporis sapiente",
-                "solution": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tenetur ipsam provident laborum illo dolore totam nam voluptatum error ullam, corrupti dolorum voluptas, corporis sapiente",
-                "result": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius tenetur ipsam provident laborum illo dolore totam nam voluptatum error ullam, corrupti dolorum voluptas, corporis sapiente"
-            },
-            "img": [
-                {
-                    "src": "/images/our_value.jpeg",
-                    "alt": "our value"
-                },
-                {
-                    "src": "/images/two_people_praying.png",
-                    "alt": "two people praying"
-                },
-                {
-                    "src": "/images/channel.png",
-                    "alt": "channel"
-                }
-            ]
+          "src": "/images/our_value.jpeg",
+          "alt": "our value"
         },
         {
-            "id": "2",
-            "title": "CODING NERDS",
-            "intro": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, dignissimos ullam eaque excepturi sunt nemo praesentium tenetur et placeat dolores at porro rem autem similique reiciendis ipsum voluptatum possimus. Veritatis possimus voluptate harum eligendi iure accusamus dolores magnam perspiciatis quaerat",
-            "info": {
-                "client": "CAMERON",
-                "timeline": "2 MONTHS",
-                "service": "EATING, CODING",
-                "website": "WWW.XXX.COM"
-            },
-            "report": {
-                "challenge": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
-                "solution": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
-                "result": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet"
-            },
-            "img": [
-                {
-                    "src": "/images/two_people_praying.png",
-                    "alt": "two people praying"
-                },
-                {
-                    "src": "/images/two_people_praying.png",
-                    "alt": "two people praying"
-                },
-                {
-                    "src": "/images/two_people_praying.png",
-                    "alt": "two people praying"
-                }
-            ]
+          "src": "/images/two_people_praying.png",
+          "alt": "two people praying"
         },
         {
-            "id": "3",
-            "title": "A MEANINGLESS TITLE",
-            "intro": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, dignissimos ullam eaque excepturi sunt nemo praesentium tenetur et placeat dolores at porro rem autem similique reiciendis ipsum voluptatum possimus. Veritatis possimus voluptate harum eligendi iure accusamus dolores magnam perspiciatis quaerat",
-            "info": {
-                "client": "ELON MUSK",
-                "timeline": "1 WEEKS",
-                "service": "DESIGN, VIDEO",
-                "website": "WWW.TESLA.COM"
-            },
-            "report": {
-                "challenge": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
-                "solution": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
-                "result": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet"
-            },
-            "img": [
-                {
-                    "src": "/images/channel.png",
-                    "alt": "channel"
-                },
-                {
-                    "src": "/images/channel.png",
-                    "alt": "channel"
-                },
-                {
-                    "src": "/images/channel.png",
-                    "alt": "channel"
-                }
-            ]
-        },
-        {
-            "id": "4",
-            "title": "WHATEVER YOU LIKE",
-            "intro": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, dignissimos ullam eaque excepturi sunt nemo praesentium tenetur et placeat dolores at porro rem autem similique reiciendis ipsum voluptatum possimus. Veritatis possimus voluptate harum eligendi iure accusamus dolores magnam perspiciatis quaerat",
-            "info": {
-                "client": "HARRY YU",
-                "timeline": "2 WEEKS",
-                "service": "MARKETING",
-                "website": "WWW.GOOGLE.COM"
-            },
-            "report": {
-                "challenge": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
-                "solution": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
-                "result": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet"
-            },
-            "img": [
-                {
-                    "src": "/images/our_value.jpeg",
-                    "alt": "our value"
-                },
-                {
-                    "src": "/images/our_value.jpeg",
-                    "alt": "our value"
-                },
-                {
-                    "src": "/images/our_value.jpeg",
-                    "alt": "our value"
-                }
-            ]
+          "src": "/images/channel.png",
+          "alt": "channel"
         }
-    ]
+      ]
+    },
+    {
+      "id": "2",
+      "title": "CODING NERDS",
+      "intro": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, dignissimos ullam eaque excepturi sunt nemo praesentium tenetur et placeat dolores at porro rem autem similique reiciendis ipsum voluptatum possimus. Veritatis possimus voluptate harum eligendi iure accusamus dolores magnam perspiciatis quaerat",
+      "info": {
+        "client": "CAMERON",
+        "timeline": "2 MONTHS",
+        "service": "EATING, CODING",
+        "website": "WWW.XXX.COM"
+      },
+      "report": {
+        "challenge": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
+        "solution": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
+        "result": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet"
+      },
+      "img": [
+        {
+          "src": "/images/two_people_praying.png",
+          "alt": "two people praying"
+        },
+        {
+          "src": "/images/two_people_praying.png",
+          "alt": "two people praying"
+        },
+        {
+          "src": "/images/two_people_praying.png",
+          "alt": "two people praying"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "A MEANINGLESS TITLE",
+      "intro": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, dignissimos ullam eaque excepturi sunt nemo praesentium tenetur et placeat dolores at porro rem autem similique reiciendis ipsum voluptatum possimus. Veritatis possimus voluptate harum eligendi iure accusamus dolores magnam perspiciatis quaerat",
+      "info": {
+        "client": "ELON MUSK",
+        "timeline": "1 WEEKS",
+        "service": "DESIGN, VIDEO",
+        "website": "WWW.TESLA.COM"
+      },
+      "report": {
+        "challenge": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
+        "solution": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
+        "result": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet"
+      },
+      "img": [
+        {
+          "src": "/images/channel.png",
+          "alt": "channel"
+        },
+        {
+          "src": "/images/channel.png",
+          "alt": "channel"
+        },
+        {
+          "src": "/images/channel.png",
+          "alt": "channel"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "WHATEVER YOU LIKE",
+      "intro": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione, dignissimos ullam eaque excepturi sunt nemo praesentium tenetur et placeat dolores at porro rem autem similique reiciendis ipsum voluptatum possimus. Veritatis possimus voluptate harum eligendi iure accusamus dolores magnam perspiciatis quaerat",
+      "info": {
+        "client": "HARRY YU",
+        "timeline": "2 WEEKS",
+        "service": "MARKETING",
+        "website": "WWW.GOOGLE.COM"
+      },
+      "report": {
+        "challenge": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
+        "solution": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet",
+        "result": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis iste magnam deserunt numquam hic voluptate, aliquid temporibus impedit mollitia veritatis facere adipisci officiis nobis nisi, autem molestias amet"
+      },
+      "img": [
+        {
+          "src": "/images/our_value.jpeg",
+          "alt": "our value"
+        },
+        {
+          "src": "/images/our_value.jpeg",
+          "alt": "our value"
+        },
+        {
+          "src": "/images/our_value.jpeg",
+          "alt": "our value"
+        }
+      ]
+    }
+  ]
 }

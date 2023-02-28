@@ -1,6 +1,5 @@
 import { render, screen } from "@testing-library/react";
 import InfoItem from "@/components/general/InfoItem";
-import { text } from "stream/consumers";
 
 describe("InfoItem", () => {
   const testData = {

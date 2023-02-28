@@ -14,16 +14,8 @@
 
 .work-single-page__img {
   width: 100%;
-  height: 670px;
+  height: 580px;
+  object-fit: cover;
   margin-bottom: 32px;
   border-radius: 16px;
-}
-
-.work-single-page__report-item {
-  margin-bottom: 65px;
-  padding-right: 16px;
-}
-
-.work-single-page__report-icon {
-  margin-bottom: 32px;
 }
