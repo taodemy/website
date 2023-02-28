@@ -1,8 +1,7 @@
-import styles from "@/styles/BlogGallery.module.css";
-import Card from "../base/Card";
-import Divider from "../base/Divider";
-import Button from "../base/Button";
-import MemberCard from "../base/MemberCard";
+import styles from "./BlogGallery.module.css";
+import Divider from "../../base/Divider";
+import Button from "../../base/Button";
+import MemberCard from "../../base/MemberCard";
 
 const BlogGallery = () => {
   return (
@@ -14,6 +13,7 @@ const BlogGallery = () => {
           subtitle={"Branding, Design"}
           direction={"column_reverse"}
           size={"lg"}
+          large_title={true}
         />
         <Divider />
         <MemberCard
@@ -22,6 +22,7 @@ const BlogGallery = () => {
           subtitle={"Branding, Design"}
           direction={"column_reverse"}
           size={"lg"}
+          large_title={true}
         />
       </article>
       <article className={styles["blog_gallery__small_group"]}>

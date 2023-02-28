@@ -8,6 +8,7 @@ interface CardProps {
   title: string;
   subtitle: string;
   image: string;
+  large_title?: boolean;
   direction?: CardDirectionVariant;
   size?: CardSizeVariant;
 }
@@ -18,6 +19,7 @@ const MemberCard = ({
   image,
   direction = "column",
   size = "sm",
+  large_title = false,
   ...otherProps
 }: CardProps) => {
   const directionVariants = {
@@ -40,9 +42,21 @@ const MemberCard = ({
         className={`${styles["card__image"]} ${styles[sizeVariants[size]]}`}
       />
       <div className={styles[directionVariants[direction]]}>
-        <h1 className={`${fontSyne.className} global__text--large ${styles["card__title"]}`}>
-          {title}
-        </h1>
+        {direction === "column_reverse" && large_title && (
+          <h1 className={`${fontSyne.className} global__heading-h2 ${styles["card__title"]}`}>
+            {title}
+          </h1>
+        )}
+        {direction === "column_reverse" && !large_title && (
+          <h1 className={`${fontSyne.className} global__text-xlarge ${styles["card__title"]}`}>
+            {title}
+          </h1>
+        )}
+        {direction !== "column_reverse" && (
+          <h1 className={`${fontSyne.className} global__text--large ${styles["card__title"]}`}>
+            {title}
+          </h1>
+        )}
         <p className={`${fontRobotoMono.className} global__text-meta ${styles["card__subtitle"]}`}>
           {subtitle}
         </p>

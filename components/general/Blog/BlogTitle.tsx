@@ -1,6 +1,6 @@
-import styles from "@/styles/BlogTitle.module.css";
+import styles from "./BlogTitle.module.css";
 import { fontSyne, fontSatoshi } from "@/pages/_app";
-import Button from "../base/Button";
+import Button from "../../base/Button";
 
 const BlogTitle = () => {
   return (

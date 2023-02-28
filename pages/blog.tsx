@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Subscription from "@/components/general/Subscription";
-import BlogTitle from "@/components/general/BlogTitle";
-import BlogGallery from "@/components/general/BlogGallery";
+import BlogTitle from "@/components/general/Blog/BlogTitle";
+import BlogGallery from "@/components/general/Blog/BlogGallery";
 
 export default function Blog() {
   return (
