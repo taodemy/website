@@ -1,6 +1,13 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .card__image {
   border-radius: 12px;
-  object-fit: cover;
+  object-fit: fill;
+  height: 800px;
 }
 
 .card__title_container_column {
@@ -24,12 +31,8 @@
   font-size: 32px;
 }
 
-.card__title_container_column_reverse p {
-  font-size: 15px;
-}
-
 .card__image_large {
-  width: 100%;
+  width: 600px;
 }
 
 .card__image_medium {
@@ -45,8 +48,4 @@
 
 .card__title {
   font-weight: 500;
-}
-
-.card__subtitle {
-  font-weight: 400;
 }

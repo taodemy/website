@@ -7,9 +7,8 @@
 }
 
 .blog_gallery__large_group {
-  padding: 63px 0 63px 0;
+  padding-bottom: 63px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   border-bottom: var(--default-border);
 }
@@ -22,7 +21,6 @@
 }
 .blog_gallery__small_group__line_one {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 

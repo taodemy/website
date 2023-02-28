@@ -33,7 +33,7 @@ const MemberCard = ({
   };
 
   return (
-    <div className={styles["card"]} {...otherProps}>
+    <div className={`${styles["card"]}`} {...otherProps}>
       <img
         src={image}
         alt={`${title} image`}
@@ -43,7 +43,9 @@ const MemberCard = ({
         <h1 className={`${fontSyne.className} global__text--large ${styles["card__title"]}`}>
           {title}
         </h1>
-        <p className={`${fontRobotoMono.className} ${styles["card__subtitle"]}`}>{subtitle}</p>
+        <p className={`${fontRobotoMono.className} global__text-meta ${styles["card__subtitle"]}`}>
+          {subtitle}
+        </p>
       </div>
     </div>
   );

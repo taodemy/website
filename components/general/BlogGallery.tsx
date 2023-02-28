@@ -2,29 +2,36 @@ import styles from "@/styles/BlogGallery.module.css";
 import Card from "../base/Card";
 import Divider from "../base/Divider";
 import Button from "../base/Button";
+import MemberCard from "../base/MemberCard";
 
 const BlogGallery = () => {
   return (
     <section className={styles["blog_gallery"]}>
       <article className={styles["blog_gallery__large_group"]}>
-        <Card
+        <MemberCard
           image={"/images/two_people_praying.png"}
-          cornerMakerLeft={"Branding, Design"}
           title={"Things to Look for When Comparing Branding Alternatives"}
+          subtitle={"Branding, Design"}
+          direction={"column_reverse"}
+          size={"lg"}
         />
         <Divider />
-        <Card
+        <MemberCard
           image={"/images/channel.png"}
-          cornerMakerLeft={"Branding, Design"}
           title={"5 Stand-out Features of Branding You Should Know"}
+          subtitle={"Branding, Design"}
+          direction={"column_reverse"}
+          size={"lg"}
         />
       </article>
       <article className={styles["blog_gallery__small_group"]}>
         <div className={styles["blog_gallery__small_group__line_one"]}>
-          <Card
+          <MemberCard
             image={"/images/two_people_praying.png"}
-            cornerMakerLeft={"Branding, Design"}
             title={"Things to Look for When Comparing Branding Alternatives"}
+            subtitle={"Branding, Design"}
+            direction={"column_reverse"}
+            size={"sm"}
           />
           <Divider />
           <Card
