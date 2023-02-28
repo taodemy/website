@@ -7,8 +7,14 @@ import Values from "@/components/general/OurValues";
 import FeaturedWork from "../components/general/FeaturedWork";
 import LatestNews from "@/components/general/LatestNews";
 import HowWework from "@/components/general/HowWeWork";
+import { getPosts } from "@/server/test";
 
 export default function Home() {
+  const b = async () => {
+    const a = await getPosts();
+    console.log(a, "@@@@@@@@ test server at port 3001");
+  };
+  b();
   return (
     <>
       <Head>
