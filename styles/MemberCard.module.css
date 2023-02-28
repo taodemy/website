@@ -1,13 +1,13 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  flex: 1;
+  gap: 16px;
 }
 
 .card__image {
   border-radius: 12px;
-  object-fit: fill;
-  height: 800px;
+  object-fit: cover;
 }
 
 .card__title_container_column {
@@ -25,6 +25,7 @@
 .card__title_container_column_reverse {
   display: flex;
   flex-direction: column-reverse;
+  gap: 8px;
 }
 
 .card__title_container_column_reverse h1 {
@@ -32,7 +33,7 @@
 }
 
 .card__image_large {
-  width: 600px;
+  width: 100%;
 }
 
 .card__image_medium {

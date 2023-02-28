@@ -9,7 +9,7 @@
 .blog_gallery__large_group {
   padding-bottom: 63px;
   display: flex;
-  justify-content: space-between;
+  gap: 48px;
   border-bottom: var(--default-border);
 }
 
@@ -21,16 +21,16 @@
 }
 .blog_gallery__small_group__line_one {
   display: flex;
-  justify-content: space-between;
+  gap: 48px;
 }
 
 .blog_gallery__small_group__line_two {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 48px;
 }
 
 .blog_gallery__button_group {
+  padding-top: 24px;
   display: flex;
   justify-content: space-between;
 }
