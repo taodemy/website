@@ -4,32 +4,6 @@ import MemberCard from "../base/MemberCard";
 import Divider from "../base/Divider";
 
 const OurTeam = () => {
-  const members = [
-    {
-      id: 1,
-      name: "Tato",
-      position: "Mentor",
-      image: "img/featured-work-sec-img-1.png",
-    },
-    {
-      id: 2,
-      name: "Kristin Watson",
-      position: "Developer",
-      image: "img/featured-work-sec-img-2.png",
-    },
-    {
-      id: 3,
-      name: "Cameron Huang",
-      position: "Developer",
-      image: "img/featured-work-sec-img-3.png",
-    },
-    {
-      id: 4,
-      name: "Guy Hawkins",
-      position: "Developer",
-      image: "img/featured-work-sec-img-4.png",
-    },
-  ];
   return (
     <section className={styles["our_team"]}>
       <div className={styles["our_team__text_container"]}>
@@ -47,27 +21,27 @@ const OurTeam = () => {
         <MemberCard
           title="Tato"
           subtitle="Mentor"
-          image="img/featured-work-sec-img-1.png"
+          image="images/featured-work-sec-img-1.png"
           direction="column"
         />
         <Divider />
         <MemberCard
           title="Kristin Watson"
           subtitle="Developer"
-          image="img/featured-work-sec-img-2.png"
+          image="images/featured-work-sec-img-2.png"
           direction="column"
         />
         <MemberCard
           title="Cameron Huang"
           subtitle="Developer"
-          image="img/featured-work-sec-img-3.png"
+          image="images/featured-work-sec-img-3.png"
           direction="column"
         />
         <Divider />
         <MemberCard
           title="Guy Hawkins"
           subtitle="Developer"
-          image="img/featured-work-sec-img-4.png"
+          image="images/featured-work-sec-img-4.png"
           direction="column"
         />
       </div>
