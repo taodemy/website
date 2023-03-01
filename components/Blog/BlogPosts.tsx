@@ -1,7 +1,7 @@
-import styles from "./BlogGallery.module.css";
-import Divider from "../../base/Divider";
-import Button from "../../base/Button";
-import MemberCard from "../../base/MemberCard";
+import styles from "./BlogPosts.module.css";
+import Divider from "../base/Divider";
+import Button from "../base/Button";
+import MemberCard from "../base/MemberCard";
 
 const BlogGallery = () => {
   return (
