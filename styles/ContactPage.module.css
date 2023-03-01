@@ -34,6 +34,9 @@
   width: 35%;
   height: 70%;
 }
+.label_input__container {
+  position: relative;
+}
 .msg__input {
   width: 100%;
   border-top: none;
@@ -45,9 +48,12 @@
   margin-bottom: 5%;
 }
 .msg__textarea {
-  border-bottom: 1px solid var(--border-default);
+  resize: none;
 }
-.msg__input::placeholder {
+.msg__label {
+  position: absolute;
+  left: 0.2em;
+  line-height: 280%;
   color: var(--text-default);
 }
 .offices {
