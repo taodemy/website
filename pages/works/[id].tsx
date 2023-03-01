@@ -86,7 +86,7 @@ const WorkSinglePage = () => {
       <Contact />
     </div>
   ) : (
-    <div></div>
+    <></>
   );
 };
 
