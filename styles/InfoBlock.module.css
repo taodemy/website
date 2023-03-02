@@ -8,6 +8,7 @@
 
 .info_block__title {
   grid-column: 1/3;
+  white-space: pre-wrap;
 }
 
 .info_block_heading {
