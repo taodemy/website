@@ -6,6 +6,7 @@
   --background-primary: #000000;
   --background-secondary: #f0d163;
   --icon-default: #191919;
+  --default-border: 1px solid var(--border-default);
 }
 
 body {

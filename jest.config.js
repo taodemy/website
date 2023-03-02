@@ -11,8 +11,8 @@ const customJestConfig = {
 
   collectCoverage: true,
   collectCoverageFrom: [
-    "pages/*.tsx",
-    "components/*/*.tsx",
+    "pages/**/*.tsx",
+    "components/**/*.tsx",
     "!pages/_app.tsx",
     "!pages/_document.tsx",
   ],
@@ -29,7 +29,6 @@ const customJestConfig = {
     // Handle module aliases (this will be automatically configured for you soon)
     "^@/components/(.*)$": "<rootDir>/components/$1",
     "^@/pages/(.*)$": "<rootDir>/pages/$1",
-
     "^@/constants/(.*)$": "<rootDir>/constants/$1",
     "^@/layouts/(.*)$": "<rootDir>/layouts/$1",
   },

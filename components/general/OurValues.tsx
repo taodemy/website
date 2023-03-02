@@ -1,9 +1,8 @@
 import ListItem from "./ItemList";
-
 import styles from "@/styles/OurValues.module.css";
 import { fontSyne } from "@/pages/_app";
 
-function OurValues() {
+const OurValues = () => {
   const listItems = [
     {
       id: 1,
@@ -45,12 +44,12 @@ function OurValues() {
 
         <div className={styles.our_values__list}>
           {listItems.map(({ id, title, content, icon }) => (
-            <ListItem key={id} title={title} content={content} icon={icon} />
+            <ListItem key={id} title={title} content={content} icon={icon} width={34} height={34} />
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default OurValues;
