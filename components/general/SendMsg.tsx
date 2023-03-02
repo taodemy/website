@@ -13,12 +13,10 @@ const SendMsg = () => {
   };
   useEffect(() => {
     const label = document.getElementById("username_label");
-    if (isNameFieldEmpty == false) {
-      if (label) {
+    if (label) {
+      if (isNameFieldEmpty == false) {
         label.style.visibility = "hidden";
-      }
-    } else {
-      if (label) {
+      } else {
         label.style.visibility = "visible";
       }
     }
@@ -28,12 +26,10 @@ const SendMsg = () => {
   };
   useEffect(() => {
     const label = document.getElementById("email_label");
-    if (isEmailFieldEmpty == false) {
-      if (label) {
+    if (label) {
+      if (isEmailFieldEmpty == false) {
         label.style.visibility = "hidden";
-      }
-    } else {
-      if (label) {
+      } else {
         label.style.visibility = "visible";
       }
     }
@@ -43,12 +39,10 @@ const SendMsg = () => {
   };
   useEffect(() => {
     const label = document.getElementById("message_label");
-    if (isMessageFieldEmpty == false) {
-      if (label) {
+    if (label) {
+      if (isMessageFieldEmpty == false) {
         label.style.visibility = "hidden";
-      }
-    } else {
-      if (label) {
+      } else {
         label.style.visibility = "visible";
       }
     }
