@@ -1,0 +1,36 @@
+.blog_gallery {
+  padding: 63px 0 63px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: var(--default-border);
+}
+
+.blog_gallery__large_group {
+  padding-bottom: 63px;
+  display: flex;
+  gap: 48px;
+  border-bottom: var(--default-border);
+}
+
+.blog_gallery__small_group {
+  padding-top: 63px;
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+}
+.blog_gallery__small_group__line_one {
+  display: flex;
+  gap: 48px;
+}
+
+.blog_gallery__small_group__line_two {
+  display: flex;
+  gap: 48px;
+}
+
+.blog_gallery__button_group {
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
