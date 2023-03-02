@@ -1,4 +1,4 @@
-import styles from "@/styles/InfoBlock.module.css";
+import styles from "./InfoBlock.module.css";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
 import Button from "../../base/Button";
 
@@ -56,11 +56,15 @@ const InfoBlock = ({
             {content}
           </p>
           <form className={styles.info_block__sign_up_content__form}>
-            <input
-              type="email"
-              defaultValue="YOUR EMAIL"
-              className={`global__heading-h4 ${fontSyne.className} ${styles.info_block__sign_up_content__form__input}`}
-            />
+            <div className={styles.info_block__sign_up_content__form__group}>
+              <label htmlFor="email" className={`global__heading-h4 ${fontSyne.className}`}>
+                YOUR EMAIL
+              </label>
+              <input
+                type="email"
+                className={`global__heading-h4 ${fontSyne.className} ${styles.info_block__sign_up_content__form__input}`}
+              />
+            </div>
             <Button>sign up</Button>
           </form>
         </div>
