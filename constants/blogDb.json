@@ -5,34 +5,46 @@
       "id": "1",
       "title": "Things to Look for When Comparing Branding Alternatives",
       "subtitle": "lorem Branding is the process of creating a distinct identity for a business in the mind.",
-      "content": "Branding is the process of creating a distinct identity for a business in the mind.",
+      "content": "Branding is the process of creating a distinct creating a distinct identity for a business in the mind. loremcreating a distinct identity for a business in the mind. loremcreating a distinct identity for a business in the mind. loremcreating a distinct identity for a business in the mind. loremcreating a distinct identity for a business in the mind. loremcreating a distinct identity for a business in the mind. loremidentity for a business in the mind. lorem",
       "image": "/images/two_people_praying.png",
       "alt": "Branding icon",
-      "date": "16 JUNE 2022",
-      "category": "design",
-      "readingTime": "10 MIN"
+      "info": {
+        "date": "16 JUNE 2022",
+        "category": "design",
+        "readingTime": "10 MIN"
+      },
+      "author": "Guy Hawkins",
+      "authorInfo": "lorem Branding is the process of creating a distinct "
     },
     {
       "id": "2",
       "title": "BRANDING2",
       "subtitle": "lorem Branding is the process of creating a distinct identity for a business in the mind.",
-      "content": "Branding is the process of creating a distinct identity for a business in the mind.",
-      "image": "/images/branding_icon.png",
+      "content": "Branding is the process of creating a distinct creating a distinct identity for a business in the mind. loremcreating a distinct identity for a business in the mind. loremcreating a distinct identity for a business in the mind. loremcreating a distinct identity for a business in the mind. loremcreating a distinct identity for a business in the mind. loremcreating a distinct identity for a business in the mind. loremidentity for a business in the mind. lorem",
+      "image": "/images/channel.png",
       "alt": "Branding icon",
-      "date": "16 JUNE 2022",
-      "category": "design",
-      "readingTime": "10 MIN"
+      "info": {
+        "date": "16 JUNE 2022",
+        "category": "design",
+        "readingTime": "10 MIN"
+      },
+      "author": "Guy Hawkins",
+      "authorInfo": "lorem Branding is the process of creating a distinct "
     },
     {
       "id": "3",
       "title": "BRANDING3",
       "subtitle": "lorem Branding is the process of creating a distinct identity for a business in the mind.",
       "content": "Branding is the process of creating a distinct identity for a business in the mind.",
-      "image": "/images/branding_icon.png",
+      "image": "/images/hero.png",
       "alt": "Branding icon",
-      "date": "16 JUNE 2022",
-      "category": "design",
-      "readingTime": "10 MIN"
+      "info": {
+        "date": "16 JUNE 2022",
+        "category": "design",
+        "readingTime": "10 MIN"
+      },
+      "author": "Guy Hawkins",
+      "authorInfo": "lorem Branding is the process of creating a distinct "
     },
     {
       "id": "4",
@@ -41,9 +53,13 @@
       "content": "Branding is the process of creating a distinct identity for a business in the mind.",
       "image": "/images/branding_icon.png",
       "alt": "Branding icon",
-      "date": "16 JUNE 2022",
-      "category": "design",
-      "readingTime": "10 MIN"
+      "info": {
+        "date": "16 JUNE 2022",
+        "category": "design",
+        "readingTime": "10 MIN"
+      },
+      "author": "Guy Hawkins",
+      "authorInfo": "lorem Branding is the process of creating a distinct "
     }
   ]
 }

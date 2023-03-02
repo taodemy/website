@@ -35,4 +35,41 @@ describe("Blog single page", () => {
     const GoBackButton = screen.getByRole("button", { name: /GO BACK/i });
     expect(GoBackButton).toBeInTheDocument();
   });
+
+  it("should render infoItem", () => {
+    const infoItem = screen.getByText(/READING TIME/i);
+    expect(infoItem).toBeInTheDocument();
+  });
+
+  it("should render author", () => {
+    const author = screen.getByText(/author/i);
+    expect(author).toBeInTheDocument();
+  });
+
+  it("should render Divider in success", () => {
+    const divider = screen.getAllByTestId("divider");
+    expect(divider[0]).toBeInTheDocument();
+    expect(divider[1]).toBeInTheDocument();
+  });
+
+  it("should render social media LN in success", () => {
+    const socialMediaImg = screen.getByRole("img", { name: "badge__ln" });
+    expect(socialMediaImg).toBeInTheDocument();
+    expect(socialMediaImg).toHaveAttribute("src", "/images/badge-ln.svg");
+    expect(socialMediaImg).toHaveAttribute("alt", "badge");
+  });
+
+  it("should render social media IN in success", () => {
+    const socialMediaImg = screen.getByRole("img", { name: "badge__in" });
+    expect(socialMediaImg).toBeInTheDocument();
+    expect(socialMediaImg).toHaveAttribute("src", "/images/badge-in.svg");
+    expect(socialMediaImg).toHaveAttribute("alt", "badge");
+  });
+
+  it("should render social media FB in success", () => {
+    const socialMediaImg = screen.getByRole("img", { name: "badge__fb" });
+    expect(socialMediaImg).toBeInTheDocument();
+    expect(socialMediaImg).toHaveAttribute("src", "/images/badge-fb.svg");
+    expect(socialMediaImg).toHaveAttribute("alt", "badge");
+  });
 });
