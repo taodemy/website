@@ -94,14 +94,17 @@
   outline: none;
 }
 
-.info_block__sign_up_content__form__group label {
+.info_block__sign_up_content__form__group span {
   position: absolute;
-
+  left: 0px;
+  top: 0px;
   cursor: text;
+  pointer-events: none;
+  text-transform: uppercase;
   transition: 0.3s ease-in-out;
 }
 
-.info_block__sign_up_content__form__group input:focus label {
-  top: -25px;
+.info_block__sign_up_content__form__group input:focus ~ span {
+  transform: translateY(-25px);
   pointer-events: none;
 }
