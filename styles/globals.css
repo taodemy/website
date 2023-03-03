@@ -7,10 +7,11 @@
   --background-secondary: #f0d163;
   --icon-default: #191919;
   --default-border: 1px solid var(--border-default);
+  --default-background: #fdfbf5;
 }
 
 body {
-  background-color: #fdfbf5;
+  background-color: var(--default-background);
 }
 
 .global__heading--large {
@@ -112,7 +113,7 @@ body {
 
 /*container for the whole page*/
 .page__wrapper {
-  padding: 48px;
+  padding: 16px 48px;
   margin: 20px;
   border: 1px solid var(--border-default);
 }
