@@ -104,7 +104,7 @@
   transition: 0.3s ease-in-out;
 }
 
-.info_block__sign_up_content__form__group input:focus ~ span {
+.info_block__sign_up_content__form__group input:focus + span {
   transform: translateY(-25px);
   pointer-events: none;
 }
