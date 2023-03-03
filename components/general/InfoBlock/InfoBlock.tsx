@@ -60,10 +60,7 @@ const InfoBlock = ({
               <label htmlFor="email" className={`global__heading-h4 ${fontSyne.className}`}>
                 YOUR EMAIL
               </label>
-              <input
-                type="email"
-                className={`global__heading-h4 ${fontSyne.className} ${styles.info_block__sign_up_content__form__input}`}
-              />
+              <input type="email" className={`global__heading-h4 ${fontSyne.className}`} />
             </div>
             <Button>sign up</Button>
           </form>
