@@ -1,6 +1,6 @@
 import styles from "@/styles/OurTeam.module.css";
 import { fontSyne, fontSatoshi } from "@/pages/_app";
-import MemberCard from "../base/MemberCard";
+import Card from "../base/Card";
 import Divider from "../base/Divider";
 
 const OurTeam = () => {
@@ -18,27 +18,27 @@ const OurTeam = () => {
       </div>
 
       <div className={styles["our_team__card_container"]}>
-        <MemberCard
+        <Card
           title="Tato"
           subtitle="Mentor"
           image="images/featured-work-sec-img-1.png"
           direction="column"
         />
         <Divider />
-        <MemberCard
+        <Card
           title="Kristin Watson"
           subtitle="Developer"
           image="images/featured-work-sec-img-2.png"
           direction="column"
         />
-        <MemberCard
+        <Card
           title="Cameron Huang"
           subtitle="Developer"
           image="images/featured-work-sec-img-3.png"
           direction="column"
         />
         <Divider />
-        <MemberCard
+        <Card
           title="Guy Hawkins"
           subtitle="Developer"
           image="images/featured-work-sec-img-4.png"

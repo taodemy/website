@@ -1,13 +1,13 @@
 import styles from "./BlogPosts.module.css";
 import Divider from "../base/Divider";
 import Button from "../base/Button";
-import MemberCard from "../base/MemberCard";
+import Card from "../base/Card";
 
 const BlogGallery = () => {
   return (
     <section className={styles["blog_gallery"]}>
       <article className={styles["blog_gallery__large_group"]}>
-        <MemberCard
+        <Card
           image={"/images/two_people_praying.png"}
           title={"Things to Look for When Comparing Branding Alternatives"}
           subtitle={"Branding, Design"}
@@ -16,7 +16,7 @@ const BlogGallery = () => {
           large_title={true}
         />
         <Divider />
-        <MemberCard
+        <Card
           image={"/images/channel.png"}
           title={"5 Stand-out Features of Branding You Should Know"}
           subtitle={"Branding, Design"}
@@ -27,7 +27,7 @@ const BlogGallery = () => {
       </article>
       <article className={styles["blog_gallery__small_group"]}>
         <div className={styles["blog_gallery__small_group__line_one"]}>
-          <MemberCard
+          <Card
             image={"/images/what_is_brand_strategy.png"}
             title={"Branding: What Real Customers Have to Say"}
             subtitle={"Branding, Design"}
@@ -35,7 +35,7 @@ const BlogGallery = () => {
             size={"sm"}
           />
           <Divider />
-          <MemberCard
+          <Card
             image={"/images/shaping_art.png"}
             title={"Branding: Pros and Cons They Don't Tell You"}
             subtitle={"Branding, Design"}
@@ -43,7 +43,7 @@ const BlogGallery = () => {
             size={"sm"}
           />
           <Divider />
-          <MemberCard
+          <Card
             image={"/images/hero_hand.png"}
             title={"How to Spot the Best Branding for You: Signs and Features"}
             subtitle={"Branding, Design"}
@@ -52,7 +52,7 @@ const BlogGallery = () => {
           />
         </div>
         <div className={styles["blog_gallery__small_group__line_two"]}>
-          <MemberCard
+          <Card
             image={"/images/perfume.png"}
             title={"How Much Should I Spend on Branding"}
             subtitle={"Branding, Design"}
@@ -60,7 +60,7 @@ const BlogGallery = () => {
             size={"sm"}
           />
           <Divider />
-          <MemberCard
+          <Card
             image={"/images/hero.png"}
             title={"Rookie Mistakes You're Making With Your Branding"}
             subtitle={"Branding, Design"}
@@ -68,7 +68,7 @@ const BlogGallery = () => {
             size={"sm"}
           />
           <Divider />
-          <MemberCard
+          <Card
             image={"/images/gabby.png"}
             title={"Real Branding Customer Reviews You Need to See"}
             subtitle={"Branding, Design"}
