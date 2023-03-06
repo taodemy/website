@@ -64,14 +64,14 @@ describe("Home", () => {
 
   it("should render how we work title in sucess", () => {
     const howWeWorkTitle = screen.getByRole("heading", {
-      name: /We help our clients succeed with innovative strategies./i,
+      name: /we help our clients\nsucceed with innovative\nstrategies\./i,
     });
     expect(howWeWorkTitle).toBeInTheDocument();
   });
 
   it("should render how we work icon in sucess", () => {
     const howWeWorkIcon = screen.getByRole("img", {
-      name: /we help our clients succeed with innovative strategies\.icon/i,
+      name: /we help our clients\nsucceed with innovative\nstrategies\.icon/i,
     });
     expect(howWeWorkIcon).toBeInTheDocument();
     expect(howWeWorkIcon).toHaveAttribute("src", "/images/star.svg");
@@ -153,7 +153,7 @@ describe("Home", () => {
 
   it("should render icon in contact section success", () => {
     const contactIcon = screen.getByRole("img", {
-      name: /let’s bring your tech to the next levelicon/i,
+      name: /let’s bring your\ntech to the next\nlevelicon/i,
     });
     expect(contactIcon).toBeInTheDocument();
     expect(contactIcon).toHaveAttribute("src", "/images/design_icon.svg");

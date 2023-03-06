@@ -55,7 +55,7 @@ describe("Studio Page", () => {
 
   it("should render icon in contact section success", () => {
     const contactIcon = screen.getByRole("img", {
-      name: /let’s bring your tech to the next levelicon/i,
+      name: /let’s bring your\ntech to the next\nlevelicon/i,
     });
     expect(contactIcon).toBeInTheDocument();
     expect(contactIcon).toHaveAttribute("src", "/images/design_icon.svg");
