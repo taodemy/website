@@ -3,7 +3,7 @@ import styles from "@/styles/Header.module.css";
 import NavbarLink from "@/components/general/Navbar/NavbarLink";
 import PageButton from "@/components/general/Navbar/PageArrow";
 import Button from "@/components/base/Button";
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 
 const NavBar = () => {
   const linkLists = [
@@ -29,15 +29,21 @@ const NavBar = () => {
     },
   ];
 
-  const [showNav, setShowNav] = useState(false);
+  const [openNav, setOpenNav] = useState(false);
 
-  const showNavBar = () => {
-    setShowNav(!showNav);
+  const handleNavBar = () => {
+    setOpenNav(!openNav);
   };
+
+  useEffect(() => {
+    if (openNav) {
+      document.body.style.overflow = "hidden";
+    }
+  }, [openNav]);
 
   return (
     <section className={styles.header_navbar}>
-      <nav className={showNav ? styles.header_responsive_navbar : styles.header_navbar_menu}>
+      <nav className={openNav ? styles.header_responsive_navbar : styles.header_navbar_menu}>
         {linkLists.map(({ id, linkName }) => (
           <NavbarLink key={id} linkName={linkName} link={`/${linkName.toLowerCase()}`} />
         ))}
@@ -48,12 +54,13 @@ const NavBar = () => {
       </div>
       <div
         className={`${styles.header_navbar_menu_icon} ${
-          showNav ? styles.header_navbar_close_icon : null
+          openNav ? styles.header_navbar_close_icon : null
         }`}
-        onClick={showNavBar}
+        onClick={handleNavBar}
+        data-testid="nav-icon"
       >
         <div className={styles.header_navbar_menu_bar1}></div>
-        <div className={styles.header_navbar_menu_bar2}></div>
+        <div className={styles.header_navbar_menu_bar2} data-testid="nav-bar2"></div>
         <div className={styles.header_navbar_menu_bar3}></div>
       </div>
     </section>
