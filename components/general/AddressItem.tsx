@@ -11,7 +11,7 @@ interface AddressItemProps {
 const AddressItem = ({ imgSrc, title, street, city }: AddressItemProps) => {
   return (
     <div className={styles.address}>
-      <img src={imgSrc} className={styles.address__img} />
+      <img src={imgSrc} className={styles.address__img} alt="office" />
       <div className={styles.address__details}>
         <h2
           className={`${fontSyne.className} global__uppercase-heading-h4 ${styles.address__text}`}

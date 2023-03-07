@@ -9,6 +9,7 @@
 .address__img {
   width: 35%;
   height: 100%;
+  border-radius: 10px;
 }
 .address__details {
   height: 90%;

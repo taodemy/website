@@ -7,13 +7,13 @@ const SocialMedia = ({ isReverse = false }: SocialMediaProps) => {
   return (
     <ul className={`${style} ${styles.social_media__ul}`}>
       <li>
-        <img src="/images/badge-ln.svg" alt="badge" aria-label="badge__ln" />
+        <img src="/images/badge-ln.svg" alt="badge" aria-label="First social media" />
       </li>
       <li>
-        <img src="/images/badge-in.svg" alt="badge" aria-label="badge__in" />
+        <img src="/images/badge-in.svg" alt="badge" aria-label="Second social media" />
       </li>
       <li>
-        <img src="/images/badge-fb.svg" alt="badge" aria-label="badge__fb" />
+        <img src="/images/badge-fb.svg" alt="badge" aria-label="Third social media" />
       </li>
     </ul>
   );

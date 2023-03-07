@@ -2,49 +2,58 @@ import styles from "@/styles/SendMsg.module.css";
 import { fontSyne, fontRobotoMono } from "@/pages/_app";
 import SocialMedia from "./SocialMedia/SocialMedia";
 import Button from "../base/Button";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const SendMsg = () => {
+  const [usernameField, setUsernameField] = useState("");
+  const [emailField, setEmailField] = useState("");
+  const [messageField, setMessageField] = useState("");
   const [isNameFieldEmpty, setIsNameFieldEmpty] = useState(true);
   const [isEmailFieldEmpty, setIsEmailFieldEmpty] = useState(true);
   const [isMessageFieldEmpty, setIsMessageFieldEmpty] = useState(true);
+  const userNameLabelRef = useRef<HTMLLabelElement>(null);
+  const emailLabelRef = useRef<HTMLLabelElement>(null);
+  const messageLabelRef = useRef<HTMLLabelElement>(null);
   const handleNameFieldChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setIsNameFieldEmpty(event.target.value.length == 0 ? true : false);
+    const text = event.target.value;
+    setIsNameFieldEmpty(text.length === 0 ? true : false);
+    setUsernameField(text);
   };
   useEffect(() => {
-    const label = document.getElementById("username_label");
-    if (label) {
-      if (isNameFieldEmpty == false) {
-        label.style.visibility = "hidden";
-      } else {
-        label.style.visibility = "visible";
-      }
+    const label = userNameLabelRef.current;
+    if (label && isNameFieldEmpty === false) {
+      label.style.visibility = "hidden";
+    }
+    if (label && isNameFieldEmpty === true) {
+      label.style.visibility = "visible";
     }
   }, [isNameFieldEmpty]);
   const handleEmailFieldChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setIsEmailFieldEmpty(event.target.value.length == 0 ? true : false);
+    const text = event.target.value;
+    setIsEmailFieldEmpty(text.length === 0 ? true : false);
+    setEmailField(text);
   };
   useEffect(() => {
-    const label = document.getElementById("email_label");
-    if (label) {
-      if (isEmailFieldEmpty == false) {
-        label.style.visibility = "hidden";
-      } else {
-        label.style.visibility = "visible";
-      }
+    const label = emailLabelRef.current;
+    if (label && isEmailFieldEmpty === false) {
+      label.style.visibility = "hidden";
+    }
+    if (label && isEmailFieldEmpty === true) {
+      label.style.visibility = "visible";
     }
   }, [isEmailFieldEmpty]);
   const handleMessageFieldChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setIsMessageFieldEmpty(event.target.value.length == 0 ? true : false);
+    const text = event.target.value;
+    setIsMessageFieldEmpty(text.length === 0 ? true : false);
+    setMessageField(text);
   };
   useEffect(() => {
-    const label = document.getElementById("message_label");
-    if (label) {
-      if (isMessageFieldEmpty == false) {
-        label.style.visibility = "hidden";
-      } else {
-        label.style.visibility = "visible";
-      }
+    const label = messageLabelRef.current;
+    if (label && isMessageFieldEmpty === false) {
+      label.style.visibility = "hidden";
+    }
+    if (label && isMessageFieldEmpty === true) {
+      label.style.visibility = "visible";
     }
   }, [isMessageFieldEmpty]);
   return (
@@ -71,7 +80,7 @@ const SendMsg = () => {
         <form>
           <div className={styles.label_input__container}>
             <label
-              id="username_label"
+              ref={userNameLabelRef}
               htmlFor="username"
               className={`${fontRobotoMono.className} global__text-meta ${styles.msg__label}`}
             >
@@ -80,13 +89,14 @@ const SendMsg = () => {
             <input
               type="text"
               id="username"
+              value={usernameField}
               onChange={handleNameFieldChange}
               className={`${styles.msg__input} ${fontRobotoMono.className} global__text-meta`}
             />
           </div>
           <div className={styles.label_input__container}>
             <label
-              id="email_label"
+              ref={emailLabelRef}
               htmlFor="email"
               className={`${fontRobotoMono.className} global__text-meta ${styles.msg__label}`}
             >
@@ -95,13 +105,14 @@ const SendMsg = () => {
             <input
               type="email"
               id="email"
+              value={emailField}
               onChange={handleEmailFieldChange}
               className={`${styles.msg__input} ${fontRobotoMono.className} global__text-meta`}
             />
           </div>
           <div className={styles.label_input__container}>
             <label
-              id="message_label"
+              ref={messageLabelRef}
               htmlFor="message"
               className={`${fontRobotoMono.className} global__text-meta ${styles.msg__label}`}
             >
@@ -109,6 +120,7 @@ const SendMsg = () => {
             </label>
             <textarea
               id="message"
+              value={messageField}
               onChange={handleMessageFieldChange}
               className={`${styles.msg__input} ${styles.msg__textarea} ${fontRobotoMono.className} global__text-meta`}
             />
