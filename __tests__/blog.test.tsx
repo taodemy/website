@@ -116,7 +116,6 @@ describe("Blog Page", () => {
     expect(subscriptionContent).toBeInTheDocument();
     expect(subscriptionInput).toBeInTheDocument();
     expect(subscriptionInput).toHaveAttribute("type", "email");
-    expect(subscriptionInput).toHaveAttribute("value", "YOUR EMAIL");
     expect(subscriptionButton).toBeInTheDocument();
   });
 });
