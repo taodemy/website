@@ -116,3 +116,158 @@ body {
   margin: 20px;
   border: 1px solid var(--border-default);
 }
+
+@media screen and (max-width: 1024px) {
+  .global__heading--large {
+    font-size: calc(128px / 1.5);
+  }
+
+  .global__heading--medium {
+    font-size: calc(96px / 1.5);
+  }
+
+  .global__uppercase-heading--medium {
+    font-size: calc(96px / 1.5);
+  }
+
+  .global__heading--small {
+    font-size: calc(80px / 1.5);
+  }
+
+  .global__uppercase-heading--small {
+    font-size: calc(80px / 1.5);
+  }
+
+  .global__heading-h1 {
+    font-size: calc(64px / 1.5);
+  }
+
+  .global__uppercase-heading-h1 {
+    font-size: calc(64px / 1.5);
+  }
+
+  .global__heading-h2 {
+    font-size: calc(48px / 1.5);
+  }
+
+  .global__uppercase-heading-h2 {
+    font-size: calc(48px / 1.5);
+  }
+
+  .global__heading-h3 {
+    font-size: calc(32px / 1.5);
+  }
+
+  .global__uppercase-heading-h3 {
+    font-size: calc(32px / 1.5);
+  }
+
+  .global__heading-h4 {
+    font-size: calc(24px / 1.5);
+  }
+
+  .global__uppercase-heading-h4 {
+    font-size: calc(24px / 1.5);
+  }
+
+  .global__text-xlarge {
+    font-size: calc(32px / 1.5);
+  }
+
+  .global__text--large {
+    font-size: calc(24px / 1.5);
+  }
+
+  .global__text--medium {
+    font-size: calc(20px / 1.5);
+  }
+
+  .global__text-default {
+    font-size: calc(18px / 1.5);
+  }
+
+  .global__text-meta {
+    font-size: calc(15px / 1.5);
+  }
+
+  .global__text-meta--small {
+    font-size: calc(13px / 1.5);
+  }
+}
+@media screen and (max-width: 743px) {
+  .global__heading--large {
+    font-size: calc(128px / 3);
+  }
+
+  .global__heading--medium {
+    font-size: calc(96px / 3);
+  }
+
+  .global__uppercase-heading--medium {
+    font-size: calc(96px / 3);
+  }
+
+  .global__heading--small {
+    font-size: calc(80px / 3);
+  }
+
+  .global__uppercase-heading--small {
+    font-size: calc(80px / 3);
+  }
+
+  .global__heading-h1 {
+    font-size: calc(64px / 3);
+  }
+
+  .global__uppercase-heading-h1 {
+    font-size: calc(64px / 3);
+  }
+
+  .global__heading-h2 {
+    font-size: calc(48px / 3);
+  }
+
+  .global__uppercase-heading-h2 {
+    font-size: calc(48px / 3);
+  }
+
+  .global__heading-h3 {
+    font-size: calc(32px / 3);
+  }
+
+  .global__uppercase-heading-h3 {
+    font-size: calc(32px / 3);
+  }
+
+  .global__heading-h4 {
+    font-size: calc(24px / 3);
+  }
+
+  .global__uppercase-heading-h4 {
+    font-size: calc(24px / 3);
+  }
+
+  .global__text-xlarge {
+    font-size: calc(32px / 3);
+  }
+
+  .global__text--large {
+    font-size: calc(24px / 3);
+  }
+
+  .global__text--medium {
+    font-size: calc(20px / 3);
+  }
+
+  .global__text-default {
+    font-size: calc(18px / 3);
+  }
+
+  .global__text-meta {
+    font-size: calc(15px / 3);
+  }
+
+  .global__text-meta--small {
+    font-size: calc(13px / 3);
+  }
+}
