@@ -2,8 +2,21 @@ import { fontRobotoMono } from "@/pages/_app";
 import styles from "@/styles/Header.module.css";
 import NavBar from "@/components/general/Navbar/FirstPageNavbar";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [openNav, setOpenNav] = useState(false);
+
+  const handleNavBar = () => {
+    setOpenNav(!openNav);
+  };
+
+  useEffect(() => {
+    if (openNav) {
+      document.body.style.overflow = "hidden";
+    }
+  }, [openNav]);
+
   return (
     <header className={styles.header}>
       <Link href="/" className={styles.header_logo_link}>
@@ -19,7 +32,7 @@ const Header = () => {
           </div>
         </section>
       </Link>
-      <NavBar />
+      <NavBar openNav={openNav} handleNavBar={handleNavBar} />
     </header>
   );
 };

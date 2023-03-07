@@ -3,9 +3,13 @@ import styles from "@/styles/Header.module.css";
 import NavbarLink from "@/components/general/Navbar/NavbarLink";
 import PageButton from "@/components/general/Navbar/PageArrow";
 import Button from "@/components/base/Button";
-import { useState, useEffect } from "react";
 
-const NavBar = () => {
+interface NavBarProps {
+  openNav: boolean;
+  handleNavBar: () => void;
+}
+
+const NavBar = ({ openNav, handleNavBar }: NavBarProps) => {
   const linkLists = [
     {
       id: 1,
@@ -28,18 +32,6 @@ const NavBar = () => {
       linkName: "SHOP",
     },
   ];
-
-  const [openNav, setOpenNav] = useState(false);
-
-  const handleNavBar = () => {
-    setOpenNav(!openNav);
-  };
-
-  useEffect(() => {
-    if (openNav) {
-      document.body.style.overflow = "hidden";
-    }
-  }, [openNav]);
 
   return (
     <section className={styles.header_navbar}>
