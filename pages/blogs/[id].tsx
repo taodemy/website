@@ -6,6 +6,7 @@ import styles from "@/styles/BlogSingle.module.css";
 import Button from "@/components/base/Button";
 import InfoItem from "@/components/general/InfoItem";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
+import Link from "next/link";
 
 interface Blog {
   id: string;
@@ -32,9 +33,11 @@ export default function Blog() {
     <div>
       <section className={`${styles.blog_title_section}`}>
         <div className={`${styles.blog_title_button}`}>
-          <Button variant="secondary" padding="small">
-            <p>GO BACK</p>
-          </Button>
+          <Link href="/">
+            <Button variant="secondary" padding="small">
+              <p>GO BACK</p>
+            </Button>
+          </Link>
         </div>
         <div className={`${styles.blog_title_text}`}>
           <h1 className={`${fontSyne.className} global__heading--medium`}>{currentBlog.title}</h1>
