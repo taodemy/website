@@ -26,7 +26,7 @@ const BlogGallery = () => {
         />
       </article>
       <article className={styles["blog_gallery__small_group"]}>
-        <div className={styles["blog_gallery__small_group__line_one"]}>
+        <div className={styles["blog_gallery__small_group__line"]}>
           <MemberCard
             image={"/images/what_is_brand_strategy.png"}
             title={"Branding: What Real Customers Have to Say"}
@@ -51,7 +51,7 @@ const BlogGallery = () => {
             size={"sm"}
           />
         </div>
-        <div className={styles["blog_gallery__small_group__line_two"]}>
+        <div className={styles["blog_gallery__small_group__line"]}>
           <MemberCard
             image={"/images/perfume.png"}
             title={"How Much Should I Spend on Branding"}

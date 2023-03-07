@@ -24,7 +24,7 @@ body {
 }
 
 .global__uppercase-heading--medium {
-  font-size: 96px;
+  font-size: 5rem;
   line-height: 110%;
 }
 
@@ -115,4 +115,21 @@ body {
   padding: 48px;
   margin: 20px;
   border: 1px solid var(--border-default);
+}
+
+@media screen and (max-width: 1024px) {
+  .global__heading-h2 {
+    font-size: 20px;
+  }
+  .global__text-xlarge {
+    font-size: 20px;
+  }
+  .global__uppercase-heading--medium {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 743px) {
+  .global__uppercase-heading--medium {
+    font-size: 3rem;
+  }
 }

@@ -12,7 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
       <section>
         <Header />
       </section>
-      <main>{children}</main>
+      {children}
       <Footer />
     </div>
   );

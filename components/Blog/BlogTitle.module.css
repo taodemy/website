@@ -13,15 +13,28 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 0 48px 0;
 }
 
 .blog_title__sub_title__text {
   color: var(--text-default);
-  margin: 0 0 48px 0;
 }
 
 .blog_title__sub_title__button_group {
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 744px) {
+  .blog_title__sub_title {
+    flex-direction: column;
+  }
+  .blog_title__sub_title__button_group {
+    flex-direction: column;
+  }
+  .blog_title__sub_title__button_group > button {
+    width: 100%;
+  }
 }

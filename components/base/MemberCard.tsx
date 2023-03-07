@@ -43,13 +43,13 @@ const MemberCard = ({
       />
       <div className={styles[directionVariants[direction]]}>
         {direction === "column_reverse" && large_title && (
-          <h1 className={`${fontSyne.className} global__heading-h2`}>{title}</h1>
+          <h2 className={`${fontSyne.className} global__heading-h2`}>{title}</h2>
         )}
         {direction === "column_reverse" && !large_title && (
-          <h1 className={`${fontSyne.className} global__text-xlarge`}>{title}</h1>
+          <h2 className={`${fontSyne.className} global__text-xlarge`}>{title}</h2>
         )}
         {direction !== "column_reverse" && (
-          <h1 className={`${fontSyne.className} global__text--large`}>{title}</h1>
+          <h2 className={`${fontSyne.className} global__text--large`}>{title}</h2>
         )}
         <p className={`${fontRobotoMono.className} global__text-meta`}>{subtitle}</p>
       </div>

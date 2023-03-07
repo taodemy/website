@@ -27,17 +27,17 @@ const InfoBlock = ({
           {sectionName}
         </p>
         {blockType === "smallHeading" ? (
-          <h1
+          <h3
             className={`${fontSyne.className} global__heading--small ${styles.info_block__title_text_small}`}
           >
             {title}
-          </h1>
+          </h3>
         ) : (
-          <h1
+          <h3
             className={`${fontSyne.className} global__uppercase-heading--medium ${styles.info_block__title_text}`}
           >
             {title}
-          </h1>
+          </h3>
         )}
         <img
           src={iconPath}
@@ -57,8 +57,17 @@ const InfoBlock = ({
           </p>
           <form className={styles.info_block__sign_up_content__form}>
             <div className={styles.info_block__sign_up_content__form__group}>
-              <input type="email" className={`global__heading-h4 ${fontSyne.className}`} />
-              <span className={`global__heading-h4 ${fontSyne.className}`}>your email</span>
+              <input
+                id="info_block__email"
+                type="email"
+                className={`global__heading-h4 ${fontSyne.className}`}
+              />
+              <label
+                htmlFor="info_block__email"
+                className={`global__heading-h4 ${fontSyne.className}`}
+              >
+                your email
+              </label>
             </div>
             <Button>sign up</Button>
           </form>
