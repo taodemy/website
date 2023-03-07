@@ -1,5 +1,6 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
+import { getByTestId, render, screen } from "@testing-library/react";
+import user from "@testing-library/user-event";
 import Header from "../../layouts/Header";
 
 describe("Header", () => {
@@ -24,5 +25,21 @@ describe("Header", () => {
     expect(logoImage).toBeInTheDocument();
     expect(logoImage).toHaveAttribute("src", "/images/logo.png");
     expect(logoImage).toHaveAttribute("alt", "Website Icon");
+  });
+
+  it("should not render nav when showNav is false", async () => {
+    const responsiveNav = screen.getByRole("navigation", { hidden: true });
+    const navIcon = screen.getByTestId("nav-icon");
+    const bar2 = screen.getByTestId("nav-bar2");
+
+    Object.defineProperty(window, "innerHeight", {
+      writable: true,
+      configurable: true,
+      value: 720,
+    });
+    expect(navIcon).toBeVisible();
+    user.click(navIcon);
+    expect(responsiveNav).toHaveStyle({ "background-color": "var(--default-background)" });
+    expect(responsiveNav).toHaveStyle({ position: "fixed" });
   });
 });
