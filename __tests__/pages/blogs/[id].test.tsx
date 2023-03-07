@@ -22,7 +22,7 @@ describe("Blog single page", () => {
   });
 
   it("should render subtitle", () => {
-    const subtitle = screen.getByText(/Branding is the process of creating a distinct identity/i);
+    const subtitle = screen.getByText(/The Battle for the Future of the Universe/i);
     expect(subtitle).toBeInTheDocument();
   });
 
