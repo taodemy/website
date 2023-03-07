@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <InfoBlock
       sectionName="Contact"
-      title="Let’s bring your tech to the next level"
+      title={"Let’s bring your\ntech to the next\nlevel"}
       iconPath="/images/design_icon.svg"
       blockType="normal"
       content="Contact us to explore partnership opportunities and discover how we can work together to drive innovation and create positive change."

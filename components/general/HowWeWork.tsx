@@ -4,7 +4,7 @@ const HowWeWork = () => {
   return (
     <InfoBlock
       sectionName="How we work"
-      title="We help our clients succeed with innovative strategies."
+      title={"We help our clients\nsucceed with innovative\nstrategies."}
       iconPath="/images/star.svg"
       blockType="smallHeading"
       content="Our team of experts is dedicated to delivering real results through creativity, strategic
