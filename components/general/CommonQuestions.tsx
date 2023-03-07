@@ -1,6 +1,6 @@
 import styles from "@/styles/CommonQuestions.module.css";
 import { fontSyne, fontRobotoMono, fontSatoshi } from "@/pages/_app";
-import QuestionItem from "./QuestionItem";
+import FAQ from "./FAQ";
 
 const CommonQuestions = () => {
   return (
@@ -17,26 +17,7 @@ const CommonQuestions = () => {
           Questions
         </h1>
       </div>
-      <div className={styles.questions_right__container}>
-        <div className={styles.questions_right__question}>
-          <QuestionItem question="Integer vitae justo eget magna?" />
-          <p className={`${fontSatoshi.className} global__text-default ${styles.question__text}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Elit ullamcorper dignissim cras tincidunt
-            lobortis feugiat vivamus at. Tincidunt vitae semper quis lectus nulla at volutpat diam
-            ut.
-          </p>
-        </div>
-        <div className={styles.questions_right__question}>
-          <QuestionItem question="Dolor magna eget est lorem ipsum?" />
-        </div>
-        <div className={styles.questions_right__question}>
-          <QuestionItem question="Ac tincidunt vitae semper quis lectus?" />
-        </div>
-        <div className={styles.questions_right__question}>
-          <QuestionItem question="Sagittis orci a scelerisque?" />
-        </div>
-      </div>
+      <FAQ />
     </section>
   );
 };

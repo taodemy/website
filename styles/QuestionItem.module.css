@@ -1,3 +1,14 @@
+.faq {
+  width: 100%;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border-default);
+}
+.faq:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0px;
+}
 .question_card {
   width: 100%;
   display: flex;
@@ -11,4 +22,8 @@
   height: 30px;
   width: 30px;
   border-radius: 50%;
+}
+.question__text {
+  margin-top: 10px;
+  color: var(--text);
 }
