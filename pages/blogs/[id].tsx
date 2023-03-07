@@ -7,6 +7,7 @@ import Button from "@/components/base/Button";
 import InfoItem from "@/components/general/InfoItem";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
 import Link from "next/link";
+import SocialMedia from "@/components/general/SocialMedia/SocialMedia";
 
 interface Blog {
   id: string;
@@ -52,14 +53,12 @@ export default function Blog() {
           })}
         </div>
       </section>
-      <section className={`${styles.blog_image_container}`}>
-        <img
-          src={currentBlog.image}
-          alt={currentBlog.alt}
-          aria-label={currentBlog.title}
-          className={`${styles.blog_image}`}
-        />
-      </section>
+      <img
+        src={currentBlog.image}
+        alt={currentBlog.alt}
+        aria-label={currentBlog.title}
+        className={`${styles.blog_image}`}
+      />
       <section className={`${styles.blog_content_section}`}>
         <section className={`${styles.blog_content_blank}`} />
         <p className={`${styles.blog_content_text} ${fontSatoshi.className} global__text-default`}>
@@ -77,17 +76,9 @@ export default function Blog() {
             {currentBlog.authorInfo}
           </p>
           <h5 className={`${fontRobotoMono.className} global__text-meta`}>SHARE</h5>
-          <ul className={`${styles.blog_content_share}`}>
-            <li>
-              <img src="/images/badge-fb.svg" alt="badge" aria-label="badge__fb" />
-            </li>
-            <li>
-              <img src="/images/badge-in.svg" alt="badge" aria-label="badge__in" />
-            </li>
-            <li>
-              <img src="/images/badge-ln.svg" alt="badge" aria-label="badge__ln" />
-            </li>
-          </ul>
+          <div className={`${styles.blog_content_share}`}>
+            <SocialMedia isReverse={true} />
+          </div>
         </section>
       </section>
     </>

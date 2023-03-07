@@ -53,21 +53,21 @@ describe("Blog single page", () => {
   });
 
   it("should render social media LN in success", () => {
-    const socialMediaImg = screen.getByRole("img", { name: "badge__ln" });
+    const socialMediaImg = screen.getByRole("img", { name: "First social media" });
     expect(socialMediaImg).toBeInTheDocument();
     expect(socialMediaImg).toHaveAttribute("src", "/images/badge-ln.svg");
     expect(socialMediaImg).toHaveAttribute("alt", "badge");
   });
 
   it("should render social media IN in success", () => {
-    const socialMediaImg = screen.getByRole("img", { name: "badge__in" });
+    const socialMediaImg = screen.getByRole("img", { name: "Second social media" });
     expect(socialMediaImg).toBeInTheDocument();
     expect(socialMediaImg).toHaveAttribute("src", "/images/badge-in.svg");
     expect(socialMediaImg).toHaveAttribute("alt", "badge");
   });
 
   it("should render social media FB in success", () => {
-    const socialMediaImg = screen.getByRole("img", { name: "badge__fb" });
+    const socialMediaImg = screen.getByRole("img", { name: "Third social media" });
     expect(socialMediaImg).toBeInTheDocument();
     expect(socialMediaImg).toHaveAttribute("src", "/images/badge-fb.svg");
     expect(socialMediaImg).toHaveAttribute("alt", "badge");
