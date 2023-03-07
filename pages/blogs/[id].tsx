@@ -23,14 +23,13 @@ export default function Blog() {
   const [currentBlog, setCurrentBlog] = useState<Blog | null>(null);
   const router = useRouter();
   const { id } = router.query;
-  console.log(typeof id);
   useEffect(() => {
-    const blog = blogs.data.filter((blog) => blog.id === id);
-    if (blog[0]) setCurrentBlog(blog[0]);
+    const blog = blogs.data.find((blog) => blog.id === id);
+    if (blog) setCurrentBlog(blog);
   }, [id]);
 
   return currentBlog ? (
-    <div>
+    <>
       <section className={`${styles.blog_title_section}`}>
         <div className={`${styles.blog_title_button}`}>
           <Link href="/">
@@ -91,7 +90,7 @@ export default function Blog() {
           </ul>
         </section>
       </section>
-    </div>
+    </>
   ) : (
     <></>
   );
