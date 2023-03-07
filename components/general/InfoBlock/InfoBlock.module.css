@@ -8,6 +8,7 @@
 
 .info_block__title {
   grid-column: 1/3;
+  white-space: pre-wrap;
 }
 
 .info_block_heading {
@@ -58,7 +59,7 @@
 .info_block__sign_up_content {
   display: flex;
   flex-direction: column;
-  align-content: space-between;
+  justify-content: space-between;
   grid-column: 3;
   height: 571px;
   padding-left: 48px;
@@ -67,7 +68,6 @@
 .info_block__sign_up_content__text {
   color: var(--text-default);
   margin: 0 0 48px 0;
-  height: 488px;
 }
 
 .info_block__sign_up_content__form {
@@ -76,14 +76,35 @@
   gap: 20px;
 }
 
-.info_block__sign_up_content__form__input {
-  width: 75%;
-  border: 0;
-  background: transparent;
+.info_block__sign_up_content__form__group {
+  width: 70%;
+  position: relative;
   border-bottom: 1px solid var(--border-default);
 }
 
-.info_block__sign_up_content__form__input:focus {
+.info_block__sign_up_content__form__group input {
+  width: 100%;
+  position: relative;
+  border: 0;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.info_block__sign_up_content__form__group input:focus {
   outline: none;
-  border-bottom: 2px solid #555;
+}
+
+.info_block__sign_up_content__form__group span {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  cursor: text;
+  pointer-events: none;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.info_block__sign_up_content__form__group input:focus + span {
+  transform: translateY(-25px);
+  pointer-events: none;
 }
