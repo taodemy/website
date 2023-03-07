@@ -1,4 +1,4 @@
-import styles from "@/styles/ContactPage.module.css";
+import styles from "@/styles/CommonQuestions.module.css";
 import { fontSyne, fontRobotoMono, fontSatoshi } from "@/pages/_app";
 import QuestionItem from "./QuestionItem";
 
