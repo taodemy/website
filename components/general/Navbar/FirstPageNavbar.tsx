@@ -52,7 +52,7 @@ const NavBar = ({ openNav, handleNavBar }: NavBarProps) => {
         data-testid="nav-icon"
       >
         <div className={styles.header_navbar_menu_bar1}></div>
-        <div className={styles.header_navbar_menu_bar2} data-testid="nav-bar2"></div>
+        <div className={styles.header_navbar_menu_bar2}></div>
         <div className={styles.header_navbar_menu_bar3}></div>
       </div>
     </section>
