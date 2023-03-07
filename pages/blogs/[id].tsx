@@ -40,7 +40,9 @@ export default function Blog() {
           </Link>
         </div>
         <div className={`${styles.blog_title_text}`}>
-          <h1 className={`${fontSyne.className} global__heading--medium`}>{currentBlog.title}</h1>
+          <h1 className={`${fontSyne.className} global__heading--medium ${styles.blog_title_head}`}>
+            {currentBlog.title}
+          </h1>
           <p className={`${fontSatoshi.className} global__text-xlarge`}>{currentBlog.subtitle}</p>
         </div>
         <Divider style={{ margin: "0px 48px" }} />
@@ -86,4 +88,3 @@ export default function Blog() {
     <></>
   );
 }
-// }

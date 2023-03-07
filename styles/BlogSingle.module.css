@@ -13,6 +13,10 @@
 .blog_title_text {
   width: 61%;
 }
+
+.blog_title_head {
+  margin-bottom: 15px;
+}
 .blog_title_aside {
   width: 22%;
 }
