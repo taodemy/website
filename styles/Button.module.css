@@ -3,6 +3,10 @@
   border: 1px solid var(--border-default);
 }
 
+.small_button {
+  padding: 6px 8px;
+  border: 1px solid var(--border-default);
+}
 .button-blocked {
   align-self: auto;
 }
