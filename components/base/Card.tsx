@@ -35,7 +35,7 @@ const Card = ({
   };
 
   return (
-    <div className={`${styles["card"]}`} {...otherProps}>
+    <figure className={`${styles["card"]}`} {...otherProps}>
       <img
         src={image}
         alt={`${title} image`}
@@ -53,7 +53,7 @@ const Card = ({
         )}
         <p className={`${fontRobotoMono.className} global__text-meta`}>{subtitle}</p>
       </div>
-    </div>
+    </figure>
   );
 };
 

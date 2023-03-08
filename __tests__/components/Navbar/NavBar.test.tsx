@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
-import NavBar from "@/components/general/Navbar/FirstPageNavbar";
+import NavBar from "@/components/general/Navbar/Navbar";
 
 describe("NavBar", () => {
   const NavProps = {
-    openNav: false,
-    handleNavBar: jest.fn(),
+    isOpen: false,
+    handleNavBarOpen: jest.fn(),
   };
 
   it("should not render nav when openNav is false", () => {
-    render(<NavBar openNav={NavProps.openNav} handleNavBar={NavProps.handleNavBar} />);
+    render(<NavBar isOpen={NavProps.isOpen} handleNavBarOpen={NavProps.handleNavBarOpen} />);
     const responsiveNav = screen.getByRole("navigation", { hidden: true });
     const navIcon = screen.getByTestId("nav-icon");
     expect(navIcon).toBeVisible();
@@ -16,7 +16,7 @@ describe("NavBar", () => {
   });
 
   it("should render nav when openNav is true", () => {
-    render(<NavBar openNav={!NavProps.openNav} handleNavBar={NavProps.handleNavBar} />);
+    render(<NavBar isOpen={!NavProps.isOpen} handleNavBarOpen={NavProps.handleNavBarOpen} />);
     const responsiveNav = screen.getByRole("navigation", { hidden: true });
     const navIcon = screen.getByTestId("nav-icon");
     expect(navIcon).toBeVisible();
