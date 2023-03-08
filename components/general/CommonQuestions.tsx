@@ -11,11 +11,7 @@ const CommonQuestions = () => {
         >
           FAQ
         </p>
-        <h1 className={`global__heading--small ${fontSyne.className}`}>
-          Common
-          <br />
-          Questions
-        </h1>
+        <h1 className={`global__heading--small ${fontSyne.className}`}>Common Questions</h1>
       </div>
       <FAQ />
     </section>

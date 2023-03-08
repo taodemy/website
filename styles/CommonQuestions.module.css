@@ -6,6 +6,7 @@
   align-items: center;
 }
 .questions_title__contrainer {
-  width: 50%;
+  width: 30%;
   height: 80%;
+  padding-right: 20%;
 }
