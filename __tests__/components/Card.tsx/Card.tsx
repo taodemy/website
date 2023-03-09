@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import MemberCard from "@/components/base/MemberCard";
+import Card from "@/components/base/Card";
 
 describe("Card", () => {
   const props = {
@@ -8,7 +8,7 @@ describe("Card", () => {
     image: "/images/number_one_icon.svg",
   };
   beforeEach(() => {
-    render(<MemberCard title={props.title} subtitle={props.subtitle} image={props.image} />);
+    render(<Card title={props.title} subtitle={props.subtitle} image={props.image} />);
   });
 
   it("should render title in success", () => {

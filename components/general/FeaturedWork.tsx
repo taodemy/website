@@ -1,8 +1,8 @@
 import styles from "../../styles/FeaturedWork.module.css";
-import { fontSyne, fontSatoshi, fontRobotoMono } from "../../pages/_app";
+import { fontSyne, fontSatoshi } from "../../pages/_app";
 import Button from "../base/Button";
 import { useState } from "react";
-import MemberCard from "../base/MemberCard";
+import Card from "../base/Card";
 import Divider from "../base/Divider";
 
 export default function FeaturedWork() {
@@ -45,7 +45,7 @@ export default function FeaturedWork() {
         <Button variant="primary">SEE ALL WORK</Button>
       </div>
       <div className={styles["featured-work__right-container"]}>
-        <MemberCard
+        <Card
           title="Dangcing Stars"
           subtitle="2022"
           image="images/featured-work-sec-img-1.png"
@@ -55,27 +55,27 @@ export default function FeaturedWork() {
         <div
           className={`${styles["featured-work__right-container-bottom"]} ${fontSyne.className} text-default`}
         >
-          <MemberCard
+          <Card
             title={imgBoxes[0].title}
             subtitle="2022"
             image={imgBoxes[0].location}
             direction="row"
           />
           <Divider />
-          <MemberCard
+          <Card
             title={imgBoxes[1].title}
             subtitle="2022"
             image={imgBoxes[1].location}
             direction="row"
           />
-          <MemberCard
+          <Card
             title={imgBoxes[2].title}
             subtitle="2022"
             image={imgBoxes[2].location}
             direction="row"
           />
           <Divider />
-          <MemberCard
+          <Card
             title={imgBoxes[3].title}
             subtitle="2022"
             image={imgBoxes[3].location}

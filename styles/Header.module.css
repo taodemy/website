@@ -1,17 +1,18 @@
 .header {
-  height: 83px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid var(--border-default);
+  padding: 12px 0 32px 0;
+  position: relative;
 }
 
 .header_logo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 180.64px;
-  height: 50px;
+  align-items: center;
   text-decoration: none;
 }
 
@@ -21,31 +22,25 @@
 }
 
 .header_logo_name {
-  margin-bottom: 10px;
-  margin-left: 10.5px;
-  width: 115px;
+  padding-left: 1rem;
   text-align: center;
   font-weight: 500;
   font-family: "Syne";
-}
-
-.header_logo_name p {
-  margin-top: 10.5px;
 }
 
 .header_navbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 32px;
+  align-items: center;
 }
 
-.header_navbar_link {
+.header_navbar_menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 32px;
-  margin-top: 10px;
+  align-items: center;
+  gap: 2rem;
   text-decoration: none;
   color: var(--text-default);
   font-weight: 400;
@@ -55,23 +50,92 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 18px;
-  gap: 4px;
+  align-items: center;
 }
 
 .header_navbar_page_icon {
-  width: 6.36px;
-  height: 4.24px;
-  padding-left: 9.82px;
-  padding-top: 7.01px;
+  width: 100%;
+  height: auto;
+  padding-left: 0.5rem;
 }
 
-.header_navbar_button {
-  background-color: var(--background-primary);
-  color: var(--text-inverse);
-  border-radius: 6px;
-  width: 132px;
-  height: 35px;
-  padding: 10px 16px;
-  text-align: center;
+.header_navbar_btn {
+  padding-left: 2rem;
+}
+
+.header_navbar_hamburger_icon {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .header_navbar {
+    gap: 2rem;
+  }
+
+  .header_navbar_hamburger_icon {
+    display: inline-block;
+    z-index: 10;
+    background: none;
+    border: none;
+  }
+
+  .header_navbar_menu {
+    display: none;
+  }
+
+  .header_navbar_hamburger_icon div {
+    width: 35px;
+    height: 5px;
+    background-color: var(--border-default);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .header_navbar_times_icon .header_navbar_hamburger_icon_bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  .header_navbar_times_icon .header_navbar_hamburger_icon_bar2 {
+    opacity: 0;
+  }
+  .header_navbar_times_icon .header_navbar_hamburger_icon_bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+  .header_navbar_menu_responsive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--default-background);
+    gap: 4rem;
+    animation: fadeIn 0.5s;
+  }
+
+  .header_navbar_menu_responsive a {
+    font-size: 32px;
+  }
+
+  .header_navbar_menu_responsive a:hover {
+    text-decoration: underline;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 743px) {
+  .header_navbar_btn {
+    display: none;
+  }
 }

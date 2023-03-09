@@ -4,7 +4,12 @@ import NavbarLink from "@/components/general/Navbar/NavbarLink";
 import PageButton from "@/components/general/Navbar/PageArrow";
 import Button from "@/components/base/Button";
 
-const NavBar = () => {
+interface NavBarProps {
+  isOpen: boolean;
+  handleNavBarOpen: () => void;
+}
+
+const NavBar = ({ isOpen, handleNavBarOpen }: NavBarProps) => {
   const linkLists = [
     {
       id: 1,
@@ -30,15 +35,26 @@ const NavBar = () => {
 
   return (
     <section className={styles.header_navbar}>
-      <section className={styles.header_navbar_link}>
+      <nav className={isOpen ? styles.header_navbar_menu_responsive : styles.header_navbar_menu}>
         {linkLists.map(({ id, linkName }) => (
           <NavbarLink key={id} linkName={linkName} link={`/${linkName.toLowerCase()}`} />
         ))}
         <PageButton />
-      </section>
-      <section className={styles.navbar_right_button}>
+      </nav>
+      <div className={styles.header_navbar_btn}>
         <Button aria-label="let's_talk_button">LET&apos;S TALK</Button>
-      </section>
+      </div>
+      <button
+        className={`${styles.header_navbar_hamburger_icon} ${
+          isOpen ? styles.header_navbar_times_icon : null
+        }`}
+        onClick={handleNavBarOpen}
+        data-testid="nav-icon"
+      >
+        <div className={styles.header_navbar_hamburger_icon_bar1} />
+        <div className={styles.header_navbar_hamburger_icon_bar2} />
+        <div className={styles.header_navbar_hamburger_icon_bar3} />
+      </button>
     </section>
   );
 };

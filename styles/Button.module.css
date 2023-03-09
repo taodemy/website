@@ -1,6 +1,7 @@
 .common_button {
   padding: 10px 16px;
   border: 1px solid var(--border-default);
+  white-space: nowrap;
 }
 
 .small_button {
