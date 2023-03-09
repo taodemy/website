@@ -1,0 +1,20 @@
+.address {
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid var(--border-default);
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+}
+.address__img {
+  width: 35%;
+  height: 100%;
+  border-radius: 10px;
+}
+.address__details {
+  height: 90%;
+  margin-left: 20px;
+}
+.address__text {
+  line-height: 180%;
+}
