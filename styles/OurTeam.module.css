@@ -23,3 +23,27 @@
   padding-left: 40px;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 1023px) {
+  .our_team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .our_team__title {
+    padding-bottom: 1rem;
+  }
+
+  .our_team__card_container {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 743px) {
+  .our_team__card_container {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    gap: 1rem;
+  }
+}

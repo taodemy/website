@@ -2,7 +2,7 @@ import styles from "@/styles/OurValueV2.module.css";
 import { fontRobotoMono, fontSyne } from "@/pages/_app";
 import ListItem from "./ItemList";
 import Button from "../base/Button";
-import { useState, useEffect } from "react";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 interface ListItem {
   id: number;
@@ -35,25 +35,8 @@ const OurValueV2 = () => {
       icon: "/images/video_icon.svg",
     },
   ];
-  const [data, setData] = useState<ListItem[] | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
 
-  // useEffect(() => {
-  //   try {
-  //     const getData = async () => {
-  //       const response = await fetch("http://localhost:3012/ourvalues2");
-  //       console.log(`response: ${response}`);
-  //       // setData(result);
-  //       setError(null);
-  //     };
-  //     getData();
-  //   } catch (error) {
-  //     setError(error);
-  //     console.log(error);
-  //     setData(null);
-  //   }
-  // }, []);
+  const matches = useMediaQuery("(max-width:743px)");
 
   return (
     <section className={styles["our_values"]}>
@@ -65,7 +48,9 @@ const OurValueV2 = () => {
             OUR VALUES
           </p>
           <h1
-            className={`${fontSyne.className} global__uppercase-heading--medium ${styles["our_values__title"]}`}
+            className={`${fontSyne.className} ${
+              matches ? "global__heading-h2" : "global__uppercase-heading--medium"
+            } ${styles["our_values__title"]}`}
           >
             Our vision is to connect with the world technology trough innovation.
           </h1>
