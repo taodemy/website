@@ -78,6 +78,10 @@
     border-right: 0;
   }
 
+  .featured-work__left-container p {
+    margin: 8px 0px 48px 0px;
+  }
+
   .featured-work__right-container {
     margin-left: 0;
     width: 100%;
