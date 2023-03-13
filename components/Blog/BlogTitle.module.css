@@ -25,3 +25,12 @@
   align-items: center;
   gap: 15px;
 }
+@media screen and (max-width: 743px) {
+  .blog_title__sub_title {
+    flex-direction: column;
+  }
+  .blog_title__sub_title__button_group {
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+}

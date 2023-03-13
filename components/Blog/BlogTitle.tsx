@@ -1,12 +1,18 @@
 import styles from "./BlogTitle.module.css";
 import { fontSyne, fontSatoshi } from "@/pages/_app";
 import Button from "../base/Button";
+import EViewPortQuery from "@/constants/viewPortSize";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
+const { PHONE } = EViewPortQuery;
 const BlogTitle = () => {
+  const isPhoneSize = useMediaQuery(PHONE);
   return (
     <section className={styles["blog_title"]}>
       <h1
-        className={`${fontSyne.className} global__heading--medium ${styles["blog_title__title"]} `}
+        className={`${fontSyne.className} 
+        ${isPhoneSize ? "global__heading-h2" : "global__heading--medium"}
+        ${styles["blog_title__title"]} `}
       >
         Blog
       </h1>
