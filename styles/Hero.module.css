@@ -14,8 +14,9 @@
   width: 50%;
 }
 
-.hero__solgan {
+.hero__slogan {
   color: var(--text-default);
+  margin-bottom: 16px;
 }
 
 .hero__txt {
@@ -25,12 +26,46 @@
 
 .hero__photo {
   border-radius: 16px;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero__icon {
   color: var(--icon-default);
   height: fit-content;
   width: fit-content;
+  padding-top: 16px;
+}
+
+/*responsive styling*/
+@media (max-width: 1023px) {
+  .hero {
+    display: block;
+  }
+
+  .hero__section {
+    width: 100%;
+  }
+
+  .hero__txt {
+    max-width: 100%;
+  }
+
+  .hero__icon {
+    padding-bottom: 24px;
+  }
+
+  .hero__photo {
+    height: 700px;
+    object-position: 70% 0%;
+  }
+}
+
+@media (max-width: 743px) {
+  .hero__photo {
+    height: 400px;
+    object-fit: none;
+    object-position: 60% 0%;
+  }
 }

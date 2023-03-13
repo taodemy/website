@@ -8,8 +8,8 @@ interface Props {
 
 const IconItem = ({ aria_label, alt, icon }: Props) => {
   return (
-    <div>
-      <img src={icon} arial-label={aria_label} alt={alt} />
+    <div className={styles.icon__item}>
+      <img className={styles.icon__img} src={icon} arial-label={aria_label} alt={alt} />
     </div>
   );
 };
