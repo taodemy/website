@@ -42,7 +42,7 @@
 }
 
 @media screen and (max-width: 743px) {
-  .blog_gallery__large_group{
+  .blog_gallery__large_group {
     flex-direction: column;
   }
 }
