@@ -31,6 +31,7 @@ const customJestConfig = {
     "^@/pages/(.*)$": "<rootDir>/pages/$1",
     "^@/constants/(.*)$": "<rootDir>/constants/$1",
     "^@/layouts/(.*)$": "<rootDir>/layouts/$1",
+    "^@/hooks/(.*)$": "<rootDir>/hooks/$1",
   },
   testEnvironment: "jest-environment-jsdom",
 };

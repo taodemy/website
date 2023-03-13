@@ -1,0 +1,12 @@
+.questions {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+.questions_title__contrainer {
+  width: 30%;
+  height: 80%;
+  padding-right: 20%;
+}
