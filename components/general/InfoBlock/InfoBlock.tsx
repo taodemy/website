@@ -39,7 +39,7 @@ const InfoBlock = ({
         ) : (
           <h1
             className={`${fontSyne.className} 
-            ${isPhoneSize ? "global__heading-h2" : "global__uppercase-heading--medium"} ${
+            ${!isPhoneSize ? "global__uppercase-heading--medium" : "global__heading-h2"} ${
               styles.info_block__title_text
             }`}
           >
