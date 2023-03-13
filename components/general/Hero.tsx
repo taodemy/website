@@ -1,13 +1,11 @@
 import styles from "@/styles/Hero.module.css";
 import { fontSyne, fontSatoshi } from "@/pages/_app";
-import useMediaQuery from "@/hooks/useMediaQuery";
-import EViewPortQuery from "@/constants/viewPortSize";
 
-const { PHONE } = EViewPortQuery;
+type HeroProps = {
+  isPhoneSize: boolean;
+};
 
-const Hero = () => {
-  let isPhoneSize = useMediaQuery(PHONE);
-
+const Hero = ({ isPhoneSize }: HeroProps) => {
   return (
     <div className={styles["hero"]}>
       <div className={styles["hero__section"]}>
