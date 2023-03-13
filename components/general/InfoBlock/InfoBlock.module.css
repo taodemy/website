@@ -19,8 +19,7 @@
   font-weight: 500;
   text-transform: uppercase;
   color: var(--text-default);
-  margin: 16px 48px 16px 0;
-  height: 424px;
+  margin: 16px 48px 100px 0;
 }
 
 .info_block__title_text_small {
@@ -61,8 +60,8 @@
   flex-direction: column;
   justify-content: space-between;
   grid-column: 3;
-  height: 571px;
-  padding-left: 48px;
+  /* height: 571px; */
+  /* padding-left: 48px; */
 }
 
 .info_block__sign_up_content__text {
@@ -107,4 +106,20 @@
 .info_block__sign_up_content__form__group input:focus + span {
   transform: translateY(-25px);
   pointer-events: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .info_block__title {
+    grid-column: 1/4;
+  }
+  .info_block__sign_up_content {
+    grid-column: 1/4;
+    margin-top: 52px;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  .info_block__sign_up_content__form {
+    flex-direction: column;
+  }
 }
