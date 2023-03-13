@@ -1,13 +1,21 @@
 import styles from "@/styles/Hero.module.css";
 import { fontSyne, fontSatoshi } from "@/pages/_app";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import EViewPortQuery from "@/constants/viewPortSize";
+
+const { PHONE } = EViewPortQuery;
 
 const Hero = () => {
+  let isPhoneSize = useMediaQuery(PHONE);
+
   return (
     <div className={styles["hero"]}>
       <div className={styles["hero__section"]}>
         <div>
           <div
-            className={`${fontSyne.className} global__heading--medium ${styles["hero__slogan"]}`}
+            className={`${fontSyne.className} ${
+              isPhoneSize ? "global__heading-h2" : "global__heading--medium"
+            } ${styles["hero__slogan"]}`}
           >
             We are a <br />
             digital agency

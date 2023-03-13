@@ -63,11 +63,6 @@
 }
 
 @media (max-width: 743px) {
-  .hero__slogan {
-    font-size: 48px;
-    line-height: 120%;
-  }
-
   .hero__photo {
     height: 400px;
     object-fit: none;
