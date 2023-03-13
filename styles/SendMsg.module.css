@@ -39,7 +39,7 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  border-width: 1px;
+  border-bottom: 1px solid var(--border-default);
   line-height: 280%;
   background-color: var(--background-default);
   margin-bottom: 5%;
