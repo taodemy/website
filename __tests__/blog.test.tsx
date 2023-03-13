@@ -2,9 +2,13 @@ import { render, screen } from "@testing-library/react";
 import Blog from "../pages/blog";
 import "@testing-library/jest-dom";
 
+import { act } from "react-dom/test-utils";
+
 describe("Blog Page", () => {
   beforeEach(() => {
-    render(<Blog />);
+    act(() => {
+      render(<Blog />);
+    });
   });
 
   it("should render blog title in success", () => {
