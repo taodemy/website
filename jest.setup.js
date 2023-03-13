@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom/extend-expect";
 Object.defineProperty(window, "matchMedia", {
-  writable: true,
+  writable: false,
   value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
