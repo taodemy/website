@@ -38,7 +38,10 @@ export default function FeaturedWork() {
   return (
     <div className={styles["featured-work"]}>
       <div className={styles["featured-work__left-container"]}>
-        <h1 className={`${fontSyne.className} ${titleName} `}>FEATURED {brExist && <br />} WORK</h1>
+        <h1 className={`${fontSyne.className} ${titleName} `}>
+          <span>FEATURED&ensp;</span>
+          <span>WORK</span>
+        </h1>
         <p className={`${fontSatoshi.className} global__text--medium`}>
           The featured work section shows some of the successful works of our website.
         </p>
