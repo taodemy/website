@@ -124,12 +124,6 @@ body {
   }
 }
 
-@media (max-width: 1043px) {
-  .page__wrapper {
-    margin: 16px;
-  }
-}
-
 @media (max-width: 743px) {
   .page__wrapper {
     padding: 16px;
