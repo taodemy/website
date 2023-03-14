@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import EViewPortQuery from "@/constants/viewPortSize";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
-const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
+const { PHONE } = EViewPortQuery;
 
 const SendMsg = () => {
   const isPhoneSize = useMediaQuery(PHONE);

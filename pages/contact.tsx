@@ -16,7 +16,7 @@ export default function Contact() {
       <main>
         <SendMsg />
         {/* <OurOffices /> */}
-        {/* <CommonQuestions /> */}
+        <CommonQuestions />
       </main>
     </>
   );

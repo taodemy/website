@@ -59,15 +59,15 @@
   }
   .msg_left__container {
     width: 100%;
-    padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 0;
   }
   .social_media__container {
+    margin-top: 20px;
     align-items: center;
   }
   .msg_form__container {
     width: 80%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
