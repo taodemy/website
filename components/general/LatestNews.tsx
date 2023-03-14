@@ -3,13 +3,22 @@ import styles from "@/styles/LatestNews.module.css";
 import Button from "../base/Button";
 import Divider from "../base/Divider";
 import Card from "../base/Card";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import EViewPortQuery from "@/constants/viewPortSize";
+
+const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
 
 const LatestNews = () => {
+  let isPhoneSize = useMediaQuery(PHONE);
   return (
     <section className={styles.latest_news}>
       <div className={styles.latest_news__header}>
         <h1
-          className={`${fontSyne.className} global__uppercase-heading--small ${styles.latest_news__title}`}
+          className={`
+            ${fontSyne.className}
+            ${isPhoneSize ? "global__uppercase-heading-h2" : "global__uppercase-heading--small"}
+            ${styles.latest_news__title}
+          `}
         >
           LATEST NEWS
         </h1>

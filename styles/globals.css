@@ -117,3 +117,9 @@ body {
   margin: 20px;
   border: 1px solid var(--border-default);
 }
+
+@media screen and (max-width: 743px) {
+  .page__wrapper {
+    padding: 20px;
+  }
+}
