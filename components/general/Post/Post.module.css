@@ -1,0 +1,27 @@
+.post_section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 64px 0;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.post_section__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.post_section__description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+}
+
+.post_section__image {
+  width: 100%;
+  border-radius: 16px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
