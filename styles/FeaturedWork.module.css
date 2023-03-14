@@ -5,7 +5,7 @@
 }
 
 .featured-work__left-container {
-  width: 33%;
+  width: 30%;
   margin-top: 48px;
   border-right: 1px solid #000000;
 }
@@ -27,8 +27,8 @@
 
 .featured-work__right-container {
   margin-top: 48px;
-  margin-left: 41px;
-  width: 67%;
+  margin-left: 48px;
+  width: 70%;
 }
 
 .featured-work__right-container-bottom {

@@ -12,14 +12,6 @@ export default function FeaturedWork() {
   const { DESKTOP, TABLET } = EViewPortQuery;
   let isDesktopSize = useMediaQuery(DESKTOP);
   let isTableletSize = useMediaQuery(TABLET);
-  let [titleName, setTitleName] = useState("global__heading-h1");
-  // if (isDesktopSize) {
-  //   setTitleName("global__heading-h1");
-  // } else if (isTableletSize) {
-  //   setTitleName("global__uppercase-heading-h2");
-  // } else {
-  //   setTitleName("global__uppercase-heading-h3");
-  // }
   const [imgBoxes, setImgBoxes] = useState([
     {
       id: 1,
@@ -52,11 +44,11 @@ export default function FeaturedWork() {
       <div className={styles["featured-work__left-container"]}>
         <h1
           className={`${fontSyne.className} 
-            ${isDesktopSize ? "global__heading-h1" : "global__heading-h2"} 
+             ${isDesktopSize ? "global__heading-h1" : "global__heading-h2"} 
           `}
         >
-          <span>FEATURED&ensp;</span>
-          <span>WORK</span>
+          <span>{isTableletSize ? "FEATURED" : "Featured"}&ensp;</span>
+          <span>{isTableletSize ? "WORK" : "Work"}</span>
         </h1>
         <p className={`${fontSatoshi.className} global__text--medium`}>
           The featured work section shows some of the successful works of our website.
