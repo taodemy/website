@@ -72,7 +72,7 @@ export default function FeaturedWork() {
             image={imgBoxes[0].location}
             direction="row"
           />
-          <Divider />
+          {isDesktopSize ? <Divider /> : <div />}
           <Card
             title={imgBoxes[1].title}
             subtitle="2022"
@@ -85,7 +85,7 @@ export default function FeaturedWork() {
             image={imgBoxes[2].location}
             direction="row"
           />
-          <Divider />
+          {isDesktopSize ? <Divider /> : <div />}
           <Card
             title={imgBoxes[3].title}
             subtitle="2022"
