@@ -33,6 +33,10 @@
 }
 
 @media screen and (max-width: 743px) {
+  .what-we-do {
+    padding-bottom: 0;
+  }
+
   .what-we-do__content {
     grid-template-columns: 100%;
   }
