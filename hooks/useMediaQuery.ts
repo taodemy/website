@@ -4,6 +4,7 @@ function useMediaQuery(query: string): boolean {
   const getMatches = (query: string): boolean => {
     // Prevents SSR issues
     if (typeof window !== "undefined") {
+      console.log(window.matchMedia(query));
       return window.matchMedia(query).matches;
     }
     return false;
