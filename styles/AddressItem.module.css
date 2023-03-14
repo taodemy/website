@@ -1,20 +1,30 @@
 .address {
-  width: 50%;
-  height: 100%;
+  width: 100%;
   border-left: 1px solid var(--border-default);
   padding-left: 35px;
+  margin-right: 10px;
   display: flex;
   align-items: center;
 }
 .address__img {
-  width: 35%;
-  height: 100%;
+  width: 150px;
   border-radius: 10px;
 }
 .address__details {
-  height: 90%;
   margin-left: 20px;
 }
 .address__text {
   line-height: 180%;
+}
+@media screen and (max-width: 1118px) {
+  .address {
+    width: 100%;
+    border-left: none;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 743px) {
+  .address__img {
+    width: 100px;
+  }
 }
