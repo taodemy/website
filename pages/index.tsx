@@ -13,9 +13,9 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
 
 export default function Home() {
-  let isDesktopSize = useMediaQuery(DESKTOP);
-  let isTabletSize = useMediaQuery(TABLET);
-  let isPhoneSize = useMediaQuery(PHONE);
+  const isDesktopSize = useMediaQuery(DESKTOP);
+  const isTabletSize = useMediaQuery(TABLET);
+  const isPhoneSize = useMediaQuery(PHONE);
 
   return (
     <>
