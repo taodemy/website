@@ -8,6 +8,10 @@ import InfoItem from "@/components/general/InfoItem";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
 import Link from "next/link";
 import SocialMedia from "@/components/general/SocialMedia/SocialMedia";
+import EViewPortQuery from "@/constants/viewPortSize";
+import useMediaQuery from "@/hooks/useMediaQuery";
+
+const { PHONE } = EViewPortQuery;
 
 interface Blog {
   id: string;
@@ -28,6 +32,7 @@ export default function Blog() {
     const blog = blogs.data.find((blog) => blog.id === id);
     if (blog) setCurrentBlog(blog);
   }, [id]);
+  const isPhoneSize = useMediaQuery(PHONE);
 
   return currentBlog ? (
     <>
@@ -40,7 +45,11 @@ export default function Blog() {
           </Link>
         </div>
         <div className={`${styles.blog_title_text}`}>
-          <h1 className={`${fontSyne.className} global__heading--medium ${styles.blog_title_head}`}>
+          <h1
+            className={`${fontSyne.className} 
+          ${isPhoneSize ? "global__heading-h2" : "global__heading--medium"}
+          ${styles.blog_title_head}`}
+          >
             {currentBlog.title}
           </h1>
           <p className={`${fontSatoshi.className} global__text-xlarge`}>{currentBlog.subtitle}</p>
