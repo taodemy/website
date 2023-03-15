@@ -2,10 +2,9 @@ import styles from "@/styles/OurTeam.module.css";
 import { fontSyne, fontSatoshi } from "@/pages/_app";
 import Card from "../base/Card";
 import Divider from "../base/Divider";
-import useMediaQuery from "@/hooks/useMediaQuery";
+import { MatchesProp } from "@/pages/studio";
 
-const OurTeam = () => {
-  const matches = useMediaQuery("(max-width:743px)");
+const OurTeam = ({ matches }: MatchesProp) => {
   return (
     <section className={styles["our_team"]}>
       <div className={styles["our_team__text_container"]}>

@@ -2,7 +2,7 @@ import styles from "@/styles/OurValueV2.module.css";
 import { fontRobotoMono, fontSyne } from "@/pages/_app";
 import ListItem from "./ItemList";
 import Button from "../base/Button";
-import useMediaQuery from "@/hooks/useMediaQuery";
+import { MatchesProp } from "@/pages/studio";
 
 interface ListItem {
   id: number;
@@ -11,7 +11,7 @@ interface ListItem {
   icon: string;
 }
 
-const OurValueV2 = () => {
+const OurValueV2 = ({ matches }: MatchesProp) => {
   const listItems = [
     {
       id: 1,
@@ -35,8 +35,6 @@ const OurValueV2 = () => {
       icon: "/images/video_icon.svg",
     },
   ];
-
-  const matches = useMediaQuery("(max-width:743px)");
 
   return (
     <section className={styles["our_values"]}>

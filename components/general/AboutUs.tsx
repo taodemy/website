@@ -1,9 +1,8 @@
 import styles from "@/styles/AboutUs.module.css";
 import { fontSyne, fontRobotoMono } from "@/pages/_app";
-import useMediaQuery from "@/hooks/useMediaQuery";
+import { MatchesProp } from "@/pages/studio";
 
-const AboutUs = () => {
-  const matches = useMediaQuery("(max-width:743px)");
+const AboutUs = ({ matches }: MatchesProp) => {
   return (
     <section className={styles["about_us"]}>
       <p className={`${fontRobotoMono.className} global__text-meta ${styles["about_us__heading"]}`}>
