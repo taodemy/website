@@ -30,7 +30,6 @@
     flex-direction: column;
   }
   .blog_title__sub_title__button_group {
-    flex-direction: column;
     margin-bottom: 60px;
   }
 }
