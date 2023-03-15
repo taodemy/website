@@ -2,7 +2,7 @@ import styles from "@/styles/OurValueV2.module.css";
 import { fontRobotoMono, fontSyne } from "@/pages/_app";
 import ListItem from "./ItemList";
 import Button from "../base/Button";
-import { MatchesProp } from "@/pages/studio";
+import { PhoneSizeProp } from "@/pages/studio";
 
 interface ListItem {
   id: number;
@@ -11,7 +11,7 @@ interface ListItem {
   icon: string;
 }
 
-const OurValueV2 = ({ matches }: MatchesProp) => {
+const OurValueV2 = ({ isPhoneSize }: PhoneSizeProp) => {
   const listItems = [
     {
       id: 1,
@@ -47,7 +47,7 @@ const OurValueV2 = ({ matches }: MatchesProp) => {
           </p>
           <h1
             className={`${fontSyne.className} ${
-              matches ? "global__heading-h2" : "global__uppercase-heading--medium"
+              isPhoneSize ? "global__heading-h2" : "global__uppercase-heading--medium"
             } ${styles["our_values__title"]}`}
           >
             Our vision is to connect with the world technology trough innovation.

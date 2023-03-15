@@ -2,18 +2,18 @@ import styles from "@/styles/OurTeam.module.css";
 import { fontSyne, fontSatoshi } from "@/pages/_app";
 import Card from "../base/Card";
 import Divider from "../base/Divider";
-import { MatchesProp } from "@/pages/studio";
+import { PhoneSizeProp } from "@/pages/studio";
 
-const OurTeam = ({ matches }: MatchesProp) => {
+const OurTeam = ({ isPhoneSize }: PhoneSizeProp) => {
   return (
     <section className={styles["our_team"]}>
       <div className={styles["our_team__text_container"]}>
         <h1
           className={`${fontSyne.className} ${
-            matches ? "global__heading-h2" : "global__heading-h1"
+            isPhoneSize ? "global__heading-h2" : "global__heading-h1"
           } ${styles.our_team__title}`}
         >
-          {matches ? (
+          {isPhoneSize ? (
             "OUR TEAM"
           ) : (
             <>

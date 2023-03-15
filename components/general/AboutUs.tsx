@@ -1,8 +1,8 @@
 import styles from "@/styles/AboutUs.module.css";
 import { fontSyne, fontRobotoMono } from "@/pages/_app";
-import { MatchesProp } from "@/pages/studio";
+import { PhoneSizeProp } from "@/pages/studio";
 
-const AboutUs = ({ matches }: MatchesProp) => {
+const AboutUs = ({ isPhoneSize }: PhoneSizeProp) => {
   return (
     <section className={styles["about_us"]}>
       <p className={`${fontRobotoMono.className} global__text-meta ${styles["about_us__heading"]}`}>
@@ -10,7 +10,7 @@ const AboutUs = ({ matches }: MatchesProp) => {
       </p>
       <h1
         className={`${fontSyne.className} ${
-          matches ? "global__heading-h2" : "global__heading--medium"
+          isPhoneSize ? "global__heading-h2" : "global__heading--medium"
         } ${styles["about_us__title"]} `}
       >
         Creative studio <br />
