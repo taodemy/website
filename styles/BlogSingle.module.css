@@ -61,3 +61,32 @@
   display: flex;
   justify-content: flex-start;
 }
+
+@media screen and (max-width: 1023px) {
+  .blog_title_section {
+    flex-direction: column;
+  }
+  .blog_title_text {
+    width: 100%;
+  }
+  .blog_title_aside {
+    margin-top: 60px;
+    width: 100%;
+  }
+  .blog_content_blank {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 734px) {
+  .blog_content_section {
+    flex-direction: column;
+  }
+  .blog_content_text {
+    width: 100%;
+  }
+  .blog_content_aside {
+    margin-top: 60px;
+    width: 50%;
+  }
+}
