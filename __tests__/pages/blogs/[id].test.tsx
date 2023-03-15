@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import Blog from "@/pages/blogs/[id]";
+import Blog from "@/pages/blog/[id]";
 
 jest.mock("next/router", () => ({
   useRouter() {

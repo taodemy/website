@@ -64,10 +64,3 @@
     height: 350px;
   }
 }
-
-@media screen and (max-width: 743px) {
-  .card__image {
-    width: auto;
-    height: 350px;
-  }
-}
