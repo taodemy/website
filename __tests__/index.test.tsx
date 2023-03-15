@@ -147,13 +147,13 @@ describe("Home", () => {
   });
 
   it("should render contact section title in success", () => {
-    const contactTitle = screen.getByText("Let’s bring your tech to the next level");
+    const contactTitle = screen.getByText("Let’s bring your brand to the next level");
     expect(contactTitle).toBeInTheDocument();
   });
 
   it("should render icon in contact section success", () => {
     const contactIcon = screen.getByRole("img", {
-      name: /let’s bring your\ntech to the next\nlevelicon/i,
+      name: /Let’s bring your brand to the next level/i,
     });
     expect(contactIcon).toBeInTheDocument();
     expect(contactIcon).toHaveAttribute("src", "/images/design_icon.svg");

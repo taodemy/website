@@ -109,13 +109,21 @@
 }
 
 @media screen and (max-width: 1023px) {
+  .info_block {
+    grid-template-columns: none;
+  }
+
   .info_block__normal_content {
     display: none;
   }
+
+  .info_block__title_text {
+    margin-right: 0;
+  }
 }
 
-/* @media screen and (max-width: 743px) {
-  .info_block__title {
-    padding: 0 20px;
+@media screen and (max-width: 743px) {
+  .info_block__title_text {
+    text-transform: capitalize;
   }
-} */
+}

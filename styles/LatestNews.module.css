@@ -39,3 +39,9 @@
     padding-bottom: 48px;
   }
 }
+
+@media screen and (max-width: 743px) {
+  .latest_news__title {
+    text-transform: capitalize;
+  }
+}

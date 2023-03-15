@@ -20,7 +20,7 @@ const LatestNews = () => {
             ${styles.latest_news__title}
           `}
         >
-          LATEST NEWS
+          {isPhoneSize ? "Latest News" : "LATEST NEWS"}
         </h1>
         <Button variant="secondary" isBlock={true}>
           SEE ALL
