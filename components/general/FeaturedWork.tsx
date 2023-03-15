@@ -4,14 +4,13 @@ import Button from "../base/Button";
 import { useState } from "react";
 import Card from "../base/Card";
 import Divider from "../base/Divider";
-import useMediaQuery from "@/hooks/useMediaQuery";
-import EViewPortQuery from "@/constants/viewPortSize";
-import { useEffect } from "react";
 
-export default function FeaturedWork() {
-  const { DESKTOP, TABLET } = EViewPortQuery;
-  let isDesktopSize = useMediaQuery(DESKTOP);
-  let isTableletSize = useMediaQuery(TABLET);
+type Props = {
+  isDesktopSize: boolean;
+  isTableletSize: boolean;
+};
+
+export default function FeaturedWork({ isDesktopSize, isTableletSize }: Props) {
   const [imgBoxes, setImgBoxes] = useState([
     {
       id: 1,
