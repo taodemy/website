@@ -60,8 +60,6 @@
   flex-direction: column;
   justify-content: space-between;
   grid-column: 3;
-  /* height: 571px; */
-  /* padding-left: 48px; */
 }
 
 .info_block__sign_up_content__text {
