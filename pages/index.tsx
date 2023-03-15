@@ -27,7 +27,7 @@ export default function Home() {
         <Hero isPhoneSize={isPhoneSize} />
         <OurClients />
         <WhatWeDo />
-        <FeaturedWork />
+        <FeaturedWork isDesktopSize={isDesktopSize} isTableletSize={isTabletSize} />
         <HowWework />
         <Values />
         <Contact />
