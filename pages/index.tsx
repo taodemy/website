@@ -7,8 +7,15 @@ import Values from "@/components/general/OurValues";
 import FeaturedWork from "../components/general/FeaturedWork";
 import LatestNews from "@/components/general/LatestNews";
 import HowWework from "@/components/general/HowWeWork";
+import EViewPortQuery from "@/constants/viewPortSize";
+import useMediaQuery from "@/hooks/useMediaQuery";
+
+const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
 
 export default function Home() {
+  let isDesktopSize = useMediaQuery(DESKTOP);
+  let isTabletSize = useMediaQuery(TABLET);
+  let isPhoneSize = useMediaQuery(PHONE);
   return (
     <>
       <Head>
@@ -19,7 +26,7 @@ export default function Home() {
         <Hero />
         <OurClients />
         <WhatWeDo />
-        <FeaturedWork />
+        <FeaturedWork isDesktopSize={isDesktopSize} isTableletSize={isTabletSize} />
         <HowWework />
         <Values />
         <Contact />

@@ -5,7 +5,12 @@ import { useState } from "react";
 import Card from "../base/Card";
 import Divider from "../base/Divider";
 
-export default function FeaturedWork() {
+type Props = {
+  isDesktopSize: boolean;
+  isTableletSize: boolean;
+};
+
+export default function FeaturedWork({ isDesktopSize, isTableletSize }: Props) {
   const [imgBoxes, setImgBoxes] = useState([
     {
       id: 1,
@@ -36,8 +41,13 @@ export default function FeaturedWork() {
   return (
     <div className={styles["featured-work"]}>
       <div className={styles["featured-work__left-container"]}>
-        <h1 className={`${fontSyne.className} global__heading-h1 `}>
-          FEATURED <br /> WORK
+        <h1
+          className={`${fontSyne.className} 
+             ${isDesktopSize ? "global__heading-h1" : "global__heading-h2"} 
+          `}
+        >
+          <span>{isTableletSize ? "FEATURED" : "Featured"}&ensp;</span>
+          <span>{isTableletSize ? "WORK" : "Work"}</span>
         </h1>
         <p className={`${fontSatoshi.className} global__text--medium`}>
           The featured work section shows some of the successful works of our website.
@@ -61,7 +71,7 @@ export default function FeaturedWork() {
             image={imgBoxes[0].location}
             direction="row"
           />
-          <Divider />
+          {isDesktopSize ? <Divider /> : <div />}
           <Card
             title={imgBoxes[1].title}
             subtitle="2022"
@@ -74,7 +84,7 @@ export default function FeaturedWork() {
             image={imgBoxes[2].location}
             direction="row"
           />
-          <Divider />
+          {isDesktopSize ? <Divider /> : <div />}
           <Card
             title={imgBoxes[3].title}
             subtitle="2022"
