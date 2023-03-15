@@ -1,0 +1,17 @@
+.service_title {
+  padding-bottom: 63px;
+  padding-top: 63px;
+  border-bottom: 1px solid var(--border-default);
+}
+.service_title__heading {
+  padding-top: 16px;
+  font-weight: 500;
+}
+
+.service_title__button {
+  width: 22%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 150px;
+}
