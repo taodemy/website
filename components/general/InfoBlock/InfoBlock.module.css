@@ -120,4 +120,7 @@
   .info_block__sign_up_content__form {
     flex-direction: column;
   }
+  .info_block__title_text {
+    text-transform: lowercase;
+  }
 }
