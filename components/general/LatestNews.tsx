@@ -28,7 +28,7 @@ const LatestNews = ({ isPhoneSize }: Props) => {
       <article className={styles.latest_news__article}>
         <Card
           title="Things to Look for When Comparing Branding Alternatives"
-          subtitle="Branding, Design"
+          subtitle="BRANDING, DESIGN"
           image="/images/two_people_praying.png"
           direction="column_reverse"
         />
@@ -36,14 +36,14 @@ const LatestNews = ({ isPhoneSize }: Props) => {
         <Divider />
         <Card
           title="5 Stand-out Features of Branding You Should Know"
-          subtitle="Branding, Design"
+          subtitle="BRANDING, DESIGN"
           image="/images/channel.png"
           direction="column_reverse"
         />
         <Divider />
         <Card
           title="Branding: What Real Customers Have to Say"
-          subtitle="Branding, Design"
+          subtitle="BRANDING, DESIGN"
           image="/images/brand_strategy.png"
           direction="column_reverse"
         />
