@@ -30,7 +30,7 @@ describe("Work Page", () => {
 
     expect(postImage).toBeInTheDocument();
     expect(postImage).toHaveAttribute("src", "/images/featured-work-sec-img-1.png");
-    expect(postImage.toHaveAttribute("alt", "dancing\nstars image");
+    expect(postImage).toHaveAttribute("alt", "dancing\nstars image");
     expect(postBtn).toBeInTheDocument();
 
     // const secondLargeImg = screen.getByRole("img", {
