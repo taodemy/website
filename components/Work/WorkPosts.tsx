@@ -42,16 +42,18 @@ const WorkPosts = () => {
 
   return (
     <>
-      {posts.map((p) => (
-        <Post
-          sectionName={p.sectionName}
-          desOne={p.desOne}
-          desTwo={p.desTwo}
-          desThree={p.desThree}
-          imgPath={p.imgPath}
-          key={p.sectionName}
-        />
-      ))}
+      <div className={styles.work_posts}>
+        {posts.map((p) => (
+          <Post
+            sectionName={p.sectionName}
+            desOne={p.desOne}
+            desTwo={p.desTwo}
+            desThree={p.desThree}
+            imgPath={p.imgPath}
+            key={p.sectionName}
+          />
+        ))}
+      </div>
     </>
   );
 };

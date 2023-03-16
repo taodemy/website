@@ -12,9 +12,9 @@ export type PostProps = {
 
 const Post = ({ sectionName, desOne, desTwo, desThree, imgPath }: PostProps) => {
   return (
-    <section className={styles.post_section}>
-      <div className={styles.post_section_information}>
-        <div className={styles.post_section_description}>
+    <section className={styles.post__section}>
+      <div className={styles.post_section__information}>
+        <div className={styles.post_section__description}>
           <h1 className={`${fontSyne.className} global__heading-h1`}>{sectionName}</h1>
           <p className={`${fontRobotoMono.className} global__text-meta`}>{desOne}</p>
           <p className={`${fontRobotoMono.className} global__text-meta`}>{desTwo}</p>
