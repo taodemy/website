@@ -118,7 +118,7 @@ body {
   border: 1px solid var(--border-default);
 }
 
-@media screen and (max-width: 1043px) {
+@media screen and (max-width: 1023px) {
   .page__wrapper {
     margin: 16px;
   }
