@@ -1,6 +1,10 @@
 import InfoBlock from "./InfoBlock/InfoBlock";
 
-const Contact = () => {
+type Props = {
+  isPhoneSize: boolean;
+};
+
+const Contact = ({ isPhoneSize }: Props) => {
   return (
     <InfoBlock
       sectionName="Contact"
@@ -9,6 +13,7 @@ const Contact = () => {
       blockType="normal"
       content="Contact us to explore partnership opportunities and discover how we can work together to drive innovation and create positive change."
       buttonContent="get in touch"
+      isPhoneSize={isPhoneSize}
     />
   );
 };

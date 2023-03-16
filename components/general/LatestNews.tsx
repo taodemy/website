@@ -3,13 +3,12 @@ import styles from "@/styles/LatestNews.module.css";
 import Button from "../base/Button";
 import Divider from "../base/Divider";
 import Card from "../base/Card";
-import useMediaQuery from "@/hooks/useMediaQuery";
-import EViewPortQuery from "@/constants/viewPortSize";
 
-const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
+type Props = {
+  isPhoneSize: boolean;
+};
 
-const LatestNews = () => {
-  let isPhoneSize = useMediaQuery(PHONE);
+const LatestNews = ({ isPhoneSize }: Props) => {
   return (
     <section className={styles.latest_news}>
       <div className={styles.latest_news__header}>

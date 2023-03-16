@@ -2,8 +2,13 @@ import Head from "next/head";
 import Subscription from "@/components/general/Subscription";
 import BlogTitle from "@/components/Blog/BlogTitle";
 import BlogGallery from "@/components/Blog/BlogPosts";
+import EViewPortQuery from "@/constants/viewPortSize";
+import useMediaQuery from "@/hooks/useMediaQuery";
+
+const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
 
 export default function Blog() {
+  const isPhoneSize = useMediaQuery(PHONE);
   return (
     <>
       <Head>
@@ -22,7 +27,7 @@ export default function Blog() {
       <main>
         <BlogTitle />
         <BlogGallery />
-        <Subscription />
+        <Subscription isPhoneSize={isPhoneSize} />
       </main>
     </>
   );

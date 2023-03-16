@@ -1,8 +1,6 @@
 import styles from "./InfoBlock.module.css";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
 import Button from "../../base/Button";
-import useMediaQuery from "@/hooks/useMediaQuery";
-import EViewPortQuery from "@/constants/viewPortSize";
 
 type InfoBlockType = "normal" | "smallHeading" | "input";
 type InfoProps = {
@@ -12,9 +10,8 @@ type InfoProps = {
   blockType: InfoBlockType;
   content: string;
   buttonContent?: string;
+  isPhoneSize: boolean;
 };
-
-const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
 
 const InfoBlock = ({
   sectionName,
@@ -23,8 +20,8 @@ const InfoBlock = ({
   blockType,
   content,
   buttonContent,
+  isPhoneSize,
 }: InfoProps) => {
-  let isPhoneSize = useMediaQuery(PHONE);
   return (
     <section className={styles.info_block}>
       <div className={styles.info_block__title}>

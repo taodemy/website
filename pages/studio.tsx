@@ -3,8 +3,13 @@ import AboutUs from "@/components/general/AboutUs";
 import OurValueV2 from "@/components/general/OurValue2";
 import OurTeam from "@/components/general/OurTeam";
 import Contact from "@/components/general/Contact";
+import EViewPortQuery from "@/constants/viewPortSize";
+import useMediaQuery from "@/hooks/useMediaQuery";
+
+const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
 
 export default function Studio() {
+  const isPhoneSize = useMediaQuery(PHONE);
   return (
     <>
       <Head>
@@ -15,7 +20,7 @@ export default function Studio() {
         <AboutUs />
         <OurValueV2 />
         <OurTeam />
-        <Contact />
+        <Contact isPhoneSize={isPhoneSize} />
       </main>
     </>
   );
