@@ -4,7 +4,7 @@ import { fontSyne, fontRobotoMono } from "@/pages/_app";
 const WorkTitle = () => {
   return (
     <section className={styles.work_block}>
-      <p className={`${fontRobotoMono.className} global__text-meta ${styles.work_block_heading}`}>
+      <p className={`${fontRobotoMono.className} global__text-meta ${styles.work_block__heading}`}>
         work
       </p>
       <h1

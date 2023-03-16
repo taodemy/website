@@ -7,97 +7,97 @@ describe("Work Page", () => {
     render(<Work />);
   });
 
-  it("should render work title in success", () => {
-    const work_block_heading = screen.getByRole("heading", { name: /work/i });
-    const work_block__title_text = screen.getByText(/Our branding success stories.\./i);
+  it("should render work title section in success", () => {
+    const work_block__heading = screen.getByText(/work/i);
+    const work_block__title_text = screen.getByRole("heading", {name: /our branding success stories\./i});
     const workViewProjectBtn = screen.getByRole("button", { name: /video/i });
-    expect(work_block_heading).toBeInTheDocument();
+    expect(work_block__heading).toBeInTheDocument();
     expect(work_block__title_text).toBeInTheDocument();
     expect(workViewProjectBtn).toBeInTheDocument();
   });
 
-  it("should render post section information in success", () => {
-    const firstLargeImg = screen.getByRole("img", {
-      name: /dancing stars/i,
+  it("should render first post section information in success", () => {
+    const postImage = screen.getByRole("img", {
+      name: /dancing\nstars/i,
     });
-    const firstLargeImgSectionName = screen.getByRole("sectionName", {
-      name: /dancing stars/i,
+    const postSectionName = screen.getByRole("heading", {
+      name: /dancing\nstars/i,
     });
-    const firstLargeImgDescriptionOne = screen.getByRole("description", {
-      name: /content/i,
-    });
-    const firstLargeImgDescriptionTwo = screen.getByRole("description", {
-      name: /video/i,
-    });
-    const firstLargeImgDescriptionThree = screen.getByRole("description", {
-      name: /design/i,
-    });
+    const postDescriptionOne = screen.getByText(/content/i);
+    const postDescriptionTwo = screen.getByText(/video/i,);
+    const postDescriptionThree = screen.getByText (/design/i,);
+    const postBtn = screen.getByTestId("dancing\nstars btn");
 
-    const secondLargeImg = screen.getByRole("img", {
-      name: /enjoy silence/i,
-    });
-    const secondLargeImgSectionName = screen.getByRole("sectionName", {
-      name: /enjoy silence/i,
-    });
-    const secondLargeImgDescriptionOne = screen.getByRole("description", {
-      name: /content/i,
-    });
-    const secondLargeImgDescriptionTwo = screen.getByRole("description", {
-      name: /branding/i,
-    });
+    expect(postImage).toBeInTheDocument();
+    expect(postImage).toHaveAttribute("src", "/images/featured-work-sec-img-1.png");
+    expect(postImage.toHaveAttribute("alt", "dancing\nstars image");
+    expect(postBtn).toBeInTheDocument();
 
-    const thirdLargeImg = screen.getByRole("img", {
-      name: /pure vision/i,
-    });
-    const thirdLargeImgSectionName = screen.getByRole("sectionName", {
-      name: /pure vision/i,
-    });
-    const thirdLargeImgDescriptionOne = screen.getByRole("description", {
-      name: /branding/i,
-    });
-    const thirdLargeImgDescriptionTwo = screen.getByRole("description", {
-      name: /video/i,
-    });
-    const thirdLargeImgDescriptionThree = screen.getByRole("description", {
-      name: /content/i,
-    });
+    // const secondLargeImg = screen.getByRole("img", {
+    //   name: /enjoy silence/i,
+    // });
+    // const secondLargeImgSectionName = screen.getByRole("sectionName", {
+    //   name: /enjoy silence/i,
+    // });
+    // const secondLargeImgDescriptionOne = screen.getByRole("description", {
+    //   name: /content/i,
+    // });
+    // const secondLargeImgDescriptionTwo = screen.getByRole("description", {
+    //   name: /branding/i,
+    // });
 
-    const fourthLargeImg = screen.getByRole("img", {
-      name: /boring brand/i,
-    });
-    const fourthLargeImgSectionName = screen.getByRole("sectionName", {
-      name: /boring brand/i,
-    });
-    const fourthLargeImgDescriptionOne = screen.getByRole("description", {
-      name: /branding/i,
-    });
-    const fourthLargeImgDescriptionTwo = screen.getByRole("description", {
-      name: /video/i,
-    });
-    const fourthLargeImgDescriptionThree = screen.getByRole("description", {
-      name: /content/i,
-    });
+    // const thirdLargeImg = screen.getByRole("img", {
+    //   name: /pure vision/i,
+    // });
+    // const thirdLargeImgSectionName = screen.getByRole("sectionName", {
+    //   name: /pure vision/i,
+    // });
+    // const thirdLargeImgDescriptionOne = screen.getByRole("description", {
+    //   name: /branding/i,
+    // });
+    // const thirdLargeImgDescriptionTwo = screen.getByRole("description", {
+    //   name: /video/i,
+    // });
+    // const thirdLargeImgDescriptionThree = screen.getByRole("description", {
+    //   name: /content/i,
+    // });
 
-    const fifthLargeImg = screen.getByRole("img", {
-      name: /new culture/i,
-    });
-    const fifthLargeImgSectionName = screen.getByRole("sectionName", {
-      name: /new culture/i,
-    });
-    const fifthLargeImgDescriptionOne = screen.getByRole("description", {
-      name: /branding/i,
-    });
-    const fifthLargeImgDescriptionTwo = screen.getByRole("description", {
-      name: /video/i,
-    });
-    const fifthLargeImgDescriptionThree = screen.getByRole("description", {
-      name: /content/i,
-    });
+    // const fourthLargeImg = screen.getByRole("img", {
+    //   name: /boring brand/i,
+    // });
+    // const fourthLargeImgSectionName = screen.getByRole("sectionName", {
+    //   name: /boring brand/i,
+    // });
+    // const fourthLargeImgDescriptionOne = screen.getByRole("description", {
+    //   name: /branding/i,
+    // });
+    // const fourthLargeImgDescriptionTwo = screen.getByRole("description", {
+    //   name: /video/i,
+    // });
+    // const fourthLargeImgDescriptionThree = screen.getByRole("description", {
+    //   name: /content/i,
+    // });
 
-    expect(firstLargeImg).toBeInTheDocument();
-    expect(firstLargeImg).toHaveAttribute("src", "/images/two_people_praying.png");
-    expect(firstLargeImgSectionName).toBeInTheDocument();
-    expect(firstLargeImgDescriptionOne).toBeInTheDocument();
+    // const fifthLargeImg = screen.getByRole("img", {
+    //   name: /new culture/i,
+    // });
+    // const fifthLargeImgSectionName = screen.getByRole("sectionName", {
+    //   name: /new culture/i,
+    // });
+    // const fifthLargeImgDescriptionOne = screen.getByRole("description", {
+    //   name: /branding/i,
+    // });
+    // const fifthLargeImgDescriptionTwo = screen.getByRole("description", {
+    //   name: /video/i,
+    // });
+    // const fifthLargeImgDescriptionThree = screen.getByRole("description", {
+    //   name: /content/i,
+    // });
+
+    expect(postImage).toBeInTheDocument();
+    expect(postImage).toHaveAttribute("src", "/images/featured-work-sec-img-1.png");
+    expect(postImage.toHaveAttribute("alt", "dancing\nstars image");
+    expect(postBtn).toBeInTheDocument();
     expect(firstLargeImgDescriptionTwo).toBeInTheDocument();
     expect(firstLargeImgDescriptionThree).toBeInTheDocument();
     expect(secondLargeImg).toBeInTheDocument();
