@@ -1,8 +1,13 @@
 .common_button {
   padding: 10px 16px;
   border: 1px solid var(--border-default);
+  white-space: nowrap;
 }
 
+.small_button {
+  padding: 6px 8px;
+  border: 1px solid var(--border-default);
+}
 .button-blocked {
   align-self: auto;
 }

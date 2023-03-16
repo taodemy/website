@@ -1,11 +1,16 @@
 import styles from "../../styles/FeaturedWork.module.css";
-import { fontSyne, fontSatoshi, fontRobotoMono } from "../../pages/_app";
+import { fontSyne, fontSatoshi } from "../../pages/_app";
 import Button from "../base/Button";
 import { useState } from "react";
-import MemberCard from "../base/MemberCard";
+import Card from "../base/Card";
 import Divider from "../base/Divider";
 
-export default function FeaturedWork() {
+type Props = {
+  isDesktopSize: boolean;
+  isTableletSize: boolean;
+};
+
+export default function FeaturedWork({ isDesktopSize, isTableletSize }: Props) {
   const [imgBoxes, setImgBoxes] = useState([
     {
       id: 1,
@@ -36,8 +41,13 @@ export default function FeaturedWork() {
   return (
     <div className={styles["featured-work"]}>
       <div className={styles["featured-work__left-container"]}>
-        <h1 className={`${fontSyne.className} global__heading-h1 `}>
-          FEATURED <br /> WORK
+        <h1
+          className={`${fontSyne.className} 
+             ${isDesktopSize ? "global__heading-h1" : "global__heading-h2"} 
+          `}
+        >
+          <span>{isTableletSize ? "FEATURED" : "Featured"}&ensp;</span>
+          <span>{isTableletSize ? "WORK" : "Work"}</span>
         </h1>
         <p className={`${fontSatoshi.className} global__text--medium`}>
           The featured work section shows some of the successful works of our website.
@@ -45,7 +55,7 @@ export default function FeaturedWork() {
         <Button variant="primary">SEE ALL WORK</Button>
       </div>
       <div className={styles["featured-work__right-container"]}>
-        <MemberCard
+        <Card
           title="Dangcing Stars"
           subtitle="2022"
           image="images/featured-work-sec-img-1.png"
@@ -55,27 +65,27 @@ export default function FeaturedWork() {
         <div
           className={`${styles["featured-work__right-container-bottom"]} ${fontSyne.className} text-default`}
         >
-          <MemberCard
+          <Card
             title={imgBoxes[0].title}
             subtitle="2022"
             image={imgBoxes[0].location}
             direction="row"
           />
-          <Divider />
-          <MemberCard
+          {isDesktopSize ? <Divider /> : <div />}
+          <Card
             title={imgBoxes[1].title}
             subtitle="2022"
             image={imgBoxes[1].location}
             direction="row"
           />
-          <MemberCard
+          <Card
             title={imgBoxes[2].title}
             subtitle="2022"
             image={imgBoxes[2].location}
             direction="row"
           />
-          <Divider />
-          <MemberCard
+          {isDesktopSize ? <Divider /> : <div />}
+          <Card
             title={imgBoxes[3].title}
             subtitle="2022"
             image={imgBoxes[3].location}
