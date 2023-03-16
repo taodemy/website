@@ -1,5 +1,9 @@
 import styles from "@/styles/Card.module.css";
 import { fontRobotoMono, fontSyne } from "../../pages/_app";
+import EViewPortQuery from "@/constants/viewPortSize";
+import useMediaQuery from "@/hooks/useMediaQuery";
+
+const { PHONE } = EViewPortQuery;
 
 type CardDirectionVariant = "column" | "column_reverse" | "row";
 type CardSizeVariant = "lg" | "md" | "sm";
@@ -33,7 +37,7 @@ const Card = ({
     md: "card__image_medium",
     sm: "card__image_small",
   };
-
+  const isPhoneSize = useMediaQuery(PHONE);
   return (
     <figure className={`${styles["card"]}`} {...otherProps}>
       <img
@@ -43,10 +47,22 @@ const Card = ({
       />
       <div className={styles[directionVariants[direction]]}>
         {direction === "column_reverse" && large_title && (
-          <h1 className={`${fontSyne.className} global__heading-h2`}>{title}</h1>
+          <h1
+            className={`${fontSyne.className} 
+          ${isPhoneSize ? ".global__heading-h4" : "  global__heading-h2"}
+        `}
+          >
+            {title}
+          </h1>
         )}
         {direction === "column_reverse" && !large_title && (
-          <h1 className={`${fontSyne.className} global__text-xlarge`}>{title}</h1>
+          <h1
+            className={`${fontSyne.className} 
+          ${isPhoneSize ? ".global__heading-h4" : "global__text-xlarge"}
+          `}
+          >
+            {title}
+          </h1>
         )}
         {direction !== "column_reverse" && (
           <h1 className={`${fontSyne.className} global__text--large`}>{title}</h1>

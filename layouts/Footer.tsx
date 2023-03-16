@@ -87,9 +87,11 @@ const Footer = () => {
                 TAOTECH
               </h1>
             </div>
-            <address className={`${fontSatoshi.className} global__text-default`}>
+            <p
+              className={`${styles["footer_address"]} ${fontSatoshi.className} global__text-default`}
+            >
               Main Street. 1<br /> 22222 Berlin
-            </address>
+            </p>
           </div>
           <ul className={styles["footer_top_taotech__ul"]}>
             <li>
@@ -151,6 +153,7 @@ const Footer = () => {
         >
           <small>© 2022 Made by Pawel Gola. Powered by Webflow.</small>
         </div>
+
         <ul
           className={`${styles["footer_bottom__privacy"]} global__text-meta ${fontRobotoMono.className}`}
         >
