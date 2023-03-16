@@ -29,7 +29,7 @@ export default function Home() {
         <WhatWeDo />
         <FeaturedWork isDesktopSize={isDesktopSize} isTableletSize={isTabletSize} />
         <HowWework />
-        <Values />
+        <Values isPhoneSize={isPhoneSize} />
         <Contact />
         <LatestNews />
       </main>
