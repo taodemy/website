@@ -1,12 +1,12 @@
 import styles from "./BlogTitle.module.css";
 import { fontSyne, fontSatoshi } from "@/pages/_app";
 import Button from "../base/Button";
-import EViewPortQuery from "@/constants/viewPortSize";
-import useMediaQuery from "@/hooks/useMediaQuery";
+import React from "react";
 
-const { PHONE } = EViewPortQuery;
-const BlogTitle = () => {
-  const isPhoneSize = useMediaQuery(PHONE);
+type BlogProps = {
+  isPhoneSize: boolean;
+};
+const BlogTitle: React.FC<BlogProps> = ({ isPhoneSize }) => {
   return (
     <section className={styles["blog_title"]}>
       <h1
