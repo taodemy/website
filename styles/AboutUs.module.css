@@ -19,3 +19,14 @@
   object-fit: cover;
   object-position: 0 10%;
 }
+
+@media screen and (max-width: 1023px) {
+  .about_us__image {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 743px) {
+}
