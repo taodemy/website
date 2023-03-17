@@ -1,4 +1,4 @@
-import styles from "./ServicesItem.module.css";
+import styles from "@/styles/ServicesItem.module.css";
 import Button from "../base/Button";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
 
@@ -35,7 +35,7 @@ const ServiceItem = ({
 }: serviceItemProps) => {
   return (
     <section className={styles.service}>
-      <div className={styles.service_left__name}>
+      <div className={styles.service_item__left}>
         <img
           arial-label={icon__arial_label}
           className={styles.service_left_logo}
@@ -44,9 +44,7 @@ const ServiceItem = ({
         />
         <h2 className={`${fontSyne.className} global__uppercase-heading-h2`}>{service_name}</h2>
 
-        <div
-          className={`${fontRobotoMono.className} global__text-meta ${styles.services_left__link}`}
-        >
+        <div>
           <li
             className={`${fontRobotoMono.className} global__text-meta ${styles.services_left__link}`}
           >

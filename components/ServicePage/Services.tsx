@@ -12,9 +12,9 @@ const Services = () => {
       service_heading:
         "A strong brand is a tool to connect people with your brand all around the world.",
       service_info1:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam ex in et tenetur doloremque inventore nulla cum, minus quasi ut adipisci eveniet nihil facilis,exercitationem atque veniam ea aliquid voluptates?Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit.  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat. Aliquam ut porttitor leo a diam sollicitudin. Malesuada pellentesgue elit eget gravida.",
       service_info2:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam ex in et tenetur doloremque inventore nulla cum, minus quasi ut adipisci eveniet nihil facilis,",
+        "Gravida quis blandit turpis cursus. Faucibus purus in massa tempor nec. Vitae purus faucibus ornare suspendisse sed nisi lacus sed. Vulputate mi sit amet mauris. ",
       image__arial_label: "service_branding_image",
       image_path: "/images/featured-work-sec-img-1.png",
       image_alt: "branding image",
@@ -31,9 +31,9 @@ const Services = () => {
       service_heading:
         "We specialize in creating amazing web experiences that people will love based on your great ideas.",
       service_info1:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam ex in et tenetur doloremque inventore nulla cum, minus quasi ut adipisci eveniet nihil facilis,exercitationem atque veniam ea aliquid voluptates?Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit.  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat. Aliquam ut porttitor leo a diam sollicitudin. Malesuada pellentesgue elit eget gravida.",
       service_info2:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam ex in et tenetur doloremque inventore nulla cum, minus quasi ut adipisci eveniet nihil facilis,",
+        "Gravida quis blandit turpis cursus. Faucibus purus in massa tempor nec. Vitae purus faucibus ornare suspendisse sed nisi lacus sed. Vulputate mi sit amet mauris. ",
       image__arial_label: "service_design_image",
       image_path: "/images/featured-work-sec-img-2.png",
       image_alt: "design image",
@@ -50,9 +50,9 @@ const Services = () => {
       service_heading:
         "We inspire people to stand up for what they believe in with amazing video strategies.",
       service_info1:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam ex in et tenetur doloremque inventore nulla cum, minus quasi ut adipisci eveniet nihil facilis,exercitationem atque veniam ea aliquid voluptates?Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit.  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat. Aliquam ut porttitor leo a diam sollicitudin. Malesuada pellentesgue elit eget gravida.",
       service_info2:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam ex in et tenetur doloremque inventore nulla cum, minus quasi ut adipisci eveniet nihil facilis,",
+        "Gravida quis blandit turpis cursus. Faucibus purus in massa tempor nec. Vitae purus faucibus ornare suspendisse sed nisi lacus sed. Vulputate mi sit amet mauris. ",
       image__arial_label: "service_video_image",
       image_path: "/images/featured-work-sec-img-3.png",
       image_alt: "video image",
@@ -69,9 +69,9 @@ const Services = () => {
       service_heading:
         "If you want to succeed, you need to create content that potential consumers will find valuable.",
       service_info1:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam ex in et tenetur doloremque inventore nulla cum, minus quasi ut adipisci eveniet nihil facilis,exercitationem atque veniam ea aliquid voluptates?Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit.  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat. Aliquam ut porttitor leo a diam sollicitudin. Malesuada pellentesgue elit eget gravida.",
       service_info2:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam ex in et tenetur doloremque inventore nulla cum, minus quasi ut adipisci eveniet nihil facilis,",
+        "Gravida quis blandit turpis cursus. Faucibus purus in massa tempor nec. Vitae purus faucibus ornare suspendisse sed nisi lacus sed. Vulputate mi sit amet mauris. ",
       image__arial_label: "service_content_image",
       image_path: "/images/featured-work-sec-img-4.png",
       image_alt: "content image",

@@ -1,20 +1,20 @@
 import React from "react";
 import { fontSyne, fontRobotoMono } from "@/pages/_app";
 import Button from "../base/Button";
-import styles from "./ServicesTitle.module.css";
+import styles from "@/styles/ServicesTitle.module.css";
 
 function ServiceTitle() {
   return (
     <section className={styles.service_title}>
-      <h1 className={`${fontRobotoMono.className} global__text-meta ${styles.service_title__name}`}>
+      <p className={`${fontRobotoMono.className} global__text-meta ${styles.service_title__name}`}>
         SERVICES
-      </h1>
-      <div
+      </p>
+      <h1
         className={`${fontSyne.className} global__heading--large ${styles.service_title__heading}`}
       >
         We create <br />
         true brands.
-      </div>
+      </h1>
       <div className={styles.service_title__button}>
         <Button variant="secondary" padding="small">
           BRANDING
