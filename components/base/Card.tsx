@@ -1,6 +1,10 @@
 import styles from "@/styles/Card.module.css";
 import Router from "next/router";
 import { fontRobotoMono, fontSyne } from "../../pages/_app";
+import EViewPortQuery from "@/constants/viewPortSize";
+import useMediaQuery from "@/hooks/useMediaQuery";
+
+const { PHONE } = EViewPortQuery;
 
 type CardDirectionVariant = "column" | "column_reverse" | "row";
 type CardSizeVariant = "lg" | "md" | "sm";
@@ -36,7 +40,7 @@ const Card = ({
     md: "card__image_medium",
     sm: "card__image_small",
   };
-
+  const isPhoneSize = useMediaQuery(PHONE);
   return (
     <figure className={`${styles["card"]}`} {...otherProps}>
       <img

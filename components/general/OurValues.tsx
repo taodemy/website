@@ -2,7 +2,11 @@ import ListItem from "./ItemList";
 import styles from "@/styles/OurValues.module.css";
 import { fontSyne } from "@/pages/_app";
 
-const OurValues = () => {
+type ValueProps = {
+  isPhoneSize: boolean;
+};
+
+const OurValues = ({ isPhoneSize }: ValueProps) => {
   const listItems = [
     {
       id: 1,
@@ -30,7 +34,9 @@ const OurValues = () => {
   return (
     <section className={styles.our_values}>
       <h1
-        className={`${fontSyne.className} global__uppercase-heading--small ${styles.our_values__title}`}
+        className={`${fontSyne.className} ${
+          isPhoneSize ? "global__heading-h2" : "global__uppercase-heading--small"
+        } ${styles.our_values__title}`}
       >
         OUR VALUES
       </h1>

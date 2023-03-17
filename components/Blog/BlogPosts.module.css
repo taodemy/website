@@ -34,3 +34,15 @@
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 1023px) {
+  .blog_gallery__small_group__line_one,
+  .blog_gallery__small_group__line_two {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  .blog_gallery__large_group {
+    flex-direction: column;
+  }
+}
