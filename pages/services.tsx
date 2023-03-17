@@ -9,7 +9,11 @@ export default function service() {
     <>
       <Head>
         <title>Service page - TaoTech</title>
-        <meta name="description" content="Our services" />
+        <meta
+          name="description"
+          content="The services that our provid include banding, video, design and cotent"
+        />
+        <meta name="keywords" content="services,banding,video,design,cotent" />
         <meta name="author" content="Taodemy Team" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

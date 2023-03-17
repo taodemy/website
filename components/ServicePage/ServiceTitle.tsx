@@ -15,7 +15,7 @@ function ServiceTitle() {
         We create <br />
         true brands.
       </h1>
-      <div className={styles.service_title__button}>
+      <div className={styles.service_title__button_container}>
         <Button variant="secondary" padding="small">
           BRANDING
         </Button>
