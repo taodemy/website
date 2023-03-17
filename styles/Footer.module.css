@@ -1,14 +1,15 @@
 .footer__container {
   padding: 0px 0px 32px;
   width: 100%;
-  height: 520px;
 }
 .footer_top__container {
   display: flex;
   width: 100%;
-  height: 441px;
+  flex-direction: row;
   align-items: center;
-  border-style: solid none solid;
+  border-style: none none solid;
+  padding-top: 64px;
+  padding-bottom: 64px;
   border-width: 1px;
 }
 .footer_top_taotech__container {
@@ -21,16 +22,19 @@
   height: 311px;
 }
 .footer_top_taotech_top__container {
-  width: 530px;
-  height: 144px;
+  padding-right: 48px;
 }
+
 .footer_top_taotech_top__icon_container {
   display: flex;
   align-items: center;
-  margin-bottom: 32px;
   width: 138.65px;
   height: 50px;
   font-size: 24px;
+}
+
+.footer_address {
+  padding-top: 32px;
 }
 .footer_top_taotech_top__icon {
   width: 49.64px;
@@ -44,9 +48,6 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  /* position: absolute;
-  left: 0;
-  bottom: 0; */
   gap: 16px;
 }
 .footer_top_taotech__ul img {
@@ -54,11 +55,10 @@
   height: 34px;
 }
 .footer_top_links__container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-left: 97px;
-  width: 1157px;
-  height: 311px;
+  margin-left: 48px;
 }
 .footer_top_link__container {
   margin-right: 48px;
@@ -73,18 +73,17 @@
   gap: 32px;
 }
 .footer_bottom__container {
-  position: relative;
-  width: 100%;
-  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 48px;
 }
 .footer_bottom__copyright {
-  position: absolute;
   bottom: 0;
   left: 0;
+  text-align: center;
 }
 .footer_bottom__privacy {
   display: flex;
-  position: absolute;
   bottom: 0;
   right: 0;
   list-style-type: none;
@@ -95,4 +94,48 @@
 .footer_main_link__a {
   color: var(--text-default);
   text-decoration: none;
+}
+@media (max-width: 1023px) {
+  .footer_top__container {
+    flex-direction: column-reverse;
+  }
+  .footer_top_taotech__container {
+    padding-top: 48px;
+    height: 100%;
+    width: 100%;
+    border-style: none;
+    align-items: center;
+    text-align: center;
+  }
+  .footer_top_links__container {
+    margin-left: 0;
+  }
+  .footer_top_link__container {
+    margin-right: 0;
+  }
+  .footer_address {
+    padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 743px) {
+  .footer_top_taotech__container {
+    padding-top: 95px;
+  }
+  .footer_top_links__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 48px;
+  }
+  .footer_top_link__ul {
+    align-items: center;
+  }
+  .footer_bottom__container {
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer_bottom__privacy {
+    padding-top: 48px;
+  }
 }
