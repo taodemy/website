@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Blog from "../pages/blog";
+import Blog from "@/pages/blog";
 import "@testing-library/jest-dom";
 
 describe("Blog Page", () => {
