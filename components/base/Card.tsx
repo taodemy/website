@@ -26,7 +26,7 @@ const Card = ({
   direction = "column",
   size = "sm",
   large_title = false,
-  path = "/blog",
+  path = "",
   ...otherProps
 }: CardProps) => {
   const directionVariants = {
@@ -53,10 +53,22 @@ const Card = ({
       <div className={styles[directionVariants[direction]]}>
         <Link href={path} className={styles["card__text_link"]}>
           {direction === "column_reverse" && large_title && (
-            <h1 className={`${fontSyne.className} global__heading-h2`}>{title}</h1>
+            <h1
+              className={`${fontSyne.className} 
+          ${isPhoneSize ? ".global__heading-h4" : "  global__heading-h2"}
+        `}
+            >
+              {title}
+            </h1>
           )}
           {direction === "column_reverse" && !large_title && (
-            <h1 className={`${fontSyne.className} global__text-xlarge`}>{title}</h1>
+            <h1
+              className={`${fontSyne.className} 
+          ${isPhoneSize ? ".global__heading-h4" : "global__text-xlarge"}
+          `}
+            >
+              {title}
+            </h1>
           )}
           {direction !== "column_reverse" && (
             <h1 className={`${fontSyne.className} global__text--large`}>{title}</h1>
