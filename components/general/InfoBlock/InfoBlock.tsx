@@ -25,7 +25,6 @@ const InfoBlock = ({
   buttonContent,
   isPhoneSize,
 }: InfoProps) => {
-  const isPhoneSize = useMediaQuery(PHONE);
   return (
     <section className={styles.info_block}>
       <div className={styles.info_block__title}>

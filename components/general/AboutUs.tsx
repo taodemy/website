@@ -1,8 +1,11 @@
 import styles from "@/styles/AboutUs.module.css";
 import { fontSyne, fontRobotoMono } from "@/pages/_app";
-import { PhoneSizeProp } from "@/pages/studio";
 
-const AboutUs = ({ isPhoneSize }: PhoneSizeProp) => {
+type Props = {
+  isPhoneSize: boolean;
+};
+
+const AboutUs = ({ isPhoneSize }: Props) => {
   return (
     <section className={styles["about_us"]}>
       <p className={`${fontRobotoMono.className} global__text-meta ${styles["about_us__heading"]}`}>
