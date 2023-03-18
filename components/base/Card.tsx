@@ -55,8 +55,8 @@ const Card = ({
           {direction === "column_reverse" && large_title && (
             <h1
               className={`${fontSyne.className} 
-          ${isPhoneSize ? ".global__heading-h4" : "  global__heading-h2"}
-        `}
+               ${isPhoneSize ? ".global__heading-h4" : "  global__heading-h2"}
+              `}
             >
               {title}
             </h1>
@@ -64,8 +64,8 @@ const Card = ({
           {direction === "column_reverse" && !large_title && (
             <h1
               className={`${fontSyne.className} 
-          ${isPhoneSize ? ".global__heading-h4" : "global__text-xlarge"}
-          `}
+               ${isPhoneSize ? ".global__heading-h4" : "global__text-xlarge"}
+              `}
             >
               {title}
             </h1>
