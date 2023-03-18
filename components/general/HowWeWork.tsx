@@ -1,6 +1,10 @@
 import InfoBlock from "./InfoBlock/InfoBlock";
 
-const HowWeWork = () => {
+type Props = {
+  isPhoneSize: boolean;
+};
+
+const HowWeWork = ({ isPhoneSize }: Props) => {
   return (
     <InfoBlock
       sectionName="How we work"
@@ -12,6 +16,7 @@ const HowWeWork = () => {
           designing a website, or creating a mobile app, we are always pushing the boundaries of
           what’s possible to help our clients stay ahead of the curve."
       buttonContent="our services"
+      isPhoneSize={isPhoneSize}
     />
   );
 };

@@ -13,6 +13,7 @@ type InfoProps = {
   blockType: InfoBlockType;
   content: string;
   buttonContent?: string;
+  isPhoneSize: boolean;
 };
 
 const InfoBlock = ({
@@ -22,8 +23,8 @@ const InfoBlock = ({
   blockType,
   content,
   buttonContent,
+  isPhoneSize,
 }: InfoProps) => {
-  const isPhoneSize = useMediaQuery(PHONE);
   return (
     <section className={styles.info_block}>
       <div className={styles.info_block__title}>
@@ -41,10 +42,11 @@ const InfoBlock = ({
           </h1>
         ) : (
           <h1
-            className={`${fontSyne.className} 
-            ${!isPhoneSize ? "global__uppercase-heading--medium" : "global__heading-h2"} ${
-              styles.info_block__title_text
-            }`}
+            className={`
+              ${fontSyne.className}
+              ${isPhoneSize ? "global__heading-h2" : "global__uppercase-heading--medium"}
+              ${styles.info_block__title_text}
+            `}
           >
             {title}
           </h1>

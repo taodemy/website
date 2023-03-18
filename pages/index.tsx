@@ -28,10 +28,10 @@ export default function Home() {
         <OurClients />
         <WhatWeDo />
         <FeaturedWork isDesktopSize={isDesktopSize} isTableletSize={isTabletSize} />
-        <HowWework />
+        <HowWework isPhoneSize={isPhoneSize} />
         <Values isPhoneSize={isPhoneSize} />
-        <Contact />
-        <LatestNews />
+        <Contact isPhoneSize={isPhoneSize} />
+        <LatestNews isPhoneSize={isPhoneSize} />
       </main>
     </>
   );

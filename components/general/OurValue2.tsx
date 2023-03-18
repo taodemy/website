@@ -2,7 +2,6 @@ import styles from "@/styles/OurValueV2.module.css";
 import { fontRobotoMono, fontSyne } from "@/pages/_app";
 import ListItem from "./ItemList";
 import Button from "../base/Button";
-import { PhoneSizeProp } from "@/pages/studio";
 
 interface ListItem {
   id: number;
@@ -11,7 +10,11 @@ interface ListItem {
   icon: string;
 }
 
-const OurValueV2 = ({ isPhoneSize }: PhoneSizeProp) => {
+type Props = {
+  isPhoneSize: boolean;
+};
+
+const OurValueV2 = ({ isPhoneSize }: Props) => {
   const listItems = [
     {
       id: 1,
