@@ -1,5 +1,5 @@
 import styles from "@/styles/Card.module.css";
-import Router from "next/router";
+import Link from "next/link";
 import { fontRobotoMono, fontSyne } from "../../pages/_app";
 import EViewPortQuery from "@/constants/viewPortSize";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -43,45 +43,25 @@ const Card = ({
   const isPhoneSize = useMediaQuery(PHONE);
   return (
     <figure className={`${styles["card"]}`} {...otherProps}>
-      <img
-        src={image}
-        alt={`${title} image`}
-        className={`${styles["card__image"]} ${styles[sizeVariants[size]]}`}
-        onClick={() => {
-          Router.push(path);
-        }}
-      />
+      <Link href={path}>
+        <img
+          src={image}
+          alt={`${title} image`}
+          className={`${styles["card__image"]} ${styles[sizeVariants[size]]}`}
+        />
+      </Link>
       <div className={styles[directionVariants[direction]]}>
-        {direction === "column_reverse" && large_title && (
-          <h1
-            className={`${fontSyne.className} global__heading-h2`}
-            onClick={() => {
-              Router.push(path);
-            }}
-          >
-            {title}
-          </h1>
-        )}
-        {direction === "column_reverse" && !large_title && (
-          <h1
-            className={`${fontSyne.className} global__text-xlarge`}
-            onClick={() => {
-              Router.push(path);
-            }}
-          >
-            {title}
-          </h1>
-        )}
-        {direction !== "column_reverse" && (
-          <h1
-            className={`${fontSyne.className} global__text--large`}
-            onClick={() => {
-              Router.push(path);
-            }}
-          >
-            {title}
-          </h1>
-        )}
+        <Link href={path} className={styles["card__text_link"]}>
+          {direction === "column_reverse" && large_title && (
+            <h1 className={`${fontSyne.className} global__heading-h2`}>{title}</h1>
+          )}
+          {direction === "column_reverse" && !large_title && (
+            <h1 className={`${fontSyne.className} global__text-xlarge`}>{title}</h1>
+          )}
+          {direction !== "column_reverse" && (
+            <h1 className={`${fontSyne.className} global__text--large`}>{title}</h1>
+          )}
+        </Link>
         <p className={`${fontRobotoMono.className} global__text-meta`}>{subtitle}</p>
       </div>
     </figure>
