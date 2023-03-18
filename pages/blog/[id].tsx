@@ -28,7 +28,6 @@ export default function Blog() {
   const [currentBlog, setCurrentBlog] = useState<Blog | null>(null);
   const router = useRouter();
   const { id } = router.query;
-  console.log(id);
   useEffect(() => {
     const blog = blogs.data.find((blog) => blog.id === id);
     if (blog) setCurrentBlog(blog);
