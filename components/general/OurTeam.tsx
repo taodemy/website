@@ -2,12 +2,9 @@ import styles from "@/styles/OurTeam.module.css";
 import { fontSyne, fontSatoshi } from "@/pages/_app";
 import Card from "../base/Card";
 import Divider from "../base/Divider";
+import { PhoneSizeProp } from "@/pages/studio";
 
-type Props = {
-  isPhoneSize: boolean;
-};
-
-const OurTeam = ({ isPhoneSize }: Props) => {
+const OurTeam = ({ isPhoneSize }: PhoneSizeProp) => {
   return (
     <section className={styles["our_team"]}>
       <div className={styles["our_team__text_container"]}>

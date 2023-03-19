@@ -29,7 +29,7 @@ export default function Blog() {
       <main>
         <BlogTitle isPhoneSize={isPhoneSize} />
         <BlogGallery />
-        <Subscription isPhoneSize={isPhoneSize} />
+        <Subscription />
       </main>
     </>
   );
