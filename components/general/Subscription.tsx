@@ -1,10 +1,6 @@
 import InfoBlock from "./InfoBlock/InfoBlock";
 
-type Props = {
-  isPhoneSize: boolean;
-};
-
-const Subscription = ({ isPhoneSize }: Props) => {
+const Subscription = () => {
   return (
     <InfoBlock
       sectionName="Newsletter"
@@ -12,7 +8,7 @@ const Subscription = ({ isPhoneSize }: Props) => {
       iconPath="/images/star.svg"
       blockType="input"
       content="Design your own brand, one click at a time. --Subscribe to our newsletter to get the most up-to-date information."
-      isPhoneSize={isPhoneSize}
+      isPhoneSize
     />
   );
 };
