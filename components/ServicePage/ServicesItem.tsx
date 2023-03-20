@@ -3,13 +3,13 @@ import Button from "../base/Button";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
 
 type serviceItemProps = {
-  service_name?: string;
+  service_name: string;
+  service_heading: string;
+  service_info1: string;
+  service_info2: string;
   icon__arial_label?: string;
   icon_path?: string;
   icon_alt?: string;
-  service_heading?: string;
-  service_info1?: string;
-  service_info2?: string;
   image__arial_label?: string;
   image_path?: string;
   image_alt?: string;
@@ -19,19 +19,19 @@ type serviceItemProps = {
 };
 
 const ServiceItem = ({
-  link1,
-  link2,
-  link3,
-  icon__arial_label,
-  icon_alt,
-  icon_path,
-  image__arial_label,
-  image_alt,
-  image_path,
+  link1 = "LOGO",
+  link2 = "DESIGN",
+  link3 = "CONTENT",
+  icon__arial_label = "service_branding_logo",
+  icon_alt = "branding icon",
+  icon_path = "/images/branding_icon.svg",
+  image__arial_label = "service_branding_image",
+  image_alt = "branding image",
+  image_path = "/images/featured-work-sec-img-1.png",
   service_heading,
   service_info1,
   service_info2,
-  service_name,
+  service_name
 }: serviceItemProps) => {
   return (
     <section className={styles.service}>
@@ -54,7 +54,7 @@ const ServiceItem = ({
           </li>
         </div>
 
-        <div className={styles.services_left__butoton}>
+        <div className={styles.services_left__button}>
           <Button>GET IN TOUCH</Button>
         </div>
       </div>

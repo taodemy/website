@@ -5,36 +5,18 @@ import ServiceItems from "@/components/ServicePage/ServicesItem";
 describe("ServiceItem", () => {
   const ServiceItem = {
     service_name: "BRANDING",
-    icon__arial_label: "service_branding_logo",
-    icon_path: "/images/branding_icon.svg",
-    icon_alt: "branding icon",
     service_heading:
       "A strong brand is a tool to connect people with your brand all around the world.",
     service_info1: "test info1",
     service_info2: "test info2 ",
-    image__arial_label: "service_branding_image",
-    image_path: "/images/featured-work-sec-img-1.png",
-    image_alt: "branding image",
-    link1: "LOGO",
-    link2: "CORPORATE IDENTITY",
-    link3: "BRAND GUIDE",
   };
   beforeEach(() => {
     render(
       <ServiceItems
         service_name={ServiceItem.service_name}
-        icon__arial_label={ServiceItem.icon__arial_label}
-        icon_path={ServiceItem.icon_path}
-        icon_alt={ServiceItem.icon_alt}
         service_heading={ServiceItem.service_heading}
         service_info1={ServiceItem.service_info1}
         service_info2={ServiceItem.service_info2}
-        image__arial_label={ServiceItem.image__arial_label}
-        image_path={ServiceItem.image_path}
-        image_alt={ServiceItem.image_alt}
-        link1={ServiceItem.link1}
-        link2={ServiceItem.link2}
-        link3={ServiceItem.link3}
       />
     );
   });
