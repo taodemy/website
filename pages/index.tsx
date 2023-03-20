@@ -29,9 +29,9 @@ export default function Home() {
         <WhatWeDo />
         <FeaturedWork isDesktopSize={isDesktopSize} isTableletSize={isTabletSize} />
         <HowWework />
-        <Values />
-        <Contact />
-        <LatestNews />
+        <Values isPhoneSize={isPhoneSize} />
+        <Contact isPhoneSize={isPhoneSize} />
+        <LatestNews isPhoneSize={isPhoneSize} />
       </main>
     </>
   );

@@ -1,7 +1,10 @@
 import styles from "./InfoBlock.module.css";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
 import Button from "../../base/Button";
+import EViewPortQuery from "@/constants/viewPortSize";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
+const { PHONE } = EViewPortQuery;
 type InfoBlockType = "normal" | "smallHeading" | "input";
 type InfoProps = {
   sectionName: string;
@@ -10,6 +13,7 @@ type InfoProps = {
   blockType: InfoBlockType;
   content: string;
   buttonContent?: string;
+  isPhoneSize: boolean;
 };
 
 const InfoBlock = ({
@@ -19,6 +23,7 @@ const InfoBlock = ({
   blockType,
   content,
   buttonContent,
+  isPhoneSize,
 }: InfoProps) => {
   return (
     <section className={styles.info_block}>
@@ -28,13 +33,20 @@ const InfoBlock = ({
         </p>
         {blockType === "smallHeading" ? (
           <h1
-            className={`${fontSyne.className} global__heading--small ${styles.info_block__title_text_small}`}
+            className={`${fontSyne.className} 
+            ${!isPhoneSize ? "global__uppercase-heading--medium" : "global__heading-h2"} ${
+              styles.info_block__title_text
+            }`}
           >
             {title}
           </h1>
         ) : (
           <h1
-            className={`${fontSyne.className} global__uppercase-heading--medium ${styles.info_block__title_text}`}
+            className={`
+              ${fontSyne.className}
+              ${isPhoneSize ? "global__heading-h2" : "global__uppercase-heading--medium"}
+              ${styles.info_block__title_text}
+            `}
           >
             {title}
           </h1>
