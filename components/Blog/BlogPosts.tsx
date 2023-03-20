@@ -14,6 +14,7 @@ const BlogGallery = () => {
           direction={"column_reverse"}
           size={"lg"}
           large_title={true}
+          path={"blog/1"}
         />
         <Divider />
         <Card
@@ -23,6 +24,7 @@ const BlogGallery = () => {
           direction={"column_reverse"}
           size={"lg"}
           large_title={true}
+          path={"blog/2"}
         />
       </article>
       <article className={styles["blog_gallery__small_group"]}>
@@ -33,6 +35,7 @@ const BlogGallery = () => {
             subtitle={"Branding, Design"}
             direction={"column_reverse"}
             size={"sm"}
+            path={"blog/3"}
           />
           <Divider />
           <Card
@@ -41,6 +44,7 @@ const BlogGallery = () => {
             subtitle={"Branding, Design"}
             direction={"column_reverse"}
             size={"sm"}
+            path={"blog/4"}
           />
           <Divider />
           <Card
@@ -49,6 +53,7 @@ const BlogGallery = () => {
             subtitle={"Branding, Design"}
             direction={"column_reverse"}
             size={"sm"}
+            path={"blog/5"}
           />
         </div>
         <div className={styles["blog_gallery__small_group__line_two"]}>
@@ -58,6 +63,7 @@ const BlogGallery = () => {
             subtitle={"Branding, Design"}
             direction={"column_reverse"}
             size={"sm"}
+            path={"blog/6"}
           />
           <Divider />
           <Card
@@ -66,6 +72,7 @@ const BlogGallery = () => {
             subtitle={"Branding, Design"}
             direction={"column_reverse"}
             size={"sm"}
+            path={"blog/7"}
           />
           <Divider />
           <Card
@@ -74,6 +81,7 @@ const BlogGallery = () => {
             subtitle={"Branding, Design"}
             direction={"column_reverse"}
             size={"sm"}
+            path={"blog/8"}
           />
         </div>
       </article>
