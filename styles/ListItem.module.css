@@ -20,3 +20,9 @@
 .item_list__text_container p {
   margin: 0;
 }
+
+@media screen and (max-width: 743px) {
+  .item_list__text_container {
+    padding-left: 24px;
+  }
+}

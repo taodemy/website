@@ -113,7 +113,20 @@ body {
 
 /*container for the whole page*/
 .page__wrapper {
-  padding: 16px 48px;
+  padding: 48px;
   margin: 20px;
   border: 1px solid var(--border-default);
+}
+
+@media screen and (max-width: 1023px) {
+  .page__wrapper {
+    margin: 16px;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  .page__wrapper {
+    padding: 48px 16px;
+    margin: 8px;
+  }
 }

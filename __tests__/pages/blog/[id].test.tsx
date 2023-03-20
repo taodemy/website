@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
-import Blog from "@/pages/blogs/[id]";
+import { render, RenderResult, screen } from "@testing-library/react";
+import Blog from "@/pages/blog/[id]";
 
 jest.mock("next/router", () => ({
   useRouter() {
@@ -12,8 +12,9 @@ jest.mock("next/router", () => ({
 }));
 
 describe("Blog single page", () => {
+  let component: RenderResult;
   beforeEach(() => {
-    render(<Blog />);
+    component = render(<Blog />);
   });
 
   it("should render title", () => {
@@ -71,5 +72,50 @@ describe("Blog single page", () => {
     expect(socialMediaImg).toBeInTheDocument();
     expect(socialMediaImg).toHaveAttribute("src", "/images/badge-fb.svg");
     expect(socialMediaImg).toHaveAttribute("alt", "badge");
+  });
+  it("should render the right font when match is true", () => {
+    // dismount the component.
+    component.unmount();
+    Object.defineProperty(window, "matchMedia", {
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches: true,
+        media: query,
+        onchange: null,
+        addListener: jest.fn(), // Deprecated
+        removeListener: jest.fn(), // Deprecated
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
+    });
+    component = render(<Blog />);
+    const heading = screen.getByRole("heading", { name: /Branding Alternatives/i });
+
+    expect(heading).toBeInTheDocument();
+    expect(heading).toHaveClass("global__heading-h2");
+  });
+
+  it("should render the right font when match is false", () => {
+    // dismount the component.
+    component.unmount();
+    Object.defineProperty(window, "matchMedia", {
+      writable: true,
+      value: jest.fn().mockImplementation((query) => ({
+        matches: false,
+        media: query,
+        onchange: null,
+        addListener: jest.fn(), // Deprecated
+        removeListener: jest.fn(), // Deprecated
+        addEventListener: jest.fn(),
+        removeEventListener: jest.fn(),
+        dispatchEvent: jest.fn(),
+      })),
+    });
+    component = render(<Blog />);
+    const heading = screen.getByRole("heading", { name: /Branding Alternatives/i });
+
+    expect(heading).toBeInTheDocument();
+    expect(heading).toHaveClass("global__heading--medium");
   });
 });

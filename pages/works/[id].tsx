@@ -7,6 +7,10 @@ import Divider from "@/components/base/Divider";
 import Contact from "@/components/general/Contact";
 import InfoItem from "@/components/general/InfoItem";
 import ReportItem from "@/components/general/ReportItem";
+import EViewPortQuery from "@/constants/viewPortSize";
+import useMediaQuery from "@/hooks/useMediaQuery";
+
+const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
 
 type Work = {
   id: string;
@@ -31,6 +35,8 @@ type Work = {
 
 const WorkSinglePage = () => {
   const [work, setWork] = useState<Work | null>(null);
+
+  const isPhoneSize = useMediaQuery(PHONE);
 
   const router = useRouter();
   const id = router.query.id;
@@ -83,7 +89,7 @@ const WorkSinglePage = () => {
           ))}
         </section>
       </div>
-      <Contact />
+      <Contact isPhoneSize={isPhoneSize} />
     </div>
   ) : (
     <></>
