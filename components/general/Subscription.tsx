@@ -8,6 +8,7 @@ const Subscription = () => {
       iconPath="/images/star.svg"
       blockType="input"
       content="Design your own brand, one click at a time. --Subscribe to our newsletter to get the most up-to-date information."
+      isPhoneSize
     />
   );
 };

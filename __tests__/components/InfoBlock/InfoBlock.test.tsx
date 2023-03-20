@@ -9,6 +9,7 @@ describe("Information Block", () => {
     iconPath: "/images/arrows.svg",
     blockType: "normal",
     content: "get the test",
+    isPhoneSize: Boolean,
   };
 
   beforeEach(() => {
@@ -19,6 +20,7 @@ describe("Information Block", () => {
         iconPath={InfoProps.iconPath}
         blockType={"normal"}
         content={InfoProps.content}
+        isPhoneSize
       />
     );
   });

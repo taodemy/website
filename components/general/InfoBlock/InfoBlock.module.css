@@ -104,25 +104,21 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .info_block__title {
-    grid-column: 1/4;
+  .info_block {
+    grid-template-columns: none;
   }
-  .info_block__sign_up_content {
-    grid-column: 1/4;
-    margin-top: 52px;
-  }
+
   .info_block__normal_content {
-    grid-column: 1/4;
-    padding-left: 0px;
-    border-left: none;
+    display: none;
+  }
+
+  .info_block__title_text {
+    margin-right: 0;
   }
 }
 
 @media screen and (max-width: 743px) {
-  .info_block__sign_up_content__form {
-    flex-direction: column;
-  }
   .info_block__title_text {
-    text-transform: lowercase;
+    text-transform: capitalize;
   }
 }
