@@ -92,7 +92,7 @@ describe("Information Block", () => {
     expect(heading).toHaveClass("global__uppercase-heading--medium");
   });
 
-  it("should render normal and not phone size h1 in correct style", () => {
+  it("should render smallHeading and not phone size h1 in correct style", () => {
     render(
       <InfoBlock
         sectionName={InfoProps.sectionName}
@@ -107,7 +107,7 @@ describe("Information Block", () => {
     expect(heading).toHaveClass("global__heading-h2");
   });
 
-  it("should render normal and not phone size h1 in correct style", () => {
+  it("should render smallHeading and not phone size h1 in correct style", () => {
     render(
       <InfoBlock
         sectionName={InfoProps.sectionName}
