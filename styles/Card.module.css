@@ -44,6 +44,11 @@
   height: 380px;
 }
 
+.card__text_link {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media screen and (max-width: 1023px) {
   .card__image_large,
   .card__image_medium,
