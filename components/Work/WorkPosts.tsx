@@ -6,36 +6,36 @@ const WorkPosts = () => {
   const posts: PostProps[] = [
     {
       sectionName: "dancing\nstars",
-      desOne: "content",
-      desTwo: "video",
-      desThree: "design",
+      descriptionOne: "content",
+      descriptionTwo: "video",
+      descriptionThree: "design",
       imgPath: "/images/featured-work-sec-img-1.png",
     },
     {
       sectionName: "enjoy\nsilence",
-      desOne: "content",
-      desTwo: "branding",
+      descriptionOne: "content",
+      descriptionTwo: "branding",
       imgPath: "/images/featured-work-sec-img-2.png",
     },
     {
       sectionName: "pure\nvision",
-      desOne: "branding",
-      desTwo: "video",
-      desThree: "content",
+      descriptionOne: "branding",
+      descriptionTwo: "video",
+      descriptionThree: "content",
       imgPath: "/images/featured-work-sec-img-3.png",
     },
     {
       sectionName: "boring\nbrand",
-      desOne: "branding",
-      desTwo: "video",
-      desThree: "content",
+      descriptionOne: "branding",
+      descriptionTwo: "video",
+      descriptionThree: "content",
       imgPath: "/images/featured-work-sec-img-4.png",
     },
     {
       sectionName: "new\nculture",
-      desOne: "branding",
-      desTwo: "video",
-      desThree: "content",
+      descriptionOne: "branding",
+      descriptionTwo: "video",
+      descriptionThree: "content",
       imgPath: "/images/featured-work-sec-img-5.png",
     },
   ];
@@ -46,9 +46,9 @@ const WorkPosts = () => {
         {posts.map((p) => (
           <Post
             sectionName={p.sectionName}
-            desOne={p.desOne}
-            desTwo={p.desTwo}
-            desThree={p.desThree}
+            descriptionOne={p.descriptionOne}
+            descriptionTwo={p.descriptionTwo}
+            descriptionThree={p.descriptionThree}
             imgPath={p.imgPath}
             key={p.sectionName}
           />

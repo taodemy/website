@@ -17,7 +17,6 @@ export default function Work() {
           content="descriptive, correlational, experimental, diagnostic design posts"
         />
         <meta name="author" content="Taodemy Team" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
         <WorkTitle />

@@ -5,18 +5,18 @@ import Post from "@/components/general/Post/Post";
 describe("WorkPosts", () => {
   const WorkPost = {
     sectionName: "dancing stars",
-    desOne: "content",
-    desTwo: "video",
-    desThree: "design",
+    descriptionOne: "content",
+    descriptionTwo: "video",
+    descriptionThree: "design",
     imgPath: "/images/featured-work-sec-img-1.png",
   };
   beforeEach(() => {
     render(
       <Post
         sectionName={WorkPost.sectionName}
-        desOne={WorkPost.desOne}
-        desTwo={WorkPost.desTwo}
-        desThree={WorkPost.desThree}
+        descriptionOne={WorkPost.descriptionOne}
+        descriptionTwo={WorkPost.descriptionTwo}
+        descriptionThree={WorkPost.descriptionThree}
         imgPath={WorkPost.imgPath}
       />
     );
