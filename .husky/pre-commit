@@ -12,7 +12,6 @@ npm run check-types ||
 )
 
 # Format files to Prettier standards
-
 npm run check-format ||
 (
         echo '😤🏀👋😤 Prettier Check Failed. 😤🏀👋😤 
