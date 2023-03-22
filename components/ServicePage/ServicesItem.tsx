@@ -31,7 +31,7 @@ const ServiceItem = ({
   service_heading,
   service_info1,
   service_info2,
-  service_name
+  service_name,
 }: serviceItemProps) => {
   return (
     <section className={styles.service}>
