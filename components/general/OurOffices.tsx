@@ -1,8 +1,13 @@
 import styles from "@/styles/OurOffices.module.css";
 import { fontRobotoMono } from "@/pages/_app";
 import AddressItem from "./AddressItem";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import EViewPortQuery from "@/constants/viewPortSize";
+
+const { OUROFFICES } = EViewPortQuery;
 
 const OurOffices = () => {
+  const isOurOfficesViewChange = useMediaQuery(OUROFFICES);
   return (
     <section className={styles.offices}>
       <div className={styles.offices_left__container}>
@@ -27,9 +32,13 @@ const OurOffices = () => {
             city="Berlin, Germany"
           />
         </div>
-        <div className={styles.address_border__container}>
-          <div className={styles.address__border_center}></div>
-        </div>
+        {isOurOfficesViewChange ? (
+          ""
+        ) : (
+          <div className={styles.address_border__container}>
+            <div className={styles.address__border_center}></div>
+          </div>
+        )}
         <div className={styles.address_details__container}>
           <AddressItem
             imgSrc="/images/our_value.jpeg"

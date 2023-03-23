@@ -4,9 +4,23 @@
   padding-bottom: 50px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid var(--border-default);
 }
 .questions_title__contrainer {
   width: 30%;
-  height: 80%;
   padding-right: 20%;
+}
+@media screen and (max-width: 1024px) {
+  .questions {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    flex-direction: column;
+  }
+  .questions_title__contrainer {
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    padding-right: 0;
+    border-bottom: 1px solid var(--border-default);
+  }
 }
