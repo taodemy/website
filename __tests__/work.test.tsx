@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Work from "@/pages/work";
+import Work from "@/pages/works/work";
 import "@testing-library/jest-dom";
 
 describe("Work Page", () => {

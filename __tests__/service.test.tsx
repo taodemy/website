@@ -46,5 +46,4 @@ describe("Service", () => {
     });
     expect(servicesTitleContentButton).toBeInTheDocument();
   });
-
 });
