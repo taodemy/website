@@ -6,11 +6,11 @@ import Services from "@/components/ServicePage/Services";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import EViewPortQuery from "@/constants/viewPortSize";
 
-const {PHONE } = EViewPortQuery;
+const { PHONE } = EViewPortQuery;
 
 export default function Service() {
   const isPhoneSize = useMediaQuery(PHONE);
-  
+
   return (
     <>
       <Head>
