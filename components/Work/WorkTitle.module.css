@@ -1,0 +1,15 @@
+.work_block {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 0;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.work_block__heading {
+  text-transform: uppercase;
+}
+.work_block__title_text {
+  font-weight: 500;
+  color: var(--text-default);
+  margin: 16px 48px 16px 0;
+}
