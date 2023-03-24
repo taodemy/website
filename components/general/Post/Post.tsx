@@ -1,6 +1,7 @@
 import styles from "./Post.module.css";
 import Button from "@/components/base/Button";
 import { fontRobotoMono, fontSyne } from "@/pages/_app";
+import Link from "next/link";
 
 export type PostProps = {
   sectionName: string;
@@ -8,6 +9,7 @@ export type PostProps = {
   descriptionTwo?: string;
   descriptionThree?: string;
   imgPath: string;
+  pagePath?: string;
 };
 
 const Post = ({
@@ -16,6 +18,7 @@ const Post = ({
   descriptionTwo,
   descriptionThree,
   imgPath,
+  pagePath = "",
 }: PostProps) => {
   return (
     <section className={styles.post_section}>
@@ -26,7 +29,9 @@ const Post = ({
           <p className={`${fontRobotoMono.className} global__text-meta`}>{descriptionTwo}</p>
           <p className={`${fontRobotoMono.className} global__text-meta`}>{descriptionThree}</p>
         </div>
-        <Button variant="secondary">VIEW PROJECT</Button>
+        <Link href={pagePath}>
+          <Button variant="secondary">VIEW PROJECT</Button>
+        </Link>
       </div>
 
       <img

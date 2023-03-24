@@ -61,6 +61,7 @@ export default function FeaturedWork({ isDesktopSize, isTableletSize }: Props) {
           image="images/featured-work-sec-img-1.png"
           direction="row"
           size="lg"
+          path="work/1"
         />
         <div
           className={`${styles["featured-work__right-container-bottom"]} ${fontSyne.className} text-default`}
@@ -70,6 +71,7 @@ export default function FeaturedWork({ isDesktopSize, isTableletSize }: Props) {
             subtitle="2022"
             image={imgBoxes[0].location}
             direction="row"
+            path="work/2"
           />
           {isDesktopSize ? <Divider /> : <div />}
           <Card
@@ -77,12 +79,14 @@ export default function FeaturedWork({ isDesktopSize, isTableletSize }: Props) {
             subtitle="2022"
             image={imgBoxes[1].location}
             direction="row"
+            path="work/3"
           />
           <Card
             title={imgBoxes[2].title}
             subtitle="2022"
             image={imgBoxes[2].location}
             direction="row"
+            path="work/4"
           />
           {isDesktopSize ? <Divider /> : <div />}
           <Card
@@ -90,6 +94,7 @@ export default function FeaturedWork({ isDesktopSize, isTableletSize }: Props) {
             subtitle="2022"
             image={imgBoxes[3].location}
             direction="row"
+            path="work/5"
           />
         </div>
       </div>
