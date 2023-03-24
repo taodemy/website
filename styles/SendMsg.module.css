@@ -1,16 +1,16 @@
 .msg__container {
   display: flex;
   align-items: center;
-  height: 500px;
   border-bottom: 1px solid var(--border-default);
 }
 .msg_left__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-top: 40px;
+  padding-bottom: 40px;
   padding-right: 10%;
   width: 50%;
-  height: 80%;
 }
 .msg_left_title__container {
   width: 100%;
@@ -20,6 +20,7 @@
   margin-bottom: 2%;
 }
 .social_media__container {
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -29,7 +30,6 @@
 }
 .msg_form__container {
   width: 35%;
-  height: 70%;
 }
 .label_input__container {
   position: relative;
@@ -52,4 +52,22 @@
   left: 0.2em;
   line-height: 280%;
   color: var(--text-default);
+}
+@media screen and (max-width: 743px) {
+  .msg__container {
+    flex-direction: column;
+  }
+  .msg_left__container {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-right: 0;
+  }
+  .social_media__container {
+    margin-top: 20px;
+    align-items: center;
+  }
+  .msg_form__container {
+    width: 80%;
+    margin-bottom: 40px;
+  }
 }

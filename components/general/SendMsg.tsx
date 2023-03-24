@@ -3,8 +3,13 @@ import { fontSyne, fontRobotoMono } from "@/pages/_app";
 import SocialMedia from "./SocialMedia/SocialMedia";
 import Button from "../base/Button";
 import { useEffect, useRef, useState } from "react";
+import EViewPortQuery from "@/constants/viewPortSize";
+import useMediaQuery from "@/hooks/useMediaQuery";
+
+const { PHONE } = EViewPortQuery;
 
 const SendMsg = () => {
+  const isPhoneSize = useMediaQuery(PHONE);
   const [usernameField, setUsernameField] = useState("");
   const [emailField, setEmailField] = useState("");
   const [messageField, setMessageField] = useState("");
@@ -65,7 +70,11 @@ const SendMsg = () => {
           >
             CONTACT
           </p>
-          <h1 className={`global__heading--medium ${fontSyne.className}`}>
+          <h1
+            className={`${isPhoneSize ? "global__heading-h2" : "global__heading--medium"} ${
+              fontSyne.className
+            }`}
+          >
             Creating true brands together.
           </h1>
         </div>

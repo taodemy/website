@@ -3,6 +3,7 @@ import { fontSatoshi, fontSyne, fontRobotoMono } from "@/pages/_app";
 import NavLink from "@/components/general/NavLink";
 import styles from "@/styles/Footer.module.css";
 import Button from "@/components/base/Button";
+import NavbarLink from "@/components/general/Navbar/NavbarLink";
 
 const Footer = () => {
   const pages = [
@@ -114,7 +115,11 @@ const Footer = () => {
                 <h2 className={`global__heading-h4 ${fontSyne.className}`}>Pages</h2>
               </li>
               {pages.map((page) => (
-                <NavLink key={page.id} content={page.content} />
+                <NavbarLink
+                  key={page.id}
+                  linkName={page.content}
+                  link={page.content.toLowerCase()}
+                />
               ))}
               <li>
                 <Button>more templates</Button>
@@ -129,7 +134,11 @@ const Footer = () => {
                 <h2 className={`global__heading-h4 ${fontSyne.className}`}>CMS</h2>
               </li>
               {cms.map((cmsItem) => (
-                <NavLink key={cmsItem.id} content={cmsItem.content} />
+                <NavbarLink
+                  key={cmsItem.id}
+                  linkName={cmsItem.content}
+                  link={cmsItem.content.toLowerCase()}
+                />
               ))}
             </ul>
           </div>
@@ -141,7 +150,11 @@ const Footer = () => {
                 <h2 className={`global__heading-h4 ${fontSyne.className}`}>Utility Pages</h2>
               </li>
               {utilityItems.map((utilityItem) => (
-                <NavLink key={utilityItem.id} content={utilityItem.content} />
+                <NavbarLink
+                  key={utilityItem.id}
+                  linkName={utilityItem.content}
+                  link={utilityItem.content.toLowerCase()}
+                />
               ))}
             </ul>
           </div>
