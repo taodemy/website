@@ -2,7 +2,11 @@ import Post from "../general/Post/Post";
 import styles from "./WorkPosts.module.css";
 import { PostProps } from "../general/Post/Post";
 
-const WorkPosts = () => {
+type WorkPostsProps = {
+  isPhoneSize: boolean;
+};
+
+const WorkPosts = ({ isPhoneSize }: WorkPostsProps) => {
   const posts: PostProps[] = [
     {
       sectionName: "dancing\nstars",
@@ -57,6 +61,7 @@ const WorkPosts = () => {
             imgPath={p.imgPath}
             key={p.sectionName}
             pagePath={p.pagePath}
+            isPhoneSize={p.isPhoneSize}
           />
         ))}
       </div>

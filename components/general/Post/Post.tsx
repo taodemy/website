@@ -10,6 +10,7 @@ export type PostProps = {
   descriptionThree?: string;
   imgPath: string;
   pagePath?: string;
+  isPhoneSize?: boolean;
 };
 
 const Post = ({
@@ -19,12 +20,19 @@ const Post = ({
   descriptionThree,
   imgPath,
   pagePath = "",
+  isPhoneSize,
 }: PostProps) => {
   return (
     <section className={styles.post_section}>
       <div className={styles.post_section__information}>
         <div className={styles.post_section__description}>
-          <h1 className={`${fontSyne.className} global__heading-h1`}>{sectionName}</h1>
+          <h1
+            className={`${fontSyne.className} ${
+              isPhoneSize ? "global__heading-h2" : "global__heading-h1"
+            }`}
+          >
+            {sectionName}
+          </h1>
           <p className={`${fontRobotoMono.className} global__text-meta`}>{descriptionOne}</p>
           <p className={`${fontRobotoMono.className} global__text-meta`}>{descriptionTwo}</p>
           <p className={`${fontRobotoMono.className} global__text-meta`}>{descriptionThree}</p>

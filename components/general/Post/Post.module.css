@@ -25,3 +25,14 @@
   grid-column-start: 2;
   grid-column-end: 4;
 }
+
+@media screen and (max-width: 1023px) {
+  .post_section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .post_section__information {
+    gap: 16px;
+  }
+}
