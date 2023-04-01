@@ -2,8 +2,13 @@ import Head from "next/head";
 import Subscription from "@/components/general/Subscription";
 import WorkTitle from "@/components/Work/WorkTitle";
 import WorkPosts from "@/components/Work/WorkPosts";
+import useMediaQuery from "@/hooks/useMediaQuery";
+import EViewPortQuery from "@/constants/viewPortSize";
 
 export default function Work() {
+  const { PHONE } = EViewPortQuery;
+  const isPhoneSize = useMediaQuery(PHONE);
+
   return (
     <>
       <Head>
@@ -19,8 +24,8 @@ export default function Work() {
         <meta name="author" content="Taodemy Team" />
       </Head>
       <main>
-        <WorkTitle />
-        <WorkPosts />
+        <WorkTitle isPhoneSize={isPhoneSize} />
+        <WorkPosts isPhoneSize={isPhoneSize} />
         <Subscription />
       </main>
     </>
