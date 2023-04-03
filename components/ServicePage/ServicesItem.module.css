@@ -118,6 +118,7 @@
 
   .services_left__link {
     margin-top: 4%;
+    gap: 2%;
   }
 
   .service_right__info {
