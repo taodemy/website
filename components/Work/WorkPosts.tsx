@@ -10,12 +10,14 @@ const WorkPosts = () => {
       descriptionTwo: "video",
       descriptionThree: "design",
       imgPath: "/images/featured-work-sec-img-1.png",
+      pagePath: "work/1",
     },
     {
       sectionName: "enjoy\nsilence",
       descriptionOne: "content",
       descriptionTwo: "branding",
       imgPath: "/images/featured-work-sec-img-2.png",
+      pagePath: "work/2",
     },
     {
       sectionName: "pure\nvision",
@@ -23,6 +25,7 @@ const WorkPosts = () => {
       descriptionTwo: "video",
       descriptionThree: "content",
       imgPath: "/images/featured-work-sec-img-3.png",
+      pagePath: "work/3",
     },
     {
       sectionName: "boring\nbrand",
@@ -30,6 +33,7 @@ const WorkPosts = () => {
       descriptionTwo: "video",
       descriptionThree: "content",
       imgPath: "/images/featured-work-sec-img-4.png",
+      pagePath: "work/4",
     },
     {
       sectionName: "new\nculture",
@@ -37,6 +41,7 @@ const WorkPosts = () => {
       descriptionTwo: "video",
       descriptionThree: "content",
       imgPath: "/images/featured-work-sec-img-5.png",
+      pagePath: "work/5",
     },
   ];
 
@@ -51,6 +56,7 @@ const WorkPosts = () => {
             descriptionThree={p.descriptionThree}
             imgPath={p.imgPath}
             key={p.sectionName}
+            pagePath={p.pagePath}
           />
         ))}
       </div>
