@@ -1,4 +1,4 @@
-import styles from "@/styles/ServicesItem.module.css";
+import styles from "./ServicesItem.module.css";
 import Button from "../base/Button";
 import { fontSyne, fontSatoshi, fontRobotoMono } from "@/pages/_app";
 
@@ -16,6 +16,7 @@ type serviceItemProps = {
   link1?: string;
   link2?: string;
   link3?: string;
+  isPhoneSize: boolean;
 };
 
 const ServiceItem = ({
@@ -32,35 +33,49 @@ const ServiceItem = ({
   service_info1,
   service_info2,
   service_name,
+  isPhoneSize,
 }: serviceItemProps) => {
   return (
     <section className={styles.service}>
       <div className={styles.service_item__left}>
-        <img
-          arial-label={icon__arial_label}
-          className={styles.service_left_logo}
-          src={icon_path}
-          alt={icon_alt}
-        />
-        <h2 className={`${fontSyne.className} global__uppercase-heading-h2`}>{service_name}</h2>
-
-        <div>
-          <li
-            className={`${fontRobotoMono.className} global__text-meta ${styles.services_left__link}`}
+        <section className={styles.service_item__left_title}>
+          <img
+            arial-label={icon__arial_label}
+            className={styles.service_left_logo}
+            src={icon_path}
+            alt={icon_alt}
+          />
+          <h2
+            className={`${fontSyne.className} ${
+              isPhoneSize ? "global__heading-h3" : "global__uppercase-heading-h2"
+            }`}
           >
-            <a href="">{link1}</a>
-            <a href="">{link2}</a>
-            <a href="">{link3}</a>
-          </li>
-        </div>
+            {service_name}
+          </h2>
+        </section>
+        <section className={styles.service_item__left_link_button}>
+          <div>
+            <li
+              className={`${fontRobotoMono.className} global__text-meta ${styles.services_left__link}`}
+            >
+              <a href="">{link1}</a>
+              <a href="">{link2}</a>
+              <a href="">{link3}</a>
+            </li>
+          </div>
 
-        <div className={styles.services_left__button}>
-          <Button>GET IN TOUCH</Button>
-        </div>
+          <div className={styles.services_left__button}>
+            <Button>GET IN TOUCH</Button>
+          </div>
+        </section>
       </div>
 
       <div className={styles.service_item_right}>
-        <h2 className={`${fontSyne.className} global__heading-h1 ${styles.service_right__heading}`}>
+        <h2
+          className={`${fontSyne.className} ${
+            isPhoneSize ? "global__heading-h3" : "global__heading-h1"
+          } ${styles.service_right__heading}`}
+        >
           {service_heading}
         </h2>
         <div

@@ -24,8 +24,8 @@ export default function Service() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>
-        <ServicesTitle />
-        <Services />
+        <ServicesTitle isPhoneSize={isPhoneSize} />
+        <Services isPhoneSize={isPhoneSize} />
         <Contact isPhoneSize={isPhoneSize} />
       </div>
     </>

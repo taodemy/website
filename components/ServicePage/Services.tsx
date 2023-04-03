@@ -1,7 +1,9 @@
 import React from "react";
 import Service from "./ServicesItem";
-
-const Services = () => {
+type SreviceProps = {
+  isPhoneSize: boolean;
+};
+const Services = ({ isPhoneSize }: SreviceProps) => {
   const ServiceItems = [
     {
       id: 1,
@@ -80,6 +82,7 @@ const Services = () => {
       link3: "WEBSITES",
     },
   ];
+
   return (
     <section>
       {ServiceItems.map((ServiceItem) => (
@@ -98,6 +101,7 @@ const Services = () => {
           link1={ServiceItem.link1}
           link2={ServiceItem.link2}
           link3={ServiceItem.link3}
+          isPhoneSize={isPhoneSize}
         />
       ))}
     </section>
