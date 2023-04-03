@@ -1,8 +1,10 @@
 import React from "react";
 import Service from "./ServicesItem";
+
 type SreviceProps = {
   isPhoneSize: boolean;
 };
+
 const Services = ({ isPhoneSize }: SreviceProps) => {
   const ServiceItems = [
     {
