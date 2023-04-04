@@ -1,16 +1,22 @@
 import React from "react";
 import { fontSyne, fontRobotoMono } from "@/pages/_app";
 import Button from "../base/Button";
-import styles from "@/styles/ServicesTitle.module.css";
+import styles from "./ServicesTitle.module.css";
 
-function ServiceTitle() {
+type ServiceProps = {
+  isPhoneSize: boolean;
+};
+
+function ServiceTitle({ isPhoneSize }: ServiceProps) {
   return (
     <section className={styles.service_title}>
       <p className={`${fontRobotoMono.className} global__text-meta ${styles.service_title__name}`}>
         SERVICES
       </p>
       <h1
-        className={`${fontSyne.className} global__heading--large ${styles.service_title__heading}`}
+        className={`${fontSyne.className} ${
+          isPhoneSize ? "global__heading-h2" : "global__heading--large"
+        } ${styles.service_title__heading} `}
       >
         We create <br />
         true brands.

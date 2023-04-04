@@ -9,6 +9,7 @@ describe("ServiceItem", () => {
       "A strong brand is a tool to connect people with your brand all around the world.",
     service_info1: "test info1",
     service_info2: "test info2 ",
+    isPhoneSize: Boolean,
   };
   beforeEach(() => {
     render(
@@ -17,6 +18,7 @@ describe("ServiceItem", () => {
         service_heading={ServiceItem.service_heading}
         service_info1={ServiceItem.service_info1}
         service_info2={ServiceItem.service_info2}
+        isPhoneSize={true}
       />
     );
   });

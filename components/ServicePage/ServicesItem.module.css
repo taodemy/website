@@ -1,0 +1,140 @@
+.service {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.service_item__left {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin: 4% 0;
+}
+
+.service_left_logo {
+  width: fit-content;
+  margin-bottom: 4%;
+}
+
+.services_left__link {
+  padding-top: 24px;
+  color: var(--text-default);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style-type: none;
+}
+
+.services_left__link a {
+  text-decoration: none;
+  color: var(--text-default);
+}
+
+.services_left__button {
+  margin-top: 4%;
+}
+
+.service_item_right {
+  display: flex;
+  width: 66%;
+  flex-direction: column;
+  border-left: 1px solid var(--border-default);
+  margin: 3% 0;
+  padding-left: 48px;
+}
+
+.service_right__heading {
+  font-weight: 530;
+}
+
+.service_right__info {
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4%;
+}
+
+.service_right__image {
+  margin-top: 4%;
+  height: 37rem;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 1023px) {
+  .service {
+    flex-direction: column;
+  }
+
+  .service_item_right {
+    width: 100%;
+    border-left: 0px solid var(--border-default);
+    margin: 4% 0;
+    padding: 0;
+  }
+
+  .service_item__left {
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 4%;
+    margin-bottom: 0;
+  }
+
+  .services_left__link {
+    margin-top: 6%;
+    padding-top: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 150%;
+    gap: 4%;
+  }
+
+  .services_left__button {
+    margin-top: 0%;
+  }
+
+  .service_item__left_link_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .service_right__image {
+    height: 30rem;
+  }
+
+  .service_right__heading {
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 743px) {
+  .service_item__left_link_button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services_left__button {
+    margin-top: 5%;
+  }
+
+  .services_left__link {
+    margin-top: 5%;
+    gap: 2%;
+    width: 100%;
+  }
+
+  .service_right__info {
+    margin-top: 3%;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .services_left__link {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
