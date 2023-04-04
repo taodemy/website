@@ -38,7 +38,7 @@ const ServiceItem = ({
   return (
     <section className={styles.service}>
       <div className={styles.service_item__left}>
-        <section className={styles.service_item__left_title}>
+        <section>
           <img
             arial-label={icon__arial_label}
             className={styles.service_left_logo}

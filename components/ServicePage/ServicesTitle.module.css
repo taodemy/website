@@ -28,3 +28,11 @@
     margin-top: 5%;
   }
 }
+
+@media screen and (max-width: 390px) {
+  .service_title__button_container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}
