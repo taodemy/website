@@ -19,3 +19,19 @@
   margin-bottom: 32px;
   border-radius: 16px;
 }
+
+@media screen and (max-width: 1023px) {
+  .work-single-page__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .work-single-page__main {
+    width: 100%;
+    border-bottom: 1px solid var(--border-default);
+    margin-bottom: 50px;
+  }
+  .work-single-page__aside {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}

@@ -56,7 +56,13 @@ const WorkSinglePage = () => {
     <div>
       <div className={styles["work-single-page__container"]}>
         <section className={styles["work-single-page__main"]}>
-          <h1 className={`${fontSyne.className} global__heading--large`}>{work.title}</h1>
+          <h1
+            className={`${fontSyne.className} ${
+              isPhoneSize ? "global_heading-h2" : "global__heading--large"
+            }`}
+          >
+            {work.title}
+          </h1>
           <p className={`${fontSatoshi.className} global__text-xlarge `}>{work.intro}</p>
         </section>
 
