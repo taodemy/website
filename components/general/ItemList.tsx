@@ -21,9 +21,7 @@ const ListItem = ({ title, content, icon, height, width }: Props) => {
         height={height}
       />
       <div className={styles.item_list__text_container}>
-        <p className={`${fontSyne.className} global__uppercase-heading-h3`}>
-          {title.toUpperCase()}
-        </p>
+        <p className={`${fontSyne.className} global__uppercase-heading-h3`}>{title}</p>
         <p className={`${fontSatoshi.className} global__text-default`}>{content}</p>
       </div>
     </div>

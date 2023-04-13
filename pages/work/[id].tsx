@@ -4,11 +4,31 @@ import styles from "@/styles/WorkSinglePage.module.css";
 import { fontSyne, fontSatoshi } from "../_app";
 import works from "@/constants/works.json";
 import Divider from "@/components/base/Divider";
-import Contact from "@/components/general/Contact";
+import Contact, { IContact } from "@/components/general/Contact";
 import InfoItem from "@/components/general/InfoItem";
 import ReportItem from "@/components/general/ReportItem";
 import EViewPortQuery from "@/constants/viewPortSize";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import { GetStaticProps } from "next";
+
+export interface Props {
+  IndexPage: IIndexPage;
+}
+
+export interface IIndexPage {
+  Contact: IContact;
+}
+
+export const getServerSideProps = async () => {
+  const res = await fetch(`${process.env.WEBSITE_API_URL}/IndexPage`);
+  const data: IIndexPage = await res.json();
+
+  return {
+    props: {
+      IndexPage: data,
+    },
+  };
+};
 
 const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
 
@@ -33,7 +53,7 @@ type Work = {
   }[];
 };
 
-const WorkSinglePage = () => {
+const WorkSinglePage = ({ IndexPage }: Props) => {
   const [work, setWork] = useState<Work | null>(null);
 
   const isPhoneSize = useMediaQuery(PHONE);
@@ -89,7 +109,7 @@ const WorkSinglePage = () => {
           ))}
         </section>
       </div>
-      <Contact isPhoneSize={isPhoneSize} />
+      <Contact {...IndexPage.Contact} />
     </div>
   ) : (
     <></>

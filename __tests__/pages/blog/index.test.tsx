@@ -1,13 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import Blog from "@/pages/blog";
 import "@testing-library/jest-dom";
+import { mockBlogPageData } from "@/components/mockData/MockBlogData";
 
 describe("Blog Page", () => {
   beforeEach(() => {
-    render(<Blog />);
+    render(<Blog data={mockBlogPageData.BlogPage} />);
   });
 
   it("should render blog title in success", () => {
+    console.log(mockBlogPageData.BlogPage);
     const blogTitle = screen.getByRole("heading", { name: /blog/i });
     const blogSubTitle = screen.getByText(/discover, learn, and be inspired with our blog\./i);
     const blogVideoBtn = screen.getByRole("button", { name: /video/i });

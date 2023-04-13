@@ -1,17 +1,23 @@
-import InfoBlock from "./InfoBlock/InfoBlock";
+import InfoBlock, { InfoBlockType } from "./InfoBlock/InfoBlock";
 
-const HowWeWork = () => {
+export interface IHowWeWork {
+  sectionName: string;
+  title: string;
+  iconPath: string;
+  blockType: InfoBlockType;
+  content: string;
+  buttonContent: string;
+}
+
+const HowWeWork = (props: IHowWeWork) => {
   return (
     <InfoBlock
-      sectionName="How we work"
-      title={"We help our clients\nsucceed with innovative\nstrategies."}
-      iconPath="/images/star.svg"
-      blockType="smallHeading"
-      content="Our team of experts is dedicated to delivering real results through creativity, strategic
-          thinking, and technical expertise. Whether it‘s developing a new marketing campaign,
-          designing a website, or creating a mobile app, we are always pushing the boundaries of
-          what’s possible to help our clients stay ahead of the curve."
-      buttonContent="our services"
+      sectionName={props.sectionName}
+      title={props.title}
+      iconPath={props.iconPath}
+      blockType={props.blockType}
+      content={props.content}
+      buttonContent={props.buttonContent}
       isPhoneSize
     />
   );

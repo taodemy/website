@@ -1,10 +1,11 @@
 import Studio from "../pages/studio";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
+import { mockStudioPageData } from "@/components/mockData/mockStudioData";
 
 describe("Studio Page", () => {
   beforeEach(() => {
-    render(<Studio />);
+    render(<Studio IndexPage={mockStudioPageData} />);
   });
 
   it("should render the heading of about us section", () => {
@@ -54,9 +55,7 @@ describe("Studio Page", () => {
   });
 
   it("should render icon in contact section success", () => {
-    const contactIcon = screen.getByRole("img", {
-      name: /let’s bring your brand to the next levelicon/i,
-    });
+    const contactIcon = screen.getByTestId("infoBlockImg");
     expect(contactIcon).toBeInTheDocument();
     expect(contactIcon).toHaveAttribute("src", "/images/design_icon.svg");
   });

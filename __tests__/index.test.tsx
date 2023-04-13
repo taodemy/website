@@ -1,10 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import Home from "../pages/index";
 import "@testing-library/jest-dom";
+import { mockIndexPageData } from "@/components/mockData/MockIndexData";
 
 describe("Home", () => {
   beforeEach(() => {
-    render(<Home />);
+    render(<Home IndexPage={mockIndexPageData.IndexPage} />);
   });
 
   it("renders the heading of featured work section", () => {

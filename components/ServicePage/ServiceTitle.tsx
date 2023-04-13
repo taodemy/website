@@ -3,7 +3,19 @@ import { fontSyne, fontRobotoMono } from "@/pages/_app";
 import Button from "../base/Button";
 import styles from "@/styles/ServicesTitle.module.css";
 
-function ServiceTitle() {
+export interface IServiceTitle {
+  id: number;
+  title: string;
+  heading: string;
+  button: IButton[];
+}
+
+export interface IButton {
+  id: number;
+  text: string;
+}
+
+function ServiceTitle({ button }: IServiceTitle) {
   return (
     <section className={styles.service_title}>
       <p className={`${fontRobotoMono.className} global__text-meta ${styles.service_title__name}`}>
@@ -16,18 +28,11 @@ function ServiceTitle() {
         true brands.
       </h1>
       <div className={styles.service_title__button_container}>
-        <Button variant="secondary" padding="small">
-          BRANDING
-        </Button>
-        <Button variant="secondary" padding="small">
-          DESIGN
-        </Button>
-        <Button variant="secondary" padding="small">
-          VIDEO
-        </Button>
-        <Button variant="secondary" padding="small">
-          CONTENT
-        </Button>
+        {button.map((btn) => (
+          <Button key={btn.id} variant="secondary" padding="small">
+            {btn.text}
+          </Button>
+        ))}
       </div>
     </section>
   );

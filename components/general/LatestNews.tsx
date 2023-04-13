@@ -4,49 +4,51 @@ import Button from "../base/Button";
 import Divider from "../base/Divider";
 import Card from "../base/Card";
 
-type Props = {
+export interface ILatestNews {
+  id: number;
+  title: string;
+  subtitle: string;
+  image: string;
+  direction: string;
   isPhoneSize: boolean;
-};
+}
 
-const LatestNews = ({ isPhoneSize }: Props) => {
+const LatestNews = (props: ILatestNews) => {
+  const cardsData = Object.values(props);
+
   return (
     <section className={styles.latest_news}>
       <div className={styles.latest_news__header}>
         <h1
           className={`
             ${fontSyne.className}
-            ${isPhoneSize ? "global__uppercase-heading-h2" : "global__uppercase-heading--small"}
+            ${
+              props.isPhoneSize
+                ? "global__uppercase-heading-h2"
+                : "global__uppercase-heading--small"
+            }
             ${styles.latest_news__title}
           `}
         >
-          {isPhoneSize ? "Latest News" : "LATEST NEWS"}
+          {props.isPhoneSize ? "Latest News" : "LATEST NEWS"}
         </h1>
         <Button variant="secondary" isBlock={true}>
           SEE ALL
         </Button>
       </div>
       <article className={styles.latest_news__article}>
-        <Card
-          title="Things to Look for When Comparing Branding Alternatives"
-          subtitle="BRANDING, DESIGN"
-          image="/images/two_people_praying.png"
-          direction="column_reverse"
-        />
-
-        <Divider />
-        <Card
-          title="5 Stand-out Features of Branding You Should Know"
-          subtitle="BRANDING, DESIGN"
-          image="/images/channel.png"
-          direction="column_reverse"
-        />
-        <Divider />
-        <Card
-          title="Branding: What Real Customers Have to Say"
-          subtitle="BRANDING, DESIGN"
-          image="/images/brand_strategy.png"
-          direction="column_reverse"
-        />
+        {cardsData.map((card) => (
+          <>
+            <Card
+              key={card.id}
+              title={card.title}
+              subtitle={card.subtitle}
+              image={card.image}
+              direction={card.direction}
+            />
+            {card.id !== cardsData[cardsData.length - 1].id && <Divider />}
+          </>
+        ))}
       </article>
     </section>
   );

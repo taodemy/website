@@ -9,7 +9,7 @@ const { PHONE } = EViewPortQuery;
 type CardDirectionVariant = "column" | "column_reverse" | "row";
 type CardSizeVariant = "lg" | "md" | "sm";
 
-interface CardProps {
+export interface CardProps {
   title: string;
   subtitle: string;
   image: string;

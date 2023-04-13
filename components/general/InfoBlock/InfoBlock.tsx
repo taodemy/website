@@ -5,7 +5,7 @@ import EViewPortQuery from "@/constants/viewPortSize";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
 const { PHONE } = EViewPortQuery;
-type InfoBlockType = "normal" | "smallHeading" | "input";
+export type InfoBlockType = "normal" | "smallHeading" | "input";
 type InfoProps = {
   sectionName: string;
   title: string;
@@ -52,6 +52,7 @@ const InfoBlock = ({
           </h1>
         )}
         <img
+          data-testid="infoBlockImg"
           src={iconPath}
           alt={`${title}icon`}
           aria-label={`${title}icon`}

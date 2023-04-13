@@ -1,6 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import WorkSinglePage from "@/pages/work/[id]";
+import { mockIndexPageData } from "@/components/mockData/MockIndexData";
 
 jest.mock("next/router", () => ({
   useRouter() {
@@ -13,7 +14,7 @@ jest.mock("next/router", () => ({
 
 describe("Work single page", () => {
   beforeEach(() => {
-    render(<WorkSinglePage />);
+    render(<WorkSinglePage IndexPage={mockIndexPageData} />);
   });
 
   it("should render a heading", () => {

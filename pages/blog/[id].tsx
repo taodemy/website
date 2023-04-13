@@ -13,7 +13,11 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 
 const { PHONE } = EViewPortQuery;
 
-interface Blog {
+interface Props {
+  blogsData: IBlog[];
+}
+
+export interface IBlog {
   id: string;
   title: string;
   subtitle: string;
@@ -24,15 +28,31 @@ interface Blog {
   author: string;
   authorInfo: string;
 }
-export default function Blog() {
-  const [currentBlog, setCurrentBlog] = useState<Blog | null>(null);
+
+export async function getServerSideProps() {
+  const res = await fetch(`${process.env.WEBSITE_API_URL}/BlogPage`);
+  const data = await res.json();
+
+  const blogsData = data.BlogsData;
+  console.log(blogsData);
+
+  return {
+    props: {
+      blogsData,
+    },
+  };
+}
+
+export default function Blog({ blogsData }: Props) {
+  const [currentBlog, setCurrentBlog] = useState<IBlog | null>(null);
   const router = useRouter();
   const { id } = router.query;
   useEffect(() => {
-    const blog = blogs.data.find((blog) => blog.id === id);
+    const blog = blogsData.find((blog) => blog.id === id);
     if (blog) setCurrentBlog(blog);
-  }, [id]);
+  }, [id, blogsData]);
   const isPhoneSize = useMediaQuery(PHONE);
+  console.log(blogsData);
 
   return currentBlog ? (
     <>

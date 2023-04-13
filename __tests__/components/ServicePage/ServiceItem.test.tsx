@@ -17,6 +17,7 @@ describe("ServiceItem", () => {
         service_heading={ServiceItem.service_heading}
         service_info1={ServiceItem.service_info1}
         service_info2={ServiceItem.service_info2}
+        isPhoneSize
       />
     );
   });

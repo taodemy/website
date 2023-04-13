@@ -3,7 +3,7 @@ import ListItem from "@/components/general/ItemList";
 
 describe("ListItems", () => {
   const props = {
-    title: "Connection",
+    title: "CONNECTION",
     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     icon: "/images/number_one_icon.svg",
   };

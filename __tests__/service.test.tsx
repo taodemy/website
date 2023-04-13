@@ -1,10 +1,11 @@
 import "@testing-library/jest-dom";
 import { screen, render } from "@testing-library/react";
 import Service from "@/pages/services";
+import { mockServicePageData } from "@/components/mockData/MockServiceData";
 
 describe("Service", () => {
   beforeEach(() => {
-    render(<Service />);
+    render(<Service ServicePage={mockServicePageData.ServicePage} />);
   });
 
   it("should render the title heading of service page in success", () => {

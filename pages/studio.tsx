@@ -2,15 +2,35 @@ import Head from "next/head";
 import AboutUs from "@/components/general/AboutUs";
 import OurValueV2 from "@/components/general/OurValue2";
 import OurTeam from "@/components/general/OurTeam";
-import Contact from "@/components/general/Contact";
+import Contact, { IContact } from "@/components/general/Contact";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import EViewPortQuery from "@/constants/viewPortSize";
+import { GetStaticProps } from "next";
+
+export interface Props {
+  IndexPage: IIndexPage;
+}
+
+export interface IIndexPage {
+  Contact: IContact;
+}
 
 export interface PhoneSizeProp {
   isPhoneSize: boolean;
 }
 
-export default function Studio() {
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const res = await fetch(`${process.env.WEBSITE_API_URL}/IndexPage`);
+  const data: IIndexPage = await res.json();
+
+  return {
+    props: {
+      IndexPage: data,
+    },
+  };
+};
+
+export default function Studio({ IndexPage }: Props) {
   const { PHONE } = EViewPortQuery;
   const isPhoneSize = useMediaQuery(PHONE);
 
@@ -24,7 +44,7 @@ export default function Studio() {
         <AboutUs isPhoneSize={isPhoneSize} />
         <OurValueV2 isPhoneSize={isPhoneSize} />
         <OurTeam isPhoneSize={isPhoneSize} />
-        <Contact isPhoneSize={isPhoneSize} />
+        <Contact {...IndexPage.Contact} />
       </main>
     </>
   );
