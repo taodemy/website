@@ -9,26 +9,38 @@ import InfoItem from "@/components/general/InfoItem";
 import ReportItem from "@/components/general/ReportItem";
 import EViewPortQuery from "@/constants/viewPortSize";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { GetStaticProps } from "next";
 
-export interface Props {
-  IndexPage: IIndexPage;
+interface Props {
+  indexPage: IIndexPage;
+  errorMessage?: string;
 }
 
-export interface IIndexPage {
-  Contact: IContact;
+interface IIndexPage {
+  contact: IContact;
 }
 
-export const getServerSideProps = async () => {
-  const res = await fetch(`${process.env.WEBSITE_API_URL}/IndexPage`);
-  const data: IIndexPage = await res.json();
-
-  return {
-    props: {
-      IndexPage: data,
-    },
-  };
-};
+export /* istanbul ignore next */ async function getServerSideProps() {
+  try {
+    const res = await fetch(`${process.env.WEBSITE_API_URL}/IndexPage`);
+    if (res.ok) {
+      const data: IIndexPage = await res.json();
+      return {
+        props: {
+          indexPage: data,
+        },
+      };
+    } else {
+      throw new Error("Failed to fetch data, please check!");
+    }
+  } catch (error) {
+    return {
+      props: {
+        indexPage: null,
+        errorMessage: "Failed to fetch data, please check!",
+      },
+    };
+  }
+}
 
 const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
 
@@ -53,7 +65,7 @@ type Work = {
   }[];
 };
 
-const WorkSinglePage = ({ IndexPage }: Props) => {
+const WorkSinglePage = ({ indexPage, errorMessage }: Props) => {
   const [work, setWork] = useState<Work | null>(null);
 
   const isPhoneSize = useMediaQuery(PHONE);
@@ -71,6 +83,10 @@ const WorkSinglePage = ({ IndexPage }: Props) => {
     const workData = works.data.find((item) => item.id === id);
     if (workData) setWork(workData);
   }, [id]);
+
+  if (!indexPage) {
+    return <div>{errorMessage}</div>;
+  }
 
   return work ? (
     <div>
@@ -109,7 +125,7 @@ const WorkSinglePage = ({ IndexPage }: Props) => {
           ))}
         </section>
       </div>
-      <Contact {...IndexPage.Contact} />
+      <Contact {...indexPage.contact} isPhoneSize={isPhoneSize} />
     </div>
   ) : (
     <></>

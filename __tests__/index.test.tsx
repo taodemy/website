@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import Home from "../pages/index";
+import Home, {getStaticProps} from "../pages/index";
 import "@testing-library/jest-dom";
 import { mockIndexPageData } from "@/components/mockData/MockIndexData";
 
 describe("Home", () => {
   beforeEach(() => {
-    render(<Home IndexPage={mockIndexPageData.IndexPage} />);
+    render(<Home indexPage={mockIndexPageData.indexPage} />);
   });
 
   it("renders the heading of featured work section", () => {
@@ -52,25 +52,25 @@ describe("Home", () => {
   });
 
   //test what we do section
-  it("renders what we do txt", () => {
-    const text = screen.getByText("WHAT WE DO");
-    expect(text).toBeInTheDocument();
+  it("should render what we do section in success", () => {
+    const whatWeDoHead = screen.getByText(/what we do/i);
+    expect(whatWeDoHead).toBeInTheDocument();
   });
 
   // test how we work section
-  it("should render how we work section in sucess", () => {
+  it("should render how we work section in success", () => {
     const howWeWorkHead = screen.getByText(/how we work/i);
     expect(howWeWorkHead).toBeInTheDocument();
   });
 
-  it("should render how we work title in sucess", () => {
+  it("should render how we work title in success", () => {
     const howWeWorkTitle = screen.getByRole("heading", {
       name: /we help our clients\nsucceed with innovative\nstrategies\./i,
     });
     expect(howWeWorkTitle).toBeInTheDocument();
   });
 
-  it("should render how we work icon in sucess", () => {
+  it("should render how we work icon in success", () => {
     const howWeWorkIcon = screen.getByRole("img", {
       name: /we help our clients\nsucceed with innovative\nstrategies\.icon/i,
     });
@@ -78,7 +78,7 @@ describe("Home", () => {
     expect(howWeWorkIcon).toHaveAttribute("src", "/images/star.svg");
   });
 
-  it("should render how we work content in sucess", () => {
+  it("should render how we work content in success", () => {
     const howWeWorkContent = screen.getByText(
       "Our team of experts is dedicated to delivering real results through creativity, strategic thinking, and technical expertise. Whether it‘s developing a new marketing campaign, designing a website, or creating a mobile app, we are always pushing the boundaries of what’s possible to help our clients stay ahead of the curve."
     );
@@ -174,5 +174,20 @@ describe("Home", () => {
     expect(latestNewsTitle).toBeInTheDocument();
     expect(button).toBeInTheDocument();
     expect(seeAllBtn[1]).toBeInTheDocument();
+  });
+});
+
+describe("getStaticProps", () => {
+
+  it("should return an error message as props when the fetch fails", async () => {
+    global.fetch = jest.fn(() => Promise.reject(new Error("Fetch failed")));
+
+    const props = await getStaticProps();
+    expect(props).toEqual({
+      props: {
+        indexPage: null,
+        errorMessage: "Failed to fetch data, please check!",
+      },
+    });
   });
 });

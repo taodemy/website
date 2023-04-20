@@ -1,6 +1,6 @@
 export const mockBlogPageData: any = {
-  BlogPage: {
-    CardLg: [
+  blogPage: {
+    cardLg: [
       {
         id: 1,
         image: "/images/two_people_praying.png",
@@ -22,7 +22,7 @@ export const mockBlogPageData: any = {
         path: "blog/2",
       },
     ],
-    CardSmOne: [
+    cardSmOne: [
       {
         id: 1,
         image: "/images/what_is_brand_strategy.png",
@@ -51,7 +51,7 @@ export const mockBlogPageData: any = {
         path: "blog/5",
       },
     ],
-    CardSmTwo: [
+    cardSmTwo: [
       {
         id: 1,
         image: "/images/perfume.png",
@@ -80,7 +80,7 @@ export const mockBlogPageData: any = {
         path: "blog/8",
       },
     ],
-    BlogsData: [
+    blogsData: [
       {
         id: "1",
         title: "Things to Look for When Comparing Branding Alternatives",

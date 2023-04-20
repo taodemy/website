@@ -1,10 +1,10 @@
 export const mockIndexPageData: any = {
-  IndexPage: {
-    Hero: {
+  indexPage: {
+    hero: {
       heading: " We are a \n digital agency \n from Melbourne.",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
     },
-    OurClients: {
+    ourClients: {
       id: 1,
       title: "OUR CLIENTS",
       iconItems: [
@@ -46,7 +46,7 @@ export const mockIndexPageData: any = {
         },
       ],
     },
-    WhatWeDo: {
+    whatWeDo: {
       whatWeDoItems: [
         {
           id: 1,
@@ -82,7 +82,7 @@ export const mockIndexPageData: any = {
         },
       ],
     },
-    FeaturedWork: {
+    featuredWork: {
       imgBoxes: [
         {
           location: "images/featured-work-sec-img-2.png",
@@ -106,7 +106,7 @@ export const mockIndexPageData: any = {
         },
       ],
     },
-    HowWeWork: {
+    howWeWork: {
       sectionName: "How we work",
       title: "We help our clients\nsucceed with innovative\nstrategies.",
       iconPath: "/images/star.svg",
@@ -115,7 +115,7 @@ export const mockIndexPageData: any = {
         "Our team of experts is dedicated to delivering real results through creativity, strategic thinking, and technical expertise. Whether it‘s developing a new marketing campaign, designing a website, or creating a mobile app, we are always pushing the boundaries of what’s possible to help our clients stay ahead of the curve.",
       buttonContent: "our services",
     },
-    Values: {
+    values: {
       listItems: [
         {
           id: 1,
@@ -140,7 +140,7 @@ export const mockIndexPageData: any = {
         },
       ],
     },
-    Contact: {
+    contact: {
       sectionName: "Contact",
       title: "Let’s bring your brand to the next level",
       iconPath: "/images/design_icon.svg",
@@ -149,7 +149,7 @@ export const mockIndexPageData: any = {
         "Contact us to explore partnership opportunities and discover how we can work together to drive innovation and create positive change.",
       buttonContent: "get in touch",
     },
-    LatestNews: [
+    latestNews: [
       {
         id: 1,
         title: "Things to Look for When Comparing Branding Alternatives",

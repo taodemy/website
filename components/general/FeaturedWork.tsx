@@ -5,13 +5,13 @@ import { useState } from "react";
 import Card from "../base/Card";
 import Divider from "../base/Divider";
 
-export interface IFeaturedWork {
+interface IFeaturedWork {
   isDesktopSize: boolean;
-  isTableletSize: boolean;
+  isTabletSize: boolean;
   imgBoxes: IImgBox[];
 }
 
-interface IImgBox {
+export interface IImgBox {
   location: string;
   title: string;
   hasBorder: string;
@@ -28,8 +28,8 @@ export default function FeaturedWork(props: IFeaturedWork) {
              ${props.isDesktopSize ? "global__heading-h1" : "global__heading-h2"}
           `}
         >
-          <span>{props.isTableletSize ? "FEATURED" : "Featured"}&ensp;</span>
-          <span>{props.isTableletSize ? "WORK" : "Work"}</span>
+          <span>{props.isTabletSize ? "FEATURED" : "Featured"}&ensp;</span>
+          <span>{props.isTabletSize ? "WORK" : "Work"}</span>
         </h1>
         <p className={`${fontSatoshi.className} global__text--medium`}>
           The featured work section shows some of the successful works of our website.

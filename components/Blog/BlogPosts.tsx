@@ -1,32 +1,52 @@
+import React from "react";
 import styles from "./BlogPosts.module.css";
 import Divider from "../base/Divider";
 import Button from "../base/Button";
-import Card, { CardProps } from "../base/Card";
+import Card from "../base/Card";
+import { CardDirectionVariant, CardSizeVariant } from "../base/Card";
 
-interface Card extends CardProps {
+export interface IBlogPost {
+  data: IData;
+  errorMessage?: string;
+}
+
+export interface IData {
+  cardLg: ICardLg[];
+  cardSmOne: ICardSmOne[];
+  cardSmTwo: ICardSmOne[];
+}
+
+interface ICardSmOne {
   id: number;
+  image: string;
+  title: string;
+  subtitle: string;
+  direction?: CardDirectionVariant;
+  size?: CardSizeVariant;
+  path: string;
 }
 
-interface IBlogPost {
-  data: Idata;
+interface ICardLg {
+  id: number;
+  image: string;
+  title: string;
+  subtitle: string;
+  direction?: CardDirectionVariant;
+  size?: CardSizeVariant;
+  large_title: boolean;
+  path: string;
 }
 
-interface Idata {
-  CardLg: Card[];
-  CardSmOne: Card[];
-  CardSmTwo: Card[];
-}
-
-const BlogGallery = ({ data }: IBlogPost) => {
-  const cardLgData = data.CardLg;
-  const cardSmOneData = data.CardSmOne;
-  const cardSmTwoData = data.CardSmTwo;
+const BlogGallery = ({ cardLg, cardSmOne, cardSmTwo }: IData) => {
+  const cardLgData = cardLg;
+  const cardSmOneData = cardSmOne;
+  const cardSmTwoData = cardSmTwo;
 
   return (
     <section className={styles["blog_gallery"]}>
       <article className={styles["blog_gallery__large_group"]}>
         {cardLgData.map((card) => (
-          <>
+          <React.Fragment key={card.id}>
             <Card
               key={card.id}
               image={card.image}
@@ -38,13 +58,13 @@ const BlogGallery = ({ data }: IBlogPost) => {
               path={card.path}
             />
             {card.id !== cardLgData[cardLgData.length - 1].id && <Divider />}
-          </>
+          </React.Fragment>
         ))}
       </article>
       <article className={styles["blog_gallery__small_group"]}>
         <div className={styles["blog_gallery__small_group__line_one"]}>
           {cardSmOneData.map((card) => (
-            <>
+            <React.Fragment key={card.id}>
               <Card
                 key={card.id}
                 image={card.image}
@@ -55,14 +75,13 @@ const BlogGallery = ({ data }: IBlogPost) => {
                 path={card.path}
               />
               {card.id !== cardSmOneData[cardSmOneData.length - 1].id && <Divider />}
-            </>
+            </React.Fragment>
           ))}
         </div>
         <div className={styles["blog_gallery__small_group__line_two"]}>
           {cardSmTwoData.map((card) => (
-            <>
+            <React.Fragment key={card.id}>
               <Card
-                key={card.id}
                 image={card.image}
                 title={card.title}
                 subtitle={card.subtitle}
@@ -71,7 +90,7 @@ const BlogGallery = ({ data }: IBlogPost) => {
                 path={card.path}
               />
               {card.id !== cardSmTwoData[cardSmTwoData.length - 1].id && <Divider />}
-            </>
+            </React.Fragment>
           ))}
         </div>
       </article>

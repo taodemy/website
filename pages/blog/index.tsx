@@ -4,23 +4,40 @@ import BlogTitle from "@/components/Blog/BlogTitle";
 import BlogGallery from "@/components/Blog/BlogPosts";
 import EViewPortQuery from "@/constants/viewPortSize";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import { IBlogPost } from "@/components/Blog/BlogPosts";
 
 const { PHONE } = EViewPortQuery;
 
-export async function getStaticProps() {
-  const res = await fetch(`${process.env.WEBSITE_API_URL}/BlogPage`);
-  const data = await res.json();
-  console.log(data);
-
-  return {
-    props: {
-      data,
-    },
-  };
+export /* istanbul ignore next */ async function getStaticProps() {
+  try {
+    const res = await fetch(`${process.env.WEBSITE_API_URL}/BlogPage`);
+    if (res.ok) {
+      const data = await res.json();
+      return {
+        props: {
+          data,
+        },
+      };
+    } else {
+      throw new Error("Failed to fetch data, please check!");
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {
+      props: {
+        data: null,
+        errorMessage: "Failed to fetch data, please check!",
+      },
+    };
+  }
 }
 
-export default function Blog({ data }: any) {
+export default function Blog({ data, errorMessage }: IBlogPost) {
   const isPhoneSize = useMediaQuery(PHONE);
+
+  if (!data) {
+    return <div>{errorMessage}</div>;
+  }
 
   return (
     <>
@@ -39,7 +56,7 @@ export default function Blog({ data }: any) {
       </Head>
       <main>
         <BlogTitle isPhoneSize={isPhoneSize} />
-        <BlogGallery data={data} />
+        <BlogGallery {...data} />
         <Subscription />
       </main>
     </>

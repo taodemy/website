@@ -14,7 +14,7 @@ jest.mock("next/router", () => ({
 
 describe("Work single page", () => {
   beforeEach(() => {
-    render(<WorkSinglePage IndexPage={mockIndexPageData} />);
+    render(<WorkSinglePage indexPage={mockIndexPageData} />);
   });
 
   it("should render a heading", () => {

@@ -4,9 +4,6 @@ import Button from "../base/Button";
 import styles from "./ServicesTitle.module.css";
 
 export interface IServiceTitle {
-  id: number;
-  title: string;
-  heading: string;
   isPhoneSize: boolean;
   button: IButton[];
 }
@@ -16,7 +13,7 @@ export interface IButton {
   text: string;
 }
 
-function ServiceTitle(props: IServiceTitle ) {
+function ServiceTitle(props: IServiceTitle) {
   return (
     <section className={styles.service_title}>
       <p className={`${fontRobotoMono.className} global__text-meta ${styles.service_title__name}`}>

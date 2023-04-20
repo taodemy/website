@@ -12,9 +12,7 @@ interface IIconItem {
   alt: string;
 }
 
-const OurClients = (props: IOurClients) => {
-  const iconItems = props.iconItems;
-
+const OurClients = ({ iconItems }: IOurClients) => {
   return (
     <section className={styles.our_clients}>
       <p className={`${fontRobotoMono.className} global__text-meta ${styles.our_clients__text}`}>

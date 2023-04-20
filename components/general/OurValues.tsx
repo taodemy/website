@@ -4,20 +4,18 @@ import { fontSyne } from "@/pages/_app";
 
 export interface IValue {
   isPhoneSize: boolean;
-  listItems: IlistItems[];
+  listItems: IListItems[];
 }
 
-interface IlistItems {
-  id: 1;
+interface IListItems {
+  id: number;
   title: string;
   content: string;
   icon: string;
-  height: number;
-  width: number;
 }
 
 const OurValues = (props: IValue) => {
-  const listItems = Object.values(props.listItems);
+  const listItems = props.listItems;
 
   return (
     <section className={styles.our_values}>

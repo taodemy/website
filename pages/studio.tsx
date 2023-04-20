@@ -7,32 +7,49 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import EViewPortQuery from "@/constants/viewPortSize";
 import { GetStaticProps } from "next";
 
-export interface Props {
-  IndexPage: IIndexPage;
+interface Props {
+  indexPage: IIndexPage;
+  errorMessage?: string;
 }
 
-export interface IIndexPage {
-  Contact: IContact;
+interface IIndexPage {
+  contact: IContact;
 }
 
 export interface PhoneSizeProp {
   isPhoneSize: boolean;
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const res = await fetch(`${process.env.WEBSITE_API_URL}/IndexPage`);
-  const data: IIndexPage = await res.json();
+export/* istanbul ignore next */ async function getStaticProps() {
+  try {
+    const res = await fetch(`${process.env.WEBSITE_API_URL}/IndexPage`);
+    if (res.ok) {
+      const data: IIndexPage = await res.json();
+      return {
+        props: {
+          indexPage: data,
+        },
+      };
+    } else {
+      throw new Error("Failed to fetch data, please check!");
+    }
+  } catch (error) {
+    return {
+      props: {
+        indexPage: null,
+        errorMessage: "Failed to fetch data, please check!",
+      },
+    };
+  }
+}
 
-  return {
-    props: {
-      IndexPage: data,
-    },
-  };
-};
-
-export default function Studio({ IndexPage }: Props) {
+export default function Studio({ indexPage, errorMessage }: Props) {
   const { PHONE } = EViewPortQuery;
   const isPhoneSize = useMediaQuery(PHONE);
+
+  if (!indexPage) {
+    return <div>{errorMessage}</div>;
+  }
 
   return (
     <>
@@ -44,7 +61,7 @@ export default function Studio({ IndexPage }: Props) {
         <AboutUs isPhoneSize={isPhoneSize} />
         <OurValueV2 isPhoneSize={isPhoneSize} />
         <OurTeam isPhoneSize={isPhoneSize} />
-        <Contact {...IndexPage.Contact} />
+        <Contact {...indexPage.contact} />
       </main>
     </>
   );

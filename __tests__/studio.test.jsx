@@ -1,11 +1,11 @@
-import Studio from "../pages/studio";
+import Studio, {getStaticProps} from "../pages/studio";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { mockStudioPageData } from "@/components/mockData/mockStudioData";
 
 describe("Studio Page", () => {
   beforeEach(() => {
-    render(<Studio IndexPage={mockStudioPageData} />);
+    render(<Studio indexPage={mockStudioPageData} />);
   });
 
   it("should render the heading of about us section", () => {
@@ -58,5 +58,19 @@ describe("Studio Page", () => {
     const contactIcon = screen.getByTestId("infoBlockImg");
     expect(contactIcon).toBeInTheDocument();
     expect(contactIcon).toHaveAttribute("src", "/images/design_icon.svg");
+  });
+});
+
+describe("getStaticProps", () => {
+  it("should return an error message as props when the fetch fails", async () => {
+    global.fetch = jest.fn(() => Promise.reject(new Error("Fetch failed")));
+
+    const props = await getStaticProps();
+    expect(props).toEqual({
+      props: {
+        indexPage: null,
+        errorMessage: "Failed to fetch data, please check!",
+      },
+    });
   });
 });

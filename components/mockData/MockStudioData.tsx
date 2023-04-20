@@ -1,5 +1,5 @@
 export const mockStudioPageData: any = {
-  Contact: {
+  contact: {
     sectionName: "Contact",
     title: "Let’s bring your brand to the next level",
     iconPath: "/images/design_icon.svg",

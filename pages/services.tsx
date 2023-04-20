@@ -5,33 +5,49 @@ import ServicesTitle, { IServiceTitle } from "@/components/ServicePage/ServiceTi
 import Services, { IServiceItems } from "@/components/ServicePage/Services";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import EViewPortQuery from "@/constants/viewPortSize";
-import { GetStaticProps } from "next";
 
 interface Props {
-  ServicePage: IServicePage;
+  servicePage: IServicePage;
+  errorMessage?: string;
 }
 
-export interface IServicePage {
-  ServiceTitle: IServiceTitle;
-  ServiceItems: IServiceItems;
-  Contact: IContact;
+interface IServicePage {
+  serviceTitle: IServiceTitle;
+  serviceItems: IServiceItems;
+  contact: IContact;
 }
 
 const { PHONE } = EViewPortQuery;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const res = await fetch(`${process.env.WEBSITE_API_URL}/ServicePage`);
-  const data: IServicePage = await res.json();
+export /* istanbul ignore next */ async function getStaticProps() {
+  try {
+    const res = await fetch(`${process.env.WEBSITE_API_URL}/ServicePage`);
+    if (res.ok) {
+      const data: IServicePage = await res.json();
+      return {
+        props: {
+          servicePage: data,
+        },
+      };
+    } else {
+      throw new Error("Failed to fetch data, please check!");
+    }
+  } catch (error) {
+    return {
+      props: {
+        servicePage: null,
+        errorMessage: "Failed to fetch data, please check!",
+      },
+    };
+  }
+}
 
-  return {
-    props: {
-      ServicePage: data,
-    },
-  };
-};
-
-export default function Service({ ServicePage }: Props) {
+export default function Service({ servicePage, errorMessage }: Props) {
   const isPhoneSize = useMediaQuery(PHONE);
+
+  if (!servicePage) {
+    return <div>{errorMessage}</div>;
+  }
 
   return (
     <>
@@ -46,9 +62,9 @@ export default function Service({ ServicePage }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>
-        <ServicesTitle {...ServicePage.ServiceTitle} />
-        <Services {...ServicePage.ServiceItems} />
-        <Contact {...ServicePage.Contact} />
+        <ServicesTitle {...servicePage.serviceTitle} isPhoneSize={isPhoneSize} />
+        <Services {...servicePage.serviceItems} isPhoneSize={isPhoneSize} />
+        <Contact {...servicePage.contact} isPhoneSize={isPhoneSize} />
       </div>
     </>
   );

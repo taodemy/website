@@ -1,8 +1,6 @@
-import { IButton } from "../ServicePage/ServiceTitle";
-
 export const mockServicePageData: any = {
-  ServicePage: {
-    ServiceTitle: {
+  servicePage: {
+    serviceTitle: {
       button: [
         {
           id: 1,
@@ -22,7 +20,7 @@ export const mockServicePageData: any = {
         },
       ],
     },
-    ServiceItems: [
+    serviceItems: [
       {
         id: 1,
         service_name: "BRANDING",
@@ -100,7 +98,7 @@ export const mockServicePageData: any = {
         link3: "WEBSITES",
       },
     ],
-    Contact: {
+    contact: {
       sectionName: "Contact",
       title: "Let’s bring your brand to the next level",
       iconPath: "/images/design_icon.svg",
