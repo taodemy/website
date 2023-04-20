@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Home, {getStaticProps} from "../pages/index";
+import Home, { getStaticProps } from "../pages/index";
 import "@testing-library/jest-dom";
 import { mockIndexPageData } from "@/components/mockData/MockIndexData";
 
@@ -178,7 +178,6 @@ describe("Home", () => {
 });
 
 describe("getStaticProps", () => {
-
   it("should return an error message as props when the fetch fails", async () => {
     global.fetch = jest.fn(() => Promise.reject(new Error("Fetch failed")));
 

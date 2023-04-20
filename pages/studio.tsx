@@ -20,7 +20,7 @@ export interface PhoneSizeProp {
   isPhoneSize: boolean;
 }
 
-export/* istanbul ignore next */ async function getStaticProps() {
+export /* istanbul ignore next */ async function getStaticProps() {
   try {
     const res = await fetch(`${process.env.WEBSITE_API_URL}/IndexPage`);
     if (res.ok) {

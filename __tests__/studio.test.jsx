@@ -1,4 +1,4 @@
-import Studio, {getStaticProps} from "../pages/studio";
+import Studio, { getStaticProps } from "../pages/studio";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { mockStudioPageData } from "@/components/mockData/mockStudioData";
