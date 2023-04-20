@@ -35,7 +35,8 @@ export /* istanbul ignore next */ async function getServerSideProps() {
     const res = await fetch(`${process.env.WEBSITE_API_URL}/BlogPage`);
     if (res.ok) {
       const data = await res.json();
-      const blogsData = data.BlogsData;
+      const blogsData = data.blogsData;
+      
       return {
         props: {
           blogsData: blogsData || null,
