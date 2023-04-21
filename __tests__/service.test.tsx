@@ -1,22 +1,23 @@
 import "@testing-library/jest-dom";
 import { screen, render } from "@testing-library/react";
-import Service from "@/pages/services";
+import Service, { getStaticProps } from "@/pages/services";
+import { mockServicePageData } from "@/components/mockData/MockServiceData";
 
 describe("Service", () => {
   beforeEach(() => {
-    render(<Service />);
+    render(<Service servicePage={mockServicePageData.servicePage} />);
   });
 
   it("should render the title heading of service page in success", () => {
-    const servicesTitleHeadig = screen.getByText("SERVICES");
-    expect(servicesTitleHeadig).toBeInTheDocument();
+    const servicesTitleHeading = screen.getByText("SERVICES");
+    expect(servicesTitleHeading).toBeInTheDocument();
   });
 
   it("should render the title info of service page in success", () => {
-    const servicesTitleHeadig = screen.getByRole("heading", {
+    const servicesTitleHeading = screen.getByRole("heading", {
       name: "We create true brands.",
     });
-    expect(servicesTitleHeadig).toBeInTheDocument();
+    expect(servicesTitleHeading).toBeInTheDocument();
   });
 
   it("should render the title banding button of service page in success", () => {

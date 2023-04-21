@@ -1,14 +1,27 @@
+import React from "react";
 import { fontSyne } from "@/pages/_app";
 import styles from "@/styles/LatestNews.module.css";
 import Button from "../base/Button";
 import Divider from "../base/Divider";
 import Card from "../base/Card";
 
-type Props = {
+type CardDirectionVariant = "column" | "column_reverse" | "row";
+interface Props {
   isPhoneSize: boolean;
-};
+  latestNews: ILatestNews[];
+}
 
-const LatestNews = ({ isPhoneSize }: Props) => {
+export interface ILatestNews {
+  id: number;
+  title: string;
+  subtitle: string;
+  image: string;
+  direction?: CardDirectionVariant;
+}
+
+const LatestNews = ({ isPhoneSize, latestNews }: Props) => {
+  const cardsData = latestNews;
+
   return (
     <section className={styles.latest_news}>
       <div className={styles.latest_news__header}>
@@ -26,27 +39,17 @@ const LatestNews = ({ isPhoneSize }: Props) => {
         </Button>
       </div>
       <article className={styles.latest_news__article}>
-        <Card
-          title="Things to Look for When Comparing Branding Alternatives"
-          subtitle="BRANDING, DESIGN"
-          image="/images/two_people_praying.png"
-          direction="column_reverse"
-        />
-
-        <Divider />
-        <Card
-          title="5 Stand-out Features of Branding You Should Know"
-          subtitle="BRANDING, DESIGN"
-          image="/images/channel.png"
-          direction="column_reverse"
-        />
-        <Divider />
-        <Card
-          title="Branding: What Real Customers Have to Say"
-          subtitle="BRANDING, DESIGN"
-          image="/images/brand_strategy.png"
-          direction="column_reverse"
-        />
+        {cardsData.map((card) => (
+          <React.Fragment key={card.id}>
+            <Card
+              title={card.title}
+              subtitle={card.subtitle}
+              image={card.image}
+              direction={card.direction}
+            />
+            {card.id !== cardsData[cardsData.length - 1].id && <Divider />}
+          </React.Fragment>
+        ))}
       </article>
     </section>
   );

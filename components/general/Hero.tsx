@@ -1,26 +1,26 @@
 import styles from "@/styles/Hero.module.css";
 import { fontSyne, fontSatoshi } from "@/pages/_app";
 
-type HeroProps = {
+export interface IHero {
   isPhoneSize: boolean;
-};
+  heading: string;
+  text: string;
+}
 
-const Hero = ({ isPhoneSize }: HeroProps) => {
+const Hero = (props: IHero) => {
   return (
     <div className={styles["hero"]}>
       <div className={styles["hero__section"]}>
         <div>
           <div
             className={`${fontSyne.className} ${
-              isPhoneSize ? "global__heading-h2" : "global__heading--medium"
+              props.isPhoneSize ? "global__heading-h2" : "global__heading--medium"
             } ${styles["hero__slogan"]}`}
           >
-            We are a <br />
-            digital agency
-            <br /> from Melbourne.
+            {props.heading}
           </div>
           <div className={`${fontSatoshi.className} global__text-xlarge ${styles["hero__txt"]}`}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+            {props.text}
           </div>
         </div>
         <img

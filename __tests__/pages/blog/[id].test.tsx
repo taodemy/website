@@ -1,12 +1,15 @@
 import "@testing-library/jest-dom";
 import { render, RenderResult, screen } from "@testing-library/react";
 import Blog from "@/pages/blog/[id]";
+import { mockBlogPageData } from "@/components/mockData/MockBlogData";
 
 jest.mock("next/router", () => ({
   useRouter() {
     return {
       pathname: "/blogs/[id]",
-      query: { id: "1" },
+      query: {
+        id: "1",
+      },
     };
   },
 }));
@@ -14,7 +17,7 @@ jest.mock("next/router", () => ({
 describe("Blog single page", () => {
   let component: RenderResult;
   beforeEach(() => {
-    component = render(<Blog />);
+    component = render(<Blog blogsData={mockBlogPageData.blogPage.blogsData} />);
   });
 
   it("should render title", () => {
@@ -89,7 +92,7 @@ describe("Blog single page", () => {
         dispatchEvent: jest.fn(),
       })),
     });
-    component = render(<Blog />);
+    component = render(<Blog blogsData={mockBlogPageData.blogPage.blogsData} />);
     const heading = screen.getByRole("heading", { name: /Branding Alternatives/i });
 
     expect(heading).toBeInTheDocument();
@@ -112,7 +115,7 @@ describe("Blog single page", () => {
         dispatchEvent: jest.fn(),
       })),
     });
-    component = render(<Blog />);
+    component = render(<Blog blogsData={mockBlogPageData.blogPage.blogsData} />);
     const heading = screen.getByRole("heading", { name: /Branding Alternatives/i });
 
     expect(heading).toBeInTheDocument();

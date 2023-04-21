@@ -5,49 +5,31 @@ import { useState } from "react";
 import Card from "../base/Card";
 import Divider from "../base/Divider";
 
-type Props = {
+interface IFeaturedWork {
   isDesktopSize: boolean;
-  isTableletSize: boolean;
-};
+  isTabletSize: boolean;
+  imgBoxes: IImgBox[];
+}
 
-export default function FeaturedWork({ isDesktopSize, isTableletSize }: Props) {
-  const [imgBoxes, setImgBoxes] = useState([
-    {
-      id: 1,
-      location: "images/featured-work-sec-img-2.png",
-      title: "Enjoy Silence",
-      hasBorder: true,
-    },
-    {
-      id: 2,
-      location: "images/featured-work-sec-img-3.png",
-      title: "Pure Vision",
-      hasBorder: false,
-    },
-    {
-      id: 3,
-      location: "images/featured-work-sec-img-4.png",
-      title: "Boring Brand",
-      hasBorder: true,
-    },
-    {
-      id: 4,
-      location: "images/featured-work-sec-img-5.png",
-      title: "New Culture",
-      hasBorder: false,
-    },
-  ]);
+export interface IImgBox {
+  location: string;
+  title: string;
+  hasBorder: string;
+}
+
+export default function FeaturedWork(props: IFeaturedWork) {
+  const [imgBoxes, setImgBoxes] = useState(props.imgBoxes);
 
   return (
     <div className={styles["featured-work"]}>
       <div className={styles["featured-work__left-container"]}>
         <h1
-          className={`${fontSyne.className} 
-             ${isDesktopSize ? "global__heading-h1" : "global__heading-h2"} 
+          className={`${fontSyne.className}
+             ${props.isDesktopSize ? "global__heading-h1" : "global__heading-h2"}
           `}
         >
-          <span>{isTableletSize ? "FEATURED" : "Featured"}&ensp;</span>
-          <span>{isTableletSize ? "WORK" : "Work"}</span>
+          <span>{props.isTabletSize ? "FEATURED" : "Featured"}&ensp;</span>
+          <span>{props.isTabletSize ? "WORK" : "Work"}</span>
         </h1>
         <p className={`${fontSatoshi.className} global__text--medium`}>
           The featured work section shows some of the successful works of our website.
@@ -73,7 +55,7 @@ export default function FeaturedWork({ isDesktopSize, isTableletSize }: Props) {
             direction="row"
             path="work/2"
           />
-          {isDesktopSize ? <Divider /> : <div />}
+          {props.isDesktopSize ? <Divider /> : <div />}
           <Card
             title={imgBoxes[1].title}
             subtitle="2022"
@@ -88,7 +70,7 @@ export default function FeaturedWork({ isDesktopSize, isTableletSize }: Props) {
             direction="row"
             path="work/4"
           />
-          {isDesktopSize ? <Divider /> : <div />}
+          {props.isDesktopSize ? <Divider /> : <div />}
           <Card
             title={imgBoxes[3].title}
             subtitle="2022"

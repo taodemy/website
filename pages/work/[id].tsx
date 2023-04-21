@@ -4,11 +4,43 @@ import styles from "@/styles/WorkSinglePage.module.css";
 import { fontSyne, fontSatoshi } from "../_app";
 import works from "@/constants/works.json";
 import Divider from "@/components/base/Divider";
-import Contact from "@/components/general/Contact";
+import Contact, { IContact } from "@/components/general/Contact";
 import InfoItem from "@/components/general/InfoItem";
 import ReportItem from "@/components/general/ReportItem";
 import EViewPortQuery from "@/constants/viewPortSize";
 import useMediaQuery from "@/hooks/useMediaQuery";
+
+interface Props {
+  indexPage: IIndexPage;
+  errorMessage?: string;
+}
+
+interface IIndexPage {
+  contact: IContact;
+}
+
+export /* istanbul ignore next */ async function getServerSideProps() {
+  try {
+    const res = await fetch(`${process.env.WEBSITE_API_URL}/IndexPage`);
+    if (res.ok) {
+      const data: IIndexPage = await res.json();
+      return {
+        props: {
+          indexPage: data,
+        },
+      };
+    } else {
+      throw new Error("Failed to fetch data, please check!");
+    }
+  } catch (error) {
+    return {
+      props: {
+        indexPage: null,
+        errorMessage: "Failed to fetch data, please check!",
+      },
+    };
+  }
+}
 
 const { DESKTOP, TABLET, PHONE } = EViewPortQuery;
 
@@ -33,7 +65,7 @@ type Work = {
   }[];
 };
 
-const WorkSinglePage = () => {
+const WorkSinglePage = ({ indexPage, errorMessage }: Props) => {
   const [work, setWork] = useState<Work | null>(null);
 
   const isPhoneSize = useMediaQuery(PHONE);
@@ -51,6 +83,10 @@ const WorkSinglePage = () => {
     const workData = works.data.find((item) => item.id === id);
     if (workData) setWork(workData);
   }, [id]);
+
+  if (!indexPage) {
+    return <div>{errorMessage}</div>;
+  }
 
   return work ? (
     <div>
@@ -89,7 +125,7 @@ const WorkSinglePage = () => {
           ))}
         </section>
       </div>
-      <Contact isPhoneSize={isPhoneSize} />
+      <Contact {...indexPage.contact} isPhoneSize={isPhoneSize} />
     </div>
   ) : (
     <></>

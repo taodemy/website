@@ -1,19 +1,26 @@
 import InfoBlock from "./InfoBlock/InfoBlock";
+import { InfoBlockType } from "./InfoBlock/InfoBlock";
 
-type Props = {
+export interface IContact {
+  sectionName: string;
+  title: string;
+  iconPath: string;
+  blockType: InfoBlockType;
+  content: string;
+  buttonContent: string;
   isPhoneSize: boolean;
-};
+}
 
-const Contact = ({ isPhoneSize }: Props) => {
+const Contact = (props: IContact) => {
   return (
     <InfoBlock
-      sectionName="Contact"
-      title={"Let’s bring your brand to the next level"}
-      iconPath="/images/design_icon.svg"
-      blockType="normal"
-      content="Contact us to explore partnership opportunities and discover how we can work together to drive innovation and create positive change."
-      buttonContent="get in touch"
-      isPhoneSize={isPhoneSize}
+      sectionName={props.sectionName}
+      title={props.title}
+      iconPath={props.iconPath}
+      blockType={props.blockType}
+      content={props.content}
+      buttonContent={props.buttonContent}
+      isPhoneSize={props.isPhoneSize}
     />
   );
 };

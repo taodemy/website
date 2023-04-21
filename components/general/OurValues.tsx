@@ -2,40 +2,26 @@ import ListItem from "./ItemList";
 import styles from "@/styles/OurValues.module.css";
 import { fontSyne } from "@/pages/_app";
 
-type ValueProps = {
+export interface IValue {
   isPhoneSize: boolean;
-};
+  listItems: IListItems[];
+}
 
-const OurValues = ({ isPhoneSize }: ValueProps) => {
-  const listItems = [
-    {
-      id: 1,
-      title: "Vision",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat.",
-      icon: "/images/number_one_icon.svg",
-    },
-    {
-      id: 2,
-      title: "Innovation",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat.",
-      icon: "/images/number_two_icon.svg",
-    },
-    {
-      id: 3,
-      title: "Connection",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque in dictum non consectetur a erat nam at. Pretium aenean pharetra magna ac placerat.",
-      icon: "/images/number_three_icon.svg",
-    },
-  ];
+interface IListItems {
+  id: number;
+  title: string;
+  content: string;
+  icon: string;
+}
+
+const OurValues = (props: IValue) => {
+  const listItems = props.listItems;
 
   return (
     <section className={styles.our_values}>
       <h1
         className={`${fontSyne.className} ${
-          isPhoneSize ? "global__heading-h2" : "global__uppercase-heading--small"
+          props.isPhoneSize ? "global__heading-h2" : "global__uppercase-heading--small"
         } ${styles.our_values__title}`}
       >
         OUR VALUES

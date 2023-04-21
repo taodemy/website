@@ -1,10 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import Blog from "@/pages/blog";
 import "@testing-library/jest-dom";
+import { mockBlogPageData } from "@/components/mockData/MockBlogData";
 
 describe("Blog Page", () => {
   beforeEach(() => {
-    render(<Blog />);
+    render(<Blog data={mockBlogPageData.blogPage} />);
   });
 
   it("should render blog title in success", () => {

@@ -6,10 +6,10 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 
 const { PHONE } = EViewPortQuery;
 
-type CardDirectionVariant = "column" | "column_reverse" | "row";
-type CardSizeVariant = "lg" | "md" | "sm";
+export type CardDirectionVariant = "column" | "column_reverse" | "row";
+export type CardSizeVariant = "lg" | "md" | "sm";
 
-interface CardProps {
+export interface CardProps {
   title: string;
   subtitle: string;
   image: string;

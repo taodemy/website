@@ -13,7 +13,12 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 
 const { PHONE } = EViewPortQuery;
 
-interface Blog {
+interface Props {
+  blogsData: IBlog[];
+  errorMessage?: string;
+}
+
+interface IBlog {
   id: string;
   title: string;
   subtitle: string;
@@ -24,15 +29,48 @@ interface Blog {
   author: string;
   authorInfo: string;
 }
-export default function Blog() {
-  const [currentBlog, setCurrentBlog] = useState<Blog | null>(null);
+
+export /* istanbul ignore next */ async function getServerSideProps() {
+  try {
+    const res = await fetch(`${process.env.WEBSITE_API_URL}/BlogPage`);
+    if (res.ok) {
+      const data = await res.json();
+      const blogsData = data.blogsData;
+      
+      return {
+        props: {
+          blogsData: blogsData || null,
+        },
+      };
+    } else {
+      throw new Error("Failed to fetch data, please check!");
+    }
+  } catch (error) {
+    return {
+      props: {
+        blogsData: null,
+        errorMessage: "Failed to fetch data, please check!",
+      },
+    };
+  }
+}
+
+export default function Blog({ blogsData, errorMessage }: Props) {
+  const [currentBlog, setCurrentBlog] = useState<IBlog | null>(null);
   const router = useRouter();
   const { id } = router.query;
+
   useEffect(() => {
-    const blog = blogs.data.find((blog) => blog.id === id);
-    if (blog) setCurrentBlog(blog);
-  }, [id]);
+    if (blogsData) {
+      const blog = blogsData.find((blog) => blog.id === id);
+      if (blog) setCurrentBlog(blog);
+    }
+  }, [id, blogsData]);
   const isPhoneSize = useMediaQuery(PHONE);
+
+  if (!blogsData) {
+    return <div>{errorMessage}</div>;
+  }
 
   return currentBlog ? (
     <>
